@@ -1,0 +1,26 @@
+---
+export const socialIcons = [
+  { icon: "uil uil-twitter", link: "https://twitter.com/0bkevin", index: 1 },
+  {
+    icon: "uil uil-github-alt",
+    link: "https://github.com/0bkevin/",
+    index: 2,
+  },
+  {
+    icon: "uil uil-linkedin",
+    link: "https://www.linkedin.com/in/0bkevin/",
+    index: 3,
+  },
+];
+---
+<div class="home__social">
+  {
+    socialIcons.map(({ icon, link }) => {
+      return (
+        <a href={link} class="home__social-icon" target="_blank">
+          <i class={icon} />
+        </a>
+      );
+    })
+  }
+</div>
