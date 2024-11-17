@@ -1,4 +1,5 @@
 ---
+import Navbar from '../components/header/Navbar.svelte';
 interface Props {
   title: string;
 }
@@ -12,13 +13,16 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Kevin Bravo's personal portfolio. A software engineer with 3 years of experience, specializing in cybersecurity, blockchain, and cryptography."
+      content="Kevin Bravo's personal portfolio. Software engineer with 3 years of experience, specializing in cybersecurity, blockchain, and cryptography."
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Kevin Bravo | {title}</title>
   </head>
+  <header>
+    <Navbar/>
+  </header>
   <body>
     <slot />
   </body>
