@@ -1,0 +1,36 @@
+---
+const achivements = [
+  {
+    title: "Experience",
+    subtitle: "3 years of professional experience",
+    icon: "bx-award",
+    index: 1,
+  },
+  {
+    title: "Completed",
+    subtitle: "5 projects completed",
+    icon: "bx-briefcase-alt",
+    index: 2,
+  },
+  {
+    title: "Learning",
+    subtitle: "Constanly learning 24/7",
+    icon: "bx-brain",
+    index: 3,
+  },
+];
+---
+
+<div class="about__info grid">
+  {
+    achivements.map(({ subtitle, icon, title }) => {
+      return (
+        <div class="about__box" >
+          <i class={`bx ${icon} about__icon`} />
+          <h3 class="about__title">{title}</h3>
+          <span class="about__subtitle">{subtitle}</span>
+        </div>
+      );
+    })
+  }
+</div>
