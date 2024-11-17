@@ -1,0 +1,43 @@
+---
+import { footerLinks, socialIcons } from "./data.ts";
+import "./footer.css";
+const actualYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__container container">
+    <h1 class="footer__title">Kevin Bravo</h1>
+    <ul class="footer__list">
+      {
+        footerLinks.map(({ link, name }) => {
+          return (
+            <li >
+              <a href={link} class="footer__link">
+                {name}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <div class="footer__socials">
+      {
+        socialIcons.map(({ icon, link }) => {
+          return (
+            <a
+              href={link}
+              class="footer__social-link"
+              target="_blank"
+              
+            >
+              <i class={icon} />
+            </a>
+          );
+        })
+      }
+    </div>
+    <span class="footer__copy"
+      >Kevin Bravo. {actualYear} &#169; All rigths reserved</span
+    >
+  </div>
+</footer>
