@@ -1,0 +1,25 @@
+---
+import { contactData } from "./form/contactData"
+import ContactSocials from "./ContactSocials.astro"
+import ContactForm from "./form/ContactForm.svelte"
+import "./contact.css"
+---
+
+<section class="contact section min-h-screen" id='contact'>
+  <h2 class="section__title">Get in touch</h2>
+  <span class="section__subtitle">Let's talk and build the future</span>
+  <div class="contact__container container grid">
+      <div class="contact__content">
+          <h3 class="contact__title">Talk to me</h3>
+          <div class="contact__info">
+              {contactData.map((info) => {
+                  return <ContactSocials {...info}/>
+              })}
+          </div>
+      </div>
+      <div class="contact__content">
+          <h3 class="contact__title">Contact me</h3>
+          <ContactForm client:only="svelte"  />
+      </div>
+  </div >
+</section >
