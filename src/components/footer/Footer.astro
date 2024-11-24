@@ -1,43 +1,36 @@
 ---
+
 import { footerLinks, socialIcons } from "./data.ts";
-import "./footer.css";
-const actualYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="footer">
-  <div class="footer__container container">
-    <h1 class="footer__title">Kevin Bravo</h1>
-    <ul class="footer__list">
-      {
-        footerLinks.map(({ link, name }) => {
-          return (
-            <li >
-              <a href={link} class="footer__link">
-                {name}
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
-    <div class="footer__socials">
-      {
-        socialIcons.map(({ icon, link }) => {
-          return (
-            <a
-              href={link}
-              class="footer__social-link"
-              target="_blank"
-              
-            >
-              <i class={icon} />
-            </a>
-          );
-        })
-      }
-    </div>
-    <span class="footer__copy"
-      >Kevin Bravo. {actualYear} &#169; All rigths reserved</span
+<footer class="border-t bg-white h-full">
+  <div class="container flex flex-col items-center gap-8 px-4 py-12 md:py-16 ">
+    <a
+      href="/"
+      class="text-2xl font-bold tracking-tight transition-colors hover:text-primary"
     >
+      Kevin Bravo
+    </a>
+    <nav class="flex gap-6" aria-label="Footer navigation">
+      {
+        footerLinks.map(({ name, link }) => (
+          <a
+            href={link}
+            class=" hover:font-medium hover:text-black  text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+          >
+            {name}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex gap-4">
+      {socialIcons.map(({ icon, link }) => <a target='_blank' href={link} class={`hover:font-bold hover:text-black text-2xl ${icon}`} />)}
+    </div>
+
+    <p class="text-sm text-muted-foreground">
+      Kevin Bravo. {currentYear} © All rights reserved
+    </p>
   </div>
 </footer>

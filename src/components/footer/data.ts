@@ -9,11 +9,11 @@ export const footerLinks = [
   },
 ];
 export const socialIcons = [
-  { icon: "bx bxl-twitter", link: "https://twitter.com/_BravoK", index: 1 },
-  { icon: "bx bxl-github", link: "https://github.com/mustafinho/", index: 2 },
+  { icon: "bx bxl-twitter", link: "https://twitter.com/0bkevin", index: 1 },
+  { icon: "bx bxl-github", link: "https://github.com/0bkevin/", index: 2 },
   {
     icon: "bx bxl-linkedin",
-    link: "https://www.linkedin.com/in/bravokevin/",
+    link: "https://www.linkedin.com/in/0bkevin/",
     index: 3,
   },
 ];
