@@ -37,8 +37,18 @@
           message,
         }),
       });
-      if(response.status === 200) {
+      if (response.status === 200) {
         status = "sent";
+        //once the email is sent, we clear the form
+        name = "";
+        email = "";
+        subject = "";
+        message = "";
+
+        //after 5 seconds we change the status to toSend
+        timeoutId = setTimeout(() => {
+          showMessage = false;
+        }, 5000);
       } else {
         status = "error";
       }
@@ -46,7 +56,11 @@
   };
 </script>
 
-<form on:submit={handleSubmit} class="flex flex-col gap-4 w-full " name="contactForm">
+<form
+  on:submit={handleSubmit}
+  class="flex flex-col gap-4 w-full"
+  name="contactForm"
+>
   <div class="space-y-6 mb-6">
     <ContactInput
       name="name"

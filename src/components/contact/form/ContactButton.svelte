@@ -1,16 +1,35 @@
 <script>
   export let status;
+
+  import { onDestroy } from "svelte";
+
+  let showMessage = true;
+  let timeoutId;
+
+  $: if (status === "sent") {
+    timeoutId = setTimeout(() => {
+      showMessage = false;
+    }, 10000);
+  }
+
+  function dismissPopup() {
+    showMessage = false;
+  }
+
+  onDestroy(() => {
+    clearTimeout(timeoutId);
+  });
 </script>
 
 <button
   type="submit"
-  class=" flex  justify-between py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-105 active:scale-95 transition-transform"
+  class=" flex justify-between py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-105 active:scale-95 transition-transform"
   disabled={!status === "toSend"}
 >
   {#if status === "sending"}
     Sending...
   {:else if status === "sent"}
-    Message Sent!
+    Message Sent! ✅
   {:else if status === "error"}
     There was an error while sending your message :(
   {:else}
@@ -34,3 +53,56 @@
     </svg>
   {/if}
 </button>
+
+{#if status === "sent" && showMessage}
+  <div role="alert" class="rounded-xl border border-gray-100 bg-green-100 p-4">
+    <div class="flex items-start gap-4">
+      <span class="text-green-600">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </span>
+
+      <div class="flex-1">
+        <strong class="block font-medium text-gray-900">
+          Message sent correctly
+        </strong>
+
+        <p class="mt-1 text-sm text-gray-700">
+          Your message has been sent correctly. I will get back to you as soon
+          as possible.
+        </p>
+      </div>
+
+      <button class="text-gray-500 transition hover:text-gray-600" on:click={dismissPopup}>
+        <span class="sr-only">Dismiss popup</span>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+{/if}
