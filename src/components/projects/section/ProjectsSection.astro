@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import Swiper from "./Swiper.svelte";
+const projects = await getCollection("projects");
+---
+
+<section class="min-h-screen w-full flex flex-col" id="about">
+  <div class="space-y-1 mb-4">
+    <h2 class="text-4xl font-bold text-center">Projects</h2>
+    <p class="text-gray-500 font-medium text-center">What I have done</p>
+  </div>
+  <div class="mb-16">
+    <p class="text-gray-500 text-center max-w-5xl m-auto p-4">
+      I am passionate about creating innovative solutions and have worked on a
+      variety of projects that showcase my skills in software engineering,
+      cybersecurity, blockchain, and cryptography. My projects reflect my
+      dedication to learning and growing in these fields, and I strive to
+      deliver high-quality work that makes a positive impact. Explore my
+      projects to see how I apply my expertise to solve real-world problems and
+      push the boundaries of technology.
+    </p>
+  </div>
+  <Swiper projects={projects} client:only="svelte" />
+</section>
