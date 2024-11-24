@@ -13,11 +13,16 @@ export const socialIcons = [
   },
 ];
 ---
+
 <div class="home__social">
   {
     socialIcons.map(({ icon, link }) => {
       return (
-        <a href={link} class="home__social-icon" target="_blank">
+        <a
+          href={link}
+          class="text-xl hover:scale-105 active:scale-95 transition-transform text-slate-700 hover:text-slate-900"
+          target="_blank"
+        >
           <i class={icon} />
         </a>
       );

@@ -1,60 +1,13 @@
-.home__content {
-  grid-template-columns: 100px repeat(2, 1fr);
-  padding-top: 5.5rem;
-  column-gap: 2rem;
-  align-items: center;
-}
-
 .home__social {
   display: grid;
   grid-template-columns: max-content;
   row-gap: 1rem
 }
-
-.home__social-icon {
-  font-size: 1.25rem;
-  color: var(--text-color);
-}
-
-.home__social-icon :hover {
-  color: var(--title-color-dark);
-
-
-}
-
-.home__title {
-  font-size: var(--big-font-size);
-  margin-bottom: var(--mb-0-25);
-}
-
-
 .home__hand {
   width: 38px;
   height: 38px;
-  margin-left: 0.4rem;
 }
 
-.home__subtitle {
-  position: relative;
-  padding-left: 3.4rem;
-  font-weight: var(--font-normal);
-  margin-bottom: var(--mb-1);
-}
-
-.home__subtitle:before {
-  content: '';
-  position: absolute;
-  width: 40px;
-  height: 1px;
-  background-color: var(--text-color);
-  left: 0;
-  top: 1rem;
-}
-
-.home__description {
-  max-width: 400px;
-  margin-bottom: var(--mb-3);
-}
 
 .home__img {
   background: url(../../assets/main_photo.jpg);
@@ -64,8 +17,8 @@
   box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
   order: 1;
   justify-self: center;
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   animation: profile__animate 8s ease-in-out infinite 1s
 }
 
@@ -85,9 +38,6 @@
 
 }
 
-.home__scroll {
-  margin-left: 9.25rem;
-}
 
 .wheel {
   animation: scroll 1.5s ease infinite;
@@ -116,11 +66,6 @@
 }
 
 
-@media screen and (max-width: 1200px) {
-.home__social {
-  margin-left: 2rem;
-}
-}
 
 
 /* For large devices */
@@ -160,14 +105,11 @@
 @media screen and (max-width: 738px) {
   .home__content {
       grid-template-columns: 0.5fr 0.3fr;
-
-      /* padding-top: 3.5rem; */
-  }
+      }
 
   .home__img {
       order: initial;
       justify-self: initial;
-      margin: auto;
   }
 
   .home__data {
@@ -176,8 +118,8 @@
   }
 
   .home__img {
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
   }
 
@@ -196,22 +138,12 @@
   .home__scroll {
       display: none;
   }
-  .home__social {
-      /* margin-right: 0.50rem; */
-      margin-left: 0.5rem;
-  }
-  .home__img {
-      margin-left: 1.5rem;
-      }
+
 }
 
 
 /* For small devices */
 @media screen and (max-width: 350px) {
-  .home__img {
-      width: 180px;
-      height: 180px;
-  }
 
   .home__hand {
       width: 22px;
@@ -221,12 +153,6 @@
   .home__button {
       margin-left: 4rem;
   }
-      .home__social {
-      /* margin-right: 0.50rem; */
-      margin-left: 0.7rem;
-  }
-  .home__img {
-      margin-left: 0.9rem;
-      }
+ 
 
 }
