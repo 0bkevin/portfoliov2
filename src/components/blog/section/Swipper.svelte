@@ -1,7 +1,4 @@
-<script
-  lang="ts"
-  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
->
+<script lang="ts">
   import "swiper/swiper-bundle.css";
   import { register } from "swiper/element/bundle";
   import { onMount } from "svelte";
@@ -86,12 +83,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 </style>
