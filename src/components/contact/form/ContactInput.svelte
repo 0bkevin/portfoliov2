@@ -12,9 +12,11 @@
   };
 </script>
 
-<div >
+<div>
   <div class="contact__form-div">
-    <label class="contact__form-tag" for={name}>{label}</label>
+    <label class="contact__form-tag text-xs " for={name}
+      >{label}</label
+    >
     <input
       {type}
       required

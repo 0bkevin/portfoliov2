@@ -14,7 +14,7 @@
 
 <div>
   <div class="contact__form-div contact__form-area">
-    <label class="contact__form-tag" for={name}>{label}</label>
+    <label class="contact__form-tag text-xs" for={name}>{label}</label>
     <textarea
       required
       class:error

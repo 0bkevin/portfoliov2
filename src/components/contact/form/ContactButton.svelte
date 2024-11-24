@@ -4,7 +4,7 @@
 
 <button
   type="submit"
-  class="button button--flex"
+  class=" flex  justify-between py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-105 active:scale-95 transition-transform"
   disabled={!status === "toSend"}
 >
   {#if status === "sending"}

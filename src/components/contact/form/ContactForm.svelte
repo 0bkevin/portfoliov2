@@ -46,7 +46,7 @@
   };
 </script>
 
-<form on:submit={handleSubmit} class="contact__form " name="contactForm">
+<form on:submit={handleSubmit} class="flex flex-col gap-4 w-full " name="contactForm">
   <div class="space-y-6 mb-6">
     <ContactInput
       name="name"
