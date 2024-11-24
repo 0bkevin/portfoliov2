@@ -1,6 +1,6 @@
 export const footerLinks = [
   { link: "#about", name: "About", index: 1 },
-  { link: "#portfolio", name: "Projects", index: 2 },
+  { link: "#projects", name: "Projects", index: 2 },
   { link: "https://blog.kevinbravo.me/", name: "Blog", index: 3 },
   {
     link: "https://doc.clickup.com/25746702/d/h/rhq8e-525/61cc762b944d21c",
