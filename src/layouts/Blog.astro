@@ -1,0 +1,87 @@
+---
+import Footer from "@components/footer/Footer.astro";
+import TOCItem from "@components/TOCItem.svelte";
+import Navbar from "@components/header/Navbar.svelte";
+
+interface Props {
+  title: string;
+  image: string;
+  description: string;
+  publishDate: string;
+  updateDate?: string;
+  readingTime: number;
+  tableOfContents: any[];
+}
+
+const { title, publishDate, updateDate, tableOfContents, readingTime } =
+  Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Kevin Bravo's personal portfolio. Software engineer with 3 years of experience, specializing in cybersecurity, blockchain, and cryptography."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>Kevin Bravo | {title}</title>
+  </head>
+  <header>
+    <Navbar />
+  </header>
+  <body>
+    <article class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="lg:flex lg:gap-8">
+        <!-- <aside  class="lg:w-1/6">
+          <nav class="sticky top-8 space-y-4">
+            <h2 class="text-lg font-semibold">
+              Table of Contents
+            </h2>
+            <ul class="space-y-2">
+              {tableOfContents.map((item) => <TOCItem item={item} />)}
+            </ul>
+          </nav>
+        </aside> -->
+        <main class="">
+          <h1 class="text-4xl font-bold mb-4">
+            {title}
+          </h1>
+          <div class="flex flex-wrap gap-4 text-sm mb-8">
+            <time datetime={publishDate}>Published: {publishDate}</time>
+            {
+              updateDate && (
+                <time datetime={updateDate}>Updated: {updateDate}</time>
+              )
+            }
+            <span>{readingTime} min read</span>
+          </div>
+          <div class="prose">
+            <slot />
+          </div>
+        </main>
+      </div>
+    </article>
+  </body>
+  <Footer />
+
+</html>

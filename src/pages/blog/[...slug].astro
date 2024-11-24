@@ -1,0 +1,70 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Blog from "@layouts/Blog.astro";
+import { formatDateToDisplay } from "@lib/utils";
+
+export const prerender = true;
+// called at build time, it compiles the list of all possible paths for this page to make it static
+export async function getStaticPaths() {
+  const blogs = await getCollection("blog");
+  return blogs.map((blog) => ({
+    params: {
+      slug: blog.slug,
+    },
+    props: { blog },
+  }));
+}
+
+type Props = CollectionEntry<"blog">;
+
+const { blog } = Astro.props;
+const { Content, headings } = await blog.render();
+
+const wordsPerMinute = 200;
+const wordCount = blog.body.split(/\s+/).length;
+const readingTime = Math.ceil(wordCount / wordsPerMinute);
+
+const publishDate = formatDateToDisplay(blog.data.publishDate);
+const updateDate = blog.data.updateDate
+  ? formatDateToDisplay(blog.data.updateDate)
+  : null;
+
+
+// Function to generate nested table of contents
+function generateTOC(headings) {
+  const toc = [];
+  const stack = [];
+
+  headings.forEach((heading) => {
+    const item = { ...heading, children: [] };
+
+    while (stack.length > 0 && stack[stack.length - 1].depth >= heading.depth) {
+      stack.pop();
+    }
+
+    if (stack.length > 0) {
+      stack[stack.length - 1].children.push(item);
+    } else {
+      toc.push(item);
+    }
+
+    stack.push(item);
+  });
+
+  return toc;
+}
+
+const tableOfContents = generateTOC(headings);
+---
+
+<Blog
+  description={blog.data.description}
+  readingTime={readingTime}
+  publishDate={publishDate}
+  tableOfContents={tableOfContents}
+  title={blog.data.title}
+  updateDate={updateDate}
+  image="/images/blog.jpg"
+>
+  <Content />
+</Blog>
