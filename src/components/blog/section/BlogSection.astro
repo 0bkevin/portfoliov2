@@ -2,8 +2,6 @@
 import { getCollection } from "astro:content";
 import Swipper from "@components/blog/section/Swipper.svelte";
 const blogs = await getCollection("blog");
-
-console.log(blogs);
 ---
 
 <section class="min-h-screen w-full flex flex-col" id="about">
