@@ -1,0 +1,16 @@
+---
+import { TOOLS, LANGUAGES, FRAMEWORKS} from "./data";
+import SkillCard from "./SkillCard.astro";
+---
+
+<section class="min-h-screen w-full flex flex-col md:py-32" id="skills">
+  <div class="space-y-1  mb-16">
+    <h2 class="text-4xl font-bold text-center">Skils</h2>
+    <p class="text-gray-500 font-medium text-center">My technical level</p>
+  </div>
+  <div class="mb-10 grid md:grid-cols-3 gap-4">
+    <SkillCard title="Languages" skills={LANGUAGES} />
+    <SkillCard title="Tools" skills={TOOLS} />
+    <SkillCard title="Frameworks" skills={FRAMEWORKS} />
+  </div>
+</section>
