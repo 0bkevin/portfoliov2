@@ -11,14 +11,17 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/svelte": "^6.0.1",
     "@astrojs/tailwind": "^5.1.2",
     "astro": "^4.16.13",
     "svelte": "^5.2.2",
+    "swiper": "^11.1.15",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^17.0.15"
   }
 }

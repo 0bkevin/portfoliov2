@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import Swipper from "@components/blog/section/Swipper.svelte";
+const blogs = await getCollection("blog");
+
+console.log(blogs);
+---
+
+<section class="min-h-screen w-full flex flex-col" id="about">
+  <div class="space-y-1 mb-4">
+    <h2 class="text-4xl font-bold text-center">Articles</h2>
+    <p class="text-gray-500 font-medium text-center">My most recent texts</p>
+  </div>
+  <div class="mb-16">
+    <p class="text-gray-500 text-center max-w-5xl m-auto p-4">
+      I like to write about a plethora of topics and spread the knowledge I have
+      with the community. I think that sharing information and experiences can
+      help others learn and grow. Whether it's about software engineering,
+      cybersecurity, blockchain, or cryptography, I aim to provide valuable
+      insights and practical advice through my blog posts. Stay tuned for more
+      updates and feel free to reach out if you have any questions or
+      suggestions!
+    </p>
+  </div>
+  <Swipper blogs={blogs} client:only="svelte">
+
+  </Swipper>
+</section>
+
