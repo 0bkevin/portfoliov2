@@ -32,8 +32,8 @@ const NAV_ITEMS = [
   },
 
   {
-      name: 'Portfolio',
-      link: '#portfolio',
+      name: 'Projects',
+      link: '#projects',
       icon: 'scenery',
       id: 6
   },
