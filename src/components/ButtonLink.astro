@@ -1,5 +1,15 @@
-<button
+---
+interface Props {
+  link: string;
+  target?: '_blank' | '_self';
+}
+const { link, target } = Astro.props;
+---
+
+<a
+  href={link}
+  target={target}
   class="block py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-105 active:scale-95 transition-transform"
 >
   <slot />
-</button>
+</a>

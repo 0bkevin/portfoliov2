@@ -3,15 +3,21 @@ import Button from "@components/Button.astro";
 import Image from "../../../public/assets/secondary_photo.jpg";
 import "./about.css";
 import Info from "./InfoCard.astro";
+import ButtonLink from "@components/ButtonLink.astro";
 ---
 
-<section class="min-h-screen w-full space-y-8 flex flex-col md:py-36" id="about">
+<section
+  class="min-h-screen w-full space-y-8 flex flex-col md:py-36"
+  id="about"
+>
   <div class="space-y-2">
     <h2 class="text-4xl font-bold text-center">About me</h2>
     <p class="text-gray-500 font-medium text-center">Getting to know me</p>
   </div>
 
-  <div class="max-w-5xl grid md:grid-cols-2 mx-auto min-h-full gap-y-6 lg:gap-x-5 md:py-36 md:p-4 lg:p-8">
+  <div
+    class="max-w-5xl grid md:grid-cols-2 mx-auto min-h-full gap-y-6 lg:gap-x-5 md:py-36 md:p-4 lg:p-8"
+  >
     <div>
       <img src={Image.src} alt="" class="about__img mx-auto md:mx-0" />
     </div>
@@ -27,11 +33,11 @@ import Info from "./InfoCard.astro";
       </p>
       <div class="flex flex-col items-center md:flex-row gap-4 w-full">
         <div class="">
-          <Button>
-            <a
-              href="https://drive.google.com/file/d/1XUAa1pM_F91Wp_SAPGe9lwWTTj_bVELI/view?usp=drivesdk"
-              target="blank"
-              class="flex justify-between items-center gap-2"
+          <ButtonLink
+            target="_blank"
+            link="https://drive.google.com/file/d/1XUAa1pM_F91Wp_SAPGe9lwWTTj_bVELI/view?usp=drivesdk"
+          >
+            <span class="flex justify-between items-center gap-2"
               >See my CV {" "}
               <svg
                 class="text-white"
@@ -53,20 +59,20 @@ import Info from "./InfoCard.astro";
                 <path
                   d="M11.25 17.7502H7.25C6.84 17.7502 6.5 17.4102 6.5 17.0002C6.5 16.5902 6.84 16.2502 7.25 16.2502H11.25C11.66 16.2502 12 16.5902 12 17.0002C12 17.4102 11.66 17.7502 11.25 17.7502Z"
                   fill="var(--container-color)"></path>
-              </svg></a
-            >
-          </Button>
+              </svg>
+            </span>
+          </ButtonLink>
         </div>
         <div class="">
-          <Button>
-            <a
-              href="https://doc.clickup.com/25746702/d/h/rhq8e-525/61cc762b944d21c"
-              target="blank"
-              class="flex justify-between items-center gap-2"
+          <ButtonLink
+            link="https://doc.clickup.com/25746702/d/h/rhq8e-525/61cc762b944d21c"
+            target="_blank"
+          >
+            <span class="flex justify-between items-center gap-2"
               >Know more about me{" "}<i class="uil uil-user button__icon"
-              ></i></a
+              ></i></span
             >
-          </Button>
+          </ButtonLink>
         </div>
       </div>
     </div>
