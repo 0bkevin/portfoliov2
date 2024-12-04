@@ -253,6 +253,6 @@ You can see the complete solution in this [GitHub repo](https://github.com/musta
 
 If you have any comments or suggestions please leave it in the comments section, also if you see any problem with the code feel free to make a PR.
 
-You can follow me on my Twitter @kevbto and DM me, I’m always happy to talk and get to know more people in this amazing community.
+You can follow me on my Twitter @0bkevin and DM me, I’m always happy to talk and get to know more people in this amazing community.
 
 Stay tuned for the next Damn Vulnerable Token solution: **Naive receiver**

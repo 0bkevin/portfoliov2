@@ -709,7 +709,7 @@ I hope this article was helpful for you.
 
 If you have any comment or suggestions, please leave it in the comments section.
 
-You can follow me on twitter [@kevbto](https://twitter.com/KevBto) and DM me, I’m always happy to talk and know more people in this amazing community.
+You can follow me on twitter [@0bkevin](https://twitter.com/KevBto) and DM me, I’m always happy to talk and know more people in this amazing community.
 
 ## Sources.
 

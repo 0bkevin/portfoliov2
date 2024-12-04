@@ -535,6 +535,6 @@ You can grab the complete solution in this [github repo.](https://github.com/mus
 
 If you have any comment or suggestions please leave it in the comments section, also if you see any problem with the code feel free to make a PR.
 
-You can follow me on my twitter [@kevbto](https://twitter.com/KevBto?t=OLX4oFBNcar_L-2QGx5B8Q&s=09) and DM me, I’m always happy to talk and know more people in this amazing community.
+You can follow me on my twitter [@0bkevin](https://twitter.com/KevBto?t=OLX4oFBNcar_L-2QGx5B8Q&s=09) and DM me, I’m always happy to talk and know more people in this amazing community.
 
 **Stay tuned for the next Ethernaut solution:** Fallout.
