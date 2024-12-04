@@ -3,8 +3,11 @@ title: "Brownie: everything you need to know to write, test and deploy your smar
 pubDate: '2023-10-01T12:00:00Z'
 image: {url: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1643917478735/Um-sGfhzH.png', alt: 'Banner'}
 description: We’ll walk through and explore all the main areas of functionality and I'll give you some tricks you can use to make your development process more easy.
-tags: [brownie, blochain]
+tags: [brownie, blochain, smart contracts, python]
+language: en
+canonicalURL: https://kevdevto.hashnode.dev/brownie
 ---
+
 Actually, Brownie is one of the most popular frameworks to create smart contracts, alongside truffle and hardhat.
 
 *Brownie offers a lot of cool things and functionalities you can use to make your development process more simple.*
@@ -21,7 +24,7 @@ There are two easy ways in which you can install brownie:
 
 **1\. By using pipx**
 
-`pipx` is just a like `pip`, but you can install those packages and run it directly in the command line
+` pipx ` is just a like `pip`, but you can install those packages and run it directly in the command line
 
 Is focused on installing and managing Python packages that can be run from the command line directly as applications.
 
@@ -45,19 +48,19 @@ You can create one just by typing:
 
 Example:
 
-$ python -m venv ./myVirtualEnviroment
+`$ python -m venv ./myVirtualEnviroment`
 
 After the creation process is done, you will need to activate the virtual environment:
 
-$ source myVirtualEnviroment/bin/activate
+`$ source myVirtualEnviroment/bin/activate`
 
 Or
 
-$ source myVirtualEnviroment/Scripts/activate
+`$ source myVirtualEnviroment/Scripts/activate`
 
 And then, you just need to write:
 
-$ pip install eth-brownie
+`$ pip install eth-brownie`
 
 With that you'll be able to use brownie.
 
@@ -65,9 +68,9 @@ With that you'll be able to use brownie.
 
 To make sure that everything works fine, in both scenarios, write
 
-$ brownie
+`$ brownie`
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643839805789/TCsH9-fK8.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643839805789/TCsH9-fK8.png)
 
 If you need more information about the installation process of Brownie, you can follow [this tutorial](https://iamdefinitelyahuman.medium.com/getting-started-with-brownie-part-1-9b2181f4cb99) made **by Ben Hauser on Medium**
 
@@ -121,8 +124,7 @@ Also, you can read these greats tutorial made by Ben Hauser, [tutorial one](http
     
 * if you need any extra information about a brownie CLI command you can always type:
     
-
-\`$ brownie --help
+  `$ brownie --help`
 
 ## The brownie config file
 
@@ -185,9 +187,9 @@ And then, having the path that rute us to the open zeppelin package in NPM, that
 
 We can obtain that searching by googling *open zeppelin ownable contract*
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643847873973/vdLDGCg89.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643847873973/vdLDGCg89.png)
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643849387151/p_Qjfqc0-.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643849387151/p_Qjfqc0-.png)
 
 And we can use this information to make the path, should be wrote in this format: &lt;organization/repo&gt;@
 
@@ -207,11 +209,11 @@ And finally, we need to add the package version we want to work with.
 
 In the root of the repo we can see all the releases (the versions).
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643849331423/AWpD6ZL9h.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643849331423/AWpD6ZL9h.png)
 
 By pressing in **releases** you can see all the different versions you can use, *this is going to depend mostly of the specifications of the project you are working on,* but you can really chose whatever you want.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643851974060/zeWT9xD5Yc.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643851974060/zeWT9xD5Yc.png)
 
 You need to add the version by adding an “@” at the beginning.
 
@@ -257,7 +259,7 @@ compiler:
 
 This will create a `dependency` folder under the `build/contracts` folder. There, the artifacts of every dependencies that a contract need will be stored.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643850040466/qP1oX9mjW.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643850040466/qP1oX9mjW.png)
 
 **The** `build/contracts` folder is where all the artifacts of the projects are stored.
 
@@ -287,9 +289,9 @@ And even you could add a subsection inside a subsection, thats on you and whatev
 
 You just need to import it
 
-from brownie import config
+`from brownie import config`
 
-my\_private\_key = config\["my\_accounts"\]\["my\_private\_key"\]
+`my\_private\_key = config\["my\_accounts"\]\["my\_private\_key"\]`
 
 The first, is the section, and the second is the subsection that we are searching.
 
@@ -297,13 +299,13 @@ When you use it you will obtain the data that you store in your brownie config f
 
 Example
 
-from Brownie import config
+`from Brownie import config`
 
-my\_private\_key = config\["my\_accounts"\]\["my\_private\_key"\]
+`my\_private\_key = config\["my\_accounts"\]\["my\_private\_key"\]`
 
-print(my\_private\_key)
+`print(my\_private\_key)`
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643852559702/0S4-g0t5u.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643852559702/0S4-g0t5u.png)
 
 **Obviously, you don't want to store your private key in that way, it is too dangerous…** Later in the article I will teach you how you can store in a more secure way.
 
@@ -315,7 +317,7 @@ You can also store information in the brownie config file, and grab it condition
 
 Let's say you only want to grab certain data when you are on the `rinkeby network`, and other data when you are on the `kovan network`. That could be a contract address.
 
-\*\*You could do that! \*\*
+\*\*You could do that!\*\*
 
 Imagine your project needs to interact with a Chainlink contract, and you want to test it in all the different networks, but the address of that contract change depending on the network.
 
@@ -329,9 +331,9 @@ networks: kovan: my\_chainlink\_contract\_address: 'ths\_is\_my\_chainlink\_addr
 
 *And now, we can grab that information in our scripts or our test again by using the* `config` object of brownie, and specifying the section we want to grab information from.
 
-from brownie import config
+`from brownie import config`
 
-contract\_addresss=config\["networks"\]
+`contract\_addresss=config\["networks"\]`
 
 But now, **how do we do this work depending on the network we are working?**
 
@@ -339,25 +341,25 @@ We can see what is the current network working with the brownie object `network`
 
 **This will tell us what is the current active network.**
 
-contract\_address = config\["networks"\]\[network.show\_active()\]
+`contract\_address = config\["networks"\]\[network.show\_active()\]`
 
 And then, you need to add the name of the subsection that you created in the correspondent network, **should be the same name between the networks.**
 
-contract\_address = config\["networks"\]\[network.show\_active()\]\["my\_chainlink\_contract\_address"\]
+`contract\_address = config\["networks"\]\[network.show\_active()\]\["my\_chainlink\_contract\_address"\]`
 
-print(contract\_address)
+`print(contract\_address)`
 
 **Let's test it.**
 
-$ brownie run scripts/testing.py --network rinkeby
+`$ brownie run scripts/testing.py --network rinkeby`
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909213697/jjcwl-wPL.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909213697/jjcwl-wPL.png)
 
 Now using kovan.
 
-$ brownie run scripts/testing.py --network kovan
+`$ brownie run scripts/testing.py --network kovan`
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909283220/zk07wc4yy.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909283220/zk07wc4yy.png)
 
 The flag `--network` is used when we want to change to which network the contract would be deployed,\* this is going to be the development network by default\* (which is a ganache cli), you can read more about that [here](https://eth-brownie.readthedocs.io/en/stable/network-management.html#launching-and-connecting)
 
@@ -375,7 +377,7 @@ In this `.env` file we can store sensitive data in variables, that we can use in
 
 Example:
 
-export MY\_PRIVATE\_KEY= &lt;some\_private\_key&gt;
+`export MY\_PRIVATE\_KEY= &lt;some\_private\_key&gt;`
 
 We need to add the “export” keyword and the begining so brownie knows that variable can be used.
 
@@ -383,7 +385,7 @@ And now, you can use that data in your scripts or test file, you just need to im
 
 import os
 
-my\_private\_key = os.getenv(“MY\_PRIVATE\_KEY”)
+`my\_private\_key = os.getenv(“MY\_PRIVATE\_KEY”)`
 
 And by using the `.getenv` method and passing the id of your environment variable as a parameter you can use that information in your files.
 
@@ -395,11 +397,11 @@ But you can check the `.gitignore` file anyways to be sure that include`.env`
 
 Let's say you want to store a private key to be able to grab it in your scrips. You can just type:
 
-my\_private key: ${MY\_PRIVATE\_KEY}
+`my\_private key: ${MY\_PRIVATE\_KEY}`
 
 To be able to do that, you need to specify a new section in your brownie config file
 
-dotenv: .env
+`dotenv: .env`
 
 With this we are saying to brownie *“hey, I want to use the* `.env` file as a file to store my environment variables, and whenever you see this strange character `${}` in our brownie config file that's going to be an environmental variable that you can grab from the `.env` file.
 
@@ -407,13 +409,13 @@ With this we are saying to brownie *“hey, I want to use the* `.env` file as a 
 
 And if you want to use the environment variables in your `.env` file in all your project, you can do it by setting the environment variables using.
 
-source .env
+`source .env`
 
 This will allow you yo use all the environment variables in your command line
 
 \*This is my .env file \*
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643908156730/ZMvmkueOS.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643908156730/ZMvmkueOS.png)
 
 You can test this by typing:
 
@@ -421,7 +423,7 @@ You can test this by typing:
 echo $name_of_your_env_variable
 ```
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643908193698/ZF46Q-Vms.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643908193698/ZF46Q-Vms.png)
 
 ## Working with networks
 
@@ -435,23 +437,23 @@ Brownie have a special object called `network` that contains all the different d
 
 We can see all the networks that we have in brownie by typing:
 
-$ brownie networks list
+`$ brownie networks list`
 
 This will show us all the different networks that we can use to deploy and test our contracts…
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909041398/84_73R1DhR.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909041398/84_73R1DhR.png)
 
 We can see a more detailed list by adding "true"
 
-$ brownie networks list true
+`$ brownie networks list true`
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909070307/eD4pvbRrH.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909070307/eD4pvbRrH.png)
 
 With this, **you can see all the different options that the** `network` **object have.**
 
 And you can add new networks.
 
-$ brownie networks add \[environment\] \[id\] host=\[host\] \[KEY=VALUE, ...\]
+`$ brownie networks add \[environment\] \[id\] host=\[host\] \[KEY=VALUE, ...\]`
 
 ### Network elements
 
@@ -480,7 +482,7 @@ networks: default: ropsten
 
 Of course, you can change that behavior in specific occations when you are deploying your contract.
 
-$ brownie run scripts/deploy.py --network rinkeby
+`$ brownie run scripts/deploy.py --network rinkeby`
 
 *In this case the contract would be deployed on the rinkeby network*, although the default network is ropsten.
 
@@ -490,7 +492,7 @@ If you want to learn more about networks, you can read the [brownie documentatio
 
 **Let me teach you how you can add a forked network:** e That means, when you want to test your smart contract *you can literally grab a exact copy of the current ethereum mainnet and paste it for your personal use*, **so all the contracts that are in the mainnet you can use it in your project for testing without deploying mocks.**
 
-$ brownie networks add development my-super\_mainnet-fork host=http://127.0.0.1 fork=http//:eth-mainnnet.alchemyapi/v2/ accounts=10 mnemonic=brownie port=8585
+`$ brownie networks add development my-super\_mainnet-fork host=http://127.0.0.1 fork=http//:eth-mainnnet.alchemyapi/v2/ accounts=10 mnemonic=brownie port=8585`
 
 ### Deleting an existing network.
 
@@ -504,7 +506,7 @@ If you want to delete a default network or a network you created, you just have 
 
 `$ brownie networks delete <ftm-main-fork>`
 
-![Deleting network example](https://cdn.hashnode.com/res/hashnode/image/upload/v1646365126644/gtT7vdFKt.PNG align="left")
+![Deleting network example](https://cdn.hashnode.com/res/hashnode/image/upload/v1646365126644/gtT7vdFKt.PNG)
 
 ### Updating an existing network.
 
@@ -518,7 +520,7 @@ You just look for the network id and the element of the network you want to chan
 
 `$ brownie networks modify xdai-main-fork gas_limit=210000000`
 
-![dos.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1646365524146/_QRjaA1Di.PNG align="left")
+![dos.PNG](https://cdn.hashnode.com/res/hashnode/image/upload/v1646365524146/_QRjaA1Di.PNG)
 
 Remember not write when defining the key pair
 
@@ -538,15 +540,15 @@ For development purposes, brownie by default give us 10 accounts with false ethe
 
 *You can see your list of accounts by typing:*
 
-$ brownie accounts list
+`$ brownie accounts list`
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909510496/rXqzH_3Yv.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909510496/rXqzH_3Yv.png)
 
 You probably wouldn't have any account because first you need to add it.
 
 You can add an account in the list by using:
 
-$ brownie accounts generate
+`$ brownie accounts generate`
 
 **This will generate a random private key, and make the account available as .**
 
@@ -554,7 +556,7 @@ $ brownie accounts generate
 
 Also, you can import an account using its private key:
 
-$ brownie accounts new
+`$ brownie accounts new`
 
 You will be asked to input the private key, and to choose a password. The account will then be available as .
 
@@ -588,7 +590,7 @@ And then, in your brownie config file you can add a new section to store your pr
 
 *(remember you need to set the section”dotenv” to points to the .env file” so you can use environment variables in your brownie config file in that format)*
 
-![Brownie config file with new sections to store my private key.](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909984012/jsrNNx9sl.png align="left")
+![Brownie config file with new sections to store my private key.](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909984012/jsrNNx9sl.png)
 
 And then, you grab your account using the `conifg` and `accounts` object
 
@@ -604,7 +606,7 @@ You can read more about how to work with accounts [here.](https://eth-brownie.re
 
 **Brownie looks for a function called** `main()` **as an entry point to run your scripts**, so if that function does not exist, you will get an error like this
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643910288185/bhmVOVun1.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643910288185/bhmVOVun1.png)
 
 You can read more about that [here.](https://eth-brownie.readthedocs.io/en/stable/interaction.html?highlight=scripts#writing-scripts)
 
@@ -622,11 +624,11 @@ Then, you need to create an API key to be able to interact with the Etherscan AP
 
 In the nav bar, go to your profile and click in API keys.
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643910798046/Q6BuWq4PK.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643910798046/Q6BuWq4PK.png)
 
 Finally, you just need to add a new API key
 
-![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643910897877/xIXrp_ouN.png align="left")
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643910897877/xIXrp_ouN.png)
 
 Add that private key in your `.env` file under.
 
@@ -644,7 +646,7 @@ MyContractToken.deploy("My Contract Token", "CLT", 18, 1e28, {'from': my_account
 
 And you just need to run your deploy script.
 
-$ brownie run scripts/deploy.py --network rinkeby
+`$ brownie run scripts/deploy.py --network rinkeby`
 
 Ta da! Your contract is already verified on Etherscan!
 
@@ -677,8 +679,9 @@ Example, let's say you have your polygon scan API,
 
 The env variable should be
 
-export POLYGONSCAN\_TOKEN=&lt;your\_token&gt;
-
+```javascript
+  export POLYGONSCAN_TOKEN=<your_token>
+```
 > For know the name of a specific explorer in the in the brownie convention, use the list of accounts and look for the `explorer` key pair the see its name
 
 But, how does Brownie know it has to use Etherscan or any other block explorer to verify the contract?
