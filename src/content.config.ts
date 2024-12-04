@@ -10,13 +10,13 @@ const blogCollection = defineCollection({
     image: z.object({
       url: z.string(),
       alt: z.string()
-    }),
+    }).optional(),
     tags: z.array(z.string()),
     language: z.enum(['en', 'es']),
     footnote: z.string().optional(),
     // Transform a date string (e.g. "2022-07-08") to a Date object
-    updatedDate: z.string().transform((str) => new Date(str)),
-    canonicalURL: z.string().url(),
+    updatedDate: z.string().transform((str) => new Date(str)).optional(),
+    canonicalURL: z.string().url().optional(),
 
   }),
 });
@@ -42,7 +42,7 @@ const projectCollection = defineCollection({
 });
 
 export const collections = {
-  'blog': blogCollection,
+  'blogs': blogCollection,
   'projects': projectCollection,
 };
 
