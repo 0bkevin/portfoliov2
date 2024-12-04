@@ -1,31 +1,26 @@
 ---
 import Footer from "@components/footer/Footer.astro";
-import TOCItem from "@components/TOCItem.svelte";
-import Navbar from "@components/header/Navbar.svelte";
+import { formatDateToDisplay, getReadingTime } from "@lib/utils";
+import type { CollectionEntry } from "astro:content";
+import Toc from "@components/toc/Toc.svelte";
 
 interface Props {
-  title: string;
-  image: string;
-  description: string;
-  publishDate: string;
-  updateDate?: string;
-  readingTime: number;
-  tableOfContents: any[];
+  blog: CollectionEntry<"blogs">;
+  tableOfContents: { text: string; depth: number; slug: string }[];
 }
 
-const { title, publishDate, updateDate, tableOfContents, readingTime } =
-  Astro.props;
+const { blog } = Astro.props as Props;
+const readingTime = getReadingTime(blog.body);
+const publishDate = formatDateToDisplay(blog.data.pubDate);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Kevin Bravo's personal portfolio. Software engineer with 3 years of experience, specializing in cybersecurity, blockchain, and cryptography."
-    />
+    <meta name="description" content={blog.data.description} />
     <meta name="viewport" content="width=device-width" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -42,46 +37,71 @@ const { title, publishDate, updateDate, tableOfContents, readingTime } =
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    {
+      blog.data.canonicalURL ? (
+        <link rel="canonical" href={blog.data.canonicalURL} />
+      ) : null
+    }
 
     <meta name="generator" content={Astro.generator} />
-    <title>Kevin Bravo | {title}</title>
+    <title>{blog.data.title}</title>
   </head>
-  <header>
-    <Navbar />
-  </header>
+  <header></header>
   <body>
-    <article class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="lg:flex lg:gap-8">
-        <!-- <aside  class="lg:w-1/6">
-          <nav class="sticky top-8 space-y-4">
-            <h2 class="text-lg font-semibold">
-              Table of Contents
-            </h2>
-            <ul class="space-y-2">
-              {tableOfContents.map((item) => <TOCItem item={item} />)}
-            </ul>
-          </nav>
-        </aside> -->
-        <main class="">
-          <h1 class="text-4xl font-bold mb-4">
-            {title}
-          </h1>
-          <div class="flex flex-wrap gap-4 text-sm mb-8">
-            <time datetime={publishDate}>Published: {publishDate}</time>
-            {
-              updateDate && (
-                <time datetime={updateDate}>Updated: {updateDate}</time>
-              )
-            }
-            <span>{readingTime} min read</span>
+    <main>
+      <article class="max-w-[52rem] mx-auto pb-16 pt-8 space-y-5 px-4 md:px-0">
+        {
+          blog.data.image ? (
+            <div
+              style={{ position: "relative", width: "100%", height: "350px" }}
+            >
+              <img
+                src={blog.data.image.url}
+                alt={blog.data.image.alt}
+                class="w-full h-full object-cover top-0 left-0 right-0 absolute rounded-lg"
+              />
+            </div>
+          ) : null
+        }
+        <h1
+          class="text-3xl md:text-4xl font-extrabold tracking-tight lg:text-5xl"
+        >
+          {blog.data.title}
+        </h1>
+        <div
+          class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500 mb-4"
+        >
+          <div class="flex items-center gap-1 hover:text-black">
+            <i class="bx bx-calendar text-lg"></i>
+            <time datetime={publishDate}>{publishDate}</time>
           </div>
-          <div class="prose">
-            <slot />
+          <div class="flex items-center gap-1 hover:text-black">
+            <i class="bx bx-time text-lg"></i>
+            <span>{readingTime} Min Read</span>
           </div>
-        </main>
-      </div>
-    </article>
+          {
+            blog.data.canonicalURL ? (
+              <div class="flex items-center gap-1">
+                <i class="bx bx-globe text-lg" />
+
+                <p>Originally published on</p>
+                <a href={blog.data.canonicalURL} class="truncate text-ellipsis max-w-32 hover:text-black">{blog.data.canonicalURL}</a>
+              </div>
+            ) : null
+          }
+        </div>
+        <div
+          class=" prose lg:prose-lg max-w-none prose-code:before:hidden prose-code:after:hidden prose-code:bg-gray-800 prose-code:text-gray-100 prose-code:font-extralight prose-code:text-sm prose-code:font-mono prose-code:py-1 prose-code:px-2 prose-code:rounded-md"
+        >
+          <slot />
+        </div>
+      </article>
+      <aside class="fixed md:top-64  bottom-96 md:left-[82%] right-0  ">
+        <Toc client:only="svelte" />
+      </aside>
+    </main>
   </body>
   <Footer />
+
 
 </html>
