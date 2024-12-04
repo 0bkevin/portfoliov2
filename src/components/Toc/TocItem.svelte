@@ -4,8 +4,6 @@
     level: 0,
     id: ''
   };
-
-  console.log(item)
 </script>
 
 {#if item.level === 2}

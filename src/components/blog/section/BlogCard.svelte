@@ -10,7 +10,6 @@
       alt: string;
     };
 
-    console.log(title)
 </script>
 
 <article
