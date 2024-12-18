@@ -20,8 +20,6 @@ const blogs = await getCollection("blogs");
       suggestions!
     </p>
   </div>
-  <Swipper blogs={blogs} client:only="svelte">
-
-  </Swipper>
+  <Swipper blogs={blogs} client:only="svelte"/>
 </section>
 

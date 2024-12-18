@@ -1,14 +1,13 @@
 <script lang="ts">
-  
   import "swiper/swiper-bundle.css";
   import { register } from "swiper/element/bundle";
   import { onMount } from "svelte";
   import BlogCard from "./BlogCard.svelte";
-  import type { CollectionEntry } from 'astro:content';
+  import type { CollectionEntry } from "astro:content";
 
   register();
 
-  export let blogs: CollectionEntry<'blogs'>[];
+  export let blogs: CollectionEntry<"blogs">[];
 
   onMount(() => {
     const swiperEl = document.querySelector("swiper-container");
@@ -47,14 +46,7 @@
   <swiper-container class="mySwiper" init="false" navigation="true">
     {#each blogs as blog}
       <swiper-slide>
-        <BlogCard
-          description={blog.data.description}
-          image={blog.data.image}
-          pubDate={blog.data.pubDate}
-          tags={blog.data.tags}
-          slug={`${blog.collection}/${blog.id}`}
-          title={blog.data.title}
-        />
+        <BlogCard {blog} />
       </swiper-slide>
     {/each}
   </swiper-container>
