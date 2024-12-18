@@ -2,6 +2,12 @@
 import { getCollection } from "astro:content";
 import Swipper from "@components/blog/section/Swipper.svelte";
 const blogs = await getCollection("blogs");
+
+const sortedBlogs = blogs.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate).getTime();
+  const dateB = new Date(b.data.pubDate).getTime();
+  return dateB - dateA;
+});
 ---
 
 <section class="min-h-screen w-full flex flex-col py-32" id="about">
@@ -20,6 +26,6 @@ const blogs = await getCollection("blogs");
       suggestions!
     </p>
   </div>
-  <Swipper blogs={blogs} client:only="svelte"/>
+  <Swipper blogs={sortedBlogs} client:only="svelte"/>
 </section>
 
