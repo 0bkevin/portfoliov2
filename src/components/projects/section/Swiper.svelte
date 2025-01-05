@@ -1,26 +1,13 @@
-<script
-  lang="ts"
->
+<script lang="ts">
   import "swiper/swiper-bundle.css";
   import { register } from "swiper/element/bundle";
   import { onMount } from "svelte";
   import ProjectCard from "./ProjectCard.svelte";
+  import type { CollectionEntry } from "astro:content";
 
-  import { formatDateToDisplay } from "@lib/utils.ts";
   register();
 
-  export let projects: {
-    data: {
-      description: number;
-      title: string;
-      slug: string;
-      pubYear: Date;
-      image: string;
-      demoUrl: string;
-      repoUrl: string;
-    };
-    slug: string;
-  }[];
+  export let blogs: CollectionEntry<"projects">[];
 
   onMount(() => {
     const swiperEl = document.querySelector("swiper-container");
@@ -45,7 +32,7 @@
             spaceBetween: 0,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 20,
           },
         },
@@ -57,16 +44,9 @@
 
 <div class="max-w-7xl xl:mx-auto">
   <swiper-container class="mySwiper" init="false" navigation="true">
-    {#each projects as project}
+    {#each blogs as blog}
       <swiper-slide>
-        <ProjectCard
-          description={project.data.description}
-          demoUrl={project.data.demoUrl}
-          image={project.data.image}
-          pubYear={project.data.pubYear}
-          slug={`${project.collection}/${project.slug}`}
-          title={project.data.title}
-        />
+        <ProjectCard {blog} />
       </swiper-slide>
     {/each}
   </swiper-container>
