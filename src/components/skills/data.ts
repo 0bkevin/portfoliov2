@@ -19,14 +19,19 @@ export const LANGUAGES = [
   { name: "SQL", level: "Intermediate" },
   { name: "Python", level: "Intermediate" },
   { name: "Cairo", level: "Intermediate" },
+  { name: "Dart", level: "Intermediate" },
 ];
 
 export const FRAMEWORKS = [
   { name: "Hardhat", level: "Advanced" },
   { name: "Brownie", level: "Advanced" },
   { name: "Protostar", level: "Basic" },
+  { name: "Expo", level: "Basic" },
+  { name: "Angular", level: "Intermediate" },
   { name: "Next Js", level: "Intermediate" },
   { name: "Django", level: "Intermediate" },
+  { name: "Flutter", level: "Intermediate" },
+
   
 
 ];
