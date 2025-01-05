@@ -2,7 +2,7 @@
 title: "Ethernaut solution 1: Fallback"
 pubDate: '2023-10-01T12:00:00Z'
 image: {url: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1643942850085/KnrFn5Wza.png', alt: 'Banner'}
-description: d
+description: Learn how to solve the Ethernaut challenge "Fallback" by exploiting the contract's vulnerabilities. This step-by-step guide uses Brownie to take ownership of the contract and withdraw its balance. Perfect for blockchain developers and security enthusiasts.
 tags: [brownie, blochain, smart contracts, python]
 language: en
 canonicalURL: https://kevdevto.hashnode.dev/ethernaut-solution-1-fallback
