@@ -1,7 +1,7 @@
 export const contactData = [
   {
     title: "Email",
-    content: "bravokevinto@gmail.com",
+    content: "0bravokevin@gmail.com",
     link: "mailto:bravokevinto@gmail.com",
     icon: "-mail-send",
     index: 1,
