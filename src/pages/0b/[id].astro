@@ -1,0 +1,24 @@
+---
+import Blog from "@layouts/Blog.astro";
+import { type CollectionEntry, getCollection, render } from "astro:content";
+
+export const prerender = true;
+// called at build time, it compiles the list of all possible paths for this page to make it static
+export async function getStaticPaths() {
+  const blogs = await getCollection("blogs");
+  return blogs.map((blog) => ({
+    params: { id: blog.id },
+    props: { blog },
+  }));
+}
+
+interface Props {
+  blog: CollectionEntry<"blogs">;
+}
+const { blog } = Astro.props;
+const { Content, headings  } = await render(blog);
+---
+
+<Blog blog={blog} tableOfContents={headings}>
+  <Content />
+</Blog>
