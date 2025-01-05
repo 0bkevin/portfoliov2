@@ -9,9 +9,9 @@
   const tagsToShow = tags.slice(0, 2);
 </script>
 
-<a href={`blogs/${blog.id}`}>
+<a href={`/0b/${blog.id}`}>
 <article
-  class="max-w-xs max-h-[640px] min-h-96 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md cursor-pointer mb-10"
+  class="max-w-xs max-h-[350px] min-h-[350px] overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md cursor-pointer mb-10"
 >
   <div class="aspect-[16/9] overflow-hidden">
     {#if image}
@@ -23,7 +23,7 @@
     {/if}
   </div>
   <div class="p-4">
-    <div class="mb-4 flex items-center gap-4">
+    <div class="mb-3 flex items-center gap-4">
       <time class="rounded-md bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600" dateTime={pubDate.toDateString()}>
         <i class="bx bx-calendar text-xs"></i> {formatDateToDisplay(pubDate)}
       </time>
@@ -37,7 +37,7 @@
         {/each}
       </div>
     </div>
-    <h2 class="mb-2 text-xl font-bold text-gray-900 text-left">{title}</h2>
+    <h2 class="mb-2 text-base font-bold text-gray-900 text-left leading-tight">{title}</h2>
     <p class="text-sm text-gray-600 text-left max-h-10 overflow-hidden">{description}</p>
   </div>
 </article>
