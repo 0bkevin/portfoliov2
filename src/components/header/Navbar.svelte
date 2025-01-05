@@ -45,7 +45,7 @@
           <a
             href={link}
             on:click={() => setActive(link)}
-            class={activeNav === link ? "nav__link active-link" : "nav__link"}
+            class={activeNav === link ? "nav__link active-link hover:font-semibold" : "nav__link hover:font-semibold"}
           >
             <!-- <i class={`uil uil-${icon} nav__icon`}></i> -->
             {name}
