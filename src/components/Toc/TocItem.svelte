@@ -1,27 +1,28 @@
 <script>
   export let item = {
-    text: '',
+    text: "",
     level: 0,
-    id: ''
+    id: "",
   };
+  export let isOpen;
 </script>
 
 {#if item.level === 2}
-<li class="font-medium text-sm text-gray-500 hover:text-black truncate ">
-  <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
-    {item.text}
-  </a>
-</li>
+  <li class="font-medium text-sm text-gray-500 hover:text-black truncate">
+    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
+      {item.text}
+    </a>
+  </li>
 {:else if item.level === 3}
-<li class="ml-4 text-sm text-gray-500 hover:text-black truncate ">
-  <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
-    * {item.text}
-  </a>
-</li>
+  <li class="ml-4 text-sm text-gray-500 hover:text-black truncate">
+    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
+      <i class='bx bxs-circle !text-[0.50rem]'></i> {item.text}
+    </a>
+  </li>
 {:else if item.level === 4}
-<li class="ml-8 text-xs text-gray-500 hover:text-black truncate ">
-  <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
-    * {item.text}
-  </a>
-</li>
+  <li class="ml-8 text-xs text-gray-500 hover:text-black truncate">
+    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
+      <i class='bx bxs-circle !text-[0.50rem]'></i> {item.text}
+    </a>
+  </li>
 {/if}
