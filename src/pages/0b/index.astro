@@ -15,21 +15,22 @@ const recentPost = sortedPost.slice(0, 3);
   title="0b | Kevin Bravo's blog"
   description="Kevin Bravo's blog. Read about software development, maths, blockchain, security and embebed syst."
 >
-  <div class="w-full mx-auto max-w-7xl h-full min-h-screen p-8 lg:p-0 space-y-7">
+  <div
+    class="w-full mx-auto max-w-7xl h-full min-h-screen p-8 lg:p-0 space-y-7"
+  >
     <div class="mb-12">
       <h1 class="text-5xl font-bold mb-2">0b</h1>
       <p class="text-xl text-gray-600">
-        I post about software development, maths, blockchain, security and embebed syst.
+        I post about software development, maths, blockchain, security and
+        embebed syst.
       </p>
-    <!-- <div class="py-[0.1px] bg-gray-500 flex-grow mt-6" /> -->
-
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 w-full justify-items-stretch">
       <div class="lg:col-span-2 justify-self-start w-full">
         <div class="flex justify-between mb-8 items-center gap-5">
           <h2 class="text-2xl font-semibold">All post</h2>
-          <div class="py-[0.1px] bg-black flex-grow mt-2" />
+          <div class="py-[0.1px] bg-black flex-grow mt-2"></div>
 
           <span class="text-gray-600">{blogs.length} Posts</span>
         </div>
@@ -41,9 +42,7 @@ const recentPost = sortedPost.slice(0, 3);
                   href={`/0b/${blog.id}`}
                   class="flex flex-col lg:flex-row lg:items-center lg:gap-4 hover:scale-[1.02] transition-transform "
                 >
-                  <h2 class="font-medium text-gray-900">
-                    {blog.data.title}
-                  </h2>
+                  <h2 class="font-medium text-gray-900">{blog.data.title}</h2>
                   <div class="hidden lg:block py-[0.1px] bg-black flex-grow" />
                   <div class="flex gap-2 lg:items-center text-sm lg:justify-center">
                     <p>{formatDateToDisplay(blog.data.pubDate)}</p>
@@ -52,7 +51,6 @@ const recentPost = sortedPost.slice(0, 3);
                   </div>
                 </a>
                 <div class="block lg:hidden py-[0.1px] bg-black flex-grow mt-2" />
-
               </li>
             ))
           }
@@ -60,7 +58,7 @@ const recentPost = sortedPost.slice(0, 3);
       </div>
       <div class="w-full hidden lg:block justify-self-end">
         <div class="flex flex-col items-center justify-self-end">
-        <h2 class="text-2xl font-semibold mb-8 text-center">RECENT POSTS</h2>
+          <h2 class="text-2xl font-semibold mb-8 text-center">RECENT POSTS</h2>
 
           {
             recentPost.map((post) => (
