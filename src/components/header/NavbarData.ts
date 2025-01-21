@@ -17,12 +17,12 @@ const NAV_ITEMS = [
     icon: "briefcase-alt",
     id: 3,
   },
-  {
-    name: "Who am I?",
-    link: "me/who-is-kevin-bravo",
-    icon: "question",
-    id: 4,
-  },
+  // {
+  //   name: "Who am I?",
+  //   link: "me/who-is-kevin-bravo",
+  //   icon: "question",
+  //   id: 4,
+  // },
   {
     name: "AMA",
     link: "/me/ama",

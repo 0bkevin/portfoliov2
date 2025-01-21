@@ -1,5 +1,5 @@
 ---
-const achivements = [
+const ACHIEVEMENTS = [
   {
     title: "Experience",
     subtitle: `${new Date().getFullYear() - 2022} years of professional experience`,
@@ -7,15 +7,15 @@ const achivements = [
     index: 1,
   },
   {
-    title: "Completed",
+    title: "Projects",
     subtitle: "5 projects completed",
     icon: "bx-briefcase-alt",
     index: 2,
   },
   {
-    title: "Learning",
-    subtitle: "Constantly learning 24/7",
-    icon: "bx-brain",
+    title: "Building",
+    subtitle: "Constantly building and contributing",
+    icon: "bx-code-alt",
     index: 3,
   },
 ];
@@ -23,7 +23,7 @@ const achivements = [
 
 <div class="grid grid-cols-3 h-36 max-h-36 w-full md:gap-4">
   {
-    achivements.map(({ subtitle, icon, title }) => {
+    ACHIEVEMENTS.map(({ subtitle, icon, title }) => {
       return (
         <div class="about__box transition-transform hover:scale-105 hover:cursor-pointer max-h-36 h-36 md:max-w-36 ">
           <i class={`bx ${icon} about__icon`} />
