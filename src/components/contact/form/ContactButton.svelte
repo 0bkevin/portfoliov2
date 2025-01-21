@@ -4,12 +4,12 @@
   import { onDestroy } from "svelte";
 
   let showMessage = true;
-  let timeoutId;
+  let timeoutId;  
 
   $: if (status === "sent") {
     timeoutId = setTimeout(() => {
       showMessage = false;
-    }, 10000);
+    }, 5000);
   }
 
   function dismissPopup() {
@@ -23,16 +23,16 @@
 
 <button
   type="submit"
-  disabled={!status === "toSend"}
-  class="flex justify-between py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-[1.02] active:scale-95 transition-transform disabled:bg-gray-600 disabled:scale-100"
+  disabled={status !== "toSend"}
+  class="flex justify-between py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-[1.02] transition-transform disabled:bg-slate-600 disabled:cursor-not-allowed disabled:text-slate-200"
 >
   {#if status === "sending"}
     Sending...
   {:else if status === "sent"}
     Message Sent! ✅
   {:else if status === "error"}
-    There was an error while sending your message :(
-  {:else}
+    There was an error while sending your message {":("}
+  {:else if status === "toSend"}
     Send message
     <svg
       class="button__icon"
@@ -85,7 +85,67 @@
         </p>
       </div>
 
-      <button class="text-gray-500 transition hover:text-gray-600" on:click={dismissPopup}>
+      <button
+        class="text-gray-500 transition hover:text-gray-600"
+        on:click={dismissPopup}
+      >
+        <span class="sr-only">Dismiss popup</span>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+{/if}
+
+
+{#if status === "error" && showMessage}
+  <div role="alert" class="rounded-xl border border-gray-100 bg-red-100 p-4">
+    <div class="flex items-start gap-4">
+      <span class="text-red-600">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </span>
+
+      <div class="flex-1">
+        <strong class="block font-medium text-gray-900">
+          Error when sending you message
+        </strong>
+
+        <p class="mt-1 text-sm text-gray-700">
+          There was an error while sending your message. Please try again
+          later.
+        </p>
+      </div>
+
+      <button
+        class="text-gray-500 transition hover:text-gray-600"
+        on:click={dismissPopup}
+      >
         <span class="sr-only">Dismiss popup</span>
 
         <svg

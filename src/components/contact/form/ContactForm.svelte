@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import ContactInput from "./ContactInput.svelte";
   import ContactTextArea from "./ContactTextArea.svelte";
   import ContactButton from "./ContactButton.svelte";
@@ -16,7 +15,7 @@
     subject: "",
     message: "",
   };
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: Event) => {
     status = "sending";
     event.preventDefault();
     errors = evaluateInputs(name, email, subject, message);
@@ -45,12 +44,15 @@
         subject = "";
         message = "";
 
-        //after 5 seconds we change the status to toSend
-        timeoutId = setTimeout(() => {
-          showMessage = false;
+        setTimeout(() => {
+          status = "toSend";
         }, 5000);
+
       } else {
         status = "error";
+        setTimeout(() => {
+          status = "toSend";
+        }, 5000);
       }
     }
   };
