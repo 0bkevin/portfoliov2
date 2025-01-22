@@ -82,6 +82,12 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Your Site's Title"
+      href={new URL("rss.xml", Astro.site)}
+    />
     {
       blog.data.canonicalURL ? (
         <link rel="canonical" href={blog.data.canonicalURL} />
@@ -94,9 +100,11 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
   <header>
     <Navbar client:only="svelte" shouldFixed={false} />
   </header>
-  <body >
+  <body>
     <main>
-      <article class="max-w-[52rem] mx-auto pb-16 pt-8 space-y-5 px-4 md:px-0 p-4">
+      <article
+        class="max-w-[52rem] mx-auto pb-16 pt-8 space-y-5 px-4 md:px-0 p-4"
+      >
         <div class="flex gap-2">
           <a
             href="/0b"
@@ -159,9 +167,7 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
         </div>
         <div
           class="prose-sm lg:prose-lg max-w-none prose-code:before:hidden prose-code:after:hidden prose-code:bg-gray-800 prose-code:text-gray-100 prose-code:font-extralight prose-code:text-sm prose-code:font-mono prose-code:py-1 prose-code:px-2 prose-code:rounded-md dark:text-gray-200 dark:prose-blockquote:text-gray-200 dark:prose-strong:text-white dark:prose-em:text-gray-300 dark:prose-headings:text-white
-          dark:prose-a:text-gray-300
-          "
-          
+          dark:prose-a:text-gray-300"
         >
           <slot />
         </div>
