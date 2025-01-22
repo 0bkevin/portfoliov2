@@ -36,8 +36,8 @@
 </script>
 
 <nav
-  class={`bg-[#fafafa] dark:bg-[#13161d]  h-16 flex justify-between items-center gap-4 p-6 max-w-6xl mx-auto transition-transform ease-in-out ${
-    stickyNav  && shouldFixed ? "fixed-n drop-shadow-md " : ""
+  class={`bg-transparent h-16 flex justify-between items-center gap-4 p-6 max-w-6xl mx-auto transition-transform ease-in-out ${
+    stickyNav  && shouldFixed ? "fixed-n drop-shadow-md !bg-[#fafafa] dark:!bg-[#13161d]" : " bg-transparent"
   }`}
 >
   <a href="/" class="font-semibold text-lg ">Kevin Bravo</a>
@@ -66,7 +66,6 @@
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: transform 0.3s ease;
   }
 
 </style>
