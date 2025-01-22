@@ -13,3 +13,19 @@ html {
   color: #e2e2e2;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #FAFAFA inset !important;
+  box-shadow: 0 0 0 1000px #FAFAFA inset !important;
+  -webkit-text-fill-color: #000 !important;
+  caret-color: #000 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #13161d inset !important; /* Dark background */
+    box-shadow: 0 0 0 1000px #13161d inset !important; /* Dark background */
+    -webkit-text-fill-color: #FFF !important; /* Light text color */
+    caret-color: #FFF !important; /* Light caret color */
+  }
+}
