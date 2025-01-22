@@ -24,7 +24,7 @@
 <button
   type="submit"
   disabled={status !== "toSend"}
-  class="flex justify-between py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-[1.02] transition-transform disabled:bg-slate-600 disabled:cursor-not-allowed disabled:text-slate-200"
+  class="flex justify-between py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-[1.02] transition-transform disabled:bg-slate-600 disabled:cursor-not-allowed disabled:text-slate-200 dark:bg-gray-700 dark:hover:bg-gray-600"
 >
   {#if status === "sending"}
     Sending...
@@ -86,7 +86,7 @@
       </div>
 
       <button
-        class="text-gray-500 transition hover:text-gray-600"
+        class="text-gray-500 dark:text-gray-300 transition hover:text-gray-600"
         on:click={dismissPopup}
       >
         <span class="sr-only">Dismiss popup</span>
@@ -143,7 +143,7 @@
       </div>
 
       <button
-        class="text-gray-500 transition hover:text-gray-600"
+        class="text-gray-500 dark:text-gray-300 transition hover:text-gray-600"
         on:click={dismissPopup}
       >
         <span class="sr-only">Dismiss popup</span>

@@ -13,12 +13,12 @@
 </script>
 
 <div>
-  <div class="contact__form-div contact__form-area">
-    <label class="contact__form-tag text-xs" for={name}>{label}</label>
+  <div class="contact__form-div contact__form-area ">
+    <label class="contact__form-tag text-xs dark:bg-[#13161d]" for={name}>{label}</label>
     <textarea
       required
       class:error
-      class="contact__form-input"
+      class="contact__form-input dark:border-gray-600"
       {placeholder}
       {name}
       on:input={handleInput}

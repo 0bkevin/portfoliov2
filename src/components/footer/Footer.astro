@@ -3,7 +3,7 @@ import { footerLinks, socialIcons } from "./data.ts";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="border-t bg-white h-full w-full">
+<footer class="border-t dark:border-gray-800 bg-white dark:bg-gray-950 h-full w-full">
   <div
     class="flex flex-col items-center justify-center gap-8 px-4 py-12 md:py-16 w-full"
   >
@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear();
         footerLinks.map(({ name, link }) => (
           <a
             href={link}
-            class="text-slate-700 hover:font-bold hover:text-black  text-sm font-medium transition-colors hover:text-primary"
+            class="text-slate-700 dark:text-gray-400 hover:font-bold hover:text-black  text-sm font-medium transition-colors hover:text-primary"
           >
             {name}
           </a>
@@ -31,7 +31,7 @@ const currentYear = new Date().getFullYear();
           <a
             target="_blank"
             href={link}
-            class={`hover:font-bold hover:text-black text-2xl ${icon}`}
+            class={`hover:font-bold hover:text-black dark:hover:text-white text-2xl ${icon}`}
           />
         ))
       }

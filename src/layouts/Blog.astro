@@ -4,6 +4,7 @@ import { formatDateToDisplay, getReadingTime } from "@lib/utils";
 import type { CollectionEntry } from "astro:content";
 import Toc from "@components/Toc/Toc.svelte";
 import "@styles/global.css";
+import Navbar from "../components/header/Navbar.svelte";
 
 interface Props {
   blog: CollectionEntry<"blogs">;
@@ -18,6 +19,11 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      if (localStorage.getItem("darkMode") === "true") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="description" content={blog.data.description} />
     <meta name="viewport" content="width=device-width" />
@@ -85,20 +91,22 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
     <meta name="generator" content={Astro.generator} />
     <title>0b | {blog.data.title}</title>
   </head>
-  <header></header>
-  <body>
+  <header>
+    <Navbar client:only="svelte" shouldFixed={false} />
+  </header>
+  <body class="dark:!bg-slate-500">
     <main>
       <article class="max-w-[52rem] mx-auto pb-16 pt-8 space-y-5 px-4 md:px-0">
         <div class="flex gap-2">
           <a
             href="/0b"
-            class="border font-medium border-black py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
+            class="border font-medium border-black dark:border-gray-700 dark:hover:bg-gray-700 py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
           >
             Back to blog
           </a>
           <a
             href="/"
-            class="border font-medium border-black py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
+            class="dark:border-gray-700 dark:hover:bg-gray-700 border font-medium border-black py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
           >
             Back to main page
           </a>
@@ -123,7 +131,7 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
           {blog.data.title}
         </h1>
         <div
-          class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500 mb-4"
+          class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-500 dark:text-gray-300 mb-4"
         >
           <div class="flex items-center gap-1 hover:text-black">
             <i class="bx bx-calendar text-lg"></i>
@@ -150,7 +158,8 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
           }
         </div>
         <div
-          class="prose lg:prose-lg max-w-none prose-code:before:hidden prose-code:after:hidden prose-code:bg-gray-800 prose-code:text-gray-100 prose-code:font-extralight prose-code:text-sm prose-code:font-mono prose-code:py-1 prose-code:px-2 prose-code:rounded-md"
+          class="prose lg:prose-lg max-w-none prose-code:before:hidden prose-code:after:hidden prose-code:bg-gray-800 prose-code:text-gray-100 prose-code:font-extralight prose-code:text-sm prose-code:font-mono prose-code:py-1 prose-code:px-2 prose-code:rounded-md dark:text-gray-200 dark:prose-blockquote:text-gray-200 dark:prose-strong:text-white dark:prose-em:text-gray-300 dark:prose-headings:text-white
+          dark:prose-a:text-gray-300"
         >
           <slot />
         </div>

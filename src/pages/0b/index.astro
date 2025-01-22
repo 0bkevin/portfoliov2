@@ -20,7 +20,7 @@ const recentPost = sortedPost.slice(0, 3);
   >
     <div class="mb-12">
       <h1 class="text-5xl font-bold mb-2">0b</h1>
-      <p class="text-xl text-gray-600">
+      <p class="text-xl text-gray-600 dark:text-gray-400">
         I post about software development, maths, blockchain, security and
         embebed syst.
       </p>
@@ -30,9 +30,9 @@ const recentPost = sortedPost.slice(0, 3);
       <div class="lg:col-span-2 justify-self-start w-full">
         <div class="flex justify-between mb-8 items-center gap-5">
           <h2 class="text-2xl font-semibold">All post</h2>
-          <div class="py-[0.1px] bg-black flex-grow mt-2"></div>
+          <div class="py-[0.1px] bg-black flex-grow mt-2 dark:bg-gray-500"></div>
 
-          <span class="text-gray-600">{blogs.length} Posts</span>
+          <span class="text-gray-600 dark:text-gray-200">{blogs.length} Posts</span>
         </div>
         <ul class="space-y-4">
           {
@@ -40,17 +40,17 @@ const recentPost = sortedPost.slice(0, 3);
               <li>
                 <a
                   href={`/0b/${blog.id}`}
-                  class="flex flex-col lg:flex-row lg:items-center lg:gap-4 hover:scale-[1.02] transition-transform "
+                  class="flex flex-col lg:flex-row lg:items-center lg:gap-4 hover:scale-[1.01] transition-transform "
                 >
-                  <h2 class="font-medium text-gray-900">{blog.data.title}</h2>
-                  <div class="hidden lg:block py-[0.1px] bg-black flex-grow" />
+                  <h2 class="font-medium text-gray-900 dark:text-gray-200">{blog.data.title}</h2>
+                  <div class="hidden lg:block py-[0.1px] bg-black flex-grow  dark:bg-gray-500" />
                   <div class="flex gap-2 lg:items-center text-sm lg:justify-center">
                     <p>{formatDateToDisplay(blog.data.pubDate)}</p>
                     <p class="hidden lg:block">|</p>
                     <p>{getReadingTime(blog.body)} min Read</p>
                   </div>
                 </a>
-                <div class="block lg:hidden py-[0.1px] bg-black flex-grow mt-2" />
+                <div class="block lg:hidden py-[0.1px] bg-black  dark:bg-gray-500 flex-grow mt-2" />
               </li>
             ))
           }

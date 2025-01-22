@@ -26,13 +26,11 @@
   text-align: center;
 }
 
-
 .contact__card-icon{
   font-size: 2rem;
   color: var(--title-color);
   margin-bottom: var(--mb-0-25);
 }
-
 
 .contact__card-title,
 .contact__card-data {
@@ -132,8 +130,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 567px) {
   .contact__info {
       grid-template-columns: 1fr;
@@ -141,5 +137,16 @@
 
   .contact__form {
       width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact__card {
+    background-color: var(--dark-container-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .contact__button {
+    color: var(--dark-text-color);
   }
 }

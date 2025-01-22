@@ -13,15 +13,15 @@
 </script>
 
 <div>
-  <div class="contact__form-div">
-    <label class="contact__form-tag text-xs " for={name}
+  <div class="contact__form-div dark:!border-gray-400">
+    <label class="contact__form-tag dark:!bg-[#13161d] text-xs " for={name}
       >{label}</label
     >
     <input
       {type}
       required
       class:error
-      class="contact__form-input"
+      class="contact__form-input dark:border-gray-600"
       {placeholder}
       {name}
       on:input={handleInput}

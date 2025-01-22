@@ -10,7 +10,7 @@ const { title, icon, link, content } = Astro.props;
 ---
 
 <a href={link} class="w-full h-full">
-  <div class="contact__card !bg-white space-y-2">
+  <div class="contact__card !bg-white dark:!bg-gray-800 space-y-2">
     <i class={`bx bx${icon} contact__card-icon`}></i>
     <h3 class="text-center font-semibold ">{title}</h3>
     <p class="text-sm ">{content}</p>

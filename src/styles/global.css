@@ -5,4 +5,11 @@
 html {
   scroll-behavior: smooth;
   background-color: #FAFAFA;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+  background-color: #13161d; /* Dark Gray */
+  color: #e2e2e2;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
