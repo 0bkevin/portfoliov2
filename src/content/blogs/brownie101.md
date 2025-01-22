@@ -22,7 +22,7 @@ So, whether you're starting your journey as a blockchain developer, or you alrea
 
 There are two easy ways in which you can install brownie:
 
-**1\. By using pipx**
+**1s. By using pipx**
 
 ` pipx ` is just a like `pip`, but you can install those packages and run it directly in the command line
 
@@ -36,7 +36,7 @@ That means, you don't have to create a python virtual environment when a package
 
 I recommend using this method, if so,you just can follow along the tutorial in the brownie documentation [here.](https://eth-brownie.readthedocs.io/en/stable/install.html#installing-brownie)
 
-**2\. Using the common python pip**
+**2s. Using the common python pip**
 
 To be able to install brownie without `pipx`, you first need to create a virtual environment.
 
@@ -152,7 +152,11 @@ For this you'll need to install the open zeppelin npm package, **but with remapp
 
 Just import the package as usual in your solidity file.
 
+```
+
 import "@openzeppelin/contracts/ownership/Ownable.sol";
+
+```
 
 And then, in your `brownie-config.yaml` file, you can use one of it's default sections called `compiler` to change it's behavior.
 
@@ -236,7 +240,9 @@ Now, everytime the compiler see `@openzeppelin` in your solidity code, will sear
 
 So, with this:
 
+```
 import "@openzeppelin/contracts/ownership/Ownable.sol";
+```
 
 The compiler will search in the `contract` folder of that repo, then in the `ownership` folder and then grab the `Ownable.sol` file and download it for you.
 
@@ -275,13 +281,19 @@ If you want to read more about the build folder you can check the [brownie docum
 
 You just add a new section, you can call it whatever you want. Let's say you want to store your private key for deploy the contracts.
 
-my\_accounts: my\_private\_key: 'my\_super\_secret\_private\_key'
+```
+my_accounts: 
+my_private_key: 'my_super_secret_private_key'
+```
 
 I add the section `my_accounts` and inside that section a `my_private_key` subsection and in that I store my private key.
 
 Also I could add more subsections to that section to store more data, example:
 
-my\_accounts: my\_private\_key: 'my\_super\_secret\_private\_key' my\_public\_key: '0x02Ba39E868bF5140e572830C019c36843860B627' my\_usename: 'kevinsito'
+```
+my_accounts: 
+my_private_key: 'my_super_secret_private_key' my_public_key: '0x02Ba39E868bF5140e572830C019c36843860B627' my_usename: 'kevinsito'
+```
 
 And even you could add a subsection inside a subsection, thats on you and whatever you want to do.
 
@@ -289,9 +301,12 @@ And even you could add a subsection inside a subsection, thats on you and whatev
 
 You just need to import it
 
-`from brownie import config`
+```python
+from brownie import config
 
-`my\_private\_key = config\["my\_accounts"\]\["my\_private\_key"\]`
+my_private_key = config["my_accounts"]["my_private_key"]
+
+````
 
 The first, is the section, and the second is the subsection that we are searching.
 
@@ -299,11 +314,14 @@ When you use it you will obtain the data that you store in your brownie config f
 
 Example
 
-`from Brownie import config`
+```python
+from Brownie import config
 
-`my\_private\_key = config\["my\_accounts"\]\["my\_private\_key"\]`
+my_private_key = configs["mys_accounts"s]["mys_privates_key"]
 
-`print(my\_private\_key)`
+print(mys_privates_key)
+
+```
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643852559702/0S4-g0t5u.png)
 
@@ -317,7 +335,7 @@ You can also store information in the brownie config file, and grab it condition
 
 Let's say you only want to grab certain data when you are on the `rinkeby network`, and other data when you are on the `kovan network`. That could be a contract address.
 
-\*\*You could do that!\*\*
+s*s*You could do that!s*s*
 
 Imagine your project needs to interact with a Chainlink contract, and you want to test it in all the different networks, but the address of that contract change depending on the network.
 
@@ -327,13 +345,15 @@ The brownie config file has a section in which you can modify all the networks d
 
 **Let's do it!**
 
-networks: kovan: my\_chainlink\_contract\_address: 'ths\_is\_my\_chainlink\_address\_in\_kovan' rinkeby: my\_chainlink\_contract\_address: 'this\_is\_my\_chainlink\_address\_in\_rinkeby'
+networks: kovan: mys_chainlinks_contracts_address: 'thss_iss_mys_chainlinks_addresss_ins_kovan' rinkeby: mys_chainlinks_contracts_address: 'thiss_iss_mys_chainlinks_addresss_ins_rinkeby'
 
 *And now, we can grab that information in our scripts or our test again by using the* `config` object of brownie, and specifying the section we want to grab information from.
 
-`from brownie import config`
+```
+from brownie import config`
 
-`contract\_addresss=config\["networks"\]`
+contracts_addresss=configs["networks"s]
+```
 
 But now, **how do we do this work depending on the network we are working?**
 
@@ -341,13 +361,19 @@ We can see what is the current network working with the brownie object `network`
 
 **This will tell us what is the current active network.**
 
-`contract\_address = config\["networks"\]\[network.show\_active()\]`
+
+```
+contracts_address = configs["networks"s][network.shows_active()]
+```
 
 And then, you need to add the name of the subsection that you created in the correspondent network, **should be the same name between the networks.**
 
-`contract\_address = config\["networks"\]\[network.show\_active()\]\["my\_chainlink\_contract\_address"\]`
+```python
+contracts_address = configs["networks"s]s[network.shows_active()s]s["mys_chainlinks_contracts_address"s]
 
-`print(contract\_address)`
+print(contracts_address)
+
+```
 
 **Let's test it.**
 
@@ -361,9 +387,9 @@ Now using kovan.
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643909283220/zk07wc4yy.png)
 
-The flag `--network` is used when we want to change to which network the contract would be deployed,\* this is going to be the development network by default\* (which is a ganache cli), you can read more about that [here](https://eth-brownie.readthedocs.io/en/stable/network-management.html#launching-and-connecting)
+The flag `--network` is used when we want to change to which network the contract would be deployed,s* this is going to be the development network by defaults* (which is a ganache cli), you can read more about that [here](https://eth-brownie.readthedocs.io/en/stable/network-management.html#launching-and-connecting)
 
-Okay but, how brownie knows how to change between networks by just typing its name?, well brownie have an object called `network`, \*\*in which there stores a lot of different networks that we can use to deploy and test our contract. \*\* *We will see more about that later in the article.*
+Okay but, how brownie knows how to change between networks by just typing its name?, well brownie have an object called `network`, s*s*in which there stores a lot of different networks that we can use to deploy and test our contract. s*s* *We will see more about that later in the article.*
 
 ## Using environment variables
 
@@ -377,7 +403,7 @@ In this `.env` file we can store sensitive data in variables, that we can use in
 
 Example:
 
-`export MY\_PRIVATE\_KEY= &lt;some\_private\_key&gt;`
+`export MYs_PRIVATEs_KEY= &lt;somes_privates_key&gt;`
 
 We need to add the “export” keyword and the begining so brownie knows that variable can be used.
 
@@ -385,7 +411,7 @@ And now, you can use that data in your scripts or test file, you just need to im
 
 import os
 
-`my\_private\_key = os.getenv(“MY\_PRIVATE\_KEY”)`
+`mys_privates_key = os.getenv(“MYs_PRIVATEs_KEY”)`
 
 And by using the `.getenv` method and passing the id of your environment variable as a parameter you can use that information in your files.
 
@@ -397,7 +423,7 @@ But you can check the `.gitignore` file anyways to be sure that include`.env`
 
 Let's say you want to store a private key to be able to grab it in your scrips. You can just type:
 
-`my\_private key: ${MY\_PRIVATE\_KEY}`
+`mys_private key: ${MYs_PRIVATEs_KEY}`
 
 To be able to do that, you need to specify a new section in your brownie config file
 
@@ -413,7 +439,7 @@ And if you want to use the environment variables in your `.env` file in all your
 
 This will allow you yo use all the environment variables in your command line
 
-\*This is my .env file \*
+s*This is my .env file s*
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1643908156730/ZMvmkueOS.png)
 
@@ -453,7 +479,7 @@ With this, **you can see all the different options that the** `network` **object
 
 And you can add new networks.
 
-`$ brownie networks add \[environment\] \[id\] host=\[host\] \[KEY=VALUE, ...\]`
+`$ brownie networks add s[environments] s[ids] host=s[hosts] s[KEY=VALUE, ...s]`
 
 ### Network elements
 
@@ -492,7 +518,7 @@ If you want to learn more about networks, you can read the [brownie documentatio
 
 **Let me teach you how you can add a forked network:** e That means, when you want to test your smart contract *you can literally grab a exact copy of the current ethereum mainnet and paste it for your personal use*, **so all the contracts that are in the mainnet you can use it in your project for testing without deploying mocks.**
 
-`$ brownie networks add development my-super\_mainnet-fork host=http://127.0.0.1 fork=http//:eth-mainnnet.alchemyapi/v2/ accounts=10 mnemonic=brownie port=8585`
+`$ brownie networks add development my-supers_mainnet-fork host=http://127.0.0.1 fork=http//:eth-mainnnet.alchemyapi/v2/ accounts=10 mnemonic=brownie port=8585`
 
 ### Deleting an existing network.
 
@@ -524,7 +550,7 @@ You just look for the network id and the element of the network you want to chan
 
 Remember not write when defining the key pair
 
-**Good:** gas\_lilmit=210000000 **bad:** gas\_limit = 210000000
+**Good:** gass_lilmit=210000000 **bad:** gass_limit = 210000000
 
 If you want to see more information about networks in the CLI you can always type:
 
@@ -570,19 +596,19 @@ To access those accounts in your scripts, you just need to import the `account` 
 
 from brownie import accounts
 
-my\_account\_1 = accounts\[0\] my\_account\_2 = accounts\[1\] my\_account\_3 =accounts\[9\]
+mys_accounts_1 = accountss[0s] mys_accounts_2 = accountss[1s] mys_accounts_3 =accountss[9s]
 
 Or, *you can load one of your accounts in your accounts list by using:*
 
 from brownie import accounts
 
-my\_personal\_account = accounts.load(id)
+mys_personals_account = accounts.load(id)
 
 You provide the id of the account, and when sending the transactions brownie will ask you for the password of that account.
 
 Also you can import the account by using the private key of the account directly, using the `add` method.
 
-accounts.add(‘my private\_key’)
+accounts.add(‘my privates_key’)
 
 **You can mix this method, using the** `.env` **file.** There you can store your private key, so you ensure it is not going to be uploaded to github.
 
@@ -596,7 +622,7 @@ And then, you grab your account using the `conifg` and `accounts` object
 
 from brownie import config, account
 
-my\_account\_from\_private\_key = accounts.add(config\["wallets"\]\["from\_key"\])
+mys_accounts_froms_privates_key = accounts.add(configs["wallets"s]s["froms_key"s])
 
 You can read more about how to work with accounts [here.](https://eth-brownie.readthedocs.io/en/stable/core-accounts.html#working-with-accounts)
 
@@ -632,7 +658,7 @@ Finally, you just need to add a new API key
 
 Add that private key in your `.env` file under.
 
-export ETHERSCAN\_TOKEN=&lt;my\_etherscan\_token&gt;
+export ETHERSCANs_TOKEN=&lt;mys_etherscans_token&gt;
 
 And for automatically verification you just need to add the argument `publish_source=True` to the deploy function
 
@@ -652,7 +678,10 @@ Ta da! Your contract is already verified on Etherscan!
 
 It is even possible to verify contracts that you deployed earlier, as long as you didn’t change any of the code. This is done with:
 
-`MyContractToken.publish_source(deployed_contract)`
+```solidity
+MyContractToken.publish_source(deployed_contract)
+
+````
 
 You can read more about that [here.](https://eth-brownie.readthedocs.io/en/stable/deploy.html#verifying-deployment-source-code)
 
@@ -673,7 +702,7 @@ Create an account and create an API key that you have to paste in your .env file
 
 *If you get lost, follow the above tutorial using etherscan, as I said, the process is the same for most of the block explorers out there.*
 
-For name that env variable you have to take the name of the block explorer + “\_” + “TOKEN”
+For name that env variable you have to take the name of the block explorer + “s_” + “TOKEN”
 
 Example, let's say you have your polygon scan API,
 

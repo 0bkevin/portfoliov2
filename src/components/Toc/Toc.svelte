@@ -26,7 +26,7 @@
 
 <div class="md:max-w-xs overflow-x-hidden h-full">
   <!-- Toggle Button -->
-  <button on:click={toggleOpen} class="toggle-button rounded-full px-2 py-1 top-4 md:top-5 opacity-50 md:opacity-100 hover:scale-105">
+  <button on:click={toggleOpen} class="toggle-button rounded-full px-2 py-1 top-4 md:top-10 opacity-50 md:opacity-100 hover:scale-105">
     {#if $isOpen}
       <i class="bx bx-x text-lg font-medium"></i>
     {:else}
