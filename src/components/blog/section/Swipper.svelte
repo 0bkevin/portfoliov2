@@ -14,7 +14,7 @@
     if (swiperEl) {
       Object.assign(swiperEl, {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 15,
         speed: 500,
         loop: true,
         autoplayDelay: 2000,
@@ -31,7 +31,11 @@
             slidesPerView: 2,
             spaceBetween: 0,
           },
-          1024: {
+          850: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          1099: {
             slidesPerView: 4,
             spaceBetween: 20,
           },

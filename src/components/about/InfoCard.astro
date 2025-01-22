@@ -21,13 +21,13 @@ const ACHIEVEMENTS = [
 ];
 ---
 
-<div class="grid grid-cols-3 h-36 max-h-36 w-full md:gap-4">
+<div class="grid grid-cols-3 h-36 max-h-36 w-full md:gap-4 gap-2">
   {
     ACHIEVEMENTS.map(({ subtitle, icon, title }) => {
       return (
-        <div class="about__box transition-transform hover:scale-105 hover:cursor-pointer max-h-36 h-36 md:max-w-36 bg-white dark:bg-gray-800 ">
+        <div class="about__box transition-transform hover:scale-105 hover:cursor-pointer max-h-36 h-36 md:max-w-36 bg-white dark:bg-gray-800 flex flex-col items-center justify-center">
           <i class={`bx ${icon} about__icon`} />
-          <h3 class="font-medium text-center">{title}</h3>
+          <h3 class="font-medium text-center text-sm md:text-base">{title}</h3>
           <p class="text-xs lg:text-sm mt-2">{subtitle}</p>
         </div>
       );
