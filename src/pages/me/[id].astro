@@ -5,7 +5,7 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 export const prerender = true;
 // called at build time, it compiles the list of all possible paths for this page to make it static
 export async function getStaticPaths() {
-  const posts = await getCollection("me");
+  const posts = (await getCollection("me")) as CollectionEntry<"me">[];
   return posts.map((blog) => ({
     params: { id: blog.id },
     props: { blog },
@@ -16,7 +16,7 @@ interface Props {
   blog: CollectionEntry<"me">;
 }
 const { blog } = Astro.props;
-const { Content, headings  } = await render(blog);
+const { Content, headings } = await render(blog);
 ---
 
 <MeLayout blog={blog} tableOfContents={headings}>

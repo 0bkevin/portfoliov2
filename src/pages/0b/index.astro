@@ -1,9 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import BlogCard from "@components/blog/section/BlogCard.svelte";
 import { formatDateToDisplay, getReadingTime } from "../../lib/utils";
-const blogs = await getCollection("blogs");
+
+const blogs = (await getCollection("blogs")) as CollectionEntry<"blogs">[];
 
 const sortedPost = blogs.sort(
   (a, b) => Number(new Date(b.data.pubDate)) - Number(new Date(a.data.pubDate))
@@ -30,9 +31,12 @@ const recentPost = sortedPost.slice(0, 3);
       <div class="lg:col-span-2 justify-self-start w-full">
         <div class="flex justify-between mb-8 items-center gap-5">
           <h2 class="text-2xl font-semibold">All post</h2>
-          <div class="py-[0.1px] bg-black flex-grow mt-2 dark:bg-gray-500"></div>
+          <div class="py-[0.1px] bg-black flex-grow mt-2 dark:bg-gray-500">
+          </div>
 
-          <span class="text-gray-600 dark:text-gray-200">{blogs.length} Posts</span>
+          <span class="text-gray-600 dark:text-gray-200"
+            >{blogs.length} Posts</span
+          >
         </div>
         <ul class="space-y-4">
           {
@@ -42,7 +46,9 @@ const recentPost = sortedPost.slice(0, 3);
                   href={`/0b/${blog.id}`}
                   class="flex flex-col lg:flex-row lg:items-center lg:gap-4 hover:scale-[1.01] transition-transform "
                 >
-                  <h2 class="font-medium text-gray-900 dark:text-gray-200">{blog.data.title}</h2>
+                  <h2 class="font-medium text-gray-900 dark:text-gray-200">
+                    {blog.data.title}
+                  </h2>
                   <div class="hidden lg:block py-[0.1px] bg-black flex-grow  dark:bg-gray-500" />
                   <div class="flex gap-2 lg:items-center text-sm lg:justify-center">
                     <p>{formatDateToDisplay(blog.data.pubDate)}</p>
