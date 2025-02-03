@@ -82,12 +82,6 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="0b Blog"
-      href={new URL("rss.xml", Astro.site)}
-    />
     {
       blog.data.canonicalURL ? (
         <link rel="canonical" href={blog.data.canonicalURL} />

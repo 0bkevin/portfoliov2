@@ -10,5 +10,7 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   integrations: [tailwind(), svelte(), sitemap()],
   output: 'server',
-  adapter: cloudflare()
+  trailingSlash: 'never',
+  adapter: cloudflare(),
+  site: 'https://www.kevinbravo.com',
 });
