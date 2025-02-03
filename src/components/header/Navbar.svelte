@@ -36,7 +36,7 @@
 </script>
 
 <nav
-  class={`bg-transparent h-16 flex justify-between items-center gap-4 p-6 max-w-6xl mx-auto transition-transform ease-in-out ${
+  class={`bg-transparent h-16 flex justify-between items-center gap-4 p-6 max-w-6xl mx-auto transition-transform ease-in-out z-50 ${
     stickyNav  && shouldFixed ? "fixed-n drop-shadow-md !bg-[#fafafa] dark:!bg-[#13161d]" : " bg-transparent"
   }`}
 >

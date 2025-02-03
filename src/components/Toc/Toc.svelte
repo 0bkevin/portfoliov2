@@ -24,9 +24,9 @@
   };
 </script>
 
-<div class="md:max-w-xs overflow-x-hidden h-full">
+<div class="md:max-w-xs ">
   <!-- Toggle Button -->
-  <button on:click={toggleOpen} class="toggle-button rounded-full px-2 py-1 top-4 md:top-10 opacity-50 md:opacity-100 hover:scale-105 ">
+  <button on:click={toggleOpen} class="toggle-button bg-white dark:bg-black rounded-full px-2 py-1 top-4 md:top-10 opacity-50 md:opacity-100 hover:scale-105 ">
     {#if $isOpen}
       <i class="bx bx-x text-lg font-medium"></i>
     {:else}
@@ -36,12 +36,12 @@
 
   <!-- Table of Contents -->
   <nav
-    class="md:max-w-xs p-4 rounded-md transition-all duration-300 ease-in-out overflow-y-hidden bg-white md:bg-transparent h-full dark:bg-black {$isOpen
-      ? 'translate-y-0 opacity-100'
-      : '-translate-y-full opacity-0'}"
+    class=" p-4 rounded-md transition-all duration-300 ease-in-out overflow-y-hidden bg-white md:bg-transparent h-full dark:md:bg-[#13161d] dark:text-white {$isOpen
+      ? 'translate-y-10 opacity-100'
+      : '-translate-y-[110%] opacity-0'}"
   >
     <p class="font-semibold mb-3 text-lg">Table of Contents</p>
-    <ul class="space-y-1.5 md:max-w-[15rem] w-full h-full">
+    <ul class="space-y-1.5 truncate w-full h-full">
       {#each $headings as heading}
         <TocItem item={heading} toggleOpen={toggleOpen} isOpen={isOpen} />
       {/each}
@@ -53,15 +53,12 @@
   .toggle-button {
     position: fixed;
     right: 1rem;
-    background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     z-index: 50;
   }
   
   @media (prefers-color-scheme: dark) {
     .toggle-button {
-      background-color: #333; /* Dark background */
-      color: white; /* Light text color */
       box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
     }
   }

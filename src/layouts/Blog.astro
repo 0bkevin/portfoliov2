@@ -108,13 +108,13 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
         <div class="flex gap-2">
           <a
             href="/0b"
-            class="border font-medium border-black dark:border-gray-700 dark:hover:bg-gray-700 py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
+            class="border font-medium border-black dark:border-gray-600 dark:hover:bg-gray-600 py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
           >
             Back to blog
           </a>
           <a
             href="/"
-            class="dark:border-gray-700 dark:hover:bg-gray-700 border font-medium border-black py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
+            class="border font-medium border-black dark:border-gray-600 dark:hover:bg-gray-600 py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
           >
             Back to main page
           </a>
@@ -172,7 +172,7 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
           <slot />
         </div>
       </article>
-      <aside class="fixed top-14 bottom-0 left-[20%] md:left-[81%] md:right-0">
+      <aside class="fixed top-14 bottom-0 left-0 md:left-[81%] right-0">
         <Toc client:only="svelte" />
       </aside>
     </main>
