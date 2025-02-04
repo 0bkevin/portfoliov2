@@ -55,6 +55,9 @@
         }, 5000);
       }
     }
+    else {
+      status = "toSend";
+    }
   };
 </script>
 
