@@ -20,5 +20,19 @@ export const contactData = [
     link: "https://discordapp.com/channels/@me/0bkevin/",
     index: 3,
   },
+  {
+    title: "X",
+    content: "@0bkevin",
+    icon: "l-twitter",
+    link: "https://x.com/0bkevin",
+    index: 4,
+  },
+  {
+    title: "LinkedIn",
+    content: "Kevin Bravo",
+    icon: "l-linkedin",
+    link: "https://www.linkedin.com/in/0bkevin/",
+    index: 5,
+  },
 ];
 
