@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear();
   >
     <a
       href="/"
-      class="text-3xl font-bold tracking-tight transition-colors hover:text-primary hover:text-black"
+      class="text-3xl font-bold tracking-tight transition-all duration-300 hover:text-green-500 dark:hover:text-green-400"
     >
       Kevin Bravo
     </a>
@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear();
         footerLinks.map(({ name, link }) => (
           <a
             href={link}
-            class="text-slate-700 dark:text-gray-400 hover:font-bold hover:text-black  text-sm font-medium transition-colors hover:text-primary"
+            class="text-slate-700 dark:text-gray-400 hover:text-green-500 text-sm font-medium transition-all duration-300"
           >
             {name}
           </a>
@@ -31,7 +31,7 @@ const currentYear = new Date().getFullYear();
           <a
             target="_blank"
             href={link}
-            class={`hover:font-bold hover:text-black dark:hover:text-white text-2xl ${icon}`}
+            class={`hover:text-green-500 dark:hover:text-green-400 hover:scale-110 transition-all duration-300 text-2xl ${icon}`}
           />
         ))
       }
