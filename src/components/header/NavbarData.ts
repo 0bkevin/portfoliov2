@@ -5,18 +5,18 @@ const NAV_ITEMS = [
     icon: "estate",
     id: 1,
   },
-  {
-    name: "About",
-    link: "#about",
-    icon: "user",
-    id: 2,
-  },
-  {
-    name: "Skills",
-    link: "#skills",
-    icon: "briefcase-alt",
-    id: 3,
-  },
+  // {
+  //   name: "About",
+  //   link: "#about",
+  //   icon: "user",
+  //   id: 2,
+  // },
+  // {
+  //   name: "Skills",
+  //   link: "#skills",
+  //   icon: "briefcase-alt",
+  //   id: 3,
+  // },
   // {
   //   name: "Who am I?",
   //   link: "me/who-is-kevin-bravo",
@@ -44,7 +44,7 @@ const NAV_ITEMS = [
   },
   {
     name: "Contact",
-    link: "#contact",
+    link: "/#contact",
     icon: "message",
     id: 7,
   },
