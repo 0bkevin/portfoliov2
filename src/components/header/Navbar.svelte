@@ -201,6 +201,25 @@
     }
   }
 
+  @keyframes slideOutNavDark {
+    0% {
+      opacity: 1;
+      transform: translateY(-2px);
+      background: rgba(19, 22, 29, 0.65);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0);
+    }
+  }
+
   /* Hover effect for extra interactivity */
   .sticky-nav:hover {
     box-shadow: 0 12px 32px rgba(2, 6, 23, 0.14);
@@ -300,6 +319,7 @@
   :global(.dark) .nav-normal.animating-out {
     background: rgba(19, 22, 29, 0.65);
     border-color: rgba(255, 255, 255, 0.12);
+    animation: slideOutNavDark 480ms cubic-bezier(0.34, 1.2, 0.64, 1);
   }
 
   :global(.dark) .sticky-nav:hover {
