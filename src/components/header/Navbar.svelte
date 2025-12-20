@@ -3,51 +3,43 @@
   import NAV_ITEMS from "./NavbarData.ts";
   import ToggleDark from "../ToggleDark.svelte";
 
-  export  let shouldFixed = true
+  export let shouldFixed = true;
 
-  let Toggle = false;
   let activeNav = "#home";
 
   let stickyNav = false;
   let isAnimating = false;
-  let scrollDirection = "up";
   let lastScrollY = 0;
 
   // Throttle scroll events for better performance
   let ticking = false;
 
   const handleScroll = () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const currentScrollY = window.scrollY;
-        
-        // Detect scroll direction for subtle effects
-        scrollDirection = currentScrollY > lastScrollY ? "down" : "up";
-        lastScrollY = currentScrollY;
+    if (ticking) return;
 
-        if (currentScrollY >= 40) {
-          if (!stickyNav) {
-            isAnimating = true;
-            stickyNav = true;
-            setTimeout(() => {
-              isAnimating = false;
-            }, 400);
-          }
-        } else {
-          if (stickyNav) {
-            isAnimating = true;
-            stickyNav = false;
-            setTimeout(() => {
-              isAnimating = false;
-            }, 400);
-          }
-        }
-        
-        ticking = false;
-      });
-      
-      ticking = true;
-    }
+    window.requestAnimationFrame(() => {
+      const currentScrollY = window.scrollY;
+      const crossedThreshold = currentScrollY >= 40;
+
+      if (crossedThreshold && !stickyNav) {
+        isAnimating = true;
+        stickyNav = true;
+        setTimeout(() => {
+          isAnimating = false;
+        }, 500);
+      } else if (!crossedThreshold && stickyNav) {
+        isAnimating = true;
+        stickyNav = false;
+        setTimeout(() => {
+          isAnimating = false;
+        }, 480);
+      }
+
+      lastScrollY = currentScrollY;
+      ticking = false;
+    });
+
+    ticking = true;
   };
 
   onMount(() => {
@@ -57,16 +49,19 @@
     };
   });
 
-  const toggleMenu = () => {
-    Toggle = !Toggle;
-  };
-
   const setActive = (link) => {
     activeNav = link;
   };
 </script>
 
+{#if stickyNav || isAnimating}
+  <div aria-hidden="true" class="nav-spacer is-active"></div>
+{:else}
+  <div aria-hidden="true" class="nav-spacer"></div>
+{/if}
+
 <nav
+  aria-label="Main navigation"
   class={`bg-transparent h-16 flex justify-between items-center gap-4 p-6 max-w-6xl mx-auto z-50 ${
     stickyNav && shouldFixed
       ? `sticky-nav drop-shadow-md${isAnimating ? ' animating' : ''}`
@@ -74,25 +69,22 @@
   }`}
 >
   <a href="/" class="nav-logo font-semibold text-lg">Kevin Bravo</a>
-  <div class={Toggle ? "nav__menu show-menu " : "nav__menu"}>
+  <div class="nav__menu">
     <ul class="hidden md:flex gap-6 items-center">
-      {#each NAV_ITEMS as { name, link, id, icon }, index}
-        <li 
-          class="nav__item" 
-          key={id}
-          style="--item-index: {index};"
-        >
+      {#each NAV_ITEMS as item, index (item.id)}
+        <li class="nav__item">
           <a
-            href={link}
-            on:click={() => setActive(link)}
-            class={activeNav === link ? "nav__link active-link" : "nav__link"}
+            href={item.link}
+            on:click={() => setActive(item.link)}
+            aria-current={activeNav === item.link ? 'page' : undefined}
+            class={activeNav === item.link ? "nav__link active-link" : "nav__link"}
           >
-            <span class="nav__link-text">{name}</span>
+            <span class="nav__link-text">{item.name}</span>
             <span class="nav__link-underline"></span>
           </a>
         </li>
       {/each}
-      <li class="nav__item" style="--item-index: {NAV_ITEMS.length};">
+      <li class="nav__item">
         <ToggleDark/>
       </li>
     </ul>
@@ -100,6 +92,16 @@
   </div>
 </nav>
 <style>
+  /* Reserve space to prevent layout shift when nav becomes fixed */
+  .nav-spacer {
+    height: 0;
+    transition: height 480ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-spacer.is-active {
+    height: 4rem; /* match h-16 */
+  }
+
   /* Normal state with transition readiness */
   .nav-normal {
     background: transparent;
@@ -112,16 +114,12 @@
   }
 
   /* Exit animation when transitioning back to normal */
+  /* Keep fixed overlay during out animation to avoid layout jank */
   .nav-normal.animating-out {
-    animation: slideOutNav 500ms cubic-bezier(0.34, 1.2, 0.64, 1);
-  }
-
-  /* Enhanced sticky glassmorphism nav style */
-  .sticky-nav {
     position: fixed;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.98);
+    top: 0px;
+    left: 0;
+    right: 0;
     z-index: 1000;
     width: min(100%, 72rem);
     min-width: 0;
@@ -130,8 +128,29 @@
     backdrop-filter: blur(16px) saturate(160%);
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 50px;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    will-change: transform, opacity, border-color, background-color;
+    animation: slideOutNav 480ms cubic-bezier(0.34, 1.2, 0.64, 1);
+  }
+
+  /* Enhanced sticky glassmorphism nav style */
+  .sticky-nav {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    right: 0;
+    transform: translateY(0);
+    z-index: 1000;
+    width: min(100%, 72rem);
+    min-width: 0;
+    background: rgba(250, 250, 250, 0.7);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     will-change: transform, box-shadow, border-color;
     transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1),
                 backdrop-filter 400ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -149,16 +168,16 @@
   @keyframes slideInNav {
     0% {
       opacity: 0;
-      transform: translateX(-50%) translateY(-24px) scale(0.94);
+      transform: translateY(-24px);
       border-color: rgba(0, 0, 0, 0);
     }
     60% {
       opacity: 1;
-      transform: translateX(-50%) translateY(2px) scale(0.99);
+      transform: translateY(2px);
     }
     100% {
       opacity: 1;
-      transform: translateX(-50%) translateY(0) scale(0.98);
+      transform: translateY(0);
       border-color: rgba(0, 0, 0, 0.08);
     }
   }
@@ -166,15 +185,19 @@
   @keyframes slideOutNav {
     0% {
       opacity: 1;
-      transform: scale(0.98);
+      transform: translateY(-2px);
+      background: rgba(250, 250, 250, 0.7);
+      border-color: rgba(0, 0, 0, 0.08);
     }
-    40% {
+    60% {
       opacity: 1;
-      transform: scale(0.99);
+      transform: translateY(-1px);
     }
     100% {
       opacity: 1;
-      transform: scale(1);
+      transform: translateY(0);
+      background: transparent;
+      border-color: rgba(0, 0, 0, 0);
     }
   }
 
@@ -182,7 +205,7 @@
   .sticky-nav:hover {
     box-shadow: 0 12px 32px rgba(2, 6, 23, 0.14);
     border-color: rgba(0, 0, 0, 0.14);
-    transform: translateX(-50%) scale(0.985);
+    transform: translateY(0);
   }
 
   /* Logo styling with hover effect */
@@ -212,17 +235,6 @@
     width: 100%;
   }
 
-
-  @keyframes fadeInItem {
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
   /* Navigation links with enhanced microinteractions */
   .nav__link {
@@ -284,6 +296,11 @@
     background: rgba(19, 22, 29, 0.65);
     border-color: rgba(255, 255, 255, 0.12);
   }
+  /* Match out animation overlay in dark mode */
+  :global(.dark) .nav-normal.animating-out {
+    background: rgba(19, 22, 29, 0.65);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
 
   :global(.dark) .sticky-nav:hover {
     border-color: rgba(255, 255, 255, 0.2);
@@ -298,16 +315,16 @@
   @keyframes slideInNavDark {
     0% {
       opacity: 0;
-      transform: translateX(-50%) translateY(-24px) scale(0.94);
+      transform: translateY(-24px);
       border-color: rgba(255, 255, 255, 0);
     }
     60% {
       opacity: 1;
-      transform: translateX(-50%) translateY(2px) scale(0.99);
+      transform: translateY(2px);
     }
     100% {
       opacity: 1;
-      transform: translateX(-50%) translateY(0) scale(0.98);
+      transform: translateY(0);
       border-color: rgba(255, 255, 255, 0.12);
     }
   }
@@ -344,6 +361,21 @@
         opacity: 1;
         transform: translateY(0);
       }
+    }
+    /* Keep overlay fixed during out animation on mobile */
+    .nav-normal.animating-out {
+      left: 0;
+      right: 0;
+      transform: none;
+      width: 100%;
+      border-radius: 0;
+      top: 0;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .nav-spacer.is-active {
+      height: 4rem;
     }
   }
 
