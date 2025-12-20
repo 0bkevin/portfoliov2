@@ -24,6 +24,3 @@
     <i class="bx bx-moon text-lg"></i>
   {/if}
 </button>
-
-<style>
-</style>
