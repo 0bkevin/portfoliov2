@@ -24,145 +24,51 @@
 <button
   type="submit"
   disabled={status !== "toSend"}
-  class="flex justify-between py-4 px-8 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold w-full hover:scale-[1.02] transition-transform disabled:bg-slate-600 disabled:cursor-not-allowed disabled:text-slate-200 dark:bg-gray-700 dark:hover:bg-gray-600"
+  class="group relative flex items-center justify-center gap-3 py-4 px-8 rounded-lg bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 font-bold text-xs uppercase tracking-[0.2em] w-full overflow-hidden transition-all hover:bg-stone-800 dark:hover:bg-stone-200 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
 >
+  <div class="absolute inset-0 bg-gradient-to-r from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+  
   {#if status === "sending"}
-    Sending...
+    <i class="bx bx-loader-alt animate-spin text-lg"></i>
+    <span>Sending...</span>
   {:else if status === "sent"}
-    Message Sent! ✅
+    <i class="bx bx-check text-lg"></i>
+    <span>Message Sent</span>
   {:else if status === "error"}
-    There was an error while sending your message {":("}
-  {:else if status === "toSend"}
-    Send message
-    <svg
-      class="button__icon"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-    >
-      <path
-        d="M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z"
-        fill="#fff"
-      ></path>
-      <path
-        d="M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z"
-        fill="#fff"
-      ></path>
-    </svg>
+    <i class="bx bx-error-circle text-lg"></i>
+    <span>Error Occurred</span>
+  {:else}
+    <span>Send Message</span>
+    <i class="bx bx-right-arrow-alt text-lg group-hover:translate-x-1 transition-transform"></i>
   {/if}
 </button>
 
 {#if status === "sent" && showMessage}
-  <div role="alert" class="rounded-xl border border-gray-100 bg-green-100 p-4">
-    <div class="flex items-start gap-4">
-      <span class="text-green-600">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      </span>
-
-      <div class="flex-1">
-        <strong class="block font-medium text-gray-900">
-          Message sent correctly
-        </strong>
-
-        <p class="mt-1 text-sm text-gray-700">
-          Your message has been sent correctly. I will get back to you as soon
-          as possible.
-        </p>
-      </div>
-
-      <button
-        class="text-gray-500 dark:text-gray-300 transition hover:text-gray-600"
-        on:click={dismissPopup}
-      >
-        <span class="sr-only">Dismiss popup</span>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
+  <div role="alert" class="mt-6 p-5 rounded-lg bg-green-50 dark:bg-green-900/10 border border-green-200/50 dark:border-green-800/30 flex items-start gap-4 animate-in fade-in slide-in-from-top-2 duration-300">
+    <div class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0">
+      <i class="bx bx-check text-green-600 dark:text-green-400 text-lg"></i>
     </div>
+    <div class="flex-1">
+      <p class="text-xs font-bold text-green-800 dark:text-green-300 uppercase tracking-widest">Success</p>
+      <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Your message has been received. I'll get back to you shortly.</p>
+    </div>
+    <button on:click={dismissPopup} class="text-stone-400 hover:text-stone-600 dark:hover:text-stone-200 transition-colors">
+      <i class="bx bx-x text-xl"></i>
+    </button>
   </div>
 {/if}
 
-
 {#if status === "error" && showMessage}
-  <div role="alert" class="rounded-xl border border-gray-100 bg-red-100 p-4">
-    <div class="flex items-start gap-4">
-      <span class="text-red-600">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      </span>
-
-      <div class="flex-1">
-        <strong class="block font-medium text-gray-900">
-          Error when sending you message
-        </strong>
-
-        <p class="mt-1 text-sm text-gray-700">
-          There was an error while sending your message. Please try again
-          later.
-        </p>
-      </div>
-
-      <button
-        class="text-gray-500 dark:text-gray-300 transition hover:text-gray-600"
-        on:click={dismissPopup}
-      >
-        <span class="sr-only">Dismiss popup</span>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
+  <div role="alert" class="mt-6 p-5 rounded-lg bg-red-50 dark:bg-red-900/10 border border-red-200/50 dark:border-red-800/30 flex items-start gap-4 animate-in fade-in slide-in-from-top-2 duration-300">
+    <div class="w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center shrink-0">
+      <i class="bx bx-error-circle text-red-600 dark:text-red-400 text-lg"></i>
     </div>
+    <div class="flex-1">
+      <p class="text-xs font-bold text-red-800 dark:text-red-300 uppercase tracking-widest">Error</p>
+      <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Something went wrong. Please try again or contact me directly.</p>
+    </div>
+    <button on:click={dismissPopup} class="text-stone-400 hover:text-stone-600 dark:hover:text-stone-200 transition-colors">
+      <i class="bx bx-x text-xl"></i>
+    </button>
   </div>
 {/if}

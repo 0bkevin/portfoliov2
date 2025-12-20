@@ -63,14 +63,14 @@
 
 <form
   on:submit={handleSubmit}
-  class="flex flex-col gap-4 w-full"
+  class="flex flex-col gap-6 w-full"
   name="contactForm"
 >
-  <div class="space-y-6 mb-6">
+  <div class="grid grid-cols-1  gap-6">
     <ContactInput
       name="name"
       label="Name"
-      placeholder="How should I call you?"
+      placeholder="Your name"
       error={errors.name}
       type="text"
       bind:value={name}
@@ -79,25 +79,30 @@
       name="email"
       label="Email"
       error={errors.email}
-      placeholder="Where should I reply?"
+      placeholder="Your email"
       type="email"
       bind:value={email}
     />
-    <ContactInput
-      name="subject"
-      label="Subject"
-      placeholder="What is this about?"
-      error={errors.subject}
-      type="text"
-      bind:value={subject}
-    />
-    <ContactTextArea
-      name="message"
-      label="Message"
-      error={errors.message}
-      placeholder="What do you want to tell me?"
-      bind:value={message}
-    />
   </div>
-  <ContactButton {status} />
+  
+  <ContactInput
+    name="subject"
+    label="Subject"
+    placeholder="What is this about?"
+    error={errors.subject}
+    type="text"
+    bind:value={subject}
+  />
+  
+  <ContactTextArea
+    name="message"
+    label="Message"
+    error={errors.message}
+    placeholder="Tell me more about your project or inquiry..."
+    bind:value={message}
+  />
+
+  <div class="pt-2">
+    <ContactButton {status} />
+  </div>
 </form>

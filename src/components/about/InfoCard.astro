@@ -21,14 +21,14 @@ const ACHIEVEMENTS = [
 ];
 ---
 
-<div class="grid grid-cols-3 h-36 max-h-36 w-full md:gap-4 gap-2">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
   {
     ACHIEVEMENTS.map(({ subtitle, icon, title }) => {
       return (
-        <div class="about__box  hover:cursor-pointer max-h-36 h-36 md:max-w-36 bg-white dark:bg-zinc-900 flex flex-col items-center justify-center">
-          <i class={`bx ${icon} about__icon`} />
-          <h3 class="font-medium text-center text-sm md:text-base">{title}</h3>
-          <p class="text-xs lg:text-sm mt-2">{subtitle}</p>
+        <div class="flex flex-col items-start p-5 rounded-xl bg-stone-50/50 dark:bg-stone-900/30 border border-stone-200/60 dark:border-stone-800/60 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] dark:shadow-none">
+          <i class={`bx ${icon} text-green-600 dark:text-green-500 text-xl mb-3`} />
+          <h3 class="font-bold text-stone-800 dark:text-stone-100 text-sm mb-1 uppercase tracking-wider">{title}</h3>
+          <p class="text-xs text-stone-500 dark:text-stone-400 leading-tight">{subtitle}</p>
         </div>
       );
     })
@@ -36,17 +36,5 @@ const ACHIEVEMENTS = [
 </div>
 
 <style>
-  .about__box {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.75rem;
-  text-align: center;
-  padding: 0.5rem;
-}
-
-.about__icon {
-  font-size: 1.4rem;
-  color: var(--ttle-color);
-  margin-bottom: var(--mb-0-5);
-}
-
+  /* Removed old styles */
 </style>
