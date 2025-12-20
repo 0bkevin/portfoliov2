@@ -1,5 +1,5 @@
 <script>
-  let darkMode = localStorage.getItem("darkMode") === "true";
+  let darkMode = localStorage.getItem("darkMode") !== "false";
 
   function toggleDarkMode() {
     darkMode = !darkMode;
