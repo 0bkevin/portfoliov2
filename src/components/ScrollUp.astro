@@ -1,0 +1,19 @@
+<a href="#" class="scrollup fixed right-4 -bottom-[20%] bg-[#282727] opacity-90 px-[0.4rem] py-[0.25rem] rounded-[0.4rem] z-[100] hover:bg-black dark:bg-gray-700 dark:hover:bg-gray-500 md:right-6 md:px-2 md:py-[0.3rem] lg:right-10 transition-all duration-300">
+  <i class="uil uil-arrow-up text-white text-[1.25rem] md:text-xl"></i>
+</a>
+<script is:inline>
+  window.addEventListener("scroll", function () {
+    const scrollUp = document.querySelector(".scrollup");
+    if (this.scrollY >= 560) {
+      scrollUp.classList.add("show-scroll");
+    } else {
+      scrollUp.classList.remove("show-scroll");
+    }
+  }); 
+</script>
+
+<style>
+ .show-scroll {
+  @apply bottom-12 md:bottom-16;
+}
+</style>
