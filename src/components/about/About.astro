@@ -1,6 +1,5 @@
 ---
-import Image from "../../../public/assets/secondary_photo.jpg";
-import "./about.css";
+import Image from "../../../public/assets/photo-1.jpeg";
 import Info from "./InfoCard.astro";
 import ButtonLink from "@components/ButtonLink.astro";
 ---
@@ -26,9 +25,7 @@ import ButtonLink from "@components/ButtonLink.astro";
       </div>
 
       <p class="text-sm sm:text-base text-center md:text-start p-2 md:p-0">
-        I'm Kevin, software developer from Caracas - Venezuela. Highly
-        interest in blockchain, ZK-proof, Maths, security, interop and embedded sys, with a great
-        understanding of solidity and EVM's related chains.
+I’m Kevin, a software developer and MPA student from Caracas, Venezuela. I’m especially interested in distributed systems, ZK proofs, maths, security, interoperability, and embedded systems. I have a strong understanding of Solidity and EVM-based chains, and I enjoy building production-ready infrastructure that’s reliable, secure, and measurable.
       </p>
       <div class="flex flex-col items-center sm:flex-row gap-4 w-full justify-center">
         <div class="">
@@ -56,3 +53,21 @@ import ButtonLink from "@components/ButtonLink.astro";
     </div>
   </div>
 </section>
+
+
+<style>
+.about__img {
+  width: 420px;
+  border-radius: 0.7rem;
+
+}
+
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .about__img {
+    width: 250px;
+  
+  }
+}
+</style>

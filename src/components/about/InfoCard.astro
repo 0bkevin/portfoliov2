@@ -25,7 +25,7 @@ const ACHIEVEMENTS = [
   {
     ACHIEVEMENTS.map(({ subtitle, icon, title }) => {
       return (
-        <div class="about__box transition-transform hover:scale-105 hover:cursor-pointer max-h-36 h-36 md:max-w-36 bg-white dark:bg-gray-800 flex flex-col items-center justify-center">
+        <div class="about__box  hover:cursor-pointer max-h-36 h-36 md:max-w-36 bg-white dark:bg-zinc-900 flex flex-col items-center justify-center">
           <i class={`bx ${icon} about__icon`} />
           <h3 class="font-medium text-center text-sm md:text-base">{title}</h3>
           <p class="text-xs lg:text-sm mt-2">{subtitle}</p>
@@ -34,3 +34,19 @@ const ACHIEVEMENTS = [
     })
   }
 </div>
+
+<style>
+  .about__box {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.about__icon {
+  font-size: 1.4rem;
+  color: var(--ttle-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+</style>
