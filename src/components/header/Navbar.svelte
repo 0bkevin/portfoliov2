@@ -19,7 +19,7 @@
 
     window.requestAnimationFrame(() => {
       const currentScrollY = window.scrollY;
-      const crossedThreshold = currentScrollY >= 40;
+      const crossedThreshold = currentScrollY >= 200;
 
       if (crossedThreshold && !stickyNav) {
         isAnimating = true;
