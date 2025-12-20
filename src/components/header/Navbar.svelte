@@ -10,29 +10,68 @@
   let stickyNav = false;
   let isAnimating = false;
   let lastScrollY = 0;
+  let isHidden = false;
+
+  // Constants for better maintainability
+  const SCROLL_THRESHOLD = 200;
+  const ANIMATION_DURATION_STICKY = 500;
+  const ANIMATION_DURATION_NORMAL = 480;
+  const ANIMATION_DURATION_HIDE_SHOW = 300;
 
   // Throttle scroll events for better performance
   let ticking = false;
+
+  const updateStickyState = (currentScrollY, crossedThreshold) => {
+    if (crossedThreshold && !stickyNav) {
+      // Become sticky and visible
+      stickyNav = true;
+      isHidden = false;
+      isAnimating = true;
+      setTimeout(() => {
+        isAnimating = false;
+      }, ANIMATION_DURATION_STICKY);
+    } else if (!crossedThreshold && stickyNav) {
+      // Return to normal state
+      stickyNav = false;
+      isHidden = false;
+      isAnimating = true;
+      setTimeout(() => {
+        isAnimating = false;
+      }, ANIMATION_DURATION_NORMAL);
+    }
+  };
+
+  const updateVisibility = (scrollingDown, scrollingUp) => {
+    if (scrollingDown && !isHidden) {
+      // Hide navbar
+      isHidden = true;
+      isAnimating = true;
+      setTimeout(() => {
+        isAnimating = false;
+      }, ANIMATION_DURATION_HIDE_SHOW);
+    } else if (scrollingUp && isHidden) {
+      // Show navbar
+      isHidden = false;
+      isAnimating = true;
+      setTimeout(() => {
+        isAnimating = false;
+      }, ANIMATION_DURATION_HIDE_SHOW);
+    }
+  };
 
   const handleScroll = () => {
     if (ticking) return;
 
     window.requestAnimationFrame(() => {
       const currentScrollY = window.scrollY;
-      const crossedThreshold = currentScrollY >= 200;
+      const crossedThreshold = currentScrollY >= SCROLL_THRESHOLD;
+      const scrollingDown = currentScrollY > lastScrollY;
+      const scrollingUp = currentScrollY < lastScrollY;
 
-      if (crossedThreshold && !stickyNav) {
-        isAnimating = true;
-        stickyNav = true;
-        setTimeout(() => {
-          isAnimating = false;
-        }, 500);
-      } else if (!crossedThreshold && stickyNav) {
-        isAnimating = true;
-        stickyNav = false;
-        setTimeout(() => {
-          isAnimating = false;
-        }, 480);
+      updateStickyState(currentScrollY, crossedThreshold);
+
+      if (stickyNav) {
+        updateVisibility(scrollingDown, scrollingUp);
       }
 
       lastScrollY = currentScrollY;
@@ -52,6 +91,22 @@
   const setActive = (link) => {
     activeNav = link;
   };
+
+  // Helper function to build nav classes
+  $: navClasses = (() => {
+    const baseClasses = "bg-transparent h-16 flex justify-between items-center gap-4 p-6 max-w-6xl mx-auto z-50";
+    
+    if (stickyNav && shouldFixed) {
+      let classes = `sticky-nav drop-shadow-md`;
+      if (isAnimating) classes += ' animating';
+      if (isHidden) classes += ' hidden';
+      return `${baseClasses} ${classes}`;
+    } else {
+      let classes = 'nav-normal';
+      if (isAnimating) classes += ' animating-out';
+      return `${baseClasses} ${classes}`;
+    }
+  })();
 </script>
 
 {#if stickyNav || isAnimating}
@@ -62,11 +117,8 @@
 
 <nav
   aria-label="Main navigation"
-  class={`bg-transparent h-16 flex justify-between items-center gap-4 p-6 max-w-6xl mx-auto z-50 ${
-    stickyNav && shouldFixed
-      ? `sticky-nav drop-shadow-md${isAnimating ? ' animating' : ''}`
-      : `nav-normal${isAnimating ? ' animating-out' : ''}`
-  }`}
+  aria-hidden={isHidden}
+  class={navClasses}
 >
   <a href="/" class="nav-logo font-semibold text-lg">Kevin Bravo</a>
   <div class="nav__menu">
@@ -158,6 +210,11 @@
                 border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
                 opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
                 transform 500ms cubic-bezier(0.34, 1.35, 0.64, 1);
+  }
+
+  .sticky-nav.hidden {
+    transform: translateY(-100%);
+    transition-duration: 300ms;
   }
 
   /* Apply animation only when entering sticky state */
@@ -368,8 +425,17 @@
       animation: slideInNavMobile 400ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     
+    .sticky-nav.hidden {
+      transform: translateY(-100%);
+      transition-duration: 300ms;
+    }
+
     .sticky-nav:hover {
       transform: none;
+    }
+
+    .sticky-nav.hidden:hover {
+      transform: translateY(-100%);
     }
 
     @keyframes slideInNavMobile {
