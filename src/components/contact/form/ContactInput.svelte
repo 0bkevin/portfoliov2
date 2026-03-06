@@ -12,9 +12,9 @@
   };
 </script>
 
-<div class="flex flex-col gap-2">
-  <label 
-    class="text-[11px] font-bold uppercase tracking-[0.1em] text-stone-500 dark:text-stone-400 ml-1" 
+<div class="flex flex-col gap-1.5">
+  <label
+    class="text-xs font-medium text-surface-500 dark:text-surface-400"
     for={name}
   >
     {label}
@@ -24,12 +24,12 @@
     id={name}
     {name}
     required
-    class="w-full px-5 py-3.5 rounded-lg bg-stone-100/50 dark:bg-stone-900/50 border border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-100 placeholder:text-stone-400 dark:placeholder:text-stone-600 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500/50 transition-all {error ? 'border-red-500/50 ring-red-500/10' : ''}"
+    class="w-full px-4 py-2.5 rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-sm text-surface-900 dark:text-surface-100 placeholder:text-surface-400 dark:placeholder:text-surface-600 focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500/50 transition-all {error ? 'border-red-400/60 ring-1 ring-red-400/10' : ''}"
     {placeholder}
     on:input={handleInput}
     bind:value
   />
   {#if error}
-    <span class="text-[10px] font-bold text-red-500 uppercase tracking-wider mt-1 ml-1">{error}</span>
+    <span class="text-[11px] text-red-500 mt-0.5">{error}</span>
   {/if}
 </div>

@@ -27,131 +27,79 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
     <meta charset="UTF-8" />
     <meta name="description" content={blog.data.description} />
     <meta name="viewport" content="width=device-width" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/android-icon-192x192.png"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#fafafa" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     {
       blog.data.canonicalURL ? (
         <link rel="canonical" href={blog.data.canonicalURL} />
       ) : null
     }
-
     <meta name="generator" content={Astro.generator} />
     <title>0b | {blog.data.title}</title>
   </head>
-  <header>
-    <Navbar client:only="svelte" shouldFixed={false} />
-  </header>
-  <body>
+  <body class="font-sans">
+    <header>
+      <Navbar client:only="svelte" shouldFixed={false} />
+    </header>
     <main>
-      <article
-        class="max-w-[52rem] mx-auto pb-16 pt-8 space-y-5 px-4 md:px-0 p-4"
-      >
+      <article class="section-container pb-20 pt-8 space-y-6">
         <div class="flex gap-2">
           <a
             href="/0b"
-            class="border font-medium border-black dark:border-gray-600 dark:hover:bg-gray-600 py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
+            class="text-xs font-medium text-surface-500 dark:text-surface-400 border border-surface-200 dark:border-surface-800 py-1.5 px-3 rounded-md hover:border-surface-300 dark:hover:border-surface-700 hover:text-surface-900 dark:hover:text-surface-200 transition-colors"
           >
-            Back to blog
+            &larr; Blog
           </a>
           <a
             href="/"
-            class="border font-medium border-black dark:border-gray-600 dark:hover:bg-gray-600 py-1.5 px-3 rounded-md hover:bg-black hover:text-white transition-colors"
+            class="text-xs font-medium text-surface-500 dark:text-surface-400 border border-surface-200 dark:border-surface-800 py-1.5 px-3 rounded-md hover:border-surface-300 dark:hover:border-surface-700 hover:text-surface-900 dark:hover:text-surface-200 transition-colors"
           >
-            Back to main page
+            Home
           </a>
         </div>
 
         {
           blog.data.image ? (
-            <div
-              style={{ position: "relative", width: "100%", height: "350px" }}
-            >
+            <div class="relative w-full h-[350px] overflow-hidden rounded-xl">
               <img
                 src={blog.data.image.url}
                 alt={blog.data.image.alt}
-                class="w-full h-full object-cover top-0 left-0 right-0 absolute rounded-lg"
+                class="w-full h-full object-cover absolute inset-0"
               />
             </div>
           ) : null
         }
-        <h1
-          class="text-3xl md:text-4xl font-extrabold tracking-tight lg:text-5xl"
-        >
+
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-surface-900 dark:text-surface-100">
           {blog.data.title}
         </h1>
-        <div
-          class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm text-gray-500 dark:text-gray-300 mb-4"
-        >
-          <div class="flex items-center gap-1 hover:text-black">
-            <i class="bx bx-calendar text-lg"></i>
+
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-surface-400 dark:text-surface-500">
+          <div class="flex items-center gap-1.5">
+            <i class="bx bx-calendar"></i>
             <time datetime={publishDate}>{publishDate}</time>
           </div>
-          <div class="flex items-center gap-1 hover:text-black">
-            <i class="bx bx-time text-lg"></i>
-            <span>{readingTime} Min Read</span>
+          <div class="flex items-center gap-1.5">
+            <i class="bx bx-time"></i>
+            <span>{readingTime} min read</span>
           </div>
           {
             blog.data.canonicalURL ? (
-              <div class="flex items-center gap-1">
-                <i class="bx bx-globe text-lg" />
-
-                <p>Originally published on</p>
+              <div class="flex items-center gap-1.5">
+                <i class="bx bx-link-external" />
                 <a
                   href={blog.data.canonicalURL}
-                  class="truncate text-ellipsis max-w-32 hover:text-black"
+                  class="truncate max-w-48 hover:text-surface-900 dark:hover:text-surface-200 transition-colors"
                 >
                   {blog.data.canonicalURL}
                 </a>
@@ -159,9 +107,15 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
             ) : null
           }
         </div>
+
         <div
-          class="prose-sm lg:prose-lg max-w-none prose-code:before:hidden prose-code:after:hidden prose-code:bg-gray-800 prose-code:text-gray-100 prose-code:font-extralight prose-code:text-sm prose-code:font-mono prose-code:py-1 prose-code:px-2 prose-code:rounded-md dark:text-gray-200 dark:prose-blockquote:text-gray-200 dark:prose-strong:text-white dark:prose-em:text-gray-300 dark:prose-headings:text-white
-          dark:prose-a:text-gray-300"
+          class="prose prose-neutral max-w-none
+            prose-headings:tracking-tight prose-headings:font-bold
+            prose-code:before:hidden prose-code:after:hidden
+            prose-code:bg-surface-800 prose-code:text-surface-200
+            prose-code:text-sm prose-code:font-mono prose-code:py-0.5 prose-code:px-1.5 prose-code:rounded
+            dark:prose-invert
+            dark:prose-a:text-surface-300"
         >
           <slot />
         </div>
@@ -170,8 +124,6 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
         <Toc client:only="svelte" />
       </aside>
     </main>
+    <Footer />
   </body>
-  <Footer />
-
-
 </html>

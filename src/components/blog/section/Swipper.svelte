@@ -14,29 +14,17 @@
     if (swiperEl) {
       Object.assign(swiperEl, {
         slidesPerView: 1,
-        spaceBetween: 15,
+        spaceBetween: 20,
         speed: 500,
-        loop: true,
-        autoplayDelay: 2000,
-        autoplayDisableOnInteraction: false,
-        pagination: {
-          clickable: true,
-        },
+        loop: blogs.length > 3,
+        navigation: true,
         breakpoints: {
           640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
             slidesPerView: 2,
-            spaceBetween: 0,
+            spaceBetween: 20,
           },
-          850: {
+          1024: {
             slidesPerView: 3,
-            spaceBetween: 0,
-          },
-          1099: {
-            slidesPerView: 4,
             spaceBetween: 20,
           },
         },
@@ -46,8 +34,8 @@
   });
 </script>
 
-<div class="max-w-7xl xl:mx-auto">
-  <swiper-container class="mySwiper" init="false" navigation="true">
+<div class="max-w-5xl mx-auto px-6 md:px-8">
+  <swiper-container class="blog-swiper" init="false">
     {#each blogs as blog}
       <swiper-slide>
         <BlogCard {blog} />
@@ -59,14 +47,17 @@
 <style>
   swiper-container {
     width: 100%;
-    height: 100%;
+    padding-bottom: 3.5rem;
+    --swiper-navigation-color: #525252;
+    --swiper-navigation-size: 22px;
+    --swiper-navigation-sides-offset: 0px;
+    --swiper-navigation-top-offset: auto;
   }
-
+  :global(.dark) swiper-container {
+    --swiper-navigation-color: #a3a3a3;
+  }
   swiper-slide {
-    text-align: center;
-    font-size: 18px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
   }
 </style>

@@ -1,7 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
-import BlogCard from "@components/blog/section/BlogCard.svelte";
 import { formatDateToDisplay, getReadingTime } from "../../lib/utils";
 
 const blogs = (await getCollection("blogs")) as CollectionEntry<"blogs">[];
@@ -9,70 +8,48 @@ const blogs = (await getCollection("blogs")) as CollectionEntry<"blogs">[];
 const sortedPost = blogs.sort(
   (a, b) => Number(new Date(b.data.pubDate)) - Number(new Date(a.data.pubDate))
 );
-const recentPost = sortedPost.slice(0, 3);
 ---
 
 <Layout
   title="0b | Kevin Bravo's blog"
-  description="Kevin Bravo's blog. Read about software development, maths, blockchain, security and embebed syst."
+  description="Kevin Bravo's blog. Read about software development, maths, blockchain, security and embedded systems."
 >
-  <div
-    class="w-full mx-auto max-w-7xl h-full min-h-screen p-8 lg:py-14 space-y-7"
-  >
-    <div class="mb-12">
-      <h1 class="text-5xl font-bold mb-2">0b</h1>
-      <p class="text-xl text-gray-600 dark:text-gray-400">
-        I post about software development, maths, blockchain, security and
-        embebed syst.
+  <div class="section-container py-16 min-h-screen">
+    <div class="mb-16">
+      <a href="/" class="inline-flex text-xs font-medium text-surface-400 dark:text-surface-500 hover:text-surface-900 dark:hover:text-surface-200 transition-colors mb-8">
+        &larr; Home
+      </a>
+      <h1 class="text-4xl font-bold tracking-tighter text-surface-900 dark:text-surface-100 mb-3">Blog</h1>
+      <p class="text-surface-500 dark:text-surface-400">
+        Writing about software development, blockchain, security, and systems.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 w-full justify-items-stretch">
-      <div class="lg:col-span-2 justify-self-start w-full">
-        <div class="flex justify-between mb-8 items-center gap-5">
-          <h2 class="text-2xl font-semibold">All post</h2>
-          <div class="py-[0.1px] bg-black flex-grow mt-2 dark:bg-gray-500">
-          </div>
-
-          <span class="text-gray-600 dark:text-gray-200"
-            >{blogs.length} Posts</span
-          >
-        </div>
-        <ul class="space-y-4">
-          {
-            sortedPost.map((blog) => (
-              <li>
-                <a
-                  href={`/0b/${blog.id}`}
-                  class="flex flex-col lg:flex-row lg:items-center lg:gap-4 hover:scale-[1.01] transition-transform "
-                >
-                  <h2 class="font-medium text-gray-900 dark:text-gray-200">
-                    {blog.data.title}
-                  </h2>
-                  <div class="hidden lg:block py-[0.1px] bg-black flex-grow  dark:bg-gray-500" />
-                  <div class="flex gap-2 lg:items-center text-sm lg:justify-center">
-                    <p>{formatDateToDisplay(blog.data.pubDate)}</p>
-                    <p class="hidden lg:block">|</p>
-                    <p>{getReadingTime(blog.body)} min Read</p>
-                  </div>
-                </a>
-                <div class="block lg:hidden py-[0.1px] bg-black  dark:bg-gray-500 flex-grow mt-2" />
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="w-full hidden lg:block justify-self-end">
-        <div class="flex flex-col items-center justify-self-end">
-          <h2 class="text-2xl font-semibold mb-8 text-center">RECENT POSTS</h2>
-
-          {
-            recentPost.map((post) => (
-              <BlogCard blog={post} client:only="svelte" />
-            ))
-          }
-        </div>
-      </div>
+    <div class="flex items-center justify-between mb-8 pb-4 border-b border-surface-200 dark:border-surface-800">
+      <span class="text-xs font-medium uppercase tracking-widest text-surface-400 dark:text-surface-500">All Posts</span>
+      <span class="text-xs text-surface-400 dark:text-surface-500">{blogs.length} posts</span>
     </div>
+
+    <ul class="space-y-0">
+      {
+        sortedPost.map((blog) => (
+          <li>
+            <a
+              href={`/0b/${blog.id}`}
+              class="group flex flex-col md:flex-row md:items-center md:justify-between py-4 border-b border-surface-100 dark:border-surface-800/50 hover:pl-2 transition-all"
+            >
+              <h2 class="text-sm font-medium text-surface-800 dark:text-surface-200 group-hover:text-surface-900 dark:group-hover:text-surface-100 transition-colors">
+                {blog.data.title}
+              </h2>
+              <div class="flex gap-3 items-center text-xs text-surface-400 dark:text-surface-500 shrink-0 mt-1 md:mt-0">
+                <span>{formatDateToDisplay(blog.data.pubDate)}</span>
+                <span class="w-px h-3 bg-surface-200 dark:bg-surface-800"></span>
+                <span>{getReadingTime(blog.body)} min</span>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </Layout>

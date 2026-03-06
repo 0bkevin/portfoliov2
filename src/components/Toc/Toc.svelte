@@ -24,24 +24,22 @@
   };
 </script>
 
-<div class="md:max-w-xs ">
-  <!-- Toggle Button -->
-  <button on:click={toggleOpen} class="toggle-button bg-white dark:bg-black rounded-full px-2 py-1 top-4 md:top-10 opacity-50 md:opacity-100 hover:scale-105 ">
+<div class="md:max-w-xs">
+  <button on:click={toggleOpen} class="toggle-button">
     {#if $isOpen}
-      <i class="bx bx-x text-lg font-medium"></i>
+      <i class="bx bx-x text-sm"></i>
     {:else}
-      <i class="bx bx-menu-alt-right text-lg font-medium"></i>
+      <i class="bx bx-menu-alt-right text-sm"></i>
     {/if}
   </button>
 
-  <!-- Table of Contents -->
   <nav
-    class=" p-4 rounded-md transition-all duration-300 ease-in-out overflow-y-hidden bg-white md:bg-transparent h-full dark:md:bg-[#13161d] dark:text-white {$isOpen
-      ? 'translate-y-10 opacity-100'
-      : '-translate-y-[110%] opacity-0'}"
+    class="p-4 rounded-lg transition-all duration-300 ease-in-out overflow-y-auto h-full
+      bg-white dark:bg-surface-950 border border-surface-200 dark:border-surface-800
+      {$isOpen ? 'translate-y-10 opacity-100' : '-translate-y-[110%] opacity-0'}"
   >
-    <p class="font-semibold mb-3 text-lg">Table of Contents</p>
-    <ul class="space-y-1.5 truncate w-full h-full">
+    <p class="text-xs font-semibold uppercase tracking-widest text-surface-400 dark:text-surface-500 mb-4">Contents</p>
+    <ul class="space-y-1 truncate w-full h-full">
       {#each $headings as heading}
         <TocItem item={heading} toggleOpen={toggleOpen} isOpen={isOpen} />
       {/each}
@@ -53,13 +51,33 @@
   .toggle-button {
     position: fixed;
     right: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
     z-index: 50;
+    cursor: pointer;
+    transition: border-color 200ms ease;
   }
-  
-  @media (prefers-color-scheme: dark) {
+  .toggle-button:hover {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+  :global(.dark) .toggle-button {
+    background: #0a0a0a;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  :global(.dark) .toggle-button:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  @media (min-width: 768px) {
     .toggle-button {
-      box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
+      top: 2.5rem;
     }
   }
 </style>

@@ -8,24 +8,25 @@
 </script>
 
 {#if item.level === 2}
-  <li class="font-medium text-sm text-gray-500 dark:text-gray-300 hover:text-black truncate">
-    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
+  <li class="truncate">
+    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}
+      class="text-sm font-medium text-surface-600 dark:text-surface-400 hover:text-surface-900 dark:hover:text-surface-200 transition-colors">
       {item.text}
     </a>
   </li>
 {:else if item.level === 3}
-  <li
-    class="ml-4 text-sm text-gray-500 dark:text-gray-300 hover:text-black truncate flex items-center gap-1"
-  >
-    <i class="bx bxs-circle !text-[0.30rem]"></i>
-    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
+  <li class="ml-4 truncate flex items-center gap-1.5">
+    <span class="w-1 h-1 rounded-full bg-surface-300 dark:bg-surface-700 shrink-0"></span>
+    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}
+      class="text-xs text-surface-500 dark:text-surface-500 hover:text-surface-900 dark:hover:text-surface-200 transition-colors">
       {item.text}
     </a>
   </li>
 {:else if item.level === 4}
-  <li class="ml-8 text-xs text-gray-500 dark:text-gray-300 hover:text-black truncate gap-1">
-    <i class="bx bxs-circle !text-[0.30rem]"></i>
-    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}>
+  <li class="ml-8 truncate flex items-center gap-1.5">
+    <span class="w-0.5 h-0.5 rounded-full bg-surface-300 dark:bg-surface-700 shrink-0"></span>
+    <a href={`#${item.id}`} on:click={() => isOpen.set(false)}
+      class="text-xs text-surface-400 dark:text-surface-600 hover:text-surface-900 dark:hover:text-surface-200 transition-colors">
       {item.text}
     </a>
   </li>

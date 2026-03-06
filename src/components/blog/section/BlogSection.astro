@@ -11,20 +11,20 @@ const sortedBlogs = blogs.sort((a, b) => {
 });
 ---
 
-<section class="min-h-screen w-full flex flex-col py-32" id="about">
-  <div class="space-y-1 mb-4">
-    <h2 class="text-4xl font-bold text-center">Articles</h2>
-    <p class="text-gray-500 dark:text-gray-400 font-medium text-center">My most recent texts</p>
-  </div>
-  <div class="mb-16">
-    <p class="text-gray-500 dark:text-gray-400 text-center max-w-5xl m-auto p-4">
-      I like to write about a plethora of topics and spread the knowledge I have
-      with the community. I think that sharing information and experiences can
-      help others learn and grow. Whether it's about software engineering,
-      cybersecurity, blockchain, or cryptography, I aim to provide valuable
-      insights and practical advice through my blog posts.
-    </p>
+<section class="py-24 md:py-32" id="articles">
+  <div class="section-container mb-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-4">
+      <div>
+        <p class="section-heading">Blog</p>
+        <h2 class="section-title">Articles</h2>
+      </div>
+      <a
+        href="/0b"
+        class="text-sm font-medium text-accent-500 dark:text-accent-400 hover:text-accent-600 dark:hover:text-accent-300 transition-colors"
+      >
+        View all &rarr;
+      </a>
+    </div>
   </div>
   <Swipper blogs={sortedBlogs} client:only="svelte"/>
 </section>
-

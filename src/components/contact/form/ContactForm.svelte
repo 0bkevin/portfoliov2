@@ -29,33 +29,20 @@
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name,
-          email,
-          subject,
-          message,
-        }),
+        body: JSON.stringify({ name, email, subject, message }),
       });
       if (response.status === 200) {
         status = "sent";
-        //once the email is sent, we clear the form
         name = "";
         email = "";
         subject = "";
         message = "";
-
-        setTimeout(() => {
-          status = "toSend";
-        }, 5000);
-
+        setTimeout(() => { status = "toSend"; }, 5000);
       } else {
         status = "error";
-        setTimeout(() => {
-          status = "toSend";
-        }, 5000);
+        setTimeout(() => { status = "toSend"; }, 5000);
       }
-    }
-    else {
+    } else {
       status = "toSend";
     }
   };
@@ -63,10 +50,10 @@
 
 <form
   on:submit={handleSubmit}
-  class="flex flex-col gap-6 w-full"
+  class="flex flex-col gap-5 w-full"
   name="contactForm"
 >
-  <div class="grid grid-cols-1  gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
     <ContactInput
       name="name"
       label="Name"
@@ -84,7 +71,7 @@
       bind:value={email}
     />
   </div>
-  
+
   <ContactInput
     name="subject"
     label="Subject"
@@ -93,16 +80,16 @@
     type="text"
     bind:value={subject}
   />
-  
+
   <ContactTextArea
     name="message"
     label="Message"
     error={errors.message}
-    placeholder="Tell me more about your project or inquiry..."
+    placeholder="Tell me about your project or inquiry..."
     bind:value={message}
   />
 
-  <div class="pt-2">
+  <div class="pt-1">
     <ContactButton {status} />
   </div>
 </form>
