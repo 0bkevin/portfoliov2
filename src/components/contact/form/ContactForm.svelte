@@ -50,27 +50,25 @@
 
 <form
   on:submit={handleSubmit}
-  class="flex flex-col gap-5 w-full"
+  class="flex flex-col gap-6 w-full"
   name="contactForm"
 >
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-    <ContactInput
-      name="name"
-      label="Name"
-      placeholder="Your name"
-      error={errors.name}
-      type="text"
-      bind:value={name}
-    />
-    <ContactInput
-      name="email"
-      label="Email"
-      error={errors.email}
-      placeholder="Your email"
-      type="email"
-      bind:value={email}
-    />
-  </div>
+  <ContactInput
+    name="name"
+    label="Name"
+    placeholder="Your name"
+    error={errors.name}
+    type="text"
+    bind:value={name}
+  />
+  <ContactInput
+    name="email"
+    label="Email"
+    error={errors.email}
+    placeholder="Your email"
+    type="email"
+    bind:value={email}
+  />
 
   <ContactInput
     name="subject"
