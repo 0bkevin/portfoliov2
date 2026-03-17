@@ -3,13 +3,17 @@
 
   import { onDestroy } from "svelte";
 
-  let showMessage = true;
+  let showMessage = false;
   let timeoutId;
 
-  $: if (status === "sent") {
-    timeoutId = setTimeout(() => {
-      showMessage = false;
-    }, 5000);
+  $: if (status === "sent" || status === "error") {
+    showMessage = true;
+    clearTimeout(timeoutId);
+    if (status === "sent") {
+      timeoutId = setTimeout(() => {
+        showMessage = false;
+      }, 5000);
+    }
   }
 
   function dismissPopup() {

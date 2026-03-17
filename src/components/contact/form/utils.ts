@@ -3,7 +3,7 @@ const _isValidEmail = (email: string) => {
   return emailRegex.test(email);
 };
 
-const sanitizeInput = (input: string): string => {
+export const sanitizeInput = (input: string): string => {
   const sanitized = input.replace(/<[^>]*>?/gm, ''); // Remove HTML tags
   return sanitized.trim(); // Remove leading and trailing whitespace
 };

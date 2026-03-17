@@ -2,7 +2,7 @@
   import ContactInput from "./ContactInput.svelte";
   import ContactTextArea from "./ContactTextArea.svelte";
   import ContactButton from "./ContactButton.svelte";
-  import { evaluateInputs } from "./utils";
+  import { evaluateInputs, sanitizeInput } from "./utils";
   let status = "toSend";
 
   let name = "";
@@ -15,31 +15,48 @@
     subject: "",
     message: "",
   };
-  const handleSubmit = async (event: Event) => {
-    status = "sending";
-    event.preventDefault();
-    errors = evaluateInputs(name, email, subject, message);
+  let hasSubmitted = false;
 
+  $: if (hasSubmitted) {
+    errors = evaluateInputs(name, email, subject, message);
+  }
+
+  const handleSubmit = async (event: Event) => {
+    event.preventDefault();
+    hasSubmitted = true;
+    status = "sending";
+    
+    errors = evaluateInputs(name, email, subject, message);
     const hasErrors = Object.values(errors).some((msg) => msg);
 
     if (!hasErrors) {
-      status = "sending";
-      const response = await fetch("/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, subject, message }),
-      });
-      if (response.status === 200) {
-        status = "sent";
-        name = "";
-        email = "";
-        subject = "";
-        message = "";
-        setTimeout(() => { status = "toSend"; }, 5000);
-      } else {
+      try {
+        const response = await fetch("/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ 
+            name: sanitizeInput(name), 
+            email: sanitizeInput(email), 
+            subject: sanitizeInput(subject), 
+            message: sanitizeInput(message) 
+          }),
+        });
+        
+        if (response.ok) {
+          status = "sent";
+          name = "";
+          email = "";
+          subject = "";
+          message = "";
+          hasSubmitted = false;
+        } else {
+          status = "error";
+        }
+      } catch (error) {
         status = "error";
+      } finally {
         setTimeout(() => { status = "toSend"; }, 5000);
       }
     } else {
