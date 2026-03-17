@@ -1,7 +1,7 @@
 const NAV_ITEMS = [
   {
     name: "Home",
-    link: "#home",
+    link: "/#home",
     icon: "estate",
     id: 1,
   },
@@ -38,7 +38,7 @@ const NAV_ITEMS = [
 
   {
     name: "Projects",
-    link: "#projects",
+    link: "/#projects",
     icon: "scenery",
     id: 6,
   },

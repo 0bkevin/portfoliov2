@@ -20,8 +20,8 @@
         activeNav = "/me/ama";
       } else if (path === "/" || path === "") {
         if (hash === "#contact") activeNav = "/#contact";
-        else if (hash === "#projects") activeNav = "#projects";
-        else if (hash === "#home") activeNav = "#home";
+        else if (hash === "#projects") activeNav = "/#projects";
+        else if (hash === "#home" || hash === "") activeNav = "/#home";
       }
     };
 
@@ -38,8 +38,8 @@
             if (entry.isIntersecting) {
               const id = entry.target.getAttribute("id");
               if (id === "contact") activeNav = "/#contact";
-              else if (id === "projects") activeNav = "#projects";
-              else if (id === "home") activeNav = "#home";
+              else if (id === "projects") activeNav = "/#projects";
+              else if (id === "home") activeNav = "/#home";
             }
           });
         },
