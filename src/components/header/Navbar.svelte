@@ -1,12 +1,59 @@
 <script>
+  import { onMount } from "svelte";
   import NAV_ITEMS from "./NavbarData.ts";
   import ToggleDark from "../ToggleDark.svelte";
 
   export let shouldFixed = true;
 
-  let activeNav = "#home";
+  let activeNav = "";
 
   const setActive = (link) => { activeNav = link; };
+
+  onMount(() => {
+    const updateActiveNav = () => {
+      const path = window.location.pathname;
+      const hash = window.location.hash;
+
+      if (path.startsWith("/0b")) {
+        activeNav = "/0b";
+      } else if (path.startsWith("/me/ama")) {
+        activeNav = "/me/ama";
+      } else if (path === "/" || path === "") {
+        if (hash === "#contact") activeNav = "/#contact";
+        else if (hash === "#projects") activeNav = "#projects";
+        else if (hash === "#home") activeNav = "#home";
+      }
+    };
+
+    updateActiveNav();
+    window.addEventListener("hashchange", updateActiveNav);
+
+    // Setup intersection observer for homepage sections
+    let observer;
+    if (window.location.pathname === "/" || window.location.pathname === "") {
+      const sections = document.querySelectorAll("section[id]");
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              if (id === "contact") activeNav = "/#contact";
+              else if (id === "projects") activeNav = "#projects";
+              else if (id === "home") activeNav = "#home";
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -40% 0px", threshold: 0 }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    }
+    
+    return () => {
+      window.removeEventListener("hashchange", updateActiveNav);
+      if (observer) observer.disconnect();
+    };
+  });
 
   let y = 0;
   let lastY = 0;

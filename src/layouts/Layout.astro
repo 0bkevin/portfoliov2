@@ -12,13 +12,25 @@ const {title, description} = Astro.props
 ---
 
 <!doctype html>
-<html lang="en" class="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <script>
-      if (localStorage.getItem("darkMode") === "true") {
-        document.documentElement.classList.add("dark");
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('darkMode')) {
+          return localStorage.getItem('darkMode');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'true';
+        }
+        return 'false';
+      })();
+    
+      if (theme === 'true') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
       }
     </script>
     <meta name="viewport" content="width=device-width" />
