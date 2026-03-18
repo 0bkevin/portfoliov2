@@ -3,10 +3,10 @@ export const sendEmailMessage = async (data: {
   email: string;
   subject: string;
   message: string;
-}) => {
-  const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
+}, cfEnv: any = {}) => {
+  const RESEND_API_KEY = cfEnv.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
   // Fallback to the same email or a designated one if MY_EMAIL_ADDRESS is not set
-  const MY_EMAIL_ADDRESS = import.meta.env.MY_EMAIL_ADDRESS || "delivered@resend.dev"; 
+  const MY_EMAIL_ADDRESS = cfEnv.MY_EMAIL_ADDRESS || import.meta.env.MY_EMAIL_ADDRESS || "delivered@resend.dev"; 
 
   if (!RESEND_API_KEY) {
     console.error("RESEND_API_KEY is not set in environment variables.");

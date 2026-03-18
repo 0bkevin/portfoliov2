@@ -1,14 +1,20 @@
 import type { APIRoute } from "astro";
 import { sendEmailMessage } from "../lib/sendEmailMessage";
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   if (request.headers.get("Content-Type") === "application/json") {
     try {
       const body = await request.json();
 
       // Verify Cloudflare Turnstile token
       const turnstileToken = body.turnstileToken;
-      const TURNSTILE_SECRET_KEY = import.meta.env.TURNSTILE_SECRET_KEY || (import.meta.env.DEV ? "1x0000000000000000000000000000000AA" : "");
+      
+      // With Cloudflare Pages/Workers adapter in Astro v5/v6, secrets are usually accessed from locals.runtime.env
+      // Or they might be injected via Vite statically during build. 
+      // We check locals.runtime.env first for Cloudflare environment bindings, then fallback to import.meta.env
+      // @ts-ignore
+      const cfEnv = locals?.runtime?.env || {};
+      const TURNSTILE_SECRET_KEY = cfEnv.TURNSTILE_SECRET_KEY || import.meta.env.TURNSTILE_SECRET_KEY || (import.meta.env.DEV ? "1x0000000000000000000000000000000AA" : "");
       
       if (!turnstileToken) {
         console.error("Turnstile token missing");
@@ -50,7 +56,7 @@ export const POST: APIRoute = async ({ request }) => {
         email: body.email,
         subject: body.subject,
         message: body.message,
-      });
+      }, cfEnv);
       
       if (success) {
         return new Response(
