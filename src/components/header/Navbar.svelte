@@ -21,9 +21,12 @@
         activeNav = "/0b";
       } else if (path.startsWith("/me/ama")) {
         activeNav = "/me/ama";
+      } else if (path.startsWith("/projects")) {
+        activeNav = "/#projects";
       } else if (path === "/" || path === "") {
         if (hash === "#contact") activeNav = "/#contact";
         else if (hash === "#projects") activeNav = "/#projects";
+        else if (hash === "#blog") activeNav = "/0b";
         else if (hash === "#home" || hash === "") activeNav = "/#home";
       }
     };
@@ -42,6 +45,7 @@
               const id = entry.target.getAttribute("id");
               if (id === "contact") activeNav = "/#contact";
               else if (id === "projects") activeNav = "/#projects";
+              else if (id === "blog") activeNav = "/0b";
               else if (id === "home") activeNav = "/#home";
             }
           });

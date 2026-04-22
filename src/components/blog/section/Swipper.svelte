@@ -8,9 +8,11 @@
   register();
 
   export let blogs: CollectionEntry<"blogs">[];
+  let swiperEl: HTMLElement & {
+    initialize?: () => void;
+  };
 
   onMount(() => {
-    const swiperEl = document.querySelector("swiper-container");
     if (swiperEl) {
       Object.assign(swiperEl, {
         slidesPerView: 1,
@@ -44,7 +46,7 @@
   </button>
 
   <div class="w-full mx-auto">
-    <swiper-container class="blog-swiper" init="false">
+    <swiper-container bind:this={swiperEl} class="blog-swiper" init="false">
       {#each blogs as blog}
         <swiper-slide>
           <BlogCard {blog} />
