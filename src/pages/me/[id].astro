@@ -1,5 +1,5 @@
 ---
-import MeLayout from "@layouts/MeLayout.astro";
+import BlogLayout from "@layouts/Blog.astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
 
 export const prerender = true;
@@ -19,6 +19,6 @@ const { blog } = Astro.props;
 const { Content, headings } = await render(blog);
 ---
 
-<MeLayout blog={blog} tableOfContents={headings}>
+<BlogLayout blog={blog} tableOfContents={headings}>
   <Content />
-</MeLayout>
+</BlogLayout>
