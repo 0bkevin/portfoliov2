@@ -3,6 +3,7 @@ import Footer from "@components/footer/Footer.astro";
 import { formatDateToDisplay, getReadingTime } from "@lib/utils";
 import type { CollectionEntry } from "astro:content";
 import Toc from "@components/Toc/Toc.svelte";
+import { ClientRouter } from "astro:transitions";
 import "@styles/global.css";
 import Navbar from "../components/header/Navbar.svelte";
 import ScrollUp from "../components/ScrollUp.astro";
@@ -12,7 +13,7 @@ interface Props {
   tableOfContents: { text: string; depth: number; slug: string }[];
 }
 
-const { blog } = Astro.props as Props;
+const { blog, tableOfContents } = Astro.props as Props;
 const readingTime = getReadingTime(blog.body);
 const publishDate = formatDateToDisplay(blog.data.pubDate);
 ---
@@ -20,6 +21,7 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
 <!doctype html>
 <html lang="en">
   <head>
+    <ClientRouter />
     <script is:inline>
       const theme = (() => {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('darkMode')) {
@@ -138,7 +140,7 @@ const publishDate = formatDateToDisplay(blog.data.pubDate);
           <slot />
         </div>
       </article>
-      <Toc client:only="svelte" />
+      {tableOfContents.length > 0 ? <Toc client:only="svelte" /> : null}
     </main>
     <Footer />
     <ScrollUp />

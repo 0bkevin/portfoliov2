@@ -40,19 +40,18 @@ const sortedPost = blogs.sort(
           placeholder="Search posts..." 
         />
       </div>
-      <div class="relative shrink-0 group">
-        <select 
-          id="blog-sort" 
-          class="appearance-none block w-full sm:w-[160px] py-2.5 pl-4 pr-10 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500/50 transition-all hover:border-surface-300 dark:hover:border-surface-700 cursor-pointer"
+      <div class="relative shrink-0 flex items-center">
+        <button 
+          id="blog-sort-button" 
+          class="flex items-center gap-2 py-2.5 px-4 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 hover:border-surface-300 dark:hover:border-surface-700 transition-all cursor-pointer group/btn"
+          data-sort="newest"
         >
-          <option value="newest" class="bg-white dark:bg-surface-900">Newest first</option>
-          <option value="oldest" class="bg-white dark:bg-surface-900">Oldest first</option>
-        </select>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-surface-400 group-focus-within:text-accent-500 transition-colors">
-          <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+          <span id="sort-text">Newest</span>
+          <svg id="sort-icon" class="w-4 h-4 text-surface-400 group-hover/btn:text-surface-600 dark:group-hover/btn:text-surface-300 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path id="sort-path" stroke-linecap="round" stroke-linejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.5L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
           </svg>
-        </div>
+        </button>
       </div>
     </div>
 
@@ -92,20 +91,22 @@ const sortedPost = blogs.sort(
 <script>
   function initBlogFilter() {
     const searchInput = document.getElementById('blog-search') as HTMLInputElement | null;
-    const sortSelect = document.getElementById('blog-sort') as HTMLSelectElement | null;
+    const sortBtn = document.getElementById('blog-sort-button') as HTMLButtonElement | null;
+    const sortText = document.getElementById('sort-text');
+    const sortIcon = document.getElementById('sort-icon');
     const blogList = document.getElementById('blog-list');
     const noResults = document.getElementById('no-results');
     const postCount = document.getElementById('post-count');
     
-    if (!searchInput || !sortSelect || !blogList || !noResults || !postCount) return;
+    if (!searchInput || !sortBtn || !blogList || !noResults || !postCount) return;
 
     const posts = Array.from(blogList.querySelectorAll('.blog-post-item')) as HTMLElement[];
+    let currentSort: 'newest' | 'oldest' = 'newest';
 
     function updateList() {
-      if (!searchInput || !sortSelect || !blogList || !noResults || !postCount) return;
+      if (!searchInput || !blogList || !noResults || !postCount) return;
 
       const searchTerm = searchInput.value.toLowerCase().trim();
-      const sortValue = sortSelect.value;
       let visibleCount = 0;
 
       // Filter and count visible posts
@@ -126,11 +127,7 @@ const sortedPost = blogs.sort(
         const dateA = parseInt(a.getAttribute('data-date') || '0', 10);
         const dateB = parseInt(b.getAttribute('data-date') || '0', 10);
         
-        if (sortValue === 'newest') {
-          return dateB - dateA;
-        } else {
-          return dateA - dateB;
-        }
+        return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
       });
 
       // Reorder DOM
@@ -146,8 +143,18 @@ const sortedPost = blogs.sort(
       }
     }
 
+    sortBtn.addEventListener('click', () => {
+      currentSort = currentSort === 'newest' ? 'oldest' : 'newest';
+      
+      if (sortText) sortText.textContent = currentSort === 'newest' ? 'Newest' : 'Oldest';
+      if (sortIcon) {
+        sortIcon.style.transform = currentSort === 'newest' ? 'rotate(0deg)' : 'rotate(180deg)';
+      }
+      
+      updateList();
+    });
+
     searchInput.addEventListener('input', updateList);
-    sortSelect.addEventListener('change', updateList);
   }
 
   // Initialize on load and when navigating via ViewTransitions if used

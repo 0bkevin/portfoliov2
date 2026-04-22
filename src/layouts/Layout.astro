@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/header/Navbar.svelte";
 import Footer from "../components/footer/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 import '@styles/global.css';
 
 interface Props {
@@ -14,6 +15,7 @@ const {title, description} = Astro.props
 <!doctype html>
 <html lang="en">
   <head>
+    <ClientRouter />
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <script is:inline>
