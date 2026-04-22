@@ -1,24 +1,170 @@
 ---
+import Layout from "@layouts/Layout.astro";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 
 export const prerender = true;
-// called at build time, it compiles the list of all possible paths for this page to make it static
-export async function getStaticPaths() {
-  const posts = (await getCollection(
-    "projects"
-  )) as CollectionEntry<"projects">[];
 
-  return posts.map((blog) => ({
-    params: { id: blog.id },
-    props: { blog },
+export async function getStaticPaths() {
+  const projects = (await getCollection("projects")) as CollectionEntry<"projects">[];
+
+  return projects.map((project) => ({
+    params: { id: project.id },
+    props: { project },
   }));
 }
 
 interface Props {
-  blog: CollectionEntry<"projects">;
+  project: CollectionEntry<"projects">;
 }
-const { blog } = Astro.props;
-const { Content } = await render(blog);
+
+const { project } = Astro.props as Props;
+const { Content } = await render(project);
+const projectYear = project.data.pubYear.getFullYear();
 ---
 
-<Content />
+<Layout
+  title={`0b | ${project.data.title}`}
+  description={project.data.description}
+>
+  <article class="min-h-screen py-16 md:py-20">
+    <div class="section-container">
+      <!-- Minimal Header -->
+      <div class="mb-12 md:mb-16 max-w-4xl">
+        <a
+          href="/projects"
+          class="inline-flex text-xs font-medium text-surface-400 dark:text-surface-500 hover:text-surface-900 dark:hover:text-surface-200 transition-colors mb-10"
+        >
+          &larr; Back to projects
+        </a>
+
+        <h1 class="text-4xl md:text-5xl lg:text-[4rem] font-bold tracking-tighter text-surface-900 dark:text-surface-100 mb-6 leading-tight">
+          {project.data.title}
+        </h1>
+        
+        <p class="text-lg md:text-xl text-surface-500 dark:text-surface-400 max-w-2xl leading-relaxed mb-8">
+          {project.data.description}
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 text-xs font-medium uppercase tracking-widest text-surface-500 dark:text-surface-400">
+          <time datetime={projectYear.toString()} class="text-surface-900 dark:text-surface-200">{projectYear}</time>
+          <span class="h-1 w-1 rounded-full bg-surface-300 dark:bg-surface-700"></span>
+          <div class="flex flex-wrap gap-3">
+            {project.data.tags.map((tag) => (
+              <span>{tag}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="relative w-full aspect-video md:aspect-[21/9] overflow-hidden rounded-2xl bg-surface-100 dark:bg-surface-800 ring-1 ring-surface-200/50 dark:ring-surface-700/50 mb-16 md:mb-24">
+        <img
+          src={project.data.image.url}
+          alt={project.data.image.alt}
+          class="h-full w-full object-cover"
+        />
+      </div>
+
+      <!-- Layout Split -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24 items-start">
+        
+        <!-- Left Sidebar / Meta -->
+        <aside class="flex flex-col gap-10 lg:sticky lg:top-32 hidden md:flex">
+          
+          <!-- Info Overview -->
+          <div>
+            <span class="block text-xs font-medium uppercase tracking-widest text-surface-400 dark:text-surface-500 mb-5 pb-4 border-b border-surface-200 dark:border-surface-800">
+              Overview
+            </span>
+            <ul class="flex flex-col gap-5 text-sm text-surface-600 dark:text-surface-300">
+              <li class="flex flex-col gap-1.5">
+                <span class="text-[11px] font-medium text-surface-400 uppercase tracking-widest">Timeline</span>
+                <span class="font-medium text-surface-900 dark:text-surface-100">{projectYear}</span>
+              </li>
+              <li class="flex flex-col gap-1.5">
+                <span class="text-[11px] font-medium text-surface-400 uppercase tracking-widest">Category</span>
+                <span class="font-medium text-surface-900 dark:text-surface-100 capitalize">{project.data.tags[0] || 'Engineering'}</span>
+              </li>
+              <li class="flex flex-col gap-1.5">
+                <span class="text-[11px] font-medium text-surface-400 uppercase tracking-widest">Technologies</span>
+                <span class="font-medium text-surface-900 dark:text-surface-100 leading-relaxed capitalize">{project.data.tags.slice(1).join(", ") || 'N/A'}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex flex-col gap-3">
+            {project.data.demoUrl || project.data.repoUrl ? (
+              <span class="block text-xs font-medium uppercase tracking-widest text-surface-400 dark:text-surface-500 mb-2 pb-4 border-b border-surface-200 dark:border-surface-800">
+                Links
+              </span>
+            ) : null}
+            {project.data.demoUrl && (
+              <a
+                href={project.data.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center justify-between w-full rounded-xl bg-surface-900 dark:bg-surface-100 px-5 py-3.5 text-sm font-medium text-white dark:text-surface-900 transition-transform active:scale-[0.98]"
+              >
+                <span>Live demo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+            )}
+            {project.data.repoUrl && (
+              <a
+                href={project.data.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center justify-between w-full rounded-xl border border-surface-200 dark:border-surface-800 bg-transparent px-5 py-3.5 text-sm font-medium text-surface-900 dark:text-surface-100 transition-colors hover:bg-surface-50 dark:hover:bg-surface-800/50"
+              >
+                <span>Source code</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+              </a>
+            )}
+          </div>
+        </aside>
+
+        <!-- Right Content Body -->
+        <div class="prose prose-neutral dark:prose-invert max-w-3xl
+          prose-headings:tracking-tight prose-headings:font-bold prose-headings:text-surface-900 dark:prose-headings:text-surface-100
+          prose-h1:text-3xl prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl
+          prose-p:text-surface-600 dark:prose-p:text-surface-400 prose-p:leading-relaxed prose-p:mb-6
+          prose-a:text-surface-900 dark:prose-a:text-surface-100 prose-a:underline prose-a:decoration-surface-300 dark:prose-a:decoration-surface-700 prose-a:underline-offset-4 hover:prose-a:decoration-surface-900 dark:hover:prose-a:decoration-surface-100 transition-colors
+          prose-strong:text-surface-900 dark:prose-strong:text-surface-100 prose-strong:font-semibold
+          prose-blockquote:border-l-2 prose-blockquote:border-surface-300 dark:prose-blockquote:border-surface-700 prose-blockquote:pl-6 prose-blockquote:py-1 prose-blockquote:text-surface-900 dark:prose-blockquote:text-surface-100 prose-blockquote:font-medium prose-blockquote:not-italic
+          prose-img:rounded-xl prose-img:border prose-img:border-surface-200/50 dark:prose-img:border-surface-800/50 prose-img:my-10
+          prose-code:text-surface-900 dark:prose-code:text-surface-100 prose-code:bg-surface-100 dark:prose-code:bg-surface-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
+          prose-ul:list-disc prose-ol:list-decimal prose-li:my-2
+          prose-li:marker:text-surface-400 dark:prose-li:marker:text-surface-600
+        ">
+          <Content />
+          
+          <!-- Mobile Actions (Hidden on Desktop) -->
+          <div class="mt-16 flex flex-col sm:flex-row gap-3 md:hidden pt-8 border-t border-surface-200 dark:border-surface-800">
+            {project.data.demoUrl && (
+              <a
+                href={project.data.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 rounded-xl bg-surface-900 dark:bg-surface-100 px-5 py-3.5 text-sm font-medium text-white dark:text-surface-900"
+              >
+                <span>Live demo</span>
+              </a>
+            )}
+            {project.data.repoUrl && (
+              <a
+                href={project.data.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 rounded-xl border border-surface-200 dark:border-surface-800 bg-transparent px-5 py-3.5 text-sm font-medium text-surface-900 dark:text-surface-100"
+              >
+                <span>Source code</span>
+              </a>
+            )}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </article>
+</Layout>
