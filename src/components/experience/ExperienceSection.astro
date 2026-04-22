@@ -1,0 +1,176 @@
+---
+const EXPERIENCE = [
+  {
+    period: "Dec 2025 — Present",
+    company: "Proyecto Educa",
+    role: "Chief Technology Officer",
+    location: "Caracas",
+    summary: "I lead the technical direction for digital initiatives that support the organization’s educational work.",
+    highlights: [
+      "Own architecture and product priorities.",
+      "Guide delivery with a focus on clarity and maintainability.",
+    ],
+    current: true,
+  },
+  {
+    period: "Apr 2025 — Apr 2026",
+    company: "Free2Z",
+    role: "Principal Software Engineer",
+    location: "United States",
+    summary: "I led the frontend migration from React to SvelteKit and helped redesign the platform for better performance and maintainability.",
+    highlights: [
+      "Migrated the frontend to SvelteKit and simplified state management.",
+      "Integrated Dyte, built a custom CMS, and improved Core Web Vitals.",
+    ],
+  },
+  {
+    period: "Nov 2024 — Aug 2025",
+    company: "U.S. Department of State",
+    role: "Software Engineer · Full-Stack Developer",
+    location: "Caracas, Venezuela",
+    summary: "I built a full-stack networking platform for bilingual Venezuelan talent, from architecture to delivery.",
+    highlights: [
+      "Designed the platform end to end, including database, UI, and workflows.",
+      "Built tracking and reporting tools for advisors and training programs.",
+    ],
+  },
+  {
+    period: "Sep 2024 — Dec 2024",
+    company: "Freelancer",
+    role: "Software Engineer",
+    location: "Remote",
+    summary: "I delivered small client projects end to end, from websites to automation scripts.",
+    highlights: [
+      "Built custom websites tailored to client goals.",
+      "Created automation scripts to simplify repetitive work.",
+    ],
+  },
+  {
+    period: "Aug 2023 — Sep 2024",
+    company: "Asociación Venezolano Americana de Amistad (AVAA)",
+    role: "Software Developer",
+    location: "Caracas",
+    summary: "I modernized AVAA’s internal tracking workflows and moved the team away from manual spreadsheets.",
+    highlights: [
+      "Built SAP as the source of truth for the ProExcelencia program.",
+      "Developed SEA for EducationUSA and automated core tracking processes.",
+    ],
+  },
+  {
+    period: "Oct 2022 — Aug 2023",
+    company: "Asociación Venezolano Americana de Amistad (AVAA)",
+    role: "Software Developer Intern",
+    location: "Caracas",
+    summary: "I helped digitize internal processes and supported the program’s operations.",
+    highlights: [
+      "Built a Power BI dashboard for alumni data.",
+      "Recovered historical records and automated scholar tracking.",
+    ],
+  },
+];
+
+const SIDEBAR_ITEMS = [
+  {
+    label: "Current focus",
+    value: "Platform reliability, developer experience, and clear product delivery.",
+  },
+  {
+    label: "Impact profile",
+    value: "Frontend migrations, workflow automation, and internal tools that reduce friction.",
+  },
+  {
+    label: "Availability",
+    value: "Open to senior engineering, technical leadership, advisory, and selective freelance or consulting work.",
+  },
+];
+---
+
+<section class="section-container py-24 md:py-32" id="experience">
+  <div class="mb-16 md:mb-24">
+    <p class="section-heading">Experience</p>
+    <h2 class="section-title">Timeline</h2>
+  </div>
+
+  <div class="grid lg:grid-cols-[1fr_2.5fr] gap-16 lg:gap-24 items-start relative z-10">
+    <aside class="flex-col gap-10 lg:sticky lg:top-32 hidden lg:flex">
+      <div class="relative group">
+        <div class="absolute -inset-x-4 -inset-y-3 bg-surface-50 dark:bg-surface-900/40 rounded-2xl scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500"></div>
+        <div class="relative">
+          <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-accent-600 dark:text-accent-400 mb-3 ml-1">Philosophy</p>
+          <p class="text-sm font-semibold text-surface-900 dark:text-white leading-relaxed pl-4 border-l-2 border-accent-500/30">
+            Systems that are easy to use, maintain, and ship.
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-10">
+        {
+          SIDEBAR_ITEMS.map(({ label, value }) => (
+            <div class="relative group">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="h-px w-6 bg-surface-200 dark:bg-surface-800 transition-all duration-500 group-hover:w-10 group-hover:bg-accent-500"></div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-400 dark:text-surface-500 transition-colors group-hover:text-accent-500">{label}</p>
+              </div>
+              <p class="text-xs font-medium leading-relaxed text-surface-600 dark:text-surface-400 transition-colors group-hover:text-surface-900 dark:group-hover:text-surface-200 pl-9">
+                {value}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="pt-6 border-t border-surface-100 dark:border-surface-900">
+        <p class="text-[10px] font-medium text-surface-400 dark:text-surface-600 italic leading-relaxed">
+          Focusing on high-impact technical direction and product-minded engineering.
+        </p>
+      </div>
+    </aside>
+
+    <div class="relative border-l border-surface-200 dark:border-surface-800 ml-3 md:ml-4 flex flex-col gap-16 pb-8">
+      {
+        EXPERIENCE.map((item, index) => (
+          <article class="relative pl-8 md:pl-12 group">
+            <!-- Minimal Timeline dot over the border -->
+            <div class={`absolute -left-[5px] md:-left-[5.5px] top-2 h-2.5 w-2.5 md:h-3 md:w-3 rounded-full ring-4 ring-[#fafafa] dark:ring-[#0a0a0a] transition-colors duration-300 ${
+              index === 0 ? 'bg-accent-500' : 'bg-surface-300 dark:bg-surface-700 group-hover:bg-surface-400 dark:group-hover:bg-surface-600'
+            }`}></div>
+
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-4">
+              <div>
+                <h3 class="text-xl md:text-2xl font-semibold tracking-tight text-surface-900 dark:text-surface-100 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
+                  {item.role}
+                </h3>
+                <p class="text-base font-medium text-surface-600 dark:text-surface-400 mt-1">
+                  {item.company}
+                </p>
+              </div>
+              <div class="flex items-center gap-4 mt-2 md:mt-0">
+                {item.current && (
+                  <span class="inline-flex items-center rounded-full bg-accent-500/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-700 dark:text-accent-400">
+                    Current
+                  </span>
+                )}
+                <span class="text-sm font-medium text-surface-400 dark:text-surface-500 tracking-tight drop-shadow-sm">{item.period}</span>
+              </div>
+            </div>
+
+            <p class="text-surface-600 dark:text-surface-400 leading-relaxed text-sm md:text-[15px] max-w-3xl">
+              {item.summary}
+            </p>
+
+            <ul class="mt-6 flex flex-col gap-3.5">
+              {
+                item.highlights.map((highlight) => (
+                  <li class="flex items-start gap-4 text-sm md:text-[15px] text-surface-500 dark:text-surface-400 max-w-3xl group-hover:text-surface-600 dark:group-hover:text-surface-300 transition-colors duration-300">
+                    <span class="text-surface-300 dark:text-surface-700 mt-0.5 transition-colors group-hover:text-accent-400">&mdash;</span>
+                    <span class="leading-relaxed">{highlight}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
