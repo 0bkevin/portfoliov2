@@ -23,12 +23,7 @@ const NAV_ITEMS = [
   //   icon: "question",
   //   id: 4,
   // },
-  {
-    name: "AMA",
-    link: "/me/ama",
-    icon: "question",
-    id: 5,
-  },
+
   {
     name: "Blog",
     link: "/0b",
@@ -47,6 +42,12 @@ const NAV_ITEMS = [
     link: "/#contact",
     icon: "message",
     id: 8,
+  },
+  {
+    name: "AMA",
+    link: "/me/ama",
+    icon: "question",
+    id: 5,
   },
 ];
 

@@ -33,16 +33,16 @@ const sortedPost = blogs.sort(
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
         </div>
-        <input 
-          type="search" 
-          id="blog-search" 
-          class="block w-full py-2.5 pl-11 pr-4 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 placeholder:text-surface-400 dark:placeholder:text-surface-600 focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500/50 transition-all hover:border-surface-300 dark:hover:border-surface-700" 
-          placeholder="Search posts..." 
+        <input
+          type="search"
+          id="blog-search"
+          class="block w-full py-2.5 pl-11 pr-4 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 placeholder:text-surface-400 dark:placeholder:text-surface-600 focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500/50 transition-all hover:border-surface-300 dark:hover:border-surface-700"
+          placeholder="Search posts..."
         />
       </div>
       <div class="relative shrink-0 flex items-center">
-        <button 
-          id="blog-sort-button" 
+        <button
+          id="blog-sort-button"
           class="flex items-center gap-2 py-2.5 px-4 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 hover:border-surface-300 dark:hover:border-surface-700 transition-all cursor-pointer group/btn"
           data-sort="newest"
         >
@@ -81,7 +81,7 @@ const sortedPost = blogs.sort(
         ))
       }
     </ul>
-    
+
     <div id="no-results" class="hidden py-8 text-center text-surface-500 dark:text-surface-400">
       No posts found matching your search.
     </div>
@@ -97,7 +97,7 @@ const sortedPost = blogs.sort(
     const blogList = document.getElementById('blog-list');
     const noResults = document.getElementById('no-results');
     const postCount = document.getElementById('post-count');
-    
+
     if (!searchInput || !sortBtn || !blogList || !noResults || !postCount) return;
 
     const posts = Array.from(blogList.querySelectorAll('.blog-post-item')) as HTMLElement[];
@@ -113,7 +113,7 @@ const sortedPost = blogs.sort(
       posts.forEach(post => {
         const title = post.getAttribute('data-title') || '';
         const matches = title.includes(searchTerm);
-        
+
         if (matches) {
           post.style.display = '';
           visibleCount++;
@@ -126,7 +126,7 @@ const sortedPost = blogs.sort(
       posts.sort((a, b) => {
         const dateA = parseInt(a.getAttribute('data-date') || '0', 10);
         const dateB = parseInt(b.getAttribute('data-date') || '0', 10);
-        
+
         return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
       });
 
@@ -135,7 +135,7 @@ const sortedPost = blogs.sort(
 
       // Update UI state
       postCount.textContent = `${visibleCount} post${visibleCount !== 1 ? 's' : ''}`;
-      
+
       if (visibleCount === 0) {
         noResults.classList.remove('hidden');
       } else {
@@ -145,12 +145,12 @@ const sortedPost = blogs.sort(
 
     sortBtn.addEventListener('click', () => {
       currentSort = currentSort === 'newest' ? 'oldest' : 'newest';
-      
+
       if (sortText) sortText.textContent = currentSort === 'newest' ? 'Newest' : 'Oldest';
       if (sortIcon) {
         sortIcon.style.transform = currentSort === 'newest' ? 'rotate(0deg)' : 'rotate(180deg)';
       }
-      
+
       updateList();
     });
 
