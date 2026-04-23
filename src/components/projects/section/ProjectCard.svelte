@@ -14,12 +14,14 @@
         <img
           alt={image.alt}
           src={image.url}
+          loading="lazy"
+          decoding="async"
           class="h-full w-full object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.03]"
         />
       {/if}
       <div class="absolute inset-0 bg-surface-900/0 transition-colors duration-500 group-hover:bg-surface-900/5 dark:group-hover:bg-surface-900/20"></div>
     </div>
-    
+
     <div class="flex flex-col gap-1.5">
       <div class="flex items-center gap-2.5 text-[0.7rem] uppercase tracking-widest text-surface-500 dark:text-surface-400 mb-0.5">
         <span class="font-medium text-surface-900 dark:text-surface-200">{pubYear ? pubYear.getFullYear() : ""}</span>
@@ -30,7 +32,7 @@
           {/each}
         </div>
       </div>
-      
+
       <div>
         <h3 class="flex items-center gap-2 text-base font-semibold tracking-tight text-surface-900 transition-colors duration-300 group-hover:text-accent-600 dark:text-surface-100 dark:group-hover:text-accent-400">
           {title}

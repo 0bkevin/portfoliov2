@@ -2,35 +2,99 @@
 import Layout from "@layouts/Layout.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import { formatDateToDisplay, getReadingTime } from "../../lib/utils";
+import {
+  createBreadcrumbSchema,
+  createWebsiteSchema,
+  createPersonSchema,
+  seoConfig,
+} from "@lib/seo";
 
 const blogs = (await getCollection("blogs")) as CollectionEntry<"blogs">[];
 
 const sortedPost = blogs.sort(
   (a, b) => Number(new Date(b.data.pubDate)) - Number(new Date(a.data.pubDate))
 );
+
+const pageTitle = "Software Engineering, Security & Blockchain Articles | Kevin Bravo";
+const pageDescription =
+  "Explore practical articles by Kevin Bravo on software engineering, backend systems, blockchain, and security, with walkthroughs, lessons learned, and production-minded technical insights.";
+
+const structuredData = [
+  createWebsiteSchema({
+    "@type": "CollectionPage",
+    name: "0b Blog",
+    url: `${seoConfig.siteUrl}/0b`,
+    description: pageDescription,
+    about: [
+      "Software engineering",
+      "Backend systems",
+      "Blockchain",
+      "Security",
+      "Engineering leadership",
+    ],
+    isPartOf: {
+      "@type": "WebSite",
+      name: seoConfig.siteName,
+      url: seoConfig.siteUrl,
+    },
+  }),
+  createBreadcrumbSchema([
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/0b" },
+  ]),
+  createPersonSchema({
+    mainEntityOfPage: `${seoConfig.siteUrl}/0b`,
+  }),
+];
 ---
 
 <Layout
-  title="0b | Kevin Bravo's blog"
-  description="Kevin Bravo's blog. Read about software development, maths, blockchain, security and embedded systems."
+  title={pageTitle}
+  description={pageDescription}
+  canonical="/0b"
+  image="/assets/main_photo.jpg"
+  type="website"
+  structuredData={structuredData}
 >
   <div class="blog-container py-16 min-h-screen">
-    <div class="mb-16">
-      <a href="/" class="inline-flex text-xs font-medium text-surface-400 dark:text-surface-500 hover:text-surface-900 dark:hover:text-surface-200 transition-colors mb-8">
+    <header class="mb-16">
+      <a
+        href="/"
+        class="inline-flex text-xs font-medium text-surface-400 dark:text-surface-500 hover:text-surface-900 dark:hover:text-surface-200 transition-colors mb-8"
+      >
         &larr; Home
       </a>
-      <h1 class="text-4xl font-bold tracking-tighter text-surface-900 dark:text-surface-100 mb-3">Blog</h1>
-      <p class="text-surface-500 dark:text-surface-400">
-        Writing about software development, blockchain, security, and systems.
+      <h1 class="text-4xl font-bold tracking-tighter text-surface-900 dark:text-surface-100 mb-3">
+        Blog
+      </h1>
+      <p class="text-surface-500 dark:text-surface-400 max-w-2xl">
+        Writing about software development, backend systems, blockchain, security,
+        and the engineering decisions behind production-ready software.
       </p>
-    </div>
+    </header>
 
-    <!-- Search & Sort Controls -->
+    <section aria-labelledby="blog-controls-heading" class="sr-only">
+      <h2 id="blog-controls-heading">Blog controls</h2>
+    </section>
+
     <div class="flex flex-col sm:flex-row gap-3 mb-10">
       <div class="relative flex-1 group">
+        <label for="blog-search" class="sr-only">Search blog posts</label>
         <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-surface-400 group-focus-within:text-accent-500 transition-colors">
-          <svg class="w-[18px] h-[18px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          <svg
+            class="w-[18px] h-[18px]"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
           </svg>
         </div>
         <input
@@ -38,51 +102,96 @@ const sortedPost = blogs.sort(
           id="blog-search"
           class="block w-full py-2.5 pl-11 pr-4 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 placeholder:text-surface-400 dark:placeholder:text-surface-600 focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500/50 transition-all hover:border-surface-300 dark:hover:border-surface-700"
           placeholder="Search posts..."
+          autocomplete="off"
         />
       </div>
+
       <div class="relative shrink-0 flex items-center">
         <button
           id="blog-sort-button"
+          type="button"
           class="flex items-center gap-2 py-2.5 px-4 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 hover:border-surface-300 dark:hover:border-surface-700 transition-all cursor-pointer group/btn"
           data-sort="newest"
+          aria-label="Toggle post sort order"
         >
           <span id="sort-text">Newest</span>
-          <svg id="sort-icon" class="w-4 h-4 text-surface-400 group-hover/btn:text-surface-600 dark:group-hover/btn:text-surface-300 transition-transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path id="sort-path" stroke-linecap="round" stroke-linejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.5L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+          <svg
+            id="sort-icon"
+            class="w-4 h-4 text-surface-400 group-hover/btn:text-surface-600 dark:group-hover/btn:text-surface-300 transition-transform"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              id="sort-path"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 16.5L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+            />
           </svg>
         </button>
       </div>
     </div>
 
     <div class="flex items-center justify-between mb-8 pb-4 border-b border-surface-200 dark:border-surface-800">
-      <span class="text-xs font-medium uppercase tracking-widest text-surface-400 dark:text-surface-500">All Posts</span>
-      <span class="text-xs text-surface-400 dark:text-surface-500" id="post-count">{blogs.length} posts</span>
+      <span class="text-xs font-medium uppercase tracking-widest text-surface-400 dark:text-surface-500">
+        All Posts
+      </span>
+      <span class="text-xs text-surface-400 dark:text-surface-500" id="post-count">
+        {blogs.length} posts
+      </span>
     </div>
 
-    <ul class="space-y-0" id="blog-list">
-      {
-        sortedPost.map((blog) => (
-          <li class="blog-post-item" data-title={blog.data.title.toLowerCase()} data-date={new Date(blog.data.pubDate).getTime()}>
-            <a
-              href={`/0b/${blog.id}`}
-              class="group flex flex-col md:flex-row md:items-center md:justify-between py-4 border-b border-surface-100 dark:border-surface-800/50 hover:pl-2 transition-all"
-            >
-              <h2 class="text-sm font-medium text-surface-800 dark:text-surface-200 group-hover:text-surface-900 dark:group-hover:text-surface-100 transition-colors">
-                {blog.data.title}
-              </h2>
-              <div class="flex gap-3 items-center text-xs text-surface-400 dark:text-surface-500 shrink-0 mt-1 md:mt-0">
-                <span>{formatDateToDisplay(blog.data.pubDate)}</span>
-                <span class="w-px h-3 bg-surface-200 dark:bg-surface-800"></span>
-                <span>{getReadingTime(blog.body)} min</span>
-              </div>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <section aria-labelledby="all-posts-heading">
+      <h2 id="all-posts-heading" class="sr-only">All blog posts</h2>
 
-    <div id="no-results" class="hidden py-8 text-center text-surface-500 dark:text-surface-400">
+      <ul class="space-y-0" id="blog-list">
+        {
+          sortedPost.map((blog) => (
+            <li
+              class="blog-post-item"
+              data-title={blog.data.title.toLowerCase()}
+              data-date={new Date(blog.data.pubDate).getTime()}
+            >
+              <a
+                href={`/0b/${blog.id}`}
+                class="group flex flex-col md:flex-row md:items-center md:justify-between py-4 border-b border-surface-100 dark:border-surface-800/50 hover:pl-2 transition-all"
+              >
+                <div class="min-w-0">
+                  <h3 class="text-sm font-medium text-surface-800 dark:text-surface-200 group-hover:text-surface-900 dark:group-hover:text-surface-100 transition-colors">
+                    {blog.data.title}
+                  </h3>
+
+                </div>
+
+                <div class="flex gap-3 items-center text-xs text-surface-400 dark:text-surface-500 shrink-0 mt-2 md:mt-0">
+                  <time datetime={new Date(blog.data.pubDate).toISOString()}>
+                    {formatDateToDisplay(blog.data.pubDate)}
+                  </time>
+                  <span class="w-px h-3 bg-surface-200 dark:bg-surface-800"></span>
+                  <span>{getReadingTime(blog.body)} min</span>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <div
+      id="no-results"
+      class="hidden py-8 text-center text-surface-500 dark:text-surface-400"
+      role="status"
+      aria-live="polite"
+    >
       No posts found matching your search.
     </div>
   </div>
@@ -90,75 +199,68 @@ const sortedPost = blogs.sort(
 
 <script>
   function initBlogFilter() {
-    const searchInput = document.getElementById('blog-search') as HTMLInputElement | null;
-    const sortBtn = document.getElementById('blog-sort-button') as HTMLButtonElement | null;
-    const sortText = document.getElementById('sort-text');
-    const sortIcon = document.getElementById('sort-icon');
-    const blogList = document.getElementById('blog-list');
-    const noResults = document.getElementById('no-results');
-    const postCount = document.getElementById('post-count');
+    const searchInput = document.getElementById("blog-search") as HTMLInputElement | null;
+    const sortBtn = document.getElementById("blog-sort-button") as HTMLButtonElement | null;
+    const sortText = document.getElementById("sort-text");
+    const sortIcon = document.getElementById("sort-icon") as HTMLElement | null;
+    const blogList = document.getElementById("blog-list") as HTMLElement | null;
+    const noResults = document.getElementById("no-results") as HTMLElement | null;
+    const postCount = document.getElementById("post-count") as HTMLElement | null;
 
-    if (!searchInput || !sortBtn || !blogList || !noResults || !postCount) return;
+    if (!searchInput || !sortBtn || !blogList || !noResults || !postCount) {
+      return;
+    }
 
-    const posts = Array.from(blogList.querySelectorAll('.blog-post-item')) as HTMLElement[];
-    let currentSort: 'newest' | 'oldest' = 'newest';
+    const posts = Array.from(blogList.querySelectorAll(".blog-post-item")) as HTMLElement[];
+    let currentSort: "newest" | "oldest" = "newest";
 
     function updateList() {
-      if (!searchInput || !blogList || !noResults || !postCount) return;
-
-      const searchTerm = searchInput.value.toLowerCase().trim();
+      const searchTerm = searchInput!.value.toLowerCase().trim();
       let visibleCount = 0;
 
-      // Filter and count visible posts
-      posts.forEach(post => {
-        const title = post.getAttribute('data-title') || '';
+      posts.forEach((post) => {
+        const title = post.getAttribute("data-title") || "";
         const matches = title.includes(searchTerm);
 
         if (matches) {
-          post.style.display = '';
+          post.style.display = "";
           visibleCount++;
         } else {
-          post.style.display = 'none';
+          post.style.display = "none";
         }
       });
 
-      // Sort ALL posts to maintain consistent DOM order
       posts.sort((a, b) => {
-        const dateA = parseInt(a.getAttribute('data-date') || '0', 10);
-        const dateB = parseInt(b.getAttribute('data-date') || '0', 10);
+        const dateA = parseInt(a.getAttribute("data-date") || "0", 10);
+        const dateB = parseInt(b.getAttribute("data-date") || "0", 10);
 
-        return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
+        return currentSort === "newest" ? dateB - dateA : dateA - dateB;
       });
 
-      // Reorder DOM
-      posts.forEach(post => blogList.appendChild(post));
+      posts.forEach((post) => blogList!.appendChild(post));
 
-      // Update UI state
-      postCount.textContent = `${visibleCount} post${visibleCount !== 1 ? 's' : ''}`;
-
-      if (visibleCount === 0) {
-        noResults.classList.remove('hidden');
-      } else {
-        noResults.classList.add('hidden');
-      }
+      postCount!.textContent = `${visibleCount} post${visibleCount !== 1 ? "s" : ""}`;
+      noResults!.classList.toggle("hidden", visibleCount !== 0);
     }
 
-    sortBtn.addEventListener('click', () => {
-      currentSort = currentSort === 'newest' ? 'oldest' : 'newest';
+    sortBtn.addEventListener("click", () => {
+      currentSort = currentSort === "newest" ? "oldest" : "newest";
 
-      if (sortText) sortText.textContent = currentSort === 'newest' ? 'Newest' : 'Oldest';
+      if (sortText) {
+        sortText.textContent = currentSort === "newest" ? "Newest" : "Oldest";
+      }
+
       if (sortIcon) {
-        sortIcon.style.transform = currentSort === 'newest' ? 'rotate(0deg)' : 'rotate(180deg)';
+        sortIcon.style.transform =
+          currentSort === "newest" ? "rotate(0deg)" : "rotate(180deg)";
       }
 
       updateList();
     });
 
-    searchInput.addEventListener('input', updateList);
+    searchInput.addEventListener("input", updateList);
   }
 
-  // Initialize on load and when navigating via ViewTransitions if used
-  document.addEventListener('astro:page-load', initBlogFilter);
-  // Also run immediately in case ViewTransitions are not used
+  document.addEventListener("astro:page-load", initBlogFilter);
   initBlogFilter();
 </script>

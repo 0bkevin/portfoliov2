@@ -15,6 +15,8 @@
         <img
           alt={image.alt}
           src={image.url}
+          loading="lazy"
+          decoding="async"
           class="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
         />
       {/if}

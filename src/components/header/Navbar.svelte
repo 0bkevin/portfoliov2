@@ -85,9 +85,6 @@
 
 <svelte:window bind:scrollY={y} />
 
-{#if shouldFixed}
-  <div aria-hidden="true" class="h-14"></div>
-{/if}
 
 <div
   class="

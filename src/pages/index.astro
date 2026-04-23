@@ -8,11 +8,71 @@ import Contact from "../components/contact/Contact.astro";
 import ProjectsSection from "../components/projects/section/ProjectsSection.astro";
 import BlogSection from "../components/blog/section/BlogSection.astro";
 import SkillsSection from "@components/skills/SkillsSection.astro";
+import { createPersonSchema, createWebsiteSchema, seoConfig } from "@lib/seo";
+
+const title = "Kevin Bravo — Backend, Infrastructure & Blockchain Software Engineer";
+const description =
+  "Explore Kevin Bravo's software engineering portfolio, case studies, and technical writing on backend systems, infrastructure, security, and blockchain.";
+const image = seoConfig.defaultOgImage;
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description,
+  url: Astro.url.toString(),
+  isPartOf: {
+    "@type": "WebSite",
+    name: seoConfig.siteName,
+    url: seoConfig.siteUrl,
+  },
+  about: {
+    "@type": "Person",
+    name: seoConfig.author.name,
+    url: seoConfig.author.url,
+    jobTitle: seoConfig.author.jobTitle,
+  },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: new URL(image, Astro.site).toString(),
+  },
+};
+
+const websiteSchema = createWebsiteSchema({
+  name: seoConfig.siteName,
+  url: seoConfig.siteUrl,
+  description,
+});
+
+const personSchema = createPersonSchema({
+  description:
+    "Software engineer focused on backend systems, infrastructure, product delivery, and blockchain applications.",
+  worksFor: [
+    {
+      "@type": "Organization",
+      name: "Proyecto Educa",
+    },
+  ],
+  knowsAbout: [
+    "Software engineering",
+    "Backend development",
+    "Distributed systems",
+    "Blockchain",
+    "Web performance",
+    "Technical leadership",
+  ],
+});
+
+const structuredData = [websiteSchema, personSchema, webPageSchema];
 ---
 
 <Layout
-  title="Kevin Bravo | Software Engineer"
-  description="Kevin Bravo — Software engineer building core & blockchain infrastructure."
+  title={title}
+  description={description}
+  image={image}
+  canonical="/"
+  type="website"
+  structuredData={structuredData}
 >
   <Home />
   <About />
