@@ -14,11 +14,12 @@ export const footerLinks = [
   }, 
 ];
 export const socialIcons = [
-  { icon: "bx bxl-twitter", link: "https://twitter.com/0bkevin", index: 1 },
-  { icon: "bx bxl-github", link: "https://github.com/0bkevin/", index: 2 },
+  { icon: "x", link: "https://twitter.com/0bkevin", label: "X profile", index: 1 },
+  { icon: "bx bxl-github", link: "https://github.com/0bkevin/", label: "GitHub profile", index: 2 },
   {
     icon: "bx bxl-linkedin",
     link: "https://www.linkedin.com/in/0bkevin/",
+    label: "LinkedIn profile",
     index: 3,
   },
 ];
