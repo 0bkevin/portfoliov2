@@ -12,9 +12,7 @@ import HeroImage from "../../../public/assets/main_photo.jpg";
         <div class="absolute w-[440px] h-[440px] rounded-full border border-surface-200/50 dark:border-surface-700/30 animate-[spin_40s_linear_infinite]"></div>
         <div class="absolute w-[520px] h-[520px] rounded-full border border-surface-200/30 dark:border-surface-800/40 animate-[spin_60s_linear_infinite_reverse] border-dashed"></div>
 
-        <div class="relative z-10 transition-transform duration-500 hover:scale-105">
-          <div class="absolute inset-0 bg-accent-400/20 blur-[60px] rounded-full -z-10 animate-pulse"></div>
-
+        <div class="relative z-10">
           <div class="home__blob">
             <img
               src={HeroImage.src}
@@ -85,7 +83,10 @@ import HeroImage from "../../../public/assets/main_photo.jpg";
   .home__blob {
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+    box-shadow:
+      inset 0 0 0 9px rgb(255 255 255 / 30%),
+      0 24px 72px rgb(245 158 11 / 0.12),
+      0 8px 28px rgb(0 0 0 / 0.16);
     width: 380px;
     height: 380px;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -102,7 +103,10 @@ import HeroImage from "../../../public/assets/main_photo.jpg";
   }
 
   :global(.dark) .home__blob {
-    box-shadow: inset 0 0 0 9px rgb(255 255 255 / 15%);
+    box-shadow:
+      inset 0 0 0 9px rgb(255 255 255 / 15%),
+      0 24px 72px rgb(245 158 11 / 0.14),
+      0 10px 32px rgb(0 0 0 / 0.34);
   }
 
   @keyframes blob__morph {
@@ -123,7 +127,10 @@ import HeroImage from "../../../public/assets/main_photo.jpg";
     .home__blob {
       width: 300px;
       height: 300px;
-      box-shadow: inset 0 0 0 7px rgb(255 255 255 / 30%);
+      box-shadow:
+        inset 0 0 0 7px rgb(255 255 255 / 30%),
+        0 18px 54px rgb(245 158 11 / 0.1),
+        0 8px 24px rgb(0 0 0 / 0.14);
     }
   }
 </style>
