@@ -77,12 +77,12 @@ const structuredData = [
       <h2 id="blog-controls-heading">Blog controls</h2>
     </section>
 
-    <div class="flex flex-col sm:flex-row gap-3 mb-10">
+    <div class="flex flex-col sm:flex-row sm:items-end gap-3 mb-12">
       <div class="relative flex-1 group">
         <label for="blog-search" class="sr-only">Search blog posts</label>
-        <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-surface-400 group-focus-within:text-accent-500 transition-colors">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-surface-400 group-focus-within:text-accent-500 dark:group-focus-within:text-accent-400 transition-colors">
           <svg
-            class="w-[18px] h-[18px]"
+            class="w-4 h-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -100,24 +100,27 @@ const structuredData = [
         <input
           type="search"
           id="blog-search"
-          class="block w-full py-2.5 pl-11 pr-4 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 placeholder:text-surface-400 dark:placeholder:text-surface-600 focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500/50 transition-all hover:border-surface-300 dark:hover:border-surface-700"
+          class="block w-full py-2 pl-11 pr-4 text-sm rounded-lg bg-transparent border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 placeholder:text-surface-400 dark:placeholder:text-surface-600 focus:outline-none focus:border-accent-500/60 dark:focus:border-accent-400/60 hover:border-surface-300 dark:hover:border-surface-700 transition-colors"
           placeholder="Search posts..."
           autocomplete="off"
         />
       </div>
 
-      <div class="relative shrink-0 flex items-center">
+      <div class="flex flex-col gap-1.5 shrink-0">
+        <span class="text-[10px] font-medium uppercase tracking-widest text-surface-400 dark:text-surface-500 pl-0.5">
+          Sort
+        </span>
         <button
           id="blog-sort-button"
           type="button"
-          class="flex items-center gap-2 py-2.5 px-4 text-[14px] rounded-lg bg-surface-50 dark:bg-surface-900 border border-surface-200 dark:border-surface-800 text-surface-900 dark:text-surface-100 hover:border-surface-300 dark:hover:border-surface-700 transition-all cursor-pointer group/btn"
+          class="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-surface-600 dark:text-surface-400 border border-surface-200 dark:border-surface-800 rounded-lg hover:border-surface-300 dark:hover:border-surface-700 hover:text-surface-900 dark:hover:text-surface-200 transition-colors cursor-pointer group/btn"
           data-sort="newest"
           aria-label="Toggle post sort order"
         >
           <span id="sort-text">Newest</span>
           <svg
             id="sort-icon"
-            class="w-4 h-4 text-surface-400 group-hover/btn:text-surface-600 dark:group-hover/btn:text-surface-300 transition-transform"
+            class="w-3.5 h-3.5 text-surface-400 group-hover/btn:text-surface-600 dark:group-hover/btn:text-surface-300 transition-transform"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -166,7 +169,7 @@ const structuredData = [
                 class="group flex flex-col md:flex-row md:items-center md:justify-between py-4 border-b border-surface-100 dark:border-surface-800/50 hover:pl-2 transition-all"
               >
                 <div class="min-w-0">
-                  <h3 class="text-sm font-medium text-surface-800 dark:text-surface-200 group-hover:text-surface-900 dark:group-hover:text-surface-100 transition-colors">
+                  <h3 class="text-sm font-medium text-surface-800 dark:text-surface-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
                     {blog.data.title}
                   </h3>
 

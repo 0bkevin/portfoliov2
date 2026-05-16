@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
-  import { slide } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
+  import { cubicOut } from "svelte/easing";
   import NAV_ITEMS from "./NavbarData.ts";
   import ToggleDark from "../ToggleDark.svelte";
 
@@ -11,6 +12,7 @@
 
   const setActive = (link) => { activeNav = link; };
   const toggleMobileMenu = () => { isMobileMenuOpen = !isMobileMenuOpen; };
+  const closeMobileMenu = () => { isMobileMenuOpen = false; };
 
   onMount(() => {
     const updateActiveNav = () => {
@@ -34,6 +36,11 @@
 
     updateActiveNav();
     window.addEventListener("hashchange", updateActiveNav);
+
+    const handleKey = (e) => {
+      if (e.key === "Escape") isMobileMenuOpen = false;
+    };
+    window.addEventListener("keydown", handleKey);
 
     // Setup intersection observer for homepage sections
     let observer;
@@ -60,6 +67,7 @@
 
     return () => {
       window.removeEventListener("hashchange", updateActiveNav);
+      window.removeEventListener("keydown", handleKey);
       if (observer) observer.disconnect();
     };
   });
@@ -85,6 +93,17 @@
 
 <svelte:window bind:scrollY={y} />
 
+<!-- Mobile backdrop overlay -->
+{#if isMobileMenuOpen}
+  <button
+    type="button"
+    aria-label="Close menu"
+    tabindex="-1"
+    transition:fade={{ duration: 200 }}
+    on:click={closeMobileMenu}
+    class="md:hidden fixed inset-0 z-40 bg-black/25 dark:bg-black/55 backdrop-blur-[2px] cursor-default"
+  ></button>
+{/if}
 
 <div
   class="
@@ -96,7 +115,7 @@
   <nav aria-label="Main navigation" class="
     pointer-events-auto w-full max-w-5xl mx-auto flex items-center justify-between h-14 px-6
     transition-all duration-300 relative
-    {(!isAtTop && shouldFixed) ? 'bg-[#fafafa]/70 dark:bg-[#0a0a0a]/70 backdrop-blur-lg rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)]' : 'bg-transparent'}
+    {((!isAtTop && shouldFixed) || isMobileMenuOpen) ? 'bg-[#fafafa]/80 dark:bg-[#0a0a0a]/80 backdrop-blur-lg rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)]' : 'bg-transparent'}
   ">
     <a href="/" class="font-bold text-[13px] tracking-[-0.02em] text-inherit no-underline px-2.5 py-1  rounded-md transition-colors duration-200 ease-in hover:border-black/30 dark:border-white/[0.12] dark:hover:border-white/30 motion-reduce:transition-none">KB</a>
 
@@ -122,25 +141,26 @@
     </div>
 
     <!-- Mobile menu toggle & ToggleDark -->
-    <div class="flex items-center gap-2 md:hidden">
+    <div class="flex items-center gap-1 md:hidden">
       <ToggleDark/>
       <button
         on:click={toggleMobileMenu}
-        aria-label="Toggle mobile menu"
-        class="p-1.5 rounded-md hover:bg-black/5 dark:hover:bg-white/[0.06] transition-colors"
+        aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isMobileMenuOpen}
+        class="relative flex items-center justify-center w-8 h-8 rounded-md hover:bg-black/5 dark:hover:bg-white/[0.06] transition-colors"
       >
-        {#if !isMobileMenuOpen}
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70">
-            <line x1="4" x2="20" y1="12" y2="12" />
-            <line x1="4" x2="20" y1="6" y2="6" />
-            <line x1="4" x2="20" y1="18" y2="18" />
-          </svg>
-        {:else}
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70">
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        {/if}
+        <span class="sr-only">Toggle navigation menu</span>
+        <span class="relative block w-4 h-[14px]" aria-hidden="true">
+          <span
+            class="absolute left-0 top-1/2 block h-[1.5px] w-4 bg-current rounded-full transform-gpu transition-transform duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] {isMobileMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-[5px]'}"
+          ></span>
+          <span
+            class="absolute left-0 top-1/2 block h-[1.5px] w-4 bg-current rounded-full transform-gpu transition-opacity duration-150 {isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}"
+          ></span>
+          <span
+            class="absolute left-0 top-1/2 block h-[1.5px] w-4 bg-current rounded-full transform-gpu transition-transform duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] {isMobileMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-[5px]'}"
+          ></span>
+        </span>
       </button>
     </div>
   </nav>
@@ -148,18 +168,23 @@
   <!-- Mobile Menu Dropdown -->
   {#if isMobileMenuOpen}
     <div
-      transition:slide={{ duration: 250 }}
       class="md:hidden absolute top-[calc(100%+0.5rem)] left-0 right-0 max-w-5xl mx-auto px-4 sm:px-6 pointer-events-auto"
     >
-      <div class="bg-[#fafafa]/95 dark:bg-[#0a0a0a]/95 backdrop-blur-xl border border-black/10 dark:border-white/[0.12] rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.1)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-2">
-        <ul class="flex flex-col gap-1 m-0 p-0 list-none">
+      <div
+        transition:fly={{ y: -8, duration: 240, easing: cubicOut }}
+        class="origin-top bg-[#fafafa]/90 dark:bg-[#0a0a0a]/90 backdrop-blur-xl rounded-xl shadow-[0_12px_36px_-12px_rgb(0,0,0,0.12)] dark:shadow-[0_12px_36px_-12px_rgb(0,0,0,0.45)]"
+      >
+        <ul class="flex flex-col m-0 p-1.5 list-none">
           {#each NAV_ITEMS as item (item.id)}
             <li>
               <a
                 href={item.link}
-                on:click={() => { setActive(item.link); isMobileMenuOpen = false; }}
+                on:click={() => { setActive(item.link); closeMobileMenu(); }}
                 aria-current={activeNav === item.link ? 'page' : undefined}
-                class="block text-[14px] text-inherit no-underline px-4 py-3 rounded-xl transition-all duration-200 ease-in hover:bg-black/5 dark:hover:bg-white/[0.06] {activeNav === item.link ? 'font-semibold text-amber-600 dark:text-amber-400 bg-black/5 dark:bg-white/[0.06]' : 'font-medium opacity-70 hover:opacity-100'}"
+                class="block px-4 py-2.5 rounded-md text-[14px] no-underline tracking-tight transition-colors duration-200 ease-out
+                  {activeNav === item.link
+                    ? 'text-amber-600 dark:text-amber-400 font-semibold'
+                    : 'text-inherit font-medium opacity-60 hover:opacity-100'}"
               >
                 {item.name}
               </a>
