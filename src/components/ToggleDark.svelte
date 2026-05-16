@@ -18,7 +18,7 @@
 
 <button
   on:click={toggleDarkMode}
-  class="toggle-btn"
+  class="toggle-btn "
   aria-label="Toggle dark mode"
 >
   {#if darkMode}
@@ -35,7 +35,7 @@
     justify-content: center;
     width: 2rem;
     height: 2rem;
-    border-radius: 6px;
+    border-radius: 9999px;
     border: none;
     background: transparent;
     color: inherit;

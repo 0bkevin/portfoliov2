@@ -32,7 +32,7 @@ Okay, let’s start with the first contract: **Fallback**
 
 Ethernaut 1: Fallback
 
-```
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.0;
 

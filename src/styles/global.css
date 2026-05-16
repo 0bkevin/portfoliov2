@@ -71,11 +71,22 @@
   }
 
   .prose pre {
-    @apply !bg-[#0d0d0d] !text-surface-200 border border-surface-200/50 dark:border-surface-800 rounded-xl shadow-lg p-5 overflow-x-auto my-6 text-[0.875em] leading-relaxed;
+    @apply !bg-[#121212] !text-surface-200 border border-white/5 rounded-xl shadow-[0_18px_40px_rgba(0,0,0,0.35)] p-5 overflow-x-auto my-6 text-[0.875em] leading-relaxed;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.035)),
+      repeating-linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.045) 0,
+        rgba(255, 255, 255, 0.045) 2px,
+        transparent 2px,
+        transparent 8px
+      );
+    background-blend-mode: overlay;
+    position: relative;
   }
   
   .prose pre code {
-    @apply bg-transparent p-0 font-mono border-none text-inherit;
+    @apply bg-transparent p-0 font-mono border-none text-inherit text-[0.92em] leading-7;
   }
 
   .prose table {

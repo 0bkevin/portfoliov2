@@ -5,48 +5,35 @@ const NAV_ITEMS = [
     icon: "estate",
     id: 1,
   },
-  // {
-  //   name: "About",
-  //   link: "#about",
-  //   icon: "user",
-  //   id: 2,
-  // },
-  // {
-  //   name: "Skills",
-  //   link: "#skills",
-  //   icon: "briefcase-alt",
-  //   id: 3,
-  // },
-  // {
-  //   name: "Who am I?",
-  //   link: "me/who-is-kevin-bravo",
-  //   icon: "question",
-  //   id: 4,
-  // },
   {
-    name: "AMA",
-    link: "/me/ama",
-    icon: "question",
-    id: 4,
+    name: "Experience",
+    link: "/#experience",
+    icon: "briefcase-alt",
+    id: 3,
   },
   {
     name: "Blog",
     link: "/0b",
     icon: "file-alt",
-    id: 5,
+    id: 6,
   },
-
   {
     name: "Projects",
-    link: "/#projects",
+    link: "/projects",
     icon: "scenery",
-    id: 6,
+    id: 7,
   },
   {
     name: "Contact",
     link: "/#contact",
     icon: "message",
-    id: 7,
+    id: 8,
+  },
+  {
+    name: "AMA",
+    link: "/me/ama",
+    icon: "question",
+    id: 5,
   },
 ];
 

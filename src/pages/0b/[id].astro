@@ -1,12 +1,12 @@
 ---
 import Blog from "@layouts/Blog.astro";
 import { type CollectionEntry, getCollection, render } from "astro:content";
+import { createArticleSchema, createBreadcrumbSchema } from "@lib/seo";
 
 export const prerender = true;
-// called at build time, it compiles the list of all possible paths for this page to make it static
-export async function getStaticPaths() {
 
-  const blogs = await getCollection("blogs") as CollectionEntry<"blogs">[];
+export async function getStaticPaths() {
+  const blogs = (await getCollection("blogs")) as CollectionEntry<"blogs">[];
 
   return blogs.map((blog) => ({
     params: { id: blog.id },
@@ -17,10 +17,42 @@ export async function getStaticPaths() {
 interface Props {
   blog: CollectionEntry<"blogs">;
 }
-const { blog } = Astro.props;
-const { Content, headings  } = await render(blog);
+
+const { blog } = Astro.props as Props;
+const { Content, headings } = await render(blog);
+
+
+
+const pagePath = `/0b/${blog.id}`;
+
+const articleSchema = createArticleSchema({
+  headline: blog.data.title,
+  description: blog.data.description,
+  url: pagePath,
+  ...(blog.data.image?.url ? { image: blog.data.image.url } : {}),
+  datePublished: blog.data.pubDate,
+  dateModified: blog.data.updatedDate ?? blog.data.pubDate,
+  keywords: blog.data.tags,
+  inLanguage: blog.data.language,
+});
+
+const breadcrumbSchema = createBreadcrumbSchema([
+  { name: "Home", item: "/" },
+  { name: "Blog", item: "/0b" },
+  { name: blog.data.title, item: pagePath },
+]);
+
+const structuredData = [articleSchema, breadcrumbSchema];
 ---
 
-<Blog blog={blog} tableOfContents={headings}>
+<Blog
+  entry={blog}
+  tableOfContents={headings}
+  backHref="/0b"
+  backLabel="Blog"
+  sectionLabel="Blog"
+  type="article"
+  structuredData={structuredData}
+>
   <Content />
 </Blog>
