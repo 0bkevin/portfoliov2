@@ -1,10 +1,17 @@
-<a href="#" class="scrollup fixed right-5 -bottom-[20%] w-8 h-8 flex items-center justify-center bg-surface-900 dark:bg-surface-100 rounded-md z-[100] transition-all duration-300 hover:bg-surface-800 dark:hover:bg-surface-200">
+<button type="button" class="scrollup fixed right-5 bottom-8 md:bottom-10 w-8 h-8 flex items-center justify-center bg-surface-900 dark:bg-surface-100 rounded-md z-[100] opacity-0 pointer-events-none transition-opacity duration-150 hover:bg-surface-800 dark:hover:bg-surface-200" aria-label="Scroll to top">
   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white dark:text-surface-900"><path d="m18 15-6-6-6 6"/></svg>
-</a>
+</button>
 <script is:inline>
+  const scrollUp = document.querySelector(".scrollup");
+
+  scrollUp?.addEventListener("click", function () {
+    window.scrollTo(0, 0);
+  });
+
   window.addEventListener("scroll", function () {
-    const scrollUp = document.querySelector(".scrollup");
-    if (this.scrollY >= 560) {
+    if (!scrollUp) return;
+
+    if (window.scrollY >= 560) {
       scrollUp.classList.add("show-scroll");
     } else {
       scrollUp.classList.remove("show-scroll");
@@ -14,6 +21,6 @@
 
 <style>
  .show-scroll {
-  @apply bottom-8 md:bottom-10;
+  @apply opacity-100 pointer-events-auto;
 }
 </style>
