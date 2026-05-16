@@ -129,7 +129,7 @@ const SIDEBAR_ITEMS = [
     <div class="relative border-l border-surface-200 dark:border-surface-800 ml-3 md:ml-4 flex flex-col gap-16 pb-8">
       {
         EXPERIENCE.map((item, index) => (
-          <article class="relative pl-8 md:pl-12 group">
+          <article class={`relative pl-8 md:pl-12 group ${index >= 4 ? "hidden md:block" : ""}`}>
             <!-- Minimal Timeline dot over the border -->
             <div class={`absolute -left-[5px] md:-left-[5.5px] top-2 h-2.5 w-2.5 md:h-3 md:w-3 rounded-full ring-4 ring-[#fafafa] dark:ring-[#0a0a0a] transition-colors duration-300 ${
               index === 0 ? 'bg-accent-500' : 'bg-surface-300 dark:bg-surface-700 group-hover:bg-surface-400 dark:group-hover:bg-surface-600'

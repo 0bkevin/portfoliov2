@@ -1,64 +1,87 @@
 ---
 title: "Billingua Talent"
-pubYear: '2024-09-01T12:00:00Z'
-description: A bilingual talent platform case study focused on candidate review, structured hiring workflows, and clearer decision-making for recruiting teams.
-image: { url: '/assets/main_photo.jpg', alt: 'Billingua Talent dashboard preview' }
-tags: [product strategy, hiring, dashboards, ux]
+pubYear: '2025-01-01T12:00:00Z'
+description: A bilingual talent platform built for AVAA and the U.S. Department of State's Venezuela Affairs Unit to connect vetted Venezuelan professionals with international organizations.
+image: { url: '/assets/projects/billingua/cover.png', alt: 'Billingua Talent homepage for English for Careers' }
+tags: [full-stack platform, talent network, dashboards, education operations]
 language: en
 ---
 
 ## Overview
 
-Billingua Talent is a bilingual talent platform case study designed for teams that need to review candidates, compare profiles quickly, and move hiring decisions forward with less friction.
+Billingua Talent is a professional networking platform commissioned by the U.S. Department of State's Venezuela Affairs Unit and led through AVAA in 2025. I led the full product development, from data architecture to the candidate and advisor interfaces.
 
-The product direction focuses on a common recruiting problem: hiring workflows often become fragmented once candidate sourcing, screening, feedback, and status tracking live across too many tools. Billingua Talent explores a more structured experience where recruiters and hiring managers can evaluate people faster without losing context.
+The platform connects bilingual Venezuelan professionals with international organizations and gives Venezuelan-American Centers a shared system to track English levels, training needs, and service participation.
 
-## The problem
+<figure>
+  <img src="/assets/projects/billingua/homepage.png" alt="Billingua Talent homepage for English for Careers" />
+  <figcaption>Billingua Talent homepage for English for Careers</figcaption>
+</figure>
 
-Many hiring teams struggle with three recurring issues:
+## Context
 
-- candidate information is spread across multiple tools or message threads
-- review workflows become harder when communication happens across languages
-- status updates and hiring signals are not easy to scan at a glance
+AVAA and the Venezuela Affairs Unit needed a secure platform to organize vetted professionals and coordinate follow-up across Binational Centers. The main challenge was keeping candidate profiles, English levels, training services, and advisor decisions in one place.
 
-That combination slows down decision-making and makes candidate review feel heavier than it should.
+## My role
 
-## Product direction
+I translated the program goals into a working product and built the platform from the ground up.
 
-This case study explores how a bilingual recruiting dashboard could support a cleaner, more operational workflow.
+My work covered:
 
-### What I focused on
+- database architecture and data modeling
+- candidate profiles and CV access
+- advisor dashboards and reporting views
+- service, workshop, and course management
+- English-level tracking
+- bilingual interface support
+- frontend and backend implementation
 
-- **Clear candidate comparison views** so recruiters can evaluate profiles side by side.
-- **Bilingual workflow support** for teams working across languages and regional hiring contexts.
-- **Compact status signals** that make pipelines easier to scan.
-- **Calmer interface hierarchy** so the product feels structured instead of overwhelming.
+## Product scope
 
-## Why this matters
+Billingua Talent combines candidate profiles, service management, and advisor analytics. Candidates can present experience, education, certifications, language level, social links, and CV. Advisors can review the talent pool, track participation, and identify training gaps.
 
-A hiring platform does not only need to look polished. It needs to help teams answer practical questions quickly:
+<figure>
+  <img src="/assets/projects/billingua/candidate-profile.png" alt="Candidate profile page with professional experience and English level" />
+  <figcaption>Candidate profile page with professional experience and English level</figcaption>
+</figure>
 
-- Who is ready to move forward?
-- Which candidates need follow-up?
-- Where is the decision getting blocked?
-- What information matters most in a fast review session?
+## Advisor dashboard
 
-Billingua Talent was shaped around those questions. The goal was to make the interface feel more like a focused operations tool and less like a generic recruiting dashboard.
+The dashboard gives VAU and AVAA advisors a live view of candidates, services, registrations, service types, and English-level distribution. It helps the team decide which resources to promote, repeat, or adjust.
+
+<figure>
+  <img src="/assets/projects/billingua/advisor-dashboard.png" alt="Advisor dashboard with candidate totals, services, registrations, and charts" />
+  <figcaption>Advisor dashboard with candidate totals, services, registrations, and charts</figcaption>
+</figure>
+
+## Growth funnel
+
+The platform gives Venezuelan-American Centers a national funnel for candidate development. Advisors can monitor active users, publish targeted services, and guide candidates toward workshops, courses, webinars, and career preparation.
+
+<figure>
+  <img src="/assets/projects/billingua/service-management.png" alt="Service management screen with registrations, dates, modality, type, facilitator, and status" />
+  <figcaption>Service management screen with registrations, dates, modality, type, facilitator, and status</figcaption>
+</figure>
+
+## Service operations
+
+Each service page centralizes logistics, capacity, cost, modality, location, facilitator, and performance metrics. Advisors can manage services and review demand without rebuilding spreadsheets.
+
+<figure>
+  <img src="/assets/projects/billingua/service-detail.png" alt="Service detail page for an intermediate English grammar workshop" />
+  <figcaption>Service detail page for an intermediate English grammar workshop</figcaption>
+</figure>
+
+## Analytics
+
+The analytics views help the team understand candidate composition, offer activity, traffic sources, devices, and usage patterns. Training plans can then respond to observed behavior, not only anecdotal demand.
 
 ## Outcome
 
-The final direction leans into strong hierarchy, deliberate spacing, and clearer candidate evaluation patterns. The result is a product concept that supports:
+Billingua Talent gave candidates a structured professional presence and gave advisors the data needed to coordinate training, monitor readiness, and support connections with international organizations.
 
-- faster scanning
-- better reviewer alignment
-- lower cognitive load during candidate review
-- a more trustworthy hiring workflow for bilingual teams
+The platform improved talent visibility, service coordination, and planning across the Binational Center network.
 
-## Related projects
+## What I learned
 
-If you want to explore adjacent workflow and decision-support case studies, continue with:
-
-- [SEP](/projects/sep), a student enrollment workflow focused on intake, document review, and progress visibility
-- [Dónde Estudiar](/projects/donde-estudiar), an education discovery platform centered on comparison, search, and lower decision fatigue
-
-These projects connect more directly to the same product themes as Billingua Talent: clearer evaluation flows, better information hierarchy, and less friction in high-context decisions.
+The product worked because professional networking and training management were treated as one system. Candidate readiness depended on profile quality and the support structure behind it.

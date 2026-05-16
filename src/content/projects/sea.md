@@ -1,116 +1,89 @@
 ---
-title: "SEA"
-pubYear: '2025-02-18T12:00:00Z'
-description: An incident response and alert triage case study focused on security operations workflows, faster investigation handoffs, and clearer context during active incidents.
-image: { url: '/assets/fourth_photo.jpg', alt: 'SEA security operations dashboard and incident response workflow preview' }
-tags: [security, automation, incident response, systems]
+title: "SEA: Advisee Evaluation System"
+pubYear: '2024-01-01T12:00:00Z'
+description: An internal platform for EducationUSA advisory operations, centralizing student histories, outreach activities, institutional alliances, and funnel visibility.
+image: { url: '/assets/projects/sea/cover.png', alt: 'Minimal abstract cover for the SEA EducationUSA advisory operations platform' }
+tags: [platform, education, automation, operations]
 language: en
 ---
 
 ## Overview
 
-SEA is a security operations case study focused on a common problem in incident response tooling: teams often have alerts, logs, notes, and next steps scattered across too many surfaces at once.
+SEA, the **Advisee Evaluation System**, is the internal platform I engineered for EducationUSA to give the advisor full control over the advisory funnel. The system centralizes student records, advisory history, outreach activities, and institutional alliances in one operational workspace.
 
-The goal of the product direction was to make **security alert triage**, **incident investigation**, and **response coordination** feel more readable under pressure. Instead of designing around visual density alone, I focused on helping analysts answer the questions that matter fastest:
+The goal was simple: replace scattered records with a system that made follow-up, reporting, and opportunity tracking easier to manage. Education advising depends on context. SEA keeps that context visible throughout the student journey.
 
-- What happened?
-- How severe is it?
-- What evidence do we already have?
-- What should happen next?
+<figure>
+  <img src="/assets/projects/sea/image.png" alt="SEA dashboard showing advisee totals, monthly registrations, and top advisees by step" />
+  <figcaption>SEA dashboard showing advisee totals, monthly registrations, and top advisees by step</figcaption>
+</figure>
 
-That made SEA less of a generic dashboard concept and more of a practical **security operations workflow** study.
+## Context
 
-## Problem
+EducationUSA supports students who are exploring international academic opportunities. That work requires more than one-time guidance. Advisors need to understand each student's profile, track previous interactions, document progress, and connect candidates with relevant opportunities abroad.
 
-Many internal security tools are functionally powerful but hard to operate when time matters. Analysts often lose momentum because the interface does not make priority, ownership, or evidence easy to scan.
+Before SEA, that information was harder to manage as a single record. Student histories, promotional activities, and partner institutions could live in separate files or informal workflows. This made reporting slower and reduced visibility into where each student stood in the advisory process.
 
-In practice, that creates friction in areas like:
+## My role
 
-- Alert prioritization during noisy periods
-- Investigation handoffs between team members
-- Tracking status changes during live incidents
-- Preserving enough context for later review
-- Moving from “signal detected” to “action taken” without jumping between too many views
+I built the system from requirements to implementation, focusing on the workflows the advisor needed to operate every week. My work covered data modeling, interface structure, feature development, and process automation for the main advisory and outreach records.
 
-SEA was designed as a response to that operational gap.
+The product had to support real operational use, not just store information. Each section was designed around the questions an advisor needs to answer quickly: who needs follow-up, what has already happened, which outreach activities are active, and what alliances can create new study opportunities.
 
-## Approach
+## Product scope
 
-I framed the product around three core workflow stages:
+SEA became a management tool for the advisory funnel. It organizes the information EducationUSA needs to support students from initial contact to ongoing guidance.
 
-1. **Triage incoming alerts quickly**
-2. **Collect and organize investigation context**
-3. **Move incidents through a visible response path**
+The platform supports:
 
-That led to a few key design decisions.
+- student profile and advisee history management
+- advisory funnel tracking
+- records of outreach and promotional activities
+- institutional alliance management
+- follow-up visibility for active students
+- reporting support for advisory operations
 
-### 1. Alert triage should feel immediate
+## Advisory records
 
-The first screen needed to support quick scanning, not deep reading. I prioritized:
+The student record is the center of the system. SEA keeps a detailed history for each person seeking international academic guidance, including their profile, progress, and advisory interactions.
 
-- Clear severity states
-- Compact but readable metadata
-- Strong contrast between active and resolved work
-- Layout patterns that help analysts sort signal from noise
+This matters because advising depends on continuity. With a structured record, the advisor can review prior context before each interaction and avoid rebuilding the student's history from memory or scattered notes.
 
-The goal was to reduce the amount of time it takes to decide whether an alert needs escalation, dismissal, or deeper investigation.
+<figure>
+  <img src="/assets/projects/sea/image copy 3.png" alt="SEA database view showing scholar records, status filters, and academic profile fields" />
+  <figcaption>SEA database view showing scholar records, status filters, and academic profile fields</figcaption>
+</figure>
 
-### 2. Incident context should stay attached to the work
+## Advisory journey
 
-A common weakness in security workflows is that context ends up split between tickets, chat messages, and analyst memory. SEA pushes toward a model where the important details stay attached to the incident itself:
+SEA also included a student-facing structure based on EducationUSA's five steps to U.S. study. This helped connect the internal advising workflow with the path students were already expected to follow, from researching academic options to preparing for departure.
 
-- Short evidence summaries
-- Investigation notes
-- Timeline-aware status changes
-- Explicit ownership and next-action visibility
+<figure>
+  <img src="/assets/projects/sea/image copy 4.png" alt="SEA student-facing view showing the five steps to U.S. study" />
+  <figcaption>SEA student-facing view showing the five steps to U.S. study</figcaption>
+</figure>
 
-That structure helps the interface support both fast action and cleaner handoffs.
+## Outreach and alliances
 
-### 3. The interface should support pressure, not fight it
+SEA also manages the operational side of EducationUSA's work. Outreach and promotional activities can be recorded as part of the same platform, giving the advisor a clearer view of what has been done, what audiences were reached, and how those efforts relate to the advisory pipeline.
 
-Security tooling often becomes visually crowded in the name of completeness. I wanted SEA to feel more structured than busy. That meant using:
+The system also maintains a database of institutional alliances. These records help track relationships with schools, universities, organizations, and partners that can expand access to study opportunities abroad.
 
-- Strong information hierarchy
-- Consistent card patterns
-- Stable layout regions for high-value signals
-- Enough whitespace to preserve readability during long sessions
+## Payments and services
 
-The result leans toward a systems-oriented UI rather than a decorative one.
+The platform also records paid services connected to the advising process, including initial advising, follow-up advising, and translations. This gives the advisor one place to review service history, monthly payment activity, receipts, and the type of support each student received.
 
-## What I focused on
+<figure>
+  <img src="/assets/projects/sea/image copy 2.png" alt="SEA payment registry showing service history, monthly payment charts, and transaction records" />
+  <figcaption>SEA payment registry showing service history, monthly payment charts, and transaction records</figcaption>
+</figure>
 
-The case study concentrated on a few practical product questions:
+## Operational impact
 
-- How do you design a **security dashboard** that still feels readable during active incident response?
-- What information should be visible at the moment of triage versus hidden until deeper investigation?
-- How can the product reduce ambiguity around ownership, severity, and next steps?
-- What layout patterns support investigation speed without overwhelming the analyst?
+SEA gave the advisor a clearer operating model for managing students, activities, and alliances. Instead of treating advisory records, outreach work, and partner relationships as separate administrative tasks, the platform brought them into one workflow.
 
-These questions shaped both the visual language and the workflow structure.
+That improved day-to-day visibility across the funnel. The advisor could track student progress, preserve historical context, review outreach activity, and manage institutional relationships with less manual coordination.
 
-## Outcome
+## What I learned
 
-SEA became a stronger exploration of what a modern **security operations platform** could feel like when designed around analyst decision-making instead of interface density.
-
-The final direction emphasizes:
-
-- Faster alert scanning
-- Better visibility into incident state
-- Clearer investigation context
-- More trustworthy handoffs across the response flow
-
-It reads as a product intended for real operational use, not just a concept gallery piece.
-
-## Why this project matters
-
-Even though SEA is a concept study, it reflects the kind of engineering and product problems I care about most: systems that need to stay clear, reliable, and useful in high-pressure conditions.
-
-That same mindset shows up in my writing about security and blockchain problem-solving, especially when analyzing how systems fail and how people investigate them.
-
-## Related writing
-
-If you want to see adjacent thinking around security analysis, attack paths, and engineering under constraints, these articles are a good follow-up:
-
-- [Damn Vulnerable DeFi Solution 1: Unstoppable](/0b/damn-vulnerable-defi-1)
-- [Ethernaut solution 1: Fallback](/0b/ethernaut-1)
-- [Ethernaut solution 2: Fallout](/0b/ethernaut-2)
+This project reinforced that internal tools are most valuable when they match the real work. SEA was not only a database. It was a way to make advisory operations easier to inspect, maintain, and improve over time.

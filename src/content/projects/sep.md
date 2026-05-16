@@ -1,117 +1,82 @@
 ---
-title: "SEP"
-pubYear: '2025-07-09T12:00:00Z'
-description: A student enrollment platform case study focused on application intake, document review, progress tracking, and a clearer admissions workflow for applicants and staff.
-image: { url: '/assets/photo-1.jpeg', alt: 'SEP student enrollment platform case study preview' }
-tags: [workflow, onboarding, forms, education]
+title: "SEP: Participant Evaluation System"
+pubYear: '2024-01-01T12:00:00Z'
+description: A platform for ProExcelencia operations, replacing scattered Excel files with real-time scholar, activity, volunteer-hour, and performance tracking.
+image: { url: '/assets/projects/sep/cover.png', alt: 'Generated portfolio cover for the SEP participant evaluation system platform' }
+tags: [platform, education, automation, operations]
 language: en
 ---
 
 ## Overview
 
-SEP is a **student enrollment platform case study** designed around a high-friction process: helping applicants move through forms, document submission, and review steps without feeling lost or overwhelmed.
+SEP, the **Participant Evaluation System**, is the platform I built to help AVAA manage ProExcelencia with live data instead of scattered spreadsheets. It centralizes scholar records, activities, chat clubs, volunteer hours, attendance, and reports across three national chapters.
 
-Many enrollment flows become confusing because they ask for a lot of information while giving very little reassurance. Applicants are left wondering what comes next, what is missing, and whether they are making progress. SEP explores a product direction where the **admissions workflow** feels clearer, more guided, and easier to complete from start to finish.
+<figure>
+  <img src="/assets/projects/sep/cover.png" alt="Generated SEP cover showing an education operations platform" />
+  <figcaption>Generated SEP cover showing an education operations platform</figcaption>
+</figure>
 
-## The problem
+The cover summarizes the product direction: an education platform built around tracking, reporting, and program visibility.
 
-A typical student application or enrollment process includes several moving parts:
+## Context
 
-- multi-step forms
-- document collection
-- verification checkpoints
-- status changes
-- follow-up from staff
-- uncertainty for the applicant
+Before SEP, program tracking depended on Excel files, manual updates, and fragmented historical records. Simple questions took extra time to answer: which scholars were active, how many activities had been completed, which hours were logged, and what still needed attendance review.
 
-When those steps are not well organized, the experience quickly feels bureaucratic. That creates friction for both sides:
+The team needed one operational record for activity planning, scholar follow-up, attendance control, and reporting.
 
-- applicants lose confidence or abandon the flow
-- staff spend more time answering repetitive status questions
-- missing documents and unclear next steps slow the process down
-- progress feels invisible even when users are moving forward
+## My role
 
-SEP was designed to reduce that friction through a more readable and supportive **application intake workflow**.
+I worked on the product structure, data organization, interface design, workflow automation, and implementation. My focus was to move the team from manual spreadsheet management to a digital workflow that matched how ProExcelencia actually operates.
 
-## Product goals
+## Product scope
 
-This case study focused on a few practical goals:
+SEP became the main platform for managing the scholar lifecycle, from activity registration to performance reporting.
 
-- make a **student enrollment process** easier to understand
-- create a step-by-step application experience with lower cognitive load
-- improve visibility into progress, missing items, and next actions
-- make forms and document review feel more approachable
-- support trust through clear states, guidance, and calmer UI patterns
+The platform supports:
 
-## Approach
+- scholar database management
+- activity and calendar tracking
+- chat club participation records
+- volunteer-hour logs
+- attendance review
+- performance reports
+- chapter-level monitoring
 
-The product direction is built around the idea that a good enrollment flow should guide users, not test their patience.
+<figure>
+  <img src="/assets/projects/sep/pes-calendar.svg" alt="PES calendar view with scholar activity KPIs and upcoming activity lists" />
+  <figcaption>PES calendar view with scholar activity KPIs and upcoming activity lists</figcaption>
+</figure>
 
-### 1. A guided multi-step form experience
+This view shows the main operations panel: KPI cards, a monthly activity calendar, and lists for upcoming or pending activities.
 
-The first priority was making the application flow feel manageable. Instead of presenting everything at once, SEP breaks the process into clearer stages so users can focus on the task in front of them.
+## Reporting and analytics
 
-That approach supports:
+The reporting views let staff review activity totals, monthly trends, attendance status, distribution charts, and exportable tables without manually filtering spreadsheets.
 
-- simpler decision-making at each step
-- better completion confidence
-- lower abandonment risk
-- a more approachable experience on both mobile and desktop
+<figure>
+  <img src="/assets/projects/sep/pes-reports.svg" alt="PES analytics view with activity totals, monthly charts, distribution charts, and a searchable table" />
+  <figcaption>PES analytics view with activity totals, monthly charts, distribution charts, and a searchable table</figcaption>
+</figure>
 
-### 2. Strong progress visibility
+This screen focuses on program reporting. It turns activity records into charts and tables the team can use for follow-up and internal reports.
 
-A major part of the case study was helping applicants understand where they are in the process.
+## Scholar visibility
 
-That means surfacing:
+SEP also includes scholar-facing views for personal progress. Participants can review their activity history, chat club progress, modality patterns, and goal completion.
 
-- current step
-- completed sections
-- pending actions
-- missing documents
-- what happens next
+<figure>
+  <img src="/assets/projects/sep/scholar-portal.svg" alt="Scholar portal showing personal statistics, monthly activity trends, and progress by goal" />
+  <figcaption>Scholar portal showing personal statistics, monthly activity trends, and progress by goal</figcaption>
+</figure>
 
-Progress states are not just visual decoration here. They are part of the product strategy, because users are much more likely to complete a process when they can see momentum.
+This view shows the participant side of the platform, where scholars can track their own progress and pending goals.
 
-### 3. Clearer document and review workflows
+## Operational impact
 
-Enrollment often breaks down around document handling. Users may not know what is required, whether something was uploaded successfully, or if staff still need more information.
+SEP reduced repetitive tracking work by automating activity, attendance, volunteer-hour, and reporting workflows. The team gained more time for scholar mentoring, activity planning, chapter coordination, and impact reporting.
 
-SEP explores a cleaner **document review workflow** that reduces ambiguity and makes the process feel more transparent for applicants while giving staff a more structured intake flow.
+The practical result was a cleaner operating model. Data entered during daily work could later support reports and decisions without rebuilding the same information by hand.
 
-## UX direction
+## What I learned
 
-The visual direction is intentionally polished and restrained. The interface aims to feel:
-
-- trustworthy
-- calm
-- structured
-- easy to scan
-
-That makes SEP a stronger fit for education products where people are dealing with important personal information, deadlines, and administrative requirements. The product tone is designed to reassure users without becoming cold or overly formal.
-
-## Outcome
-
-The final direction positions SEP as a more practical **student application platform** for institutions that want a smoother intake experience and applicants who need clearer guidance.
-
-The case study shows how a better enrollment product can improve:
-
-- application clarity
-- completion flow
-- document handling confidence
-- progress transparency
-- overall trust in the admissions experience
-
-Rather than treating enrollment as a series of disconnected forms, SEP treats it as a guided workflow where each step should reduce uncertainty and help users keep moving.
-
-## Why this project matters
-
-SEP reflects the kind of workflow-heavy product problem I enjoy most: taking a complex process with lots of states, dependencies, and edge cases, then turning it into something clearer and more usable.
-
-That same systems-oriented approach appears in other projects across this portfolio, especially products where search, comparison, intake, and multi-step decision-making are central to the experience.
-
-## Related projects and reading
-
-If you want to explore adjacent work, these are good next steps:
-
-- [Dónde Estudiar](/projects/donde-estudiar), a case study about helping students compare schools and programs with less decision fatigue
-- [Billingua Talent](/projects/billingua-talent), a workflow-focused case study centered on structured review and clearer decision-making
+This project reinforced that internal tools work when they follow the real workflow. SEP had to reflect how scholars move through activities, how attendance becomes evidence, how volunteer hours are validated, and how historical records become usable data.

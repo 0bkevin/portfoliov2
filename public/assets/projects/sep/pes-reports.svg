@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">PES analytics reporting view</title>
+  <desc id="desc">A recreated analytics screenshot showing activity totals, monthly performance bars, donut charts, and an exportable table.</desc>
+  <rect width="1600" height="900" fill="#f2fbf6"/>
+  <rect width="66" height="900" fill="#078b3e"/>
+  <g font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <rect x="90" y="48" width="1470" height="116" rx="10" fill="#fff" stroke="#dbe5df"/>
+    <g font-weight="800">
+      <text x="122" y="92" font-size="18" fill="#111827">Actividades formativas ofertadas</text><text x="122" y="136" font-size="42" fill="#18a51f">31</text>
+      <text x="476" y="92" font-size="18" fill="#111827">Actividades formativas realizadas</text><text x="476" y="136" font-size="42" fill="#18a51f">21</text>
+      <text x="830" y="92" font-size="18" fill="#111827">Actividades formativas suspendidas</text><text x="830" y="136" font-size="42" fill="#18a51f">5</text>
+      <text x="1190" y="92" font-size="18" fill="#111827">Actividades formativas agendadas</text><text x="1190" y="136" font-size="42" fill="#18a51f">5</text>
+    </g>
+    <rect x="90" y="190" width="1470" height="286" rx="10" fill="#fff"/>
+    <g stroke="#e5e7eb"><path d="M124 390h1400M124 350h1400M124 310h1400M124 270h1400"/></g>
+    <g fill="#39b833" opacity=".9">
+      <rect x="170" y="322" width="78" height="68"/><rect x="284" y="340" width="78" height="50"/><rect x="398" y="232" width="78" height="158"/><rect x="512" y="322" width="78" height="68"/>
+    </g>
+    <path d="M214 360C280 360 300 342 342 342C389 342 396 286 440 284C492 282 498 336 556 340C602 344 604 390 666 390H1490" fill="none" stroke="#f5c400" stroke-width="7" stroke-linecap="round"/>
+    <g fill="#535b66" font-size="15" text-anchor="middle">
+      <text x="210" y="424">enero</text><text x="324" y="424">febrero</text><text x="438" y="424">marzo</text><text x="552" y="424">abril</text><text x="666" y="424">mayo</text><text x="780" y="424">junio</text><text x="894" y="424">julio</text><text x="1008" y="424">agosto</text><text x="1122" y="424">septiembre</text><text x="1236" y="424">octubre</text><text x="1350" y="424">noviembre</text><text x="1464" y="424">diciembre</text>
+    </g>
+    <rect x="90" y="502" width="1470" height="250" rx="10" fill="#fff"/>
+    <g transform="translate(440 625)">
+      <circle r="80" fill="none" stroke="#f5c400" stroke-width="36" stroke-dasharray="220 503" transform="rotate(-90)"/>
+      <circle r="80" fill="none" stroke="#2563eb" stroke-width="36" stroke-dasharray="86 503" stroke-dashoffset="-220" transform="rotate(-90)"/>
+      <circle r="80" fill="none" stroke="#20a832" stroke-width="36" stroke-dasharray="50 503" stroke-dashoffset="-306" transform="rotate(-90)"/>
+      <circle r="80" fill="none" stroke="#d92d20" stroke-width="36" stroke-dasharray="88 503" stroke-dashoffset="-356" transform="rotate(-90)"/>
+    </g>
+    <g transform="translate(800 625)">
+      <circle r="80" fill="none" stroke="#f5c400" stroke-width="36" stroke-dasharray="190 503" transform="rotate(-90)"/>
+      <circle r="80" fill="none" stroke="#2563eb" stroke-width="36" stroke-dasharray="170 503" stroke-dashoffset="-190" transform="rotate(-90)"/>
+      <circle r="80" fill="none" stroke="#20a832" stroke-width="36" stroke-dasharray="70 503" stroke-dashoffset="-360" transform="rotate(-90)"/>
+    </g>
+    <g transform="translate(1160 625)">
+      <circle r="80" fill="none" stroke="#20a832" stroke-width="36" stroke-dasharray="270 503" transform="rotate(-90)"/>
+      <circle r="80" fill="none" stroke="#f5c400" stroke-width="36" stroke-dasharray="220 503" stroke-dashoffset="-270" transform="rotate(-90)"/>
+    </g>
+    <g fill="#111827" font-size="18" font-weight="800" text-anchor="middle">
+      <text x="440" y="540">Distribución por competencia</text><text x="800" y="540">Distribución por modalidad</text><text x="1160" y="540">Distribución por horario</text>
+    </g>
+    <rect x="90" y="778" width="1470" height="88" rx="10" fill="#fff" stroke="#e5e7eb"/>
+    <rect x="112" y="798" width="360" height="34" rx="6" fill="#fff" stroke="#d1d5db"/>
+    <text x="144" y="821" font-size="16" fill="#6b7280">Buscar...</text>
+    <g fill="#525252" font-size="13" font-weight="800" text-anchor="middle">
+      <text x="274" y="858">ACTIVIDAD</text><text x="520" y="858">FACILITADOR</text><text x="690" y="858">FECHA</text><text x="840" y="858">ESTATUS</text><text x="1040" y="858">MODALIDAD</text><text x="1260" y="858">PLATAFORMA/LUGAR</text>
+    </g>
+  </g>
+</svg>

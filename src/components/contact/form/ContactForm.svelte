@@ -29,62 +29,67 @@
 
   const handleTurnstile = (e: CustomEvent<{ token: string }>) => {
     turnstileToken = e.detail.token;
-    turnstileError = ""; // Clear error when token is received
+    turnstileError = "";
   };
 
   const handleTurnstileError = () => {
-    turnstileError = "Turnstile verification failed. Please try again.";
+    turnstileToken = "";
+    turnstileError = "Verification failed. Please try again.";
+  };
+
+  const handleTurnstileExpired = () => {
+    turnstileToken = "";
+    if (resetTurnstile) resetTurnstile();
   };
 
   const handleSubmit = async (event: Event) => {
     event.preventDefault();
     hasSubmitted = true;
-    
+    errors = evaluateInputs(name, email, subject, message);
+    const hasErrors = Object.values(errors).some((msg) => msg);
+
+    if (hasErrors) {
+      return;
+    }
+
     if (!turnstileToken) {
-      turnstileError = "Please complete the CAPTCHA verification.";
+      turnstileError = "Verification is still loading. Please try again in a moment.";
       return;
     }
 
     status = "sending";
-    
-    errors = evaluateInputs(name, email, subject, message);
-    const hasErrors = Object.values(errors).some((msg) => msg);
 
-    if (!hasErrors) {
-      try {
-        const response = await fetch("/sendEmail", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ 
-            name: sanitizeInput(name), 
-            email: sanitizeInput(email), 
-            subject: sanitizeInput(subject), 
-            message: sanitizeInput(message),
-            turnstileToken
-          }),
-        });
-        
-        if (response.ok) {
-          status = "sent";
-          name = "";
-          email = "";
-          subject = "";
-          message = "";
-          hasSubmitted = false;
-        } else {
-          status = "error";
-        }
-      } catch (error) {
+    try {
+      const response = await fetch("/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ 
+          name: sanitizeInput(name), 
+          email: sanitizeInput(email), 
+          subject: sanitizeInput(subject), 
+          message: sanitizeInput(message),
+          turnstileToken
+        }),
+      });
+      
+      if (response.ok) {
+        status = "sent";
+        name = "";
+        email = "";
+        subject = "";
+        message = "";
+        hasSubmitted = false;
+      } else {
         status = "error";
-      } finally {
-        if (resetTurnstile) resetTurnstile();
-        turnstileToken = "";
-        setTimeout(() => { status = "toSend"; }, 5000);
       }
-    } else {
-      status = "toSend";
+    } catch (error) {
+      status = "error";
+    } finally {
+      if (resetTurnstile) resetTurnstile();
+      turnstileToken = "";
+      setTimeout(() => { status = "toSend"; }, 5000);
     }
   };
 </script>
@@ -128,17 +133,21 @@
     bind:value={message}
   />
 
-  <div class="flex flex-col items-center w-full gap-2">
+  <div class="min-h-0">
     <Turnstile 
       siteKey={TURNSTILE_SITE_KEY} 
+      size="invisible"
+      appearance="interaction-only"
       on:callback={handleTurnstile}
       on:error={handleTurnstileError}
+      on:expired={handleTurnstileExpired}
+      on:timeout={handleTurnstileExpired}
       bind:reset={resetTurnstile}
     />
-    {#if turnstileError}
-      <span class="text-sm text-red-500">{turnstileError}</span>
-    {/if}
   </div>
+  {#if turnstileError}
+    <span class="text-sm text-red-500">{turnstileError}</span>
+  {/if}
 
   <div class="pt-1">
     <ContactButton {status} />
