@@ -12,6 +12,7 @@
   let message = "";
   let turnstileToken = "";
   let turnstileError = "";
+  let showTurnstileChallenge = false;
   let resetTurnstile: () => void;
   let errors = {
     name: "",
@@ -30,15 +31,25 @@
   const handleTurnstile = (e: CustomEvent<{ token: string }>) => {
     turnstileToken = e.detail.token;
     turnstileError = "";
+    showTurnstileChallenge = false;
   };
 
   const handleTurnstileError = () => {
     turnstileToken = "";
-    turnstileError = "Verification failed. Please try again.";
+    showTurnstileChallenge = true;
+    turnstileError = "Verification failed. Please complete the check below.";
   };
 
   const handleTurnstileExpired = () => {
     turnstileToken = "";
+    showTurnstileChallenge = true;
+    turnstileError = "Verification expired. Please complete the check below.";
+    if (resetTurnstile) resetTurnstile();
+  };
+
+  const showManualVerification = (message: string) => {
+    showTurnstileChallenge = true;
+    turnstileError = message;
     if (resetTurnstile) resetTurnstile();
   };
 
@@ -53,7 +64,7 @@
     }
 
     if (!turnstileToken) {
-      turnstileError = "Verification is still loading. Please try again in a moment.";
+      showManualVerification("Please complete the verification below, then send your message.");
       return;
     }
 
@@ -83,6 +94,11 @@
         hasSubmitted = false;
       } else {
         status = "error";
+        const result = await response.json().catch(() => null);
+        const errorMessage = result?.message || "";
+        if (/turnstile|verification/i.test(errorMessage)) {
+          showManualVerification("Verification failed. Please complete the check below and try again.");
+        }
       }
     } catch (error) {
       status = "error";
@@ -133,15 +149,16 @@
     bind:value={message}
   />
 
-  <div class="min-h-0">
+  <div class={showTurnstileChallenge ? "min-h-[65px]" : "h-0 overflow-hidden"}>
     <Turnstile 
       siteKey={TURNSTILE_SITE_KEY} 
-      size="invisible"
-      appearance="interaction-only"
+      size={showTurnstileChallenge ? "normal" : "invisible"}
+      appearance={showTurnstileChallenge ? "always" : "interaction-only"}
       on:callback={handleTurnstile}
       on:error={handleTurnstileError}
       on:expired={handleTurnstileExpired}
       on:timeout={handleTurnstileExpired}
+      on:unsupported={() => showManualVerification("Verification is not supported in this browser. Please try another browser or email me directly.")}
       bind:reset={resetTurnstile}
     />
   </div>
