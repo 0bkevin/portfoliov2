@@ -4,6 +4,7 @@ pubYear: '2025-01-01T12:00:00Z'
 description: A bilingual talent platform built for AVAA and the U.S. Department of State's Venezuela Affairs Unit to connect vetted Venezuelan professionals with international organizations.
 image: { url: '/assets/projects/billingua/cover.png', alt: 'Billingua Talent homepage for English for Careers' }
 tags: [full-stack platform, talent network, dashboards, education operations]
+technologies: [full-stack platform, backend systems, dashboards, data modeling]
 language: en
 ---
 

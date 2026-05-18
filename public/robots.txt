@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.kevinbravo.com/sitemap-index.xml
-Host: www.kevinbravo.com

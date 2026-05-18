@@ -2,7 +2,12 @@
 import Layout from "@layouts/Layout.astro";
 import ProjectCard from "@components/projects/section/ProjectCard.svelte";
 import { getCollection, type CollectionEntry } from "astro:content";
-import { createBreadcrumbSchema, createWebsiteSchema, seoConfig } from "@lib/seo";
+import {
+  createBreadcrumbSchema,
+  createCollectionPageSchema,
+  createWebsiteSchema,
+  seoConfig,
+} from "@lib/seo";
 
 const projects = (await getCollection("projects")) as CollectionEntry<"projects">[];
 
@@ -13,29 +18,24 @@ const sortedProjects = projects.sort(
 const featuredProject = sortedProjects[0];
 const secondaryProjects = sortedProjects.slice(1);
 
-const pageTitle = "Software Engineering Projects & Case Studies | Kevin Bravo";
+const pageTitle = "Backend, Infrastructure, AI & Full-Stack Projects | Kevin Bravo";
 const pageDescription =
-  "Explore software engineering projects and case studies by Kevin Bravo, including backend systems, workflow platforms, dashboards, security concepts, and product-focused builds.";
+  "Explore backend, infrastructure, AI engineering, and full-stack case studies by Kevin Bravo, including product platforms, dashboards, data-heavy systems, and technical architecture work.";
 const pagePath = "/projects";
 
-const webpageSchema = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
+const webpageSchema = createCollectionPageSchema({
+  id: `${seoConfig.siteUrl}/projects#collection`,
   name: pageTitle,
   description: pageDescription,
   url: new URL(pagePath, Astro.site).toString(),
-  isPartOf: {
-    "@type": "WebSite",
-    name: seoConfig.siteName,
-    url: seoConfig.siteUrl,
-  },
   about: {
     "@type": "Person",
+    "@id": `${seoConfig.siteUrl}/#person`,
     name: seoConfig.author.name,
     url: seoConfig.author.url,
     jobTitle: seoConfig.author.jobTitle,
   },
-};
+});
 
 const itemListSchema = {
   "@context": "https://schema.org",
@@ -70,8 +70,9 @@ const structuredData = [
   description={pageDescription}
   canonical={pagePath}
   image={featuredProject?.data.image.url ?? seoConfig.defaultOgImage}
+  imageAlt={featuredProject?.data.image.alt ?? "Kevin Bravo software engineering portfolio"}
   structuredData={structuredData}
-  tags={["software engineering", "projects", "case studies", "portfolio", "backend", "blockchain"]}
+  tags={["software engineering", "projects", "case studies", "portfolio", "backend", "infrastructure", "AI engineering", "full-stack"]}
 >
   <div class="section-container min-h-screen py-16">
     <header class="mb-16">
@@ -80,7 +81,7 @@ const structuredData = [
       </a>
       <h1 class="text-4xl font-bold tracking-tighter text-surface-900 dark:text-surface-100 mb-3">Projects</h1>
       <p class="text-surface-500 dark:text-surface-400 max-w-xl">
-        An evolving archive of my software engineering journey. From early product experiments to production-grade applications, exploring technical challenges, architectures, and lessons learned.
+        Backend, infrastructure, AI engineering, and full-stack case studies from production-grade applications and internal systems, with technical context on architecture, data flows, and product decisions.
       </p>
     </header>
 

@@ -8,7 +8,13 @@ import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), svelte(), sitemap()],
+  integrations: [
+    tailwind(),
+    svelte(),
+    sitemap({
+      filter: (page) => !page.endsWith('/me/who-is-kevin-bravo'),
+    }),
+  ],
   output: 'server',
   trailingSlash: 'never',
   adapter: cloudflare(),

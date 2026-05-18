@@ -1,6 +1,15 @@
 import type { APIRoute } from "astro";
 import { sendEmailMessage } from "../lib/sendEmailMessage";
 
+const jsonResponse = (body: unknown, status: number) =>
+  new Response(JSON.stringify(body), {
+    status,
+    headers: {
+      "content-type": "application/json; charset=utf-8",
+      "x-robots-tag": "noindex, nofollow",
+    },
+  });
+
 export const POST: APIRoute = async ({ request, locals }) => {
   if (request.headers.get("Content-Type") === "application/json") {
     try {
@@ -18,10 +27,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
       
       if (!turnstileToken) {
         console.error("Turnstile token missing");
-        return new Response(
-          JSON.stringify({ message: "Turnstile token is missing." }),
-          { status: 400 }
-        );
+        return jsonResponse({ message: "Turnstile token is missing." }, 400);
       }
 
       console.log("Sending verification request to Cloudflare...");
@@ -44,10 +50,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
 
       if (!turnstileResult.success) {
         console.error("Failed verification:", turnstileResult);
-        return new Response(
-          JSON.stringify({ message: "Failed Turnstile verification." }),
-          { status: 400 }
-        );
+        return jsonResponse({ message: "Failed Turnstile verification." }, 400);
       }
 
       console.log("Verification succeeded, sending email...");
@@ -59,24 +62,20 @@ export const POST: APIRoute = async ({ request, locals }) => {
       }, cfEnv);
       
       if (success) {
-        return new Response(
-          JSON.stringify({ message: "Email sent successfully" }),
-          { status: 200 }
-        );
+        return jsonResponse({ message: "Email sent successfully" }, 200);
       } else {
         console.error("Email sending failed");
-        return new Response(
-          JSON.stringify({ message: "Failed to send email" }),
-          { status: 500 }
-        );
+        return jsonResponse({ message: "Failed to send email" }, 500);
       }
     } catch (err) {
       console.error("Catch block error:", err);
-      return new Response(
-        JSON.stringify({ message: "An internal server error occurred." }),
-        { status: 500 }
-      );
+      return jsonResponse({ message: "An internal server error occurred." }, 500);
     }
   }
-  return new Response(null, { status: 400 });
+  return new Response(null, {
+    status: 400,
+    headers: {
+      "x-robots-tag": "noindex, nofollow",
+    },
+  });
 };

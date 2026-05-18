@@ -1,10 +1,10 @@
 ---
 title: "Damn Vulnerable DeFi Solution 1: Unstoppable"
 pubDate: '2022-05-08T12:00:00Z'
-description: Understand what are Flash loans and Lending pools.
+description: Learn how the Damn Vulnerable DeFi Unstoppable challenge works, including flash loans, lending pools, and the smart contract invariant that stops the pool.
 tags: [auditor, blockchain, smart contracts, python]
 language: en
-image: {url: '/placeholder.jpg', alt: 'Banner'}
+image: {url: '/placeholder.jpg', alt: 'Damn Vulnerable DeFi Unstoppable challenge cover image'}
 canonicalURL: https://kevdevto.hashnode.dev/dvd-1
 ---
 In this series of articles we are going to make a walkthrough of the famous CTF **Damn Vulnerable Defi**, created by one of the top auditors of OpenZeppelin,

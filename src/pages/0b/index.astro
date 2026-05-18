@@ -4,8 +4,9 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import { formatDateToDisplay, getReadingTime } from "../../lib/utils";
 import {
   createBreadcrumbSchema,
-  createWebsiteSchema,
+  createCollectionPageSchema,
   createPersonSchema,
+  createWebsiteSchema,
   seoConfig,
 } from "@lib/seo";
 
@@ -15,13 +16,13 @@ const sortedPost = blogs.sort(
   (a, b) => Number(new Date(b.data.pubDate)) - Number(new Date(a.data.pubDate))
 );
 
-const pageTitle = "Software Engineering, Security & Blockchain Articles | Kevin Bravo";
+const pageTitle = "Backend, Infrastructure, AI & Full-Stack Articles | Kevin Bravo";
 const pageDescription =
-  "Explore practical articles by Kevin Bravo on software engineering, backend systems, blockchain, and security, with walkthroughs, lessons learned, and production-minded technical insights.";
+  "Explore practical articles by Kevin Bravo on backend engineering, infrastructure, AI engineering, full-stack systems, blockchain, and security.";
 
 const structuredData = [
-  createWebsiteSchema({
-    "@type": "CollectionPage",
+  createWebsiteSchema(),
+  createCollectionPageSchema({
     name: "0b Blog",
     url: `${seoConfig.siteUrl}/0b`,
     description: pageDescription,
@@ -32,12 +33,21 @@ const structuredData = [
       "Security",
       "Engineering leadership",
     ],
-    isPartOf: {
-      "@type": "WebSite",
-      name: seoConfig.siteName,
-      url: seoConfig.siteUrl,
-    },
   }),
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Kevin Bravo technical articles",
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    numberOfItems: sortedPost.length,
+    itemListElement: sortedPost.map((blog, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: new URL(`/0b/${blog.id}`, Astro.site).toString(),
+      name: blog.data.title,
+      description: blog.data.description,
+    })),
+  },
   createBreadcrumbSchema([
     { name: "Home", item: "/" },
     { name: "Blog", item: "/0b" },
@@ -53,6 +63,7 @@ const structuredData = [
   description={pageDescription}
   canonical="/0b"
   image="/assets/main_photo.jpg"
+  imageAlt="Portrait of Kevin Bravo, author of backend, infrastructure, AI, and full-stack engineering articles"
   type="website"
   structuredData={structuredData}
 >
@@ -68,8 +79,9 @@ const structuredData = [
         Blog
       </h1>
       <p class="text-surface-500 dark:text-surface-400 max-w-2xl">
-        Writing about software development, backend systems, blockchain, security,
-        and the engineering decisions behind production-ready software.
+        Writing about backend systems, infrastructure, AI engineering, full-stack
+        software, blockchain, security, and the engineering decisions behind
+        production-ready systems.
       </p>
     </header>
 
@@ -172,7 +184,9 @@ const structuredData = [
                   <h3 class="text-sm font-medium text-surface-800 dark:text-surface-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors">
                     {blog.data.title}
                   </h3>
-
+                  <p class="mt-1 max-w-2xl text-sm leading-relaxed text-surface-500 dark:text-surface-400">
+                    {blog.data.description}
+                  </p>
                 </div>
 
                 <div class="flex gap-3 items-center text-xs text-surface-400 dark:text-surface-500 shrink-0 mt-2 md:mt-0">

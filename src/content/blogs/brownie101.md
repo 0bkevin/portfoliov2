@@ -1,9 +1,9 @@
 ---
 title: "Brownie: everything you need to know to write, test and deploy your smart contracts."
 pubDate: '2023-10-01T12:00:00Z'
-image: {url: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1643917478735/Um-sGfhzH.png', alt: 'Banner'}
+image: {url: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1643917478735/Um-sGfhzH.png', alt: 'Brownie smart contract development tutorial cover image'}
 description: We’ll walk through and explore all the main areas of functionality and I'll give you some tricks you can use to make your development process more easy.
-tags: [brownie, blochain, smart contracts, python]
+tags: [brownie, blockchain, smart contracts, python]
 language: en
 canonicalURL: https://kevdevto.hashnode.dev/brownie
 ---

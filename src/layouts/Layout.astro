@@ -7,10 +7,14 @@ import { resolveSeo, seoConfig, stringifySchema, type SchemaValue } from "@lib/s
 
 interface Props {
   title?: string | undefined;
+  seoTitle?: string | undefined;
   description?: string | undefined;
+  seoDescription?: string | undefined;
   image?: string | null | undefined;
+  imageAlt?: string | undefined;
   canonical?: string | undefined;
   noindex?: boolean | undefined;
+  robots?: string | undefined;
   type?: "website" | "article" | "profile" | undefined;
   structuredData?: SchemaValue | SchemaValue[] | undefined;
   lang?: string | undefined;
@@ -23,10 +27,14 @@ interface Props {
 
 const {
   title,
+  seoTitle,
   description,
+  seoDescription,
   image,
+  imageAlt,
   canonical,
   noindex = false,
+  robots,
   type = "website",
   structuredData,
   lang = "en",
@@ -39,10 +47,14 @@ const {
 
 const seo = resolveSeo({
   title,
+  seoTitle,
   description,
+  seoDescription,
   image,
+  imageAlt,
   canonical,
   noindex,
+  robots,
   type,
   pathname: Astro.url.pathname,
   publishedTime,
@@ -69,6 +81,7 @@ const schemaItems = Array.isArray(structuredData)
     <meta name="author" content={seoConfig.author.name} />
     <meta name="creator" content={seoConfig.author.name} />
     <meta name="publisher" content={seoConfig.author.name} />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="application-name" content={seoConfig.siteName} />
     <meta name="apple-mobile-web-app-title" content={seoConfig.siteName} />
     <meta name="format-detection" content="telephone=no" />
@@ -107,12 +120,13 @@ const schemaItems = Array.isArray(structuredData)
     <meta property="og:type" content={seo.openGraph.type} />
     <meta property="og:url" content={seo.openGraph.url} />
     <meta property="og:image" content={seo.openGraph.image} />
-    <meta property="og:image:alt" content={seo.openGraph.title} />
+    <meta property="og:image:alt" content={seo.openGraph.imageAlt} />
 
     <meta name="twitter:card" content={seo.twitter.card} />
     <meta name="twitter:title" content={seo.twitter.title} />
     <meta name="twitter:description" content={seo.twitter.description} />
     <meta name="twitter:image" content={seo.twitter.image} />
+    <meta name="twitter:image:alt" content={seo.twitter.imageAlt} />
     <meta name="twitter:creator" content={seo.twitter.creator} />
     <meta name="twitter:site" content={seo.twitter.site} />
 

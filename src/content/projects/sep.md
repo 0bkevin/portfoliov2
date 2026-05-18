@@ -3,7 +3,8 @@ title: "SEP: Participant Evaluation System"
 pubYear: '2024-01-01T12:00:00Z'
 description: A platform for ProExcelencia operations, replacing scattered Excel files with real-time scholar, activity, volunteer-hour, and performance tracking.
 image: { url: '/assets/projects/sep/cover.png', alt: 'Generated portfolio cover for the SEP participant evaluation system platform' }
-tags: [platform, education, automation, operations]
+tags: [platform, education, full-stack, operations]
+technologies: [full-stack platform, data modeling, dashboards, education operations]
 language: en
 ---
 
@@ -26,7 +27,7 @@ The team needed one operational record for activity planning, scholar follow-up,
 
 ## My role
 
-I worked on the product structure, data organization, interface design, workflow automation, and implementation. My focus was to move the team from manual spreadsheet management to a digital workflow that matched how ProExcelencia actually operates.
+I worked on the product structure, data organization, interface design, backend workflows, and implementation. My focus was to move the team from manual spreadsheet management to a digital workflow that matched how ProExcelencia actually operates.
 
 ## Product scope
 
@@ -73,7 +74,7 @@ This view shows the participant side of the platform, where scholars can track t
 
 ## Operational impact
 
-SEP reduced repetitive tracking work by automating activity, attendance, volunteer-hour, and reporting workflows. The team gained more time for scholar mentoring, activity planning, chapter coordination, and impact reporting.
+SEP reduced repetitive tracking work by centralizing activity, attendance, volunteer-hour, and reporting workflows. The team gained more time for scholar mentoring, activity planning, chapter coordination, and impact reporting.
 
 The practical result was a cleaner operating model. Data entered during daily work could later support reports and decisions without rebuilding the same information by hand.
 

@@ -2,7 +2,7 @@ export const contactData = [
   {
     title: "Email",
     content: "0bravokevin@gmail.com",
-    link: "mailto:bravokevinto@gmail.com",
+    link: "mailto:0bravokevin@gmail.com",
     icon: "-mail-send",
     index: 1,
   },
@@ -35,4 +35,3 @@ export const contactData = [
     index: 5,
   },
 ];
-

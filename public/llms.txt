@@ -1,0 +1,28 @@
+# KevinBravo.com
+
+Kevin Bravo is a software engineer focused on backend engineering, infrastructure, AI engineering, and full-stack product work.
+
+This file is an agent navigation aid. It summarizes important public URLs on the site, but crawler permissions are defined by robots.txt.
+
+## Canonical Site
+
+- https://www.kevinbravo.com/
+
+## High-Value Pages
+
+- https://www.kevinbravo.com/ - Homepage and portfolio overview for Kevin Bravo.
+- https://www.kevinbravo.com/me/ama - Primary profile page with background, strengths, role fit, and technical interests.
+- https://www.kevinbravo.com/projects - Project and case-study index.
+- https://www.kevinbravo.com/projects/billingua-talent - Full-stack platform case study for bilingual professional talent.
+- https://www.kevinbravo.com/projects/sea - Full-stack advisory operations platform case study.
+- https://www.kevinbravo.com/projects/sep - Education operations platform case study.
+- https://www.kevinbravo.com/projects/avaa-power-bi-dashboard - Data analytics dashboard case study.
+- https://www.kevinbravo.com/0b - Technical writing index.
+- https://www.kevinbravo.com/rss.xml - RSS feed for technical writing.
+- https://www.kevinbravo.com/projects.json - Machine-readable project index.
+
+## Notes For Agents
+
+- The site is optimized for hiring and technical evaluation contexts.
+- Some older technical articles are mirrored locally but keep Hashnode as their canonical source.
+- Primary topics are backend systems, infrastructure, AI engineering, full-stack engineering, data systems, and blockchain/security where relevant.

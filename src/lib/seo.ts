@@ -1,11 +1,13 @@
 const SITE_URL = "https://www.kevinbravo.com";
 const SITE_NAME = "Kevin Bravo";
-const SITE_TITLE = "Kevin Bravo — Software Engineer";
+const SITE_TITLE = "Kevin Bravo — Backend, Infrastructure, AI & Full-Stack Engineer";
 const SITE_DESCRIPTION =
-  "Kevin Bravo is a software engineer building production-ready backend, infrastructure, and blockchain systems.";
+  "Kevin Bravo is a software engineer building production-ready backend, infrastructure, AI engineering, and full-stack systems.";
 const DEFAULT_OG_IMAGE = "/assets/main_photo.jpg";
 const DEFAULT_LOCALE = "en_US";
 const TWITTER_HANDLE = "@0bkevin";
+const DEFAULT_ROBOTS =
+  "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
 
 export const seoConfig = {
   siteUrl: SITE_URL,
@@ -32,11 +34,15 @@ export type SchemaValue = Record<string, unknown>;
 
 export interface BaseSeoInput {
   title?: string | undefined;
+  seoTitle?: string | undefined;
   description?: string | undefined;
+  seoDescription?: string | undefined;
   canonical?: string | URL | undefined;
   image?: string | null | undefined;
+  imageAlt?: string | undefined;
   type?: "website" | "article" | "profile" | undefined;
   noindex?: boolean | undefined;
+  robots?: string | undefined;
   publishedTime?: Date | string | undefined;
   modifiedTime?: Date | string | undefined;
   section?: string | undefined;
@@ -70,11 +76,15 @@ export const getCanonicalUrl = (
 
 export const resolveSeo = ({
   title,
+  seoTitle,
   description,
+  seoDescription,
   canonical,
   image,
+  imageAlt,
   type = "website",
   noindex = false,
+  robots,
   publishedTime,
   modifiedTime,
   section,
@@ -84,24 +94,27 @@ export const resolveSeo = ({
   const absoluteCanonical = getCanonicalUrl(pathname, canonical);
 
   const absoluteImage = toAbsoluteUrl(image || DEFAULT_OG_IMAGE);
+  const resolvedTitle = seoTitle || title || SITE_TITLE;
+  const resolvedDescription = seoDescription || description || SITE_DESCRIPTION;
+  const resolvedImageAlt = imageAlt || resolvedTitle;
   const normalizedPublished = normalizeDate(publishedTime);
   const normalizedModified = normalizeDate(modifiedTime);
 
   return {
-    title: title || SITE_TITLE,
-    description: description || SITE_DESCRIPTION,
+    title: resolvedTitle,
+    description: resolvedDescription,
     canonical: absoluteCanonical,
     image: absoluteImage,
+    imageAlt: resolvedImageAlt,
     type,
-    robots: noindex
-      ? "noindex, nofollow"
-      : "index, follow, max-image-preview:large",
+    robots: robots || (noindex ? "noindex, nofollow" : DEFAULT_ROBOTS),
     openGraph: {
-      title: title || SITE_TITLE,
-      description: description || SITE_DESCRIPTION,
+      title: resolvedTitle,
+      description: resolvedDescription,
       url: absoluteCanonical,
       type,
       image: absoluteImage,
+      imageAlt: resolvedImageAlt,
       locale: DEFAULT_LOCALE,
       siteName: SITE_NAME,
       publishedTime: normalizedPublished,
@@ -111,9 +124,10 @@ export const resolveSeo = ({
     },
     twitter: {
       card: "summary_large_image",
-      title: title || SITE_TITLE,
-      description: description || SITE_DESCRIPTION,
+      title: resolvedTitle,
+      description: resolvedDescription,
       image: absoluteImage,
+      imageAlt: resolvedImageAlt,
       creator: TWITTER_HANDLE,
       site: TWITTER_HANDLE,
     },
@@ -125,11 +139,21 @@ export const createPersonSchema = (
 ): SchemaValue => ({
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${SITE_URL}/#person`,
   name: seoConfig.author.name,
   url: seoConfig.author.url,
   image: seoConfig.author.image,
   jobTitle: seoConfig.author.jobTitle,
   sameAs: [...seoConfig.author.sameAs],
+  knowsAbout: [
+    "Backend engineering",
+    "Infrastructure",
+    "AI engineering",
+    "Full-stack engineering",
+    "Product engineering",
+    "Data systems",
+    "Blockchain security",
+  ],
   ...overrides,
 });
 
@@ -138,15 +162,74 @@ export const createWebsiteSchema = (
 ): SchemaValue => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
   name: SITE_NAME,
   url: SITE_URL,
   description: SITE_DESCRIPTION,
   publisher: {
     "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
     name: seoConfig.author.name,
     url: seoConfig.author.url,
   },
   ...overrides,
+});
+
+export interface CollectionPageSchemaInput {
+  name: string;
+  description: string;
+  url: string;
+  id?: string | undefined;
+  about?: string[] | SchemaValue | SchemaValue[] | undefined;
+}
+
+export const createCollectionPageSchema = ({
+  name,
+  description,
+  url,
+  id,
+  about,
+}: CollectionPageSchemaInput): SchemaValue => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": id || `${toAbsoluteUrl(url)}#collection`,
+  name,
+  description,
+  url: toAbsoluteUrl(url),
+  about,
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: SITE_NAME,
+    url: SITE_URL,
+  },
+});
+
+export interface ProfilePageSchemaInput {
+  name: string;
+  description: string;
+  url: string;
+}
+
+export const createProfilePageSchema = ({
+  name,
+  description,
+  url,
+}: ProfilePageSchemaInput): SchemaValue => ({
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${toAbsoluteUrl(url)}#profilepage`,
+  name,
+  description,
+  url: toAbsoluteUrl(url),
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+  },
 });
 
 export interface ArticleSchemaInput {
@@ -187,11 +270,13 @@ export const createArticleSchema = ({
   keywords,
   author: {
     "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
     name: authorName,
     url: authorUrl,
   },
   publisher: {
     "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
     name: seoConfig.author.name,
     url: seoConfig.author.url,
     image: {
@@ -211,6 +296,7 @@ export interface ProjectSchemaInput {
   keywords?: string[] | undefined;
   codeRepository?: string | undefined;
   demoUrl?: string | undefined;
+  type?: "CreativeWork" | "SoftwareApplication" | undefined;
 }
 
 export const createProjectSchema = ({
@@ -223,24 +309,29 @@ export const createProjectSchema = ({
   keywords = [],
   codeRepository,
   demoUrl,
+  type = "CreativeWork",
 }: ProjectSchemaInput): SchemaValue => ({
   "@context": "https://schema.org",
-  "@type": "CreativeWork",
+  "@type": type,
+  "@id": `${toAbsoluteUrl(url)}#creativework`,
   name,
   description,
   url: toAbsoluteUrl(url),
   image: toAbsoluteUrl(image || DEFAULT_OG_IMAGE),
   creator: {
     "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
     name: seoConfig.author.name,
     url: seoConfig.author.url,
   },
   author: {
     "@type": "Person",
+    "@id": `${SITE_URL}/#person`,
     name: seoConfig.author.name,
     url: seoConfig.author.url,
   },
   datePublished: normalizeDate(datePublished),
+  dateCreated: normalizeDate(datePublished),
   keywords,
   programmingLanguage,
   codeRepository: toAbsoluteUrl(codeRepository),

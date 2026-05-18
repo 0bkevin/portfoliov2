@@ -1,21 +1,21 @@
 ---
 title: "Ask Me Anything: Kevin Bravo 🤺"
-pubDate: '2025-06-01T12:00:00Z'
-image: {url: '../../../public/assets/main_photo.jpg', alt: 'Banner'}
-description: Discover Kevin Bravo's professional and personal background in this AMA-style self-interview. Learn about his tech experience, volunteer work, career goals, and technical skills in less than 5 minutes. Perfect for tech recruiters and hiring managers.
+pubDate: '2026-05-18T12:00:00Z'
+seoTitle: "Kevin Bravo | Backend, Infrastructure, AI & Full-Stack Engineer"
+description: Discover Kevin Bravo's professional and personal background in this AMA-style self-interview. Learn about his software engineering experience, leadership work, volunteer projects, career goals, and technical skills in less than 5 minutes.
+seoDescription: Learn about Kevin Bravo's backend, infrastructure, AI engineering, and full-stack software work, including technical strengths, project ownership, and career fit.
+profilePageType: ama
 ---
 
-Hello tech recruiter or technical person! 👏 **Thank you for stopping by and having an interest in my profile.**
+Hello tech recruiter or technical person! 👏 **Thank you for taking the time to read my profile.**
 
-  
+Getting to know a candidate is hard when there is little time and too much to ask. So I wrote this AMA where **I'm interviewing myself so you can know me better 🤠**
 
-Getting to know a candidate can be a challenging task, more when you are in an interview and have all kinds of feelings (anxiety, fear...) and short time, so I decided to write this kind of AMA in which **I'm interviewing myself for you to know me 🤠**
+## Recruiter TL;DR
 
-  
+Backend and full-stack engineer focused on difficult technical projects, infrastructure-minded architecture, AI engineering, and systems built from zero to production.
 
-**Each section contains 5 questions or fewer,** _the goal is to explain my technical & soft experience as well as professional interests_ **so that any person could get to know me in less than 5 mins.**
-
-##   
+I work best when I have full agency to turn an unclear technical problem into a well-structured, maintainable system.
 
 ## 🤷‍♀️ Overall
 
@@ -23,194 +23,123 @@ Getting to know a candidate can be a challenging task, more when you are in an i
 
 ### What's your tech experience like?
 
-  
+I’m a **Software Engineer** focused on backend systems, infrastructure-minded product architecture, AI engineering, data systems, and full-stack products that need to work reliably in real use.
 
-I've been working for the past 5 months in an NGO where I'm currently Scholarship holder and Volunteer as an intern, it's called **AVAA.**
+Most of my experience has been around building systems from the ground up. I design databases, connect APIs, create dashboards, integrate services, and make sure the product supports the people using it. I like projects with real operational weight behind them.
 
-  
+In the projects handed to me, I take **full agency and ownership** over the outcome. I like being trusted with ambiguous and difficult technical challenges where the foundations still need to be defined, built, and maintained.
 
-My job has been mostly to help improve internal processes. Previously the organization had a very ineffective way to manage data and time-consuming and inefficient processes to make thighs work.
+At **Free2Z**, I worked as **Principal Software Engineer**. I directed a platform migration from React to SvelteKit and worked on performance, state management, backend API integrations, live video with Dyte, SSR, and a custom CMS suite.
 
-  
+For the **U.S. Department of State’s Venezuela Affairs Unit**, through AVAA, I led the full-stack development of a professional networking platform for bilingual Venezuelan talent. That project required product architecture, data modeling, advisor dashboards, candidate profiles, service tracking, and reporting flows.
 
-**I built some systems that help improve those processes and make the internal job more efficient, automatic and simple**. Giving more control to the Staff about the activities, process and progress of the scholarships holders during they stay in the program.
+I’ve also built internal platforms at **AVAA**, analytics dashboards, and blockchain side projects. Lately, I’m especially interested in backend architecture, infrastructure, AI agents/tools, data pipelines, cybersecurity, and products where engineering removes operational friction.
 
-  
+### What kind of problems do you usually solve?
 
-For example, **a process that used to take one to one and a half hours to be done manually now takes less than 5 minutes.**
+I like problems where the solution is not obvious at the beginning. The kind of work I enjoy most is technical, difficult, and foundational.
 
-  
+I like bringing ideas to life by turning an initial concept into a working system. That usually means defining the architecture, modeling the data, connecting services, building the backend, and making sure the product can scale beyond the first version.
 
-If you want to know specific details about the job done, you can check this 👇
+I’m especially interested in backend and infrastructure projects: APIs, data flows, internal platforms, integrations, AI tools, dashboards, and systems that other people can rely on.
 
-[Software Developer at AVAA](https://doc.clickup.com/25746702/d/h/rhq8e-505/6c8f4c58372109e)
+In general, I enjoy projects where engineering turns a complex idea or process into something real, maintainable, and useful.
 
-  
+### What I’m strongest at
 
-**More related to the blockchain space 🔗**, I built really great side projects to keep me constantly learning and improving my abilities with Solidity, Cairo, Typescript and Python.
+I’m strongest when a project needs someone with full agency to take ownership of an ambiguous technical problem, define the architecture, build the foundations, and ship a maintainable system.
 
-_You can check them out in my portfolio:_ **👇**
+I enjoy technical and difficult challenges where the first version of the solution still needs to be designed. That includes data models, service integrations, operational workflows, dashboards, backend logic, infrastructure decisions, and user-facing product flows that need to work together.
 
-[Kevin's Portfolio](https://www.kevinbravo.me/#portfolio)
+### Roles I’m a good fit for
+
+- Backend Engineer
+- Full-Stack Engineer
+- Infrastructure-minded Product Engineer
+- AI Tools / Agentic Systems Engineer
+- Technical Lead / Founding Engineer style roles
+
+### How I work
+
+- I take full ownership of the projects handed to me.
+- I clarify requirements before building.
+- I design the foundation and the user-facing parts that depend on it.
+- I ship iteratively and keep improving with real feedback.
+- I care about maintainability, technical clarity, and user impact.
 
 ### Volunteer?
 
-  
+Yeap! Volunteer work has been a big part of my life, especially in education, youth development, entrepreneurship, and social impact.
 
-Yeap! Currently I’m part of the **Excellence Program (Pro-Excellence)**, which is a program carried out by the **_Venezuelan American Friendship Association_** **💙** (**AVAA** _by its acronym in Spanish_), an NGO that helps Venezuelan college students by providing them leadership skills, assertive communication skills, TIC's and English training, and provide them with Volunteer opportunities through its five internal projects and allied NGOs with the main goal of reinforce social and citizen awareness.
+I’m currently **Vice President of JA Venezuela Alumni**, where I support planning, institutional growth, partnerships, internal operations, and initiatives focused on entrepreneurship and professional leadership.
 
-  
+I also serve as an **Education Committee Member at AVAA**, providing technical support for Programa Excelencia. A key part of that role is maintaining and administering the **Participant Evaluation System**, protecting data quality, and helping the committee make better decisions.
 
-During the 3 years that I've been there, I've been part of different projects and activities. One of them was _"_**_A friendly Hand for the Environment_**_"_ 💚 (**UMAA** _by its acronym in Spanish_). A project that seeks the protection and conservation of the environment in Venezuela. During my time **as head of the project I've been able to manage a team of 5 people.** My role was to provide strategic guidance, direct operational activities and evaluate overall performance while ensuring consistent communication with all team members.
+Beyond that, I’ve supported other education and tech initiatives, including Technovation Girls Venezuela, the Caracas hub for the Dev3pack Global Hackathon, and several AVAA volunteer projects.
 
-  
+### What are your main professional and academic goals?
 
-We managed to give successful virtual training activities to educate the public about the importance of protecting their environment. We successfully raise environmental awareness among the scholarship holders and the local community of people who joined the activities. We also managed to establish a long list of allies and standardized a bunch of internal processes a workflows that future administrations could take advantage of.
+Professionally, I want to keep working on difficult technical projects where I can own the architecture, build the foundations, and ship systems that people depend on.
 
-  
+Academically, I’m pursuing a **Master of Public Administration at IESA**, which connects with my interest in technology, education, and public-minded systems.
 
-_Since this period was during the beginning of the COVID-19 pandemic we weren't able to realize in person activities. (E.g.: cleaning, residue recollection.)_
-
-  
-
-Currently, I’m part of the **_Commitment Committee_** in AVAA. Is a position in which I have to design action plans to improve compliance with the commitments by the fellows and help them with all the different questions and concerns that they could have about the program.
-
-  
-
-Until now I improved the onboarding process of the new scholarship holders by creating a program called **_“Partner with a Green Heart”_**. It's an initiative in which those interested scholarship holders with more experience within the program ("_Senior Scholars_") commit to being a guide for those scholarship holders who are just beginning their path within the program ("_Junior Scholars_")
-
-  
-
-_Had great results in improving the overall adaptation process that new scholarship holders come through._ _We already successfully implement the first cohort in May 2022_ currently, the program is taking place with the new scholars of the Cohort of November 2022.
-
-  
-
-### What are your main professional, academic & personal goals?
-
-  
-
-One of **my main academic goals is to reach a PH.D. level**. I want to reach a point in my life where I can create new knowledge that could really improve people's lives and share that knowledge alongside my experience, not in an amateur way but professionally.
-
-  
-
-Professionally, **I want a life full of projects to do,** projects that I could be proud of. I would love to work in a future in one of those big tech companies (MANG) and experience what is to be a software engineer in an environment full of talented people that can shape the way we do things.
-
-  
-
-Also, I would like to continue contributing to the tech community as I gain new knowledge and experience that can be useful for others.
-
-  
-
-Personal**, I want to reach a point in where I can have a well-established and healthy family** and give all the love to my children, wife and close relatives.
-
-  
-
-# 💻 Talk techy to me
+## 💻 Talk techy to me
 
 * * *
 
-  
+### Tech stack overview
 
-### Tech stack Overview
+- **Core:** TypeScript, JavaScript, Python, SQL, Solidity.
+- **Backend & data:** API integrations, PostgreSQL, data modeling, dashboards, async workflows.
+- **Frontend:** SvelteKit, React, Next.js, Astro, Tailwind CSS, SSR, responsive interfaces.
+- **AI tooling:** AI-assisted coding workflows, model comparison, agentic coding tools, prompt iteration.
+- **Infrastructure & tools:** Git, Docker, Power BI, Dyte SDK, IPFS, Infura, Alchemy, Tenderly.
+- **Testing:** Jest, Cypress, Pytest, Chai.
 
-  
+### Best professional projects
 
-*   **Languages:** Typescript, Python, Solidity, Cairo, Rust. SQL
-*   **Frameworks:** Nextjs, brownie, Hardhat, Truffle, Protostar, Nile
-*   **Tools:** Pinata, Textile IO, IPFS, Infura, Alchemy, Git, slither, Mythx, Fleek, Tenderly, Tally, PostgresSQL, Docker
-*   **Testing:** Chai Library, pytest, Jest, Cypress
+#### Free2Z platform migration
 
-  
+I directed the technical migration and architecture redesign of a web platform, moving the frontend from React to SvelteKit to improve performance and code maintainability. The work included live video integration with Dyte, Svelte stores, Tailwind CSS, SSR optimization, backend API connections, and a custom CMS suite with a Markdown editor and blog engine.
 
-### Best Personal Projects:
+#### Billingua Talent
 
-  
+Billingua Talent is a professional networking platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit and led through AVAA. I built the full-stack architecture from the ground up to connect bilingual Venezuelan talent with international organizations. The platform includes candidate profiles, advisor dashboards, service tracking, English-level monitoring, and reporting tools.
 
-#### Crowdfy:
+#### PES - Participant Evaluation System
 
-A crowdfunding protocol that uses the minimal proxy pattern to make a campaign, every campaign has its contract and its own storage. Has capabilities to do yield farming with the funds collected and swap tokens received by the contributors to the actual token that the campaign is receiving. Has its own token and its own governance mechanism. There is a website where you can interact with the project.
+The platform I built for AVAA to manage ProExcelencia with live data instead of scattered spreadsheets. It became the source of truth for scholar records, activities, volunteer hours, attendance, and reports across three national chapters.
 
-  
+### Do you prefer frontend, backend, or full-stack?
 
-#### Arepa-Chain:
+I can work full-stack, and I usually think about systems more than labels.
 
-A blockchain protocol I'm building from scratch (currently working on) aims to be a completely blockchain which you can interact with (with his own wallet, cli, network for sharing the blocks, his own consensus mechanism (PoW))
+If the problem requires frontend architecture, I enjoy building clean interfaces and state flows. If it requires backend, I enjoy modeling data, connecting APIs, and making sure the system is maintainable. If it requires product thinking, I like being close to the user and understanding why we are building the thing.
 
-  
+So, my answer is: **I like working where the important technical decisions are happening.**
 
-#### StarkLend:
+### Have you already integrated AI tools into your workflow?
 
-A decentralized lending and borrowing protocol deployed on the Ethereum L2 Starknet network. It is a simple protocol that replicates the functionalities of the AAVE protocol but in the Starknet network.
+Yeap! AI tools are now part of my workflow as a developer and in personal projects. They help me move faster when researching, designing systems, writing, debugging, and testing ideas.
 
-  
+I use them to move faster, especially when I already understand the problem and need to explore options quickly.
 
-## ❔ Some questions
+### What AI models and tools are you currently using?
 
-  
+I use AI tools as part of my engineering workflow, with paid access to tools like Codex and Claude because I like testing how strong models perform in real engineering work.
 
-### L2 Experience?
+The models I use the most right now are:
 
-  
+- **ChatGPT 5.5** for hard work, deep technical reasoning, and coding.
+- **Claude 4.7** for coding, writing, architecture, and long-context work.
+- **Gemini 3.1 Pro and Flash** for frontend work, fast iteration, and visual/product exploration.
+- **Mimo Pro LLM**, **Kimi**, and other newer models when I want to experiment and compare behavior.
 
-I have experience building in L2 blockchains and I really find interesting most of the actual solutions out there to face the problem of base layers. Although I'm very excited with L2 technologies in general, I'm very fascinated with Zero Knowledge proof related tech. Actually, I'm in my way to have a deep understanding of this technology, more specifically STARKs and Validity Rollups. Currently improving my Cairo skills.
+For coding harnesses and tools, I’m currently using **T3Code**, **Pi**, and **OpenCode**. I also use **Cursor** or **Zed** from time to time, depending on the project and the workflow I want to test.
 
-  
+### What other technologies do you find interesting?
 
-### Have you had experience with solidity security best practices?
-
-  
-
-Yes, in fact this is one of the areas in which I have more interest in the blockchain space. Along with tokenomics. I really like doing research about the recent hacks that are happening in the ecosystem and learn from them. Usually, I spend time reading the security audits that companies like Open Zeppelin or ConsenSys do. And also, often times I get my hands dirty doing some security audits in Code4Arena.
-
-  
-
-### Have you already integrated AI tools like ChatGPT to your workflow?
-
-  
-
-Yeap! ChatGPT and related tools are being an amazing addition to my workflow, not only as a developer but also in my personal projects and day to day related stuff. It Had increased my productivity a lot since I start using it.
-
-  
-
-### What other technologies do you find interesting besides Blockchain?
-
-  
-
-AI, and cybersecurity
-
-  
-
-### What is your favorite programming lang?
-
-  
-
-I don't really have one, in fact I don't stick with only one programming lang, I use them based on the needs of the project I'm building. **I'm not a believer of "One tool fits all."** So, I just use them based on what are the requirements and needs of the projects. Also, I'm not closed to learn any new programming lang / tool, if the project requires it, no matter how difficult those can be.
-
-  
-
-Also, **I have a huge intellectual curiosity** and I'm always open to learn new things, tools...
-
-  
-
-Now, if you want to know **which programming languages I use the most,** those are: **_Typescript, Solidity and Python._**
-
-## 😜 Lighting Round
-
-* * *
-
-*   **What are you reading right now?**
-    *   The Wisdom of Crowds.
-*   **Hamburgers or pizza?**
-    *   Hamburgers
-*   **WAGMI?**
-    *   WAGMI 🚀
-*   **All your net worth is in the hands of this man?**
-
-![](https://t25746702.p.clickup-attachments.com/t25746702/501a9c5a-7c94-4f80-9320-cc4c8ae305a6/image.png)
-
-*       *   Yes
-
-  
+AI, cybersecurity, developer tools, education technology, data systems, blockchain infrastructure, and public-sector digital systems.
 
 ## 💃 What Would You Ask & Seek at Your Next Company?
 
@@ -218,74 +147,22 @@ Now, if you want to know **which programming languages I use the most,** those a
 
 ### What are you looking for in a company?
 
-  
+Right now, I’m looking for environments where ownership, technical quality, and impact matter.
 
-Right now, my goal is to get involved in the exciting and freaking out startup environment, working out to raise a company from the bottom to the top.
+I want to work with people who care about building something useful, maintaining it properly, and improving the way the product serves real users.
 
-  
-
-**I don't want to work in a monotonous company in which everything is perfect and most of the processes are already established.** **I want to create and establish those processes.** Really, I would like to work in an environment in where I can propose, design and implement ideas that can really improve the company and the services it offers for its users.
-
-  
-
-I want to work in a company that really believes in what they are doing, a company that wants to make some real change in the way we use things (for better) to improve people’s lives.
-
-  
+I enjoy teams where I can propose, design, implement, and take responsibility for ideas that improve the product, the architecture, and the user experience. I especially like projects where you have to build the solution foundations. Architecture, data model, integrations, workflows, infrastructure decisions, and the technical base that other people will later rely on.
 
 ### If we remove money off the table, what would you say is important for your next gig?
 
-  
-
 In order of importance:
 
-  
-
-1. **Culture:** I would love to work in the insane and shockingly startup ecosystem, with people trying to build something they are proud of and can have a real impact in the world improving peoples live.
-2. **Intellectual curiosity:** I would like to work in a company that is always pushing its team towards excellence, with an insatiable desire of never stop learning.
-3. **Flexibility:** I would like to work in a company that understands not everyone runs on the same schedule and that looks for punched out tasks and getting things done rather than punched out hours.
-4. **Company mission & values:** I would like to work in a company that really believes in what it says, not only because of money, of course it's important, but more important is to leave a footprint in all those lives with the product and experience we are building.
-
-  
-
-### Your perfect job description:
-
-  
-
-> "We are looking for a freaky adept technologist to work alongside us building our protocol, making research for improving our existing products and spending time researching the most efficient way in which you can write, designing reviewing and innovating smart contracts to improve the protocol.  
->   
-> So, you'll help us out first of all: designing, coding, testing and deploying smart contracts, review existing code written by other team members, research, architect, and develop innovation solutions to scale the protocol, define new features in order to contribute to build a great user experience, help build reliable and scalable systems with a strong focus on security (even trying to implement new l2 solutions). In addition, you'll provide documentation, guides, and act as a second line of support for our community.  
->   
-> Lastly, we´ll avoid booking unnecessary meetings in your day and we'll also give back to the dev community in general through Meetups, events, or even contributing to open source, etc...  
->   
-> Welcome aboard!" 🚀
-
-  
-
-## 😃 Personal Details
-
-* * *
-
-```typescript
-const name: string = "Kevin";
-const lastName: string = "Bravo";
-
-const nationality: string  = "venezuelan";
-
-let age: number = 23
-
-const languagges: [] = [
-  {
-    language: "Spanish",
-    level: "Native"
-  },
-  {
-    language: "English",
-    level: "Proeficient"
-  }
-]
-```
-
-  
+1. **Ownership:** I like environments where people trust you with real responsibility and expect you to follow through with full agency.
+2. **Technical depth:** I enjoy technical and difficult challenges, especially when the foundations of the system still need to be designed.
+3. **Technical clarity:** I want to work with teams that care about architecture, maintainability, security, and honest engineering decisions.
+4. **Intellectual curiosity:** I would like to work in a company that keeps learning and pushes its team to improve.
+5. **Flexibility:** I would like to work in a company that understands not everyone runs on the same schedule and that looks for getting things done rather than punched out hours.
+6. **Company mission & values:** I would like to work in a company that believes in what it says. Money is important, of course, but I care a lot about the impact of the product and the experience we are building.
 
 ## 👨‍🏫 Getting to Know Me
 
@@ -293,58 +170,19 @@ const languagges: [] = [
 
 ### How do you keep yourself up to date?
 
-  
-
 It's a bit of mix & match:
 
-  
-
-*   **I'm active on Twitter and usually follow dev's and projects I am interested in.** I usually find important updates, or links to talks, events, and technical tutorials.
-*   **Medium / Hashnode / Devto / Substack tutorials and technical articles**, I like the technical articles published here which tend to go more in-depth and technical than random tweets and subreddits.
-*   **Online Courses & Training**, currently I don't have a subscription for a learning platform because I cannot afford it, but in general when Pluralsight gives its free weekend I enjoy taking one or two courses. Usually, I learn through free courses and videos on YouTube. And I’ve been taking some of the hands-on projects offered by buildspace.
-
-And actually, I'm enrolled in two bootcamps offered by the StarkNet Community: Stark Basecamp Cohort 2 and Cairo Starkcon. I was also part of the first bootcamp related to Zero Knowledge proof offered by EncodeClub
-
-  
-
-### What are you currently working on? (Besides your actual work)
-
-  
-
-I'm currently in a self-learning process in which I'm learning about ZK-Proof and the primitive mechanisms that make them possible. I'm also building some stuff using Cairo to be more proficient with the language.
-
-  
-
-### What interests you most in the blockchain space?
-
-  
-
-Tokenomics (Bonding Curves, Prediction Markets, Token Curated Registries) and how to apply them on smart contracts, EVM dynamics, Interoperability between blockchains and L2s and ZK-Proof.
-
-  
-
-### Blog posts
-
-*   [Brownie: everything you need to know to write, test and deploy your smart contracts.](https://blog.kevinbravo.me/brownie)
-*   [Ethernaut solutions series (currently on 5th problem)](https://blog.kevinbravo.me/series/ethernaut)
-*   [Damn Vulnerable DeFi solution Series](https://blog.kevinbravo.me/series/dvd)
-
-  
-
-You can check all my articles here **👇**
-
-[Kevin's Blog](https://blog.KevinBravo.me)
-
-  
+- **Technical creators and conversations.** I watch Theo Browne, ThePrimeagen, and LowSpec on podcasts, Twitch, and YouTube.
+- **Twitter/X.** I spend some time there to hang out, follow technical people, and stay close to what builders are discussing.
+- **Paid learning.** I maintain paid subscriptions to Platzi and Coursera, and I take courses that interest me from time to time.
+- **Docs, articles, and building.** I read technical docs and long-form posts, but the fastest way for me to learn is still building something that forces me to understand the details.
 
 ## 💭 Contact Details
 
 * * *
 
-  
-
-*   **Email:** [0bravokevin@gmail.com](mailto:0bravokevin@gmail.com)
-*   **LinkedIn:** [0bkevin](https://www.linkedin.com/in/0bkevin/)
-*   **Twitter:** [@0bkevin](https://twitter.com/0bkevin)
-*   **Telegram:** [@Obkevin](https://t.me/Obkevin)
-*   **Phone:** Let's email first 🙂
+- **Email:** [0bravokevin@gmail.com](mailto:0bravokevin@gmail.com)
+- **LinkedIn:** [0bkevin](https://www.linkedin.com/in/0bkevin/)
+- **Twitter:** [@0bkevin](https://twitter.com/0bkevin)
+- **Telegram:** [@Obkevin](https://t.me/Obkevin)
+- **Phone:** Let's email first 🙂

@@ -1,22 +1,34 @@
 import { z, defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+const imageSchema = z.object({
+  url: z.string(),
+  alt: z.string()
+});
+
+const seoFields = {
+  seoTitle: z.string().optional(),
+  seoDescription: z.string().optional(),
+  canonicalURL: z.string().url().optional(),
+  noindex: z.boolean().optional(),
+  robots: z.string().optional(),
+  ogImage: imageSchema.optional(),
+};
+
 const blogCollection = defineCollection({
   loader: glob({ pattern: "**\/*.md", base: "./src/content/blogs" }),
   schema: z.object({
     title: z.string(),
     pubDate: z.coerce.date(),
     description: z.string(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string()
-    }).optional(),
+    image: imageSchema.optional(),
     tags: z.array(z.string()),
     language: z.enum(['en', 'es']),
     footnote: z.string().optional(),
     // Transform a date string (e.g. "2022-07-08") to a Date object
     updatedDate: z.string().transform((str) => new Date(str)).optional(),
-    canonicalURL: z.string().url().optional(),
+    isCanonicalCopy: z.boolean().optional(),
+    ...seoFields,
 
   }),
 });
@@ -28,16 +40,20 @@ const projectCollection = defineCollection({
     title: z.string(),
     pubYear: z.coerce.date(),
     description: z.string(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string()
-    }),
+    image: imageSchema,
     tags: z.array(z.string()),
+    technologies: z.array(z.string()).optional(),
+    clientName: z.string().optional(),
+    role: z.string().optional(),
+    startDate: z.coerce.date().optional(),
+    endDate: z.coerce.date().optional(),
+    status: z.enum(["live", "archived", "case-study", "private"]).optional(),
     demoUrl: z.string().optional(),
     repoUrl: z.string().optional(),
     studyCaseUrl: z.string().optional(),
     language: z.enum(['en', 'es']),
     footnote: z.string().optional(),
+    ...seoFields,
   }),
 });
 
@@ -48,10 +64,9 @@ const meCollection = defineCollection({
     pubDate: z.coerce.date(),
     updateDate: z.coerce.date().optional(),
     description: z.string(),
-    image: z.object({
-      url: z.string(),
-      alt: z.string()
-    }),
+    image: imageSchema.optional(),
+    profilePageType: z.enum(["ama", "bio", "resume"]).optional(),
+    ...seoFields,
   }),
 });
 
@@ -60,4 +75,3 @@ export const collections = {
   'projects': projectCollection,
   'me': meCollection
 };
-

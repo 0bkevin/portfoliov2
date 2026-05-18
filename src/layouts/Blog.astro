@@ -14,9 +14,13 @@ interface Props {
   backLabel?: string | undefined;
   showAuthor?: boolean | undefined;
   sectionLabel?: string | undefined;
+  seoTitle?: string | undefined;
+  seoDescription?: string | undefined;
   canonical?: string | undefined;
   type?: "article" | "profile" | undefined;
   noindex?: boolean | undefined;
+  robots?: string | undefined;
+  hideSectionLabel?: boolean | undefined;
   structuredData?:
     | Record<string, unknown>
     | Record<string, unknown>[]
@@ -30,9 +34,13 @@ const {
   backLabel = "Home",
   showAuthor = true,
   sectionLabel = "Article",
+  seoTitle,
+  seoDescription,
   canonical,
   type = "article",
   noindex = false,
+  robots,
+  hideSectionLabel = false,
   structuredData,
 } = Astro.props as Props;
 
@@ -56,24 +64,50 @@ const updatedDateIso = updatedDateValue
   : undefined;
 
 const image =
-  "image" in entry.data && entry.data.image?.url
-    ? entry.data.image.url
-    : undefined;
+  "ogImage" in entry.data && entry.data.ogImage?.url
+    ? entry.data.ogImage.url
+    : "image" in entry.data && entry.data.image?.url
+      ? entry.data.image.url
+      : undefined;
 
-const title = `0b | ${entry.data.title}`;
-const description = entry.data.description;
+const imageAlt =
+  "ogImage" in entry.data && entry.data.ogImage?.alt
+    ? entry.data.ogImage.alt
+    : "image" in entry.data && entry.data.image?.alt
+      ? entry.data.image.alt
+      : entry.data.title;
+
+const resolvedSeoTitle =
+  seoTitle ?? ("seoTitle" in entry.data ? entry.data.seoTitle : undefined);
+const resolvedSeoDescription =
+  seoDescription ??
+  ("seoDescription" in entry.data ? entry.data.seoDescription : undefined);
+const resolvedRobots =
+  robots ?? ("robots" in entry.data ? entry.data.robots : undefined);
+
+const entryNoindex =
+  noindex || ("noindex" in entry.data ? Boolean(entry.data.noindex) : false);
+
+const title =
+  resolvedSeoTitle || `0b | ${entry.data.title}`;
+const description = resolvedSeoDescription || entry.data.description;
 const resolvedCanonical =
   canonical ??
   ("canonicalURL" in entry.data ? entry.data.canonicalURL : undefined);
+
+const showCanonicalSource =
+  typeof resolvedCanonical === "string" && /^https?:\/\//i.test(resolvedCanonical);
 ---
 
 <Layout
   title={title}
   description={description}
   image={image}
+  imageAlt={imageAlt}
   canonical={resolvedCanonical}
   type={type}
-  noindex={noindex}
+  noindex={entryNoindex}
+  robots={resolvedRobots}
   structuredData={structuredData}
   fixedNavbar={false}
   publishedTime={entry.data.pubDate}
@@ -116,9 +150,13 @@ const resolvedCanonical =
       }
 
       <header class="space-y-4">
-        <p class="text-xs font-medium uppercase tracking-widest text-surface-400 dark:text-surface-500">
-          {sectionLabel}
-        </p>
+        {
+          !hideSectionLabel && (
+            <p class="text-xs font-medium uppercase tracking-widest text-surface-400 dark:text-surface-500">
+              {sectionLabel}
+            </p>
+          )
+        }
 
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-surface-900 dark:text-surface-100">
           {entry.data.title}
@@ -160,7 +198,7 @@ const resolvedCanonical =
           }
 
           {
-            resolvedCanonical ? (
+            showCanonicalSource ? (
               <div class="flex items-center gap-1.5">
                 <i class="bx bx-link-external"></i>
                 <a

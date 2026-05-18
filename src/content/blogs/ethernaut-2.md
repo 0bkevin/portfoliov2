@@ -1,9 +1,9 @@
 ---
 title: "Ethernaut solution 2: Fallout"
 pubDate: '2022-07-02T12:00:00Z'
-image: {url: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1643939982270/QJAGPa0iu.jpeg', alt: 'Banner'}
+image: {url: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1643939982270/QJAGPa0iu.jpeg', alt: 'Ethernaut Fallout challenge cover image'}
 description: Learn how to solve the Ethernaut challenge "Fallout" by exploiting a typo in the constructor function. This step-by-step guide uses Brownie to take ownership of the contract and submit the solution. Perfect for blockchain developers and security enthusiasts.
-tags: [brownie, blochain, smart contracts, python]
+tags: [brownie, blockchain, smart contracts, python]
 language: en
 canonicalURL: https://kevdevto.hashnode.dev/ethernaut-solution-2-fallout
 ---
