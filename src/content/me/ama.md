@@ -34,100 +34,96 @@ I also built internal systems at **AVAA** that centralized scholar records, stre
 
 ### What kind of problems do you usually/like solve?
 
-I like problems where the solution is not obvious at the beginning. The kind of work I enjoy most is technical, difficult, and foundational.
+I enjoy solving problems where the path to the solution is not obvious. The kind of work I enjoy is technical, foundational, and requires thinking deeply about systems, architecture, and long-term scalability.
 
-I like bringing ideas to life by turning an initial concept into a working system. That usually means defining the architecture, modeling the data, connecting services, building the backend, and making sure the product can scale beyond the first version.
+Most of the projects I’ve worked on started as rough ideas, disconnected workflows, or operational bottlenecks. My role is usually turning that into a real, production-ready system by designing the architecture, structuring the data and services, and building systems that can scale and be reliably maintained over time.
 
-I’m especially interested in backend and infrastructure projects: APIs, data flows, internal platforms, integrations, AI tools, dashboards, and systems that other people can rely on.
+I’m especially interested in backend and infrastructure work, particularly around distributed systems, cloud architecture, AI tooling, developer platforms, and the systems that power applications behind the scenes. I enjoy understanding how complex systems behave internally, where they fail under scale or complexity, and how to design them in a way that makes them more resilient, scalable, and easier to maintain over time.
 
-In general, I enjoy projects where engineering turns a complex idea or process into something real, maintainable, and useful.
+What motivates me most is building systems that become foundational for a team or organization. The kind of software that removes operational friction, creates leverage, and keeps working long after the first version ships.
 
 ### What I’m strongest at
 
-I’m strongest when a project needs someone with full agency to take ownership of an ambiguous technical problem, define the architecture, build the foundations, and ship a maintainable system.
+I’m strongest in projects that require a high level of ownership, technical judgment, and the ability to operate through ambiguity. I work best when the direction is still being defined and the challenge is figuring out how all the pieces should come together into a coherent system.
 
-I enjoy technical and difficult challenges where the first version of the solution still needs to be designed. That includes data models, service integrations, operational workflows, dashboards, backend logic, infrastructure decisions, and user-facing product flows that need to work together.
+Most of my experience has involved building systems from the ground up and turning unclear or messy problems into software that teams can actually rely on. That includes architecture decisions, backend systems, service integrations, internal tooling, and workflows that need to remain practical and maintainable as the system grows.
+
+I enjoy understanding the deeper constraints behind a problem, identifying what actually matters technically, and building solutions that balance scalability, maintainability, and speed without overengineering the system.
 
 ### Roles I’m a good fit for
-
 - Backend Engineer
 - Full-Stack Engineer
 - Infrastructure-minded Product Engineer
 - AI Tools / Agentic Systems Engineer
+- Founding Engineer
+- Technical Lead
+- Platform / Internal Tools Engineer
 - Technical Lead / Founding Engineer style roles
-
-### How I work
-
-- I take full ownership of the projects handed to me.
-- I clarify requirements before building.
-- I design the foundation and the user-facing parts that depend on it.
-- I ship iteratively and keep improving with real feedback.
-- I care about maintainability, technical clarity, and user impact.
 
 ### Volunteer?
 
-Yeap! Volunteer work has been a big part of my life, especially in education, youth development, entrepreneurship, and social impact.
+Yes, I’ve been involved in volunteer and education-focused initiatives for more than 8 years.
 
-I’m currently **Vice President of JA Venezuela Alumni**, where I support planning, institutional growth, partnerships, internal operations, and initiatives focused on entrepreneurship and professional leadership.
+Right now I’m the **Vice President of JA Venezuela Alumni**, where I help grow the community, organize initiatives, build partnerships, and create spaces around entrepreneurship, technology, and professional development for young people. 
 
-I also serve as an **Education Committee Member at AVAA**, providing technical support for Programa Excelencia. A key part of that role is maintaining and administering the **Participant Evaluation System**, protecting data quality, and helping the committee make better decisions.
+I’m also part of the **Education Committee at AVAA**, supporting Programa Excelencia from the technical and operational side by maintaining internal systems, improving workflows, and helping the team make better decisions through more reliable processes and data. 
 
-Beyond that, I’ve supported other education and tech initiatives, including Technovation Girls Venezuela, the Caracas hub for the Dev3pack Global Hackathon, and several AVAA volunteer projects.
+Over the years, I’ve also collaborated on different education and tech initiatives, including mentoring students at Technovation Girls, organizing hackathons, supporting student and entrepreneurship events, and participating in community projects focused on education, leadership, and technology access.
 
 ### What are your main professional and academic goals?
 
-Professionally, I want to keep working on difficult technical projects where I can own the architecture, build the foundations, and ship systems that people depend on.
+Professionally, I want to keep working on challenging technical projects where I can design systems from the ground up, solve complex engineering problems, and build technology that has meaningful long-term impact. I’m particularly interested in infrastructure, backend systems, AI tooling, and large-scale technical architectures.
 
-Academically, I’m pursuing a **Master of Public Administration at IESA**, which connects with my interest in technology, education, and public-minded systems.
+Academically, I’m pursuing a Master of Public Administration at IESA because I believe technology should be built with a stronger understanding of society, institutions, and long-term impact. I’m interested in helping bridge the gap between technology, governance, and the people affected by the systems we build.
 
-## 💻 Talk techy to me
+After finishing this degree, I’d like to continue deeper into the technical and research side through a master’s in Computer Science or Mathematics, and eventually continue toward PhD-level work focused on systems, computation, AI, and large-scale infrastructure.
 
-### Best professional projects
+## Best professional projects
 
-#### Free2Z platform migration
+### [Free2Z platform migration](/me/who-is-kevin-bravo)
 
 I directed the technical migration and architecture redesign of a web platform, moving the frontend from React to SvelteKit to improve performance and code maintainability. The work included live video integration with Dyte, Svelte stores, Tailwind CSS, SSR optimization, backend API connections, and a custom CMS suite with a Markdown editor and blog engine.
 
-#### Billingua Talent
+### [Billingua Talent](/projects/billingua-talent)
 
 Billingua Talent is a professional networking platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit and led through AVAA. I built the full-stack architecture from the ground up to connect bilingual Venezuelan talent with international organizations. The platform includes candidate profiles, advisor dashboards, service tracking, English-level monitoring, and reporting tools.
 
-#### PES - Participant Evaluation System
+### [PES - Participant Evaluation System](/projects/sep)
 
 The platform I built for AVAA to manage ProExcelencia with live data instead of scattered spreadsheets. It became the source of truth for scholar records, activities, volunteer hours, attendance, and reports across three national chapters.
 
 ### Do you prefer frontend, backend, or full-stack?
 
-I can work full-stack, and I usually think about systems more than labels.
+Yes, it’s strong. It sounds thoughtful, technical, and grounded without trying too hard. The flow is good and it reflects your profile well: systems thinking, versatility, ownership, and product awareness.
 
-If the problem requires frontend architecture, I enjoy building clean interfaces and state flows. If it requires backend, I enjoy modeling data, connecting APIs, and making sure the system is maintainable. If it requires product thinking, I like being close to the user and understanding why we are building the thing.
+I’d only tighten a few repetitions and make the transitions slightly smoother. Something like this reads cleaner:
 
-So, my answer is: **I like working where the important technical decisions are happening.**
+---
 
-### Have you already integrated AI tools into your workflow?
+**I like working where the important technical decisions are happening.** I can work across the stack, but I usually think in terms of systems, architecture, and long-term maintainability more than rigid roles or labels.
 
-Yeap! AI tools are now part of my workflow as a developer and in personal projects. They help me move faster when researching, designing systems, writing, debugging, and testing ideas.
+I enjoy moving across different parts of a product depending on where the problem is, whether that involves frontend experiences, backend systems, infrastructure, integrations, or internal tooling.
 
-I use them to move faster, especially when I already understand the problem and need to explore options quickly.
+I also like being close to the product and understanding why something is being built in the first place. For me, good engineering is not only about building systems, but about connecting technical decisions with real operational, organizational, and human needs.
 
-### What AI models and tools are you currently using?
+## What AI tools, models, and workflows are you currently using?
 
-I use AI tools as part of my engineering workflow, with paid access to tools like Codex and Claude because I like testing how strong models perform in real engineering work.
+I actively use AI models and coding tools as part of my daily engineering workflow to speed up research, prototyping, debugging, system design, and development. They’ve become an important part of how I explore, validate, and iterate while building.
 
 The models I use the most right now are:
 
-- **ChatGPT 5.5** for hard work, deep technical reasoning, and coding.
-- **Claude 4.7** for coding, writing, architecture, and long-context work.
-- **Gemini 3.1 Pro and Flash** for frontend work, fast iteration, and visual/product exploration.
-- **Mimo Pro LLM**, **Kimi**, and other newer models when I want to experiment and compare behavior.
+* **ChatGPT 5.5** for deep technical reasoning, architecture discussions, and coding.
+* **Gemini 3.1 Pro / Flash** and **Claude 4.7** for frontend work, UI exploration, and product-oriented tasks.
+* **Mimo v2.5 Pro**, **Kimi K2.6**, **Composer 2.5**, and newer open-source models like **DeepSeek** when I want to experiment, compare behaviors, and test different workflows.
 
-For coding harnesses and tools, I’m currently using **T3Code**, **Pi**, and **OpenCode**. I also use **Cursor** or **Zed** from time to time, depending on the project and the workflow I want to test.
+
+For coding harnesses and tools, I’m currently using [T3Code](https://t3.codes/), [Pi](https://pi.dev/), and [OpenCode](https://opencode.ai/). I also use [Cursor](https://www.cursor.com) and [Zed](https://zed.dev) from time to time, depending on the project and the workflow I want to test.
 
 ### What other technologies do you find interesting?
 
-AI, cybersecurity, developer tools, education technology, data systems, blockchain infrastructure, and public-sector digital systems.
+I’m interested in AI, maths, zero-knowledge proof, distributed systems, cybersecurity, cloud infrastructure, embedded systems, and developer tools. I also care about how technology impacts institutions, organizations, and society over time.
 
-## 💃 What Would You Ask & Seek at Your Next Company?
+## 💃 What would you ask & seek at your next company?
 
 ### What are you looking for in a company?
 
