@@ -27,23 +27,13 @@ Most of my experience has been building systems from the ground up, where I defi
 
 I like working on systems that matter and solving hard technical problems that force you to understand what is really happening. I like taking full ownership of the outcome and being trusted with difficult, ambiguous challenges. I do my best work when the systems, architecture, and foundations still need to be designed, built, and maintained.
 
-A little bit of my background:
-
-At [Free2Z](https://free2z.com), I worked as a Principal Software Engineer leading the migration from React to SvelteKit, improving frontend architecture, performance, SSR, backend integrations, and internal CMS tooling. 
-
-For the **U.S. Department of State’s Venezuela Affairs Unit**, I built Billingua Talent as the sole engineer on the project, designing and deploying the platform architecture, core systems, and operational workflows used to connect highly skilled Venezuelan professionals with high-paying job opportunities.
-
-I also built internal systems at **AVAA** that centralized scholar records, streamlined advising operations, and replaced fragmented spreadsheet-based processes with scalable internal tools and clearer reporting systems.
-
 ### What kind of problems do you usually/like solve?
 
 I enjoy solving problems where the path to the solution is not obvious. The kind of work I enjoy is technical, foundational, and requires thinking deeply about systems, architecture, and long-term scalability.
 
-Most of the projects I’ve worked on started as rough ideas, disconnected workflows, or operational bottlenecks. My role is usually turning that into a real, production-ready system by designing the architecture, structuring the data and services, and building systems that can scale and be reliably maintained over time.
+Most of the projects I’ve worked on started as rough ideas, disconnected workflows, or operational bottlenecks. My role is usually turning that into scalable, production-ready systems through architecture, backend engineering, and infrastructure design.
 
-I’m especially interested in backend and infrastructure work, particularly around distributed systems, cloud architecture, AI tooling, developer platforms, and the systems that power applications behind the scenes. I enjoy understanding how complex systems behave internally, where they fail under scale or complexity, and how to design them in a way that makes them more resilient, scalable, and easier to maintain over time.
-
-What motivates me most is building systems that become foundational for a team or organization. The kind of software that removes operational friction, creates leverage, and keeps working long after the first version ships.
+I’m especially interested in distributed systems, cloud architecture, AI tooling, developer platforms, and the systems that power applications behind the scenes. What motivates me most is building resilient systems that reduce operational friction, create leverage for teams, and continue delivering value long after the first version ships.
 
 ### What I’m strongest at
 
@@ -58,8 +48,6 @@ I enjoy understanding the deeper constraints behind a problem, identifying what 
 - Full-Stack Engineer
 - Infrastructure-minded Product Engineer
 - AI Tools / Agentic Systems Engineer
-- Founding Engineer
-- Technical Lead
 - Platform / Internal Tools Engineer
 - Technical Lead / Founding Engineer style roles
 
@@ -81,6 +69,14 @@ Academically, I’m pursuing a Master of Public Administration at IESA because I
 
 After finishing this degree, I’d like to continue deeper into the technical and research side through a master’s in Computer Science or Mathematics, and eventually continue toward PhD-level work focused on systems, computation, AI, and large-scale infrastructure.
 
+### Do you prefer frontend, backend, or full-stack?
+
+**I like working where the important technical decisions are happening.** I can work across the stack, but I usually think in terms of systems, architecture, and long-term maintainability more than rigid roles or labels.
+
+I enjoy moving across different parts of a product depending on where the problem is, whether that involves frontend experiences, backend systems, infrastructure, integrations, or internal tooling.
+
+I also like being close to the product and understanding why something is being built in the first place. For me, good engineering is not only about building systems, but about connecting technical decisions with real operational, organizational, and human needs.
+
 ## Best professional projects
 
 ### [Free2Z platform migration](/me/who-is-kevin-bravo)
@@ -94,18 +90,6 @@ Billingua Talent is a professional networking platform commissioned by the U.S. 
 ### [PES - Participant Evaluation System](/projects/sep)
 
 The platform I built for AVAA to manage ProExcelencia with live data instead of scattered spreadsheets. It became the source of truth for scholar records, activities, volunteer hours, attendance, and reports across three national chapters.
-
-### Do you prefer frontend, backend, or full-stack?
-
-Yes, it’s strong. It sounds thoughtful, technical, and grounded without trying too hard. The flow is good and it reflects your profile well: systems thinking, versatility, ownership, and product awareness.
-
-I’d only tighten a few repetitions and make the transitions slightly smoother. Something like this reads cleaner:
-
-**I like working where the important technical decisions are happening.** I can work across the stack, but I usually think in terms of systems, architecture, and long-term maintainability more than rigid roles or labels.
-
-I enjoy moving across different parts of a product depending on where the problem is, whether that involves frontend experiences, backend systems, infrastructure, integrations, or internal tooling.
-
-I also like being close to the product and understanding why something is being built in the first place. For me, good engineering is not only about building systems, but about connecting technical decisions with real operational, organizational, and human needs.
 
 ## What AI tools, models, and workflows are you currently using?
 
@@ -142,9 +126,6 @@ In order of importance:
 4. **Smart and curious people:** I want to work with people who care about learning, questioning assumptions, and improving how things are built.
 5. **Mission and long-term impact:** I care about building things that are genuinely useful and that improve how people, organizations, or systems operate over time.
 6. **Strong engineering culture:** Good technical discussions, thoughtful decision-making, and attention to quality matter a lot to me.
-
-
-## 👨‍🏫 Getting to Know Me
 
 ### How do you keep yourself up to date?
 
