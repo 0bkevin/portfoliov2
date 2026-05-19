@@ -104,6 +104,8 @@ The models I use the most right now are:
 
 For coding harnesses and tools, I’m currently using [T3Code](https://t3.codes/), [Pi](https://pi.dev/), and [OpenCode](https://opencode.ai/). I also use [Cursor](https://www.cursor.com) and [Zed](https://zed.dev) from time to time, depending on the project and the workflow I want to test.
 
+I also have a Hermes agent running 24/7 on a VPS, which works as a general personal assistant and helps me keep track of tasks, ideas, research, and my master's work.
+
 ### What other technologies do you find interesting?
 
 I’m interested in AI, maths, zero-knowledge proof, distributed systems, cybersecurity, cloud infrastructure, embedded systems, and developer tools. I also care about how technology impacts institutions, organizations, and society over time.
