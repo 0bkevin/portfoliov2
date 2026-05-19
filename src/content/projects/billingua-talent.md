@@ -1,7 +1,7 @@
 ---
 title: "Billingua Talent"
 pubYear: '2025-01-01T12:00:00Z'
-description: A bilingual talent platform built for AVAA and the U.S. Department of State's Venezuela Affairs Unit to connect vetted Venezuelan professionals with international organizations.
+description: A bilingual talent platform built for AVAA and the U.S. Department of State's Venezuela Affairs Unit to help high-skilled Venezuelans access high-paying national jobs and improve their English readiness.
 image: { url: '/assets/projects/billingua/cover.png', alt: 'Billingua Talent homepage for English for Careers' }
 tags: [full-stack platform, talent network, dashboards, education operations]
 technologies: [full-stack platform, backend systems, dashboards, data modeling]
@@ -12,7 +12,7 @@ language: en
 
 Billingua Talent is a professional networking platform commissioned by the U.S. Department of State's Venezuela Affairs Unit and led through AVAA in 2025. I led the full product development, from data architecture to the candidate and advisor interfaces.
 
-The platform connects bilingual Venezuelan professionals with international organizations and gives Venezuelan-American Centers a shared system to track English levels, training needs, and service participation.
+The platform helps high-skilled Venezuelans with strong English levels access high-paying national jobs. It also gives Venezuelan-American Centers a shared system to identify candidates who need stronger English skills and offer them services, courses, and workshops to improve their readiness.
 
 <figure>
   <img src="/assets/projects/billingua/homepage.png" alt="Billingua Talent homepage for English for Careers" />
@@ -79,7 +79,7 @@ The analytics views help the team understand candidate composition, offer activi
 
 ## Outcome
 
-Billingua Talent gave candidates a structured professional presence and gave advisors the data needed to coordinate training, monitor readiness, and support connections with international organizations.
+Billingua Talent gave candidates a structured professional presence and gave advisors the data needed to coordinate training, monitor English readiness, and support access to high-paying national opportunities.
 
 The platform improved talent visibility, service coordination, and planning across the Binational Center network.
 
