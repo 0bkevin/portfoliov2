@@ -7,35 +7,32 @@ seoDescription: Learn about Kevin Bravo's backend, infrastructure, AI engineerin
 profilePageType: ama
 ---
 
-Hello tech recruiter or technical person! 👏 **Thank you for taking the time to read my profile.**
+Hello tech recruiter or technical person! 👏 **Thanks for stoping by and taking the time to read my profile.**
 
-Getting to know a candidate is hard when there is little time and too much to ask. So I wrote this AMA where **I'm interviewing myself so you can know me better 🤠**
+Getting to know a candidate is hard, and more when there is little time, too much to ask and nervousness attacks. So I wrote this AMA where **I'm interviewing myself so you can know me better 🤠** in just a couple of minutes. 
 
 ## Recruiter TL;DR
 
-Backend and full-stack engineer focused on difficult technical projects, infrastructure-minded architecture, AI engineering, and systems built from zero to production.
-
-I work best when I have full agency to turn an unclear technical problem into a well-structured, maintainable system.
 
 ## 🤷‍♀️ Overall
 
-* * *
-
 ### What's your tech experience like?
 
-I’m a **Software Engineer** focused on backend systems, infrastructure-minded product architecture, AI engineering, data systems, and full-stack products that need to work reliably in real use.
+I’m a **Software Engineer** with 4+ years of experience building web platforms, internal tools, and data systems. I’ve worked in startups, government projects, and non-profits, leading technical architecture, full-stack development, and product design.
 
-Most of my experience has been around building systems from the ground up. I design databases, connect APIs, create dashboards, integrate services, and make sure the product supports the people using it. I like projects with real operational weight behind them.
+Most of my experience has been building systems from the ground up, where I defined the architecture, modeled the data, and connected services. I’ve worked on frontend and backend projects, but I’m especially interested in backend architecture, cloud, infrastructure, AI tools, data distributed systems, and systems that other people can rely on.
 
-In the projects handed to me, I take **full agency and ownership** over the outcome. I like being trusted with ambiguous and difficult technical challenges where the foundations still need to be defined, built, and maintained.
+I like working on systems that matter and solving hard technical problems that force you to understand what is really happening. I like taking full ownership of the outcome and being trusted with difficult, ambiguous challenges. I do my best work when the systems, architecture, and foundations still need to be designed, built, and maintained.
 
-At **Free2Z**, I worked as **Principal Software Engineer**. I directed a platform migration from React to SvelteKit and worked on performance, state management, backend API integrations, live video with Dyte, SSR, and a custom CMS suite.
+A little bit of my background:
 
-For the **U.S. Department of State’s Venezuela Affairs Unit**, through AVAA, I led the full-stack development of a professional networking platform for bilingual Venezuelan talent. That project required product architecture, data modeling, advisor dashboards, candidate profiles, service tracking, and reporting flows.
+At **Free2Z**, I worked as **Principal Software Engineer**. I worked on the platform migration from React to SvelteKit and worked on performance, state management, backend API integrations, live video with Dyte, SSR, and a custom CMS suite.
 
-I’ve also built internal platforms at **AVAA**, analytics dashboards, and blockchain side projects. Lately, I’m especially interested in backend architecture, infrastructure, AI agents/tools, data pipelines, cybersecurity, and products where engineering removes operational friction.
+For the **U.S. Department of State’s Venezuela Affairs Unit**, I worked on Billingua Talent, a platform built to connect highly skilled Venezuelan professionals with strong English proficiency to high-paying national job opportunities. As the sole engineer on the project, I designed and built the platform architecture, data model, and core product flows, then deployed and maintained the system in production.
 
-### What kind of problems do you usually solve?
+I also built internal systems at **AVAA** that centralized scholar records, streamlined advising operations, and replaced fragmented spreadsheet-based processes with scalable internal tools and clearer reporting systems.
+
+### What kind of problems do you usually/like solve?
 
 I like problems where the solution is not obvious at the beginning. The kind of work I enjoy most is technical, difficult, and foundational.
 
@@ -85,17 +82,6 @@ Academically, I’m pursuing a **Master of Public Administration at IESA**, whic
 
 ## 💻 Talk techy to me
 
-* * *
-
-### Tech stack overview
-
-- **Core:** TypeScript, JavaScript, Python, SQL, Solidity.
-- **Backend & data:** API integrations, PostgreSQL, data modeling, dashboards, async workflows.
-- **Frontend:** SvelteKit, React, Next.js, Astro, Tailwind CSS, SSR, responsive interfaces.
-- **AI tooling:** AI-assisted coding workflows, model comparison, agentic coding tools, prompt iteration.
-- **Infrastructure & tools:** Git, Docker, Power BI, Dyte SDK, IPFS, Infura, Alchemy, Tenderly.
-- **Testing:** Jest, Cypress, Pytest, Chai.
-
 ### Best professional projects
 
 #### Free2Z platform migration
@@ -143,8 +129,6 @@ AI, cybersecurity, developer tools, education technology, data systems, blockcha
 
 ## 💃 What Would You Ask & Seek at Your Next Company?
 
-* * *
-
 ### What are you looking for in a company?
 
 Right now, I’m looking for environments where ownership, technical quality, and impact matter.
@@ -166,8 +150,6 @@ In order of importance:
 
 ## 👨‍🏫 Getting to Know Me
 
-* * *
-
 ### How do you keep yourself up to date?
 
 It's a bit of mix & match:
@@ -178,8 +160,6 @@ It's a bit of mix & match:
 - **Docs, articles, and building.** I read technical docs and long-form posts, but the fastest way for me to learn is still building something that forces me to understand the details.
 
 ## 💭 Contact Details
-
-* * *
 
 - **Email:** [0bravokevin@gmail.com](mailto:0bravokevin@gmail.com)
 - **LinkedIn:** [0bkevin](https://www.linkedin.com/in/0bkevin/)
