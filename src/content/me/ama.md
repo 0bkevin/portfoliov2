@@ -13,6 +13,9 @@ Getting to know a candidate is hard, and more when there is little time, too muc
 
 ## Recruiter TL;DR
 
+Software Engineer with 4+ years of experience building platforms, internal systems, and infrastructure across startups, government projects, and non-profits. Strong focus on backend architecture, AI tooling, distributed systems, and high-ownership engineering roles.
+
+Built and maintained production systems for the U.S. Department of State’s Venezuela Affairs Unit, Free2Z, and AVAA. Outside of work, I’ve spent years volunteering in education, tech and community initiatives, organizing hackathons and tech events, mentoring students, and helping build programs focused on entrepreneurship, leadership, and technology access.
 
 ## 🤷‍♀️ Overall
 
@@ -98,8 +101,6 @@ Yes, it’s strong. It sounds thoughtful, technical, and grounded without trying
 
 I’d only tighten a few repetitions and make the transitions slightly smoother. Something like this reads cleaner:
 
----
-
 **I like working where the important technical decisions are happening.** I can work across the stack, but I usually think in terms of systems, architecture, and long-term maintainability more than rigid roles or labels.
 
 I enjoy moving across different parts of a product depending on where the problem is, whether that involves frontend experiences, backend systems, infrastructure, integrations, or internal tooling.
@@ -125,24 +126,23 @@ I’m interested in AI, maths, zero-knowledge proof, distributed systems, cybers
 
 ## 💃 What would you ask & seek at your next company?
 
-### What are you looking for in a company?
+I’m looking for teams where ownership, thoughtful engineering, and meaningful work are valued. I enjoy environments where people care about what they build, think carefully about technical decisions, and take pride in creating systems that last.
 
-Right now, I’m looking for environments where ownership, technical quality, and impact matter.
+I’m particularly interested in places working on difficult technical challenges, especially around infrastructure, backend systems, AI, developer tooling, or complex operational platforms. I like being involved when core decisions still need to be made and there’s room to shape how the product and the systems evolve over time.
 
-I want to work with people who care about building something useful, maintaining it properly, and improving the way the product serves real users.
-
-I enjoy teams where I can propose, design, implement, and take responsibility for ideas that improve the product, the architecture, and the user experience. I especially like projects where you have to build the solution foundations. Architecture, data model, integrations, workflows, infrastructure decisions, and the technical base that other people will later rely on.
+I also value collaborative teams with strong technical curiosity, open discussions, and a genuine interest in improving both the product and the way the team works.
 
 ### If we remove money off the table, what would you say is important for your next gig?
 
 In order of importance:
 
-1. **Ownership:** I like environments where people trust you with real responsibility and expect you to follow through with full agency.
-2. **Technical depth:** I enjoy technical and difficult challenges, especially when the foundations of the system still need to be designed.
-3. **Technical clarity:** I want to work with teams that care about architecture, maintainability, security, and honest engineering decisions.
-4. **Intellectual curiosity:** I would like to work in a company that keeps learning and pushes its team to improve.
-5. **Flexibility:** I would like to work in a company that understands not everyone runs on the same schedule and that looks for getting things done rather than punched out hours.
-6. **Company mission & values:** I would like to work in a company that believes in what it says. Money is important, of course, but I care a lot about the impact of the product and the experience we are building.
+1. **Ownership:** I like environments where people trust you with meaningful responsibility and expect you to drive things forward independently.
+2. **Autonomy and flexibility:** I value teams that optimize for outcomes, trust, and good judgment rather than rigid schedules, unnecessary oversight, or performative productivity.
+3. **Interesting technical problems:** I enjoy complex engineering work, especially when there’s still space to shape the architecture, systems, and technical direction.
+4. **Smart and curious people:** I want to work with people who care about learning, questioning assumptions, and improving how things are built.
+5. **Mission and long-term impact:** I care about building things that are genuinely useful and that improve how people, organizations, or systems operate over time.
+6. **Strong engineering culture:** Good technical discussions, thoughtful decision-making, and attention to quality matter a lot to me.
+
 
 ## 👨‍🏫 Getting to Know Me
 
@@ -150,10 +150,10 @@ In order of importance:
 
 It's a bit of mix & match:
 
-- **Technical creators and conversations.** I watch Theo Browne, ThePrimeagen, and LowSpec on podcasts, Twitch, and YouTube.
-- **Twitter/X.** I spend some time there to hang out, follow technical people, and stay close to what builders are discussing.
+- **Technical creators and conversations.** I watch Theo, ThePrimeagen, and LowSpec on podcasts, Twitch, and YouTube.
+- **Twitter/X.** I spend some time there to hang out, follow interesting people, and stay close to what builders are discussing.
 - **Paid learning.** I maintain paid subscriptions to Platzi and Coursera, and I take courses that interest me from time to time.
-- **Docs, articles, and building.** I read technical docs and long-form posts, but the fastest way for me to learn is still building something that forces me to understand the details.
+- **Docs, articles, and building.** I like to read  technical and long-form posts. I also like to learn by building, so I often explore new technologies through side projects and experimentation.
 
 ## 💭 Contact Details
 
@@ -161,4 +161,4 @@ It's a bit of mix & match:
 - **LinkedIn:** [0bkevin](https://www.linkedin.com/in/0bkevin/)
 - **Twitter:** [@0bkevin](https://twitter.com/0bkevin)
 - **Telegram:** [@Obkevin](https://t.me/Obkevin)
-- **Phone:** Let's email first 🙂
+- **Phone:** Let's email first 😉
