@@ -29,9 +29,9 @@ I like working on systems that matter and solving hard technical problems that f
 
 A little bit of my background:
 
-At **Free2Z**, I worked as **Principal Software Engineer**. I worked on the platform migration from React to SvelteKit and worked on performance, state management, backend API integrations, live video with Dyte, SSR, and a custom CMS suite.
+At [Free2Z](https://free2z.com), I worked as a Principal Software Engineer leading the migration from React to SvelteKit, improving frontend architecture, performance, SSR, backend integrations, and internal CMS tooling. 
 
-For the **U.S. Department of State’s Venezuela Affairs Unit**, I worked on Billingua Talent, a platform built to connect highly skilled Venezuelan professionals with strong English proficiency to high-paying national job opportunities. As the sole engineer on the project, I designed and built the platform architecture, data model, and core product flows, then deployed and maintained the system in production.
+For the **U.S. Department of State’s Venezuela Affairs Unit**, I built Billingua Talent as the sole engineer on the project, designing and deploying the platform architecture, core systems, and operational workflows used to connect highly skilled Venezuelan professionals with high-paying job opportunities.
 
 I also built internal systems at **AVAA** that centralized scholar records, streamlined advising operations, and replaced fragmented spreadsheet-based processes with scalable internal tools and clearer reporting systems.
 
@@ -89,7 +89,7 @@ I directed the technical migration and architecture redesign of a web platform, 
 
 ### [Billingua Talent](/projects/billingua-talent)
 
-Billingua Talent is a professional networking platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit and led through AVAA. I built the full-stack architecture from the ground up to connect bilingual Venezuelan talent with international organizations. The platform includes candidate profiles, advisor dashboards, service tracking, English-level monitoring, and reporting tools.
+Billingua Talent is a professional networking platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit. This is a platform built to connect highly skilled Venezuelan professionals with strong English proficiency to high-paying national job opportunities. As the sole engineer on the project, I designed and built the platform architecture, data model, and core product flows, then deployed and maintained the system in production.
 
 ### [PES - Participant Evaluation System](/projects/sep)
 
