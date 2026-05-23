@@ -4,6 +4,15 @@ dist/
 # generated types
 .astro/
 
+# LaTeX build output
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.pdf
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.synctex.gz
+
 # dependencies
 node_modules/
 
