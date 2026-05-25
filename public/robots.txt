@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.kevinbravo.com/sitemap-index.xml
+Sitemap: https://kevinbravo.com/sitemap-index.xml

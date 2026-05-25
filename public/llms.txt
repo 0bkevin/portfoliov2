@@ -6,20 +6,20 @@ This file is an agent navigation aid. It summarizes important public URLs on the
 
 ## Canonical Site
 
-- https://www.kevinbravo.com/
+- https://kevinbravo.com/
 
 ## High-Value Pages
 
-- https://www.kevinbravo.com/ - Homepage and portfolio overview for Kevin Bravo.
-- https://www.kevinbravo.com/me/ama - Primary profile page with background, strengths, role fit, and technical interests.
-- https://www.kevinbravo.com/projects - Project and case-study index.
-- https://www.kevinbravo.com/projects/billingua-talent - Full-stack platform case study for bilingual professional talent.
-- https://www.kevinbravo.com/projects/sea - Full-stack advisory operations platform case study.
-- https://www.kevinbravo.com/projects/sep - Education operations platform case study.
-- https://www.kevinbravo.com/projects/avaa-power-bi-dashboard - Data analytics dashboard case study.
-- https://www.kevinbravo.com/0b - Technical writing index.
-- https://www.kevinbravo.com/rss.xml - RSS feed for technical writing.
-- https://www.kevinbravo.com/projects.json - Machine-readable project index.
+- https://kevinbravo.com/ - Homepage and portfolio overview for Kevin Bravo.
+- https://kevinbravo.com/me/ama - Primary profile page with background, strengths, role fit, and technical interests.
+- https://kevinbravo.com/projects - Project and case-study index.
+- https://kevinbravo.com/projects/billingua-talent - Full-stack platform case study for bilingual professional talent.
+- https://kevinbravo.com/projects/sea - Full-stack advisory operations platform case study.
+- https://kevinbravo.com/projects/sep - Education operations platform case study.
+- https://kevinbravo.com/projects/avaa-power-bi-dashboard - Data analytics dashboard case study.
+- https://kevinbravo.com/0b - Technical writing index.
+- https://kevinbravo.com/rss.xml - RSS feed for technical writing.
+- https://kevinbravo.com/projects.json - Machine-readable project index.
 
 ## Notes For Agents
 

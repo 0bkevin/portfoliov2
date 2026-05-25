@@ -121,6 +121,21 @@ const schemaItems = Array.isArray(structuredData)
     <meta property="og:url" content={seo.openGraph.url} />
     <meta property="og:image" content={seo.openGraph.image} />
     <meta property="og:image:alt" content={seo.openGraph.imageAlt} />
+    {
+      seo.openGraph.imageWidth ? (
+        <meta property="og:image:width" content={String(seo.openGraph.imageWidth)} />
+      ) : null
+    }
+    {
+      seo.openGraph.imageHeight ? (
+        <meta property="og:image:height" content={String(seo.openGraph.imageHeight)} />
+      ) : null
+    }
+    {
+      seo.openGraph.imageType ? (
+        <meta property="og:image:type" content={seo.openGraph.imageType} />
+      ) : null
+    }
 
     <meta name="twitter:card" content={seo.twitter.card} />
     <meta name="twitter:title" content={seo.twitter.title} />

@@ -18,5 +18,5 @@ export default defineConfig({
   output: 'server',
   trailingSlash: 'never',
   adapter: cloudflare(),
-  site: 'https://www.kevinbravo.com',
+  site: 'https://kevinbravo.com',
 });

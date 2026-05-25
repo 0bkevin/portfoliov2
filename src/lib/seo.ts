@@ -1,9 +1,12 @@
-const SITE_URL = "https://www.kevinbravo.com";
+const SITE_URL = "https://kevinbravo.com";
 const SITE_NAME = "Kevin Bravo";
 const SITE_TITLE = "Kevin Bravo — Backend, Infrastructure, AI & Full-Stack Engineer";
 const SITE_DESCRIPTION =
   "Kevin Bravo is a software engineer building production-ready backend, infrastructure, AI engineering, and full-stack systems.";
 const DEFAULT_OG_IMAGE = "/assets/main_photo.jpg";
+const DEFAULT_OG_IMAGE_WIDTH = 935;
+const DEFAULT_OG_IMAGE_HEIGHT = 935;
+const DEFAULT_OG_IMAGE_TYPE = "image/jpeg";
 const DEFAULT_LOCALE = "en_US";
 const TWITTER_HANDLE = "@0bkevin";
 const DEFAULT_ROBOTS =
@@ -15,6 +18,9 @@ export const seoConfig = {
   siteTitle: SITE_TITLE,
   siteDescription: SITE_DESCRIPTION,
   defaultOgImage: DEFAULT_OG_IMAGE,
+  defaultOgImageWidth: DEFAULT_OG_IMAGE_WIDTH,
+  defaultOgImageHeight: DEFAULT_OG_IMAGE_HEIGHT,
+  defaultOgImageType: DEFAULT_OG_IMAGE_TYPE,
   defaultLocale: DEFAULT_LOCALE,
   twitterHandle: TWITTER_HANDLE,
   author: {
@@ -93,6 +99,7 @@ export const resolveSeo = ({
 }: BaseSeoInput & { pathname?: string | undefined }) => {
   const absoluteCanonical = getCanonicalUrl(pathname, canonical);
 
+  const usesDefaultImage = !image || image === DEFAULT_OG_IMAGE;
   const absoluteImage = toAbsoluteUrl(image || DEFAULT_OG_IMAGE);
   const resolvedTitle = seoTitle || title || SITE_TITLE;
   const resolvedDescription = seoDescription || description || SITE_DESCRIPTION;
@@ -115,6 +122,9 @@ export const resolveSeo = ({
       type,
       image: absoluteImage,
       imageAlt: resolvedImageAlt,
+      imageWidth: usesDefaultImage ? DEFAULT_OG_IMAGE_WIDTH : undefined,
+      imageHeight: usesDefaultImage ? DEFAULT_OG_IMAGE_HEIGHT : undefined,
+      imageType: usesDefaultImage ? DEFAULT_OG_IMAGE_TYPE : undefined,
       locale: DEFAULT_LOCALE,
       siteName: SITE_NAME,
       publishedTime: normalizedPublished,
