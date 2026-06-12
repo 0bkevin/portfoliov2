@@ -1,6 +1,6 @@
 import html from '../assets/econ-simulacion.html?raw';
 
-export const prerender = true;
+export const prerender = false;
 
 export function GET() {
   return new Response(html, {
