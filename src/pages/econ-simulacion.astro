@@ -131,6 +131,52 @@
   details[open] summary::before{content:"▾ "}
   details .dbody{padding:0 16px 14px;font-size:.92rem}
   .pill{display:inline-block;font-family:var(--mono);font-size:.68rem;background:var(--ink);color:var(--gold);border-radius:12px;padding:2px 10px;margin-right:6px;letter-spacing:.05em}
+
+  /* ---------- Ruta de estudio guiada ---------- */
+  .route{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:16px 18px;margin:18px 0}
+  .route-head{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#8a6510;margin-bottom:12px}
+  .route-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+  .route-steps li{margin:0}
+  .route-step{width:100%;height:100%;text-align:left;background:#fbf9f3;border:1px solid var(--line);border-radius:7px;padding:11px 13px;cursor:pointer;display:flex;flex-direction:column;gap:5px;min-height:66px;transition:border-color .15s,transform .15s,box-shadow .15s}
+  .route-step:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 3px 8px rgba(20,30,40,.08)}
+  .route-step:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .rs-top{display:flex;justify-content:space-between;align-items:center}
+  .rs-n{font-family:var(--mono);font-size:1.05rem;font-weight:700;color:var(--gold);line-height:1}
+  .rs-time{font-family:var(--mono);font-size:.66rem;color:#6b7884;text-transform:uppercase;letter-spacing:.06em}
+  .rs-t{font-weight:600;font-size:.9rem;color:var(--ink);line-height:1.25}
+  .route-step.is-current{background:var(--ink);border-color:var(--ink);cursor:default}
+  .route-step.is-current:hover{transform:none;box-shadow:none}
+  .route-step.is-current .rs-t{color:#f5efe2}
+  .route-step.is-current .rs-time{color:var(--gold)}
+
+  /* ---------- Navegación Siguiente / Anterior ---------- */
+  .step-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:30px 0 0;padding-top:18px;border-top:1px solid var(--line)}
+  .step-prev,.step-next{font-family:var(--mono);font-size:.8rem;border-radius:6px;padding:12px 16px;cursor:pointer;min-height:44px;line-height:1.2}
+  .step-prev{background:none;border:1px solid var(--line);color:#46535e}
+  .step-prev:hover{border-color:var(--ink);color:var(--ink)}
+  .step-next{background:var(--ink);border:1px solid var(--ink);color:var(--gold);font-weight:700;margin-left:auto}
+  .step-next:hover{background:#0e1820}
+  .step-prev:focus-visible,.step-next:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+  /* ---------- Selector de rol ---------- */
+  .role-pick{border-left:4px solid var(--blue)}
+  .role-pick label{font-size:.95rem;margin:0 0 4px}
+  .role-memos{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .role-memos:empty{display:none}
+  .role-memos-head{flex:1 1 100%;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:2px}
+  .memo-link{background:var(--gold-soft);border:1px solid var(--gold);color:#7a5910;border-radius:20px;padding:8px 14px;font-family:var(--mono);font-size:.78rem;cursor:pointer;min-height:40px}
+  .memo-link:hover{background:var(--gold);color:var(--ink)}
+  .memo-link:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+  /* ---------- Checklist de preparación ---------- */
+  .checklist{border-left:4px solid var(--green)}
+  .check-list{list-style:none;margin:10px 0 0;padding:0}
+  .check-list li{margin:0}
+  .check-list label{display:flex;gap:11px;align-items:flex-start;font-size:.92rem;padding:9px 2px;cursor:pointer;border-bottom:1px dashed var(--line)}
+  .check-list li:last-child label{border-bottom:none}
+  .check-list input{margin-top:2px;width:18px;height:18px;flex:0 0 auto;accent-color:var(--green);cursor:pointer}
+  .check-progress{font-family:var(--mono);font-size:.82rem;font-weight:700;margin-top:12px;color:#5d6a76}
+
   @media(max-width:640px){
     header{padding:26px 16px 20px;border-bottom-width:4px}
     .eyebrow{font-size:.64rem;letter-spacing:.12em;line-height:1.5}
@@ -170,6 +216,14 @@
     details summary{padding:10px 12px;line-height:1.35}
     details .dbody{padding:0 12px 12px}
     footer{padding:18px 12px;font-size:.64rem;line-height:1.45}
+    .route{padding:13px 14px}
+    .route-steps{grid-template-columns:1fr 1fr;gap:8px}
+    .route-step{min-height:60px;padding:10px 11px}
+    .rs-t{font-size:.84rem}
+    .step-nav{margin-top:24px}
+    .step-prev,.step-next{flex:1 1 100%;text-align:center;margin-left:0}
+    .step-next{order:-1}
+    .check-list label{font-size:.88rem}
   }
   @media(max-width:380px){
     .tab-btn{max-width:84vw;font-size:.64rem;padding-inline:10px}
@@ -222,6 +276,19 @@
     La opinión pública suele exigir al mismo tiempo: bajar impuestos, mejorar servicios públicos, aumentar el gasto en educación y salud, y reducir el déficit. <strong>Estos objetivos son contradictorios entre sí.</strong> El presupuesto es el instrumento donde esas contradicciones se hacen explícitas y obligan a elegir. En economía esto se llama <em>restricción presupuestaria</em>: no se puede tener todo a la vez; toda decisión implica un <em>costo de oportunidad</em>.
   </div>
 
+  <div class="route">
+    <div class="route-head">📋 Ruta de estudio recomendada · ~20 min</div>
+    <ol class="route-steps">
+      <li><div class="route-step is-current"><span class="rs-top"><span class="rs-n">①</span><span class="rs-time">estás aquí</span></span><span class="rs-t">Instrucciones y reglas</span></div></li>
+      <li><button class="route-step" data-goto="onapre"><span class="rs-top"><span class="rs-n">②</span><span class="rs-time">4 min</span></span><span class="rs-t">El presupuesto base (Onapre)</span></button></li>
+      <li><button class="route-step" data-goto="gasto"><span class="rs-top"><span class="rs-n">③</span><span class="rs-time">5 min</span></span><span class="rs-t">Quién pide gasto</span></button></li>
+      <li><button class="route-step" data-goto="ingresos"><span class="rs-top"><span class="rs-n">④</span><span class="rs-time">5 min</span></span><span class="rs-t">Quién financia y advierte</span></button></li>
+      <li><button class="route-step" data-goto="tablas"><span class="rs-top"><span class="rs-n">⑤</span><span class="rs-time">3 min</span></span><span class="rs-t">El modelo macro (tablas)</span></button></li>
+      <li><button class="route-step" data-goto="simulador"><span class="rs-top"><span class="rs-n">⑥</span><span class="rs-time">4 min</span></span><span class="rs-t">Practica en el simulador</span></button></li>
+    </ol>
+    <p class="small" style="margin-top:10px">Las pestañas <strong>⑦ Conceptos</strong> y <strong>⑧ Conexiones</strong> son material de referencia: consúltalas cuando las necesites.</p>
+  </div>
+
   <h3>Objetivos de aprendizaje</h3>
   <ul>
     <li><strong>Magnitudes:</strong> entender el tamaño del presupuesto y sus componentes de ingreso y gasto.</li>
@@ -242,19 +309,28 @@
     <li>Cada equipo hace una <strong>presentación de 4 minutos</strong>: qué decidió y con qué filosofía.</li>
   </ol>
 
-  <h3>¿Quién lee qué? (roles y memorandos)</h3>
-  <div class="table-wrap"><table>
-    <tr><th>Participante</th><th>Memorándum a leer</th></tr>
-    <tr><td>Presidente del Banco Central</td><td>Onapre · Banco Central</td></tr>
-    <tr><td>Ministro de Planificación y Finanzas</td><td>Onapre · Finanzas · Sepela · MEP</td></tr>
-    <tr><td>Presidente de Pdvsa</td><td>Onapre · Pdvsa</td></tr>
-    <tr><td>Ministro del Ambiente</td><td>Onapre · Ambiente</td></tr>
-    <tr><td>Ministro de Educación</td><td>Onapre · Educación</td></tr>
-    <tr><td>Ministro de Salud</td><td>Onapre · Salud</td></tr>
-    <tr><td>Ministro de Obras Públicas y Vivienda</td><td>Onapre · Mopvi</td></tr>
-    <tr><td>Jefe de la OPAM</td><td>Onapre · OPAM</td></tr>
-    <tr><td>Jefe de la Oficina Nacional de Presupuesto</td><td>Onapre</td></tr>
-  </table></div>
+  <h3>¿Quién lee qué? Elige tu rol</h3>
+  <p>Cada participante juega <strong>un</strong> cargo y solo necesita dominar <strong>sus</strong> memorandos. Selecciona el tuyo y te marco cuáles son —y te llevo a ellos con un clic:</p>
+  <div class="card role-pick">
+    <label for="roleSel"><strong>Mi cargo en el Consejo de Ministros:</strong></label>
+    <select id="roleSel"><option value="">— Selecciona tu rol —</option></select>
+    <div id="roleMemos" class="role-memos"></div>
+  </div>
+  <details>
+    <summary>Ver la tabla completa de roles y memorandos</summary>
+    <div class="dbody"><div class="table-wrap"><table>
+      <tr><th>Participante</th><th>Memorándum a leer</th></tr>
+      <tr><td>Presidente del Banco Central</td><td>Onapre · Banco Central</td></tr>
+      <tr><td>Ministro de Planificación y Finanzas</td><td>Onapre · Finanzas · Sepela · MEP</td></tr>
+      <tr><td>Presidente de Pdvsa</td><td>Onapre · Pdvsa</td></tr>
+      <tr><td>Ministro del Ambiente</td><td>Onapre · Ambiente</td></tr>
+      <tr><td>Ministro de Educación</td><td>Onapre · Educación</td></tr>
+      <tr><td>Ministro de Salud</td><td>Onapre · Salud</td></tr>
+      <tr><td>Ministro de Obras Públicas y Vivienda</td><td>Onapre · Mopvi</td></tr>
+      <tr><td>Jefe de la OPAM</td><td>Onapre · OPAM</td></tr>
+      <tr><td>Jefe de la Oficina Nacional de Presupuesto</td><td>Onapre</td></tr>
+    </table></div></div>
+  </details>
 
   <h3>El proceso presupuestario venezolano real (resumen)</h3>
   <p>La formulación del Proyecto de Ley de Presupuesto la dirige la <strong>Onapre</strong> (Oficina Nacional de Presupuesto) y dura 4–5 meses. Es un instrumento <em>técnico con un gran componente político</em> — quizá la herramienta política más importante del Ejecutivo. Secuencia simplificada:</p>
@@ -275,6 +351,26 @@
     <strong>Ley Paraguas:</strong> ley anual de endeudamiento que autoriza créditos para programas y proyectos específicos.<br>
     <strong>Lobby:</strong> presión política, formal o informal, de actores interesados en el nivel y la distribución del gasto.
   </div>
+
+  <div class="card checklist">
+    <h3 style="margin-top:0">✓ ¿Listo para el Consejo de Ministros?</h3>
+    <p class="small">Marca lo que ya dominas. Se guarda en este navegador, así retomas donde quedaste.</p>
+    <ul class="check-list" id="checkList">
+      <li><label><input type="checkbox" data-ck="caso"> Entiendo de qué trata el caso y la <strong>restricción presupuestaria</strong> (no se puede todo a la vez).</label></li>
+      <li><label><input type="checkbox" data-ck="base"> Conozco las magnitudes del presupuesto base y la diferencia entre <strong>déficit contable y económico</strong> (②).</label></li>
+      <li><label><input type="checkbox" data-ck="gasto"> Leí los memos del <strong>lado del gasto</strong> y entiendo el dilema de cada ministerio (③).</label></li>
+      <li><label><input type="checkbox" data-ck="ingreso"> Leí los memos del <strong>lado del ingreso</strong> y las advertencias macro (BCV, Pdvsa, Finanzas) (④).</label></li>
+      <li><label><input type="checkbox" data-ck="tablas"> Sé leer las tablas: <strong>déficit → inflación, reservas y crecimiento</strong> (⑤).</label></li>
+      <li><label><input type="checkbox" data-ck="sim"> Practiqué al menos <strong>una corrida completa</strong> en el simulador (⑥).</label></li>
+      <li><label><input type="checkbox" data-ck="rol"> Sé <strong>qué rol juego</strong> y domino mis memorandos específicos.</label></li>
+      <li><label><input type="checkbox" data-ck="filosofia"> Tengo clara mi <strong>filosofía fiscal</strong> para la presentación de 4 minutos.</label></li>
+    </ul>
+    <div class="check-progress" id="ckProgress">0 / 8 listo</div>
+  </div>
+
+  <nav class="step-nav" aria-label="Navegación del recorrido">
+    <button class="step-next" data-goto="onapre">Siguiente: ② El presupuesto base →</button>
+  </nav>
 </section>
 
 <!-- ==================== ② ONAPRE ==================== -->
@@ -352,6 +448,11 @@
     <div class="ctitle">📌 Ejemplo para fijar ideas</div>
     Si el Consejo aprueba todo lo que piden los ministros (≈ Bs.F. 50.000 MM extra) sin nuevos ingresos, el déficit sube ≈ 50.000 / 1.092.517 ≈ <strong>4,6% del PIB</strong>. Con tipo de cambio 4,30, las tablas de la OPAM indican que la inflación pasaría de ~25,5% a ~28%, y las reservas caerían más de US$ 5.000 MM. <em>Todo gasto tiene precio macro.</em>
   </div>
+
+  <nav class="step-nav" aria-label="Navegación del recorrido">
+    <button class="step-prev" data-goto="inicio">← Anterior: ① Instrucciones</button>
+    <button class="step-next" data-goto="gasto">Siguiente: ③ Ministerios (gasto) →</button>
+  </nav>
 </section>
 
 <!-- ==================== ③ MINISTERIOS (GASTO) ==================== -->
@@ -495,6 +596,11 @@
       <li>Rehabilitación del sistema de agua potable (derrame petrolero) en Monagas</li>
     </ol>
   </div>
+
+  <nav class="step-nav" aria-label="Navegación del recorrido">
+    <button class="step-prev" data-goto="onapre">← Anterior: ② Onapre</button>
+    <button class="step-next" data-goto="ingresos">Siguiente: ④ Entes económicos →</button>
+  </nav>
 </section>
 
 <!-- ==================== ④ ENTES ECONÓMICOS ==================== -->
@@ -639,11 +745,11 @@
     </ol>
     <div class="example">
       <div class="ctitle">📌 El ejemplo resuelto del memo</div>
-      Déficit = 3% del PIB, TC = 4,50, tasa real pasiva = −6% → inflación <strong>28%</strong>, reservas <strong>−US$ 5.275 MM</strong>, crecimiento <strong>3%</strong>. Las relaciones generales: <strong>más déficit → más inflación</strong>; <strong>mayor TC (devaluar) → menos déficit</strong>; <strong>mayor tasa real → menos pérdida de reservas pero menos crecimiento</strong>.
+      Déficit = 3% del PIB, TC = 4,50, tasa real pasiva = −6% → inflación <strong>28%</strong>, reservas <strong>−US$ 5.275 MM</strong>, crecimiento <strong>≈3%</strong>. El cuadro X.3 trae <strong>2,9%</strong>; el texto del memo lo redondea a 3%. Las relaciones generales: <strong>más déficit → más inflación</strong>; <strong>mayor TC (devaluar) → menos déficit</strong>; <strong>mayor tasa real → menos pérdida de reservas pero menos crecimiento</strong>.
     </div>
     <div class="concept">
       <div class="ctitle">💡 Recordatorio de definiciones (pie de página del memo)</div>
-      <strong>Tasa real = tasa pasiva nominal − inflación.</strong> El <em>spread</em> bancario es ~5 puntos: si quieres tasa real +3 con inflación 30, necesitas pasiva 33 y activa 38. Estas tasas deben lograrse con operaciones de mercado abierto (Títulos de Estabilización Monetaria), no por decreto.
+      <strong>Tasa real = tasa pasiva nominal − inflación.</strong> El <em>spread</em> bancario es ~5 puntos según el pie de página y la Hoja de decisión: si quieres tasa real +3 con inflación 30, necesitas pasiva 33 y activa 38. El cuerpo del memo menciona 7 puntos, pero el simulador usa <strong>activa = pasiva + 5</strong> porque así está escrito en la hoja que entrega el gabinete.
     </div>
     <p>👉 Usa la pestaña <strong>⑤ Tablas macro</strong> para consultar los valores interactivamente, o la <strong>⑥ Simulador</strong> para el ciclo completo.</p>
   </div>
@@ -678,9 +784,18 @@
       <tr><td>Pdvsa</td><td class="num">2.300.000</td><td class="num">60</td><td>Producción realista, precio medio</td></tr>
       <tr><td>Onapre (presupuesto)</td><td class="num">3.176.000</td><td class="num">40</td><td>Producción inflada, precio deprimido</td></tr>
     </table></div>
+    <div class="example">
+      <div class="ctitle">Nota de consistencia del PDF</div>
+      El memorándum del MEP muestra IEA con $93 y Goldman Sachs con $100. La <strong>Hoja de decisión</strong>, que es el formulario que usa el gabinete, cruza esos precios: Esc. 1 Goldman Sachs = 2.300.000 b/d a $93; Esc. 2 AIE = 2.630.000 b/d a $100. Por eso el simulador sigue la Hoja de decisión y no esta tabla del memo.
+    </div>
     <div class="chart-box"><canvas id="chPetro"></canvas></div>
     <div class="warn"><strong>⚠ La paradoja Onapre:</strong> asume <em>mucha</em> producción (que Pdvsa dice no poder lograr) a <em>muy bajo</em> precio. El producto producción×precio queda bajo → presupuesto "prudente" → los excedentes reales se gastan después por créditos adicionales y Fonden. El MEP recuerda además que el mercado petrolero es <strong>altamente volátil</strong>: maneja cualquier escenario con prudencia, y siempre se le puede exigir más aporte a Pdvsa (a costa de su salud financiera).</div>
   </div>
+
+  <nav class="step-nav" aria-label="Navegación del recorrido">
+    <button class="step-prev" data-goto="gasto">← Anterior: ③ Ministerios (gasto)</button>
+    <button class="step-next" data-goto="tablas">Siguiente: ⑤ Tablas macro →</button>
+  </nav>
 </section>
 
 <!-- ==================== ⑤ TABLAS MACRO ==================== -->
@@ -730,6 +845,11 @@
     <div class="ctitle">💡 ¿Por qué el déficit genera inflación aquí?</div>
     En una economía con tipo de cambio fijo y dominancia fiscal, el déficit se financia con expansión de liquidez (directa o indirectamente, vía banco central y fondos paralelos). Más bolívares persiguiendo los mismos bienes → precios al alza y presión sobre el dólar paralelo → más reservas perdidas defendiendo el TC oficial. Por eso las tres tablas se mueven juntas: <strong>déficit ↑ ⇒ inflación ↑ y reservas ↓</strong>; la única "ganancia" es algo más de crecimiento de corto plazo (demanda agregada) — el clásico dilema de corto vs. largo plazo.
   </div>
+
+  <nav class="step-nav" aria-label="Navegación del recorrido">
+    <button class="step-prev" data-goto="ingresos">← Anterior: ④ Entes económicos</button>
+    <button class="step-next" data-goto="simulador">Siguiente: ⑥ Simulador →</button>
+  </nav>
 </section>
 
 <!-- ==================== ⑥ SIMULADOR ==================== -->
@@ -793,6 +913,7 @@
             <option value="2300000,60">Esc. 3 — Pdvsa: 2.300.000 b/d a $60</option>
             <option value="custom">Esc. 5 — Gabinete (defínelo tú)</option>
           </select>
+          <p class="small">Los escenarios 1 y 2 siguen la Hoja de decisión. El memo MEP presenta esos dos precios en orden inverso.</p>
           <div id="escCustom" style="display:none;margin-top:6px">
             <label for="sProd">Producción (miles de b/d): <span class="range-val" id="vProd">2.500</span></label>
             <input type="range" id="sProd" min="1500" max="3500" step="50" value="2500">
@@ -834,6 +955,11 @@
       </ul>
     </div>
   </details>
+
+  <nav class="step-nav" aria-label="Navegación del recorrido">
+    <button class="step-prev" data-goto="tablas">← Anterior: ⑤ Tablas macro</button>
+    <button class="step-next" data-goto="conceptos">¿Listo? Repasa el ⑦ glosario de conceptos →</button>
+  </nav>
 </section>
 
 <!-- ==================== ⑦ CONCEPTOS ==================== -->
@@ -936,29 +1062,97 @@
 const tabs=document.querySelectorAll('.tab-btn');
 const panels=document.querySelectorAll('.tab-panel');
 const drawn={};
+/* Accesibilidad: roles ARIA y enlace pestaña↔panel */
+tabs.forEach(b=>{b.setAttribute('role','tab');b.id='tab-'+b.dataset.tab;b.setAttribute('aria-controls',b.dataset.tab);b.setAttribute('aria-selected',b.classList.contains('active')?'true':'false');});
+panels.forEach(p=>{p.setAttribute('role','tabpanel');p.setAttribute('tabindex','0');p.setAttribute('aria-labelledby','tab-'+p.id);});
+document.querySelectorAll('.results').forEach(r=>r.setAttribute('aria-live','polite'));
 function activateTab(tabId,{push=false,scroll=true}={}){
   const b=document.querySelector('.tab-btn[data-tab="'+tabId+'"]');
   const panel=document.getElementById(tabId);
   if(!b||!panel)return false;
-  tabs.forEach(x=>x.classList.remove('active'));
+  tabs.forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false');});
   panels.forEach(p=>p.classList.remove('active'));
-  b.classList.add('active');
+  b.classList.add('active');b.setAttribute('aria-selected','true');
   panel.classList.add('active');
   if(scroll)b.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
   initCharts(tabId);
   if(push)history.replaceState(null,'','#'+tabId);
-  window.scrollTo({top:0});
+  if(scroll)window.scrollTo({top:0});
   return true;
 }
 tabs.forEach(b=>b.addEventListener('click',()=>activateTab(b.dataset.tab,{push:true})));
-document.querySelectorAll('.subtab-btn').forEach(b=>b.addEventListener('click',()=>{
+/* Navegación con flechas en la barra de pestañas */
+const tablistEl=document.querySelector('.tabs');
+tablistEl.addEventListener('keydown',e=>{
+  if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+  const arr=[...tabs],i=arr.indexOf(document.activeElement);
+  if(i<0)return;
+  e.preventDefault();
+  const ni=e.key==='ArrowRight'?(i+1)%arr.length:(i-1+arr.length)%arr.length;
+  arr[ni].focus();activateTab(arr[ni].dataset.tab,{push:true});
+});
+/* Sub-pestañas (memorandos por ente) */
+function activateSub(sub){
+  const b=document.querySelector('.subtab-btn[data-sub="'+sub+'"]');
+  if(!b)return;
   const g=b.parentElement.dataset.group;
   document.querySelectorAll('.subtab-btn').forEach(x=>{if(x.parentElement.dataset.group===g)x.classList.remove('active')});
   document.querySelectorAll('.subpanel[data-group="'+g+'"]').forEach(p=>p.classList.remove('active'));
   b.classList.add('active');
-  document.getElementById('sub-'+b.dataset.sub).classList.add('active');
+  document.getElementById('sub-'+sub).classList.add('active');
+}
+document.querySelectorAll('.subtab-btn').forEach(b=>b.addEventListener('click',()=>{
+  activateSub(b.dataset.sub);
   b.scrollIntoView({inline:'nearest',block:'nearest',behavior:'smooth'});
 }));
+/* Saltos guiados: ruta de estudio, memorandos del rol y botones Siguiente/Anterior */
+function goTo(tab,sub){activateTab(tab,{push:true});if(sub)activateSub(sub);}
+function wireGoto(scope){(scope||document).querySelectorAll('[data-goto]').forEach(el=>{
+  if(el.dataset.wired)return;el.dataset.wired='1';
+  el.addEventListener('click',()=>goTo(el.dataset.goto,el.dataset.sub||''));
+});}
+wireGoto();
+
+/* ================= Selector de rol (memorandos personalizados) ================= */
+const ROLES=[
+ {r:'Presidente del Banco Central',m:[['onapre','','Onapre'],['ingresos','bcv','Banco Central']]},
+ {r:'Ministro de Planificación y Finanzas',m:[['onapre','','Onapre'],['ingresos','finanzas','Finanzas'],['ingresos','sepela','Sepela'],['ingresos','mep','MEP']]},
+ {r:'Presidente de Pdvsa',m:[['onapre','','Onapre'],['ingresos','pdvsa','Pdvsa']]},
+ {r:'Ministro del Ambiente',m:[['onapre','','Onapre'],['gasto','ambiente','Ambiente']]},
+ {r:'Ministro de Educación',m:[['onapre','','Onapre'],['gasto','edu','Educación']]},
+ {r:'Ministro de Salud',m:[['onapre','','Onapre'],['gasto','salud','Salud']]},
+ {r:'Ministro de Obras Públicas y Vivienda',m:[['onapre','','Onapre'],['gasto','mopvi','Obras Públicas']]},
+ {r:'Jefe de la OPAM',m:[['onapre','','Onapre'],['ingresos','opam','OPAM']]},
+ {r:'Jefe de la Oficina Nacional de Presupuesto',m:[['onapre','','Onapre']]}
+];
+const roleSel=document.getElementById('roleSel'),roleMemos=document.getElementById('roleMemos');
+ROLES.forEach((o,i)=>{const op=document.createElement('option');op.value=i;op.textContent=o.r;roleSel.appendChild(op);});
+function renderRole(){
+  const v=roleSel.value;
+  if(v===''){roleMemos.innerHTML='';try{localStorage.removeItem('econSim.role');}catch(e){}return;}
+  const o=ROLES[+v];
+  const links=o.m.map(x=>'<button class="memo-link" data-goto="'+x[0]+'"'+(x[1]?' data-sub="'+x[1]+'"':'')+'>'+x[2]+' →</button>').join('');
+  roleMemos.innerHTML='<div class="role-memos-head">Tus memorandos a dominar ('+o.m.length+'):</div>'+links;
+  wireGoto(roleMemos);
+  try{localStorage.setItem('econSim.role',v);}catch(e){}
+}
+roleSel.addEventListener('change',renderRole);
+try{const sr=localStorage.getItem('econSim.role');if(sr!==null&&ROLES[+sr])roleSel.value=sr;}catch(e){}
+renderRole();
+
+/* ================= Checklist de preparación (persistente) ================= */
+const checks=document.querySelectorAll('#checkList input[type=checkbox]');
+const ckProgress=document.getElementById('ckProgress');
+function updCk(){const n=[...checks].filter(c=>c.checked).length,t=checks.length;
+  ckProgress.textContent=n+' / '+t+' listo'+(n===t?' — ¡preparado para el Consejo! ✅':'');
+  ckProgress.style.color=n===t?'var(--green)':'';}
+try{const st=JSON.parse(localStorage.getItem('econSim.checklist')||'{}');checks.forEach(c=>{if(st[c.dataset.ck])c.checked=true;});}catch(e){}
+checks.forEach(c=>c.addEventListener('change',()=>{
+  const st={};checks.forEach(x=>st[x.dataset.ck]=x.checked);
+  try{localStorage.setItem('econSim.checklist',JSON.stringify(st));}catch(e){}
+  updCk();
+}));
+updCk();
 
 /* ----- Pistas de desplazamiento de la barra de pestañas ----- */
 const tabsEl=document.querySelector('.tabs');
