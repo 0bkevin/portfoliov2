@@ -5,6 +5,13 @@ dist/
 .astro/
 
 # LaTeX build output
+/*.aux
+/*.log
+/*.out
+/*.pdf
+/*.fls
+/*.fdb_latexmk
+/*.synctex.gz
 cv/*.aux
 cv/*.log
 cv/*.out
