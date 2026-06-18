@@ -2,7 +2,7 @@
 title: "SEA: Advisee Evaluation System"
 pubYear: '2024-01-01T12:00:00Z'
 description: An internal platform for EducationUSA advisory operations, centralizing student histories, outreach activities, institutional alliances, and funnel visibility.
-image: { url: '/assets/projects/sea/cover.png', alt: 'Minimal abstract cover for the SEA EducationUSA advisory operations platform' }
+image: { url: '/assets/projects/sea/cover.avif', alt: 'Minimal abstract cover for the SEA EducationUSA advisory operations platform' }
 tags: [platform, education, full-stack, operations]
 technologies: [full-stack platform, data modeling, dashboards, education operations]
 language: en
@@ -15,7 +15,7 @@ SEA, the **Advisee Evaluation System**, is the internal platform I engineered fo
 The goal was simple: replace scattered records with a system that made follow-up, reporting, and opportunity tracking easier to manage. Education advising depends on context. SEA keeps that context visible throughout the student journey.
 
 <figure>
-  <img src="/assets/projects/sea/image.png" alt="SEA dashboard showing advisee totals, monthly registrations, and top advisees by step" />
+  <img src="/assets/projects/sea/image.avif" alt="SEA dashboard showing advisee totals, monthly registrations, and top advisees by step" />
   <figcaption>SEA dashboard showing advisee totals, monthly registrations, and top advisees by step</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ The student record is the center of the system. SEA keeps a detailed history for
 This matters because advising depends on continuity. With a structured record, the advisor can review prior context before each interaction and avoid rebuilding the student's history from memory or scattered notes.
 
 <figure>
-  <img src="/assets/projects/sea/image copy 3.png" alt="SEA database view showing scholar records, status filters, and academic profile fields" />
+  <img src="/assets/projects/sea/image copy 3.avif" alt="SEA database view showing scholar records, status filters, and academic profile fields" />
   <figcaption>SEA database view showing scholar records, status filters, and academic profile fields</figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ This matters because advising depends on continuity. With a structured record, t
 SEA also included a student-facing structure based on EducationUSA's five steps to U.S. study. This helped connect the internal advising workflow with the path students were already expected to follow, from researching academic options to preparing for departure.
 
 <figure>
-  <img src="/assets/projects/sea/image copy 4.png" alt="SEA student-facing view showing the five steps to U.S. study" />
+  <img src="/assets/projects/sea/image copy 4.avif" alt="SEA student-facing view showing the five steps to U.S. study" />
   <figcaption>SEA student-facing view showing the five steps to U.S. study</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ The system also maintains a database of institutional alliances. These records h
 The platform also records paid services connected to the advising process, including initial advising, follow-up advising, and translations. This gives the advisor one place to review service history, monthly payment activity, receipts, and the type of support each student received.
 
 <figure>
-  <img src="/assets/projects/sea/image copy 2.png" alt="SEA payment registry showing service history, monthly payment charts, and transaction records" />
+  <img src="/assets/projects/sea/image copy 2.avif" alt="SEA payment registry showing service history, monthly payment charts, and transaction records" />
   <figcaption>SEA payment registry showing service history, monthly payment charts, and transaction records</figcaption>
 </figure>
 

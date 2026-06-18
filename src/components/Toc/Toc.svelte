@@ -3,7 +3,25 @@
   import { writable } from "svelte/store";
   import TocItem from "./TocItem.svelte";
 
-  let headings = writable([]);
+  export let items = [];
+
+  function normalizeHeadings(source) {
+    return source
+      .map((heading) => ({
+        id: heading.id || heading.slug || "",
+        text: heading.text || "",
+        level: heading.level || heading.depth || 0,
+      }))
+      .filter(
+        (heading) =>
+          heading.id &&
+          heading.text &&
+          heading.level >= 2 &&
+          heading.level <= 4
+      );
+  }
+
+  let headings = writable(normalizeHeadings(items));
   let activeId = writable("");
   let mobileOpen = false;
 
@@ -18,15 +36,28 @@
   }
 
   onMount(() => {
-    const elements = document.querySelectorAll("h1, h2, h3, h4");
-    const headingData = Array.from(elements).map((heading) => ({
-      id:
-        heading.id ||
-        heading.textContent?.toLowerCase().replace(/\s+/g, "-") ||
-        "",
-      text: heading.textContent || "",
-      level: parseInt(heading.tagName[1]),
-    }));
+    const providedHeadings = normalizeHeadings(items);
+    const elements = providedHeadings.length
+      ? providedHeadings
+          .map((heading) => document.getElementById(heading.id))
+          .filter(Boolean)
+      : Array.from(
+          document.querySelectorAll(
+            "article .prose h2, article .prose h3, article .prose h4"
+          )
+        );
+
+    const headingData = providedHeadings.length
+      ? providedHeadings
+      : elements.map((heading) => ({
+          id:
+            heading.id ||
+            heading.textContent?.toLowerCase().replace(/\s+/g, "-") ||
+            "",
+          text: heading.textContent || "",
+          level: parseInt(heading.tagName[1]),
+        }));
+
     headings.set(headingData);
 
     const observer = new IntersectionObserver(

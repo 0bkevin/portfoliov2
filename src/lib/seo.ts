@@ -3,10 +3,10 @@ const SITE_NAME = "Kevin Bravo";
 const SITE_TITLE = "Kevin Bravo — Backend, Infrastructure, AI & Full-Stack Engineer";
 const SITE_DESCRIPTION =
   "Kevin Bravo is a software engineer building production-ready backend, infrastructure, AI engineering, and full-stack systems.";
-const DEFAULT_OG_IMAGE = "/assets/main_photo.jpg";
+const DEFAULT_OG_IMAGE = "/assets/main_photo.avif";
 const DEFAULT_OG_IMAGE_WIDTH = 935;
 const DEFAULT_OG_IMAGE_HEIGHT = 935;
-const DEFAULT_OG_IMAGE_TYPE = "image/jpeg";
+const DEFAULT_OG_IMAGE_TYPE = "image/avif";
 const DEFAULT_LOCALE = "en_US";
 const TWITTER_HANDLE = "@0bkevin";
 const DEFAULT_ROBOTS =

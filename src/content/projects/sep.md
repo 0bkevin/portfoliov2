@@ -2,7 +2,7 @@
 title: "SEP: Participant Evaluation System"
 pubYear: '2024-01-01T12:00:00Z'
 description: A platform for ProExcelencia operations, replacing scattered Excel files with real-time scholar, activity, volunteer-hour, and performance tracking.
-image: { url: '/assets/projects/sep/cover.png', alt: 'Generated portfolio cover for the SEP participant evaluation system platform' }
+image: { url: '/assets/projects/sep/cover.avif', alt: 'Generated portfolio cover for the SEP participant evaluation system platform' }
 tags: [platform, education, full-stack, operations]
 technologies: [full-stack platform, data modeling, dashboards, education operations]
 language: en
@@ -13,7 +13,7 @@ language: en
 SEP, the **Participant Evaluation System**, is the platform I built to help AVAA manage ProExcelencia with live data instead of scattered spreadsheets. It centralizes scholar records, activities, chat clubs, volunteer hours, attendance, and reports across three national chapters.
 
 <figure>
-  <img src="/assets/projects/sep/cover.png" alt="Generated SEP cover showing an education operations platform" />
+  <img src="/assets/projects/sep/cover.avif" alt="Generated SEP cover showing an education operations platform" />
   <figcaption>Generated SEP cover showing an education operations platform</figcaption>
 </figure>
 

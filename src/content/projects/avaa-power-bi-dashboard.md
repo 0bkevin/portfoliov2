@@ -2,7 +2,7 @@
 title: "AVAA Alumni Analytics Dashboard"
 pubYear: '2023-08-01T12:00:00Z'
 description: A case study on building a fully interactive Power BI dashboard for AVAA, supported by Python scripts that extracted, cleaned, and prepared alumni data from historical spreadsheets.
-image: { url: '/assets/projects/avaa-dashboard/cover.png', alt: 'Portfolio cover for the AVAA alumni analytics Power BI dashboard case study' }
+image: { url: '/assets/projects/avaa-dashboard/cover.avif', alt: 'Portfolio cover for the AVAA alumni analytics Power BI dashboard case study' }
 tags: [power bi, python, data analytics, dashboards]
 technologies: [Power BI, Python, data analytics, dashboard design]
 language: en
@@ -35,21 +35,21 @@ The Python scripts helped prepare the source data by normalizing spreadsheets, o
 ## Dashboard screens
 
 <figure>
-  <img src="/assets/projects/avaa-dashboard/demographics.png" alt="Demographic dashboard view showing alumni location, gender distribution, age breakdown, and graduate records." />
+  <img src="/assets/projects/avaa-dashboard/demographics.avif" alt="Demographic dashboard view showing alumni location, gender distribution, age breakdown, and graduate records." />
   <figcaption>
     Demographic dashboard view showing alumni location, gender distribution, age breakdown, and graduate records.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/projects/avaa-dashboard/academic-data.png" alt="Academic dashboard view showing graduate counts by university, average grades, recognitions, and study time." />
+  <img src="/assets/projects/avaa-dashboard/academic-data.avif" alt="Academic dashboard view showing graduate counts by university, average grades, recognitions, and study time." />
   <figcaption>
     Academic dashboard view showing graduate counts by university, average grades, recognitions, and study time.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/projects/avaa-dashboard/satisfaction.png" alt="Satisfaction dashboard view showing how graduates evaluated different components of the ProExcelencia program." />
+  <img src="/assets/projects/avaa-dashboard/satisfaction.avif" alt="Satisfaction dashboard view showing how graduates evaluated different components of the ProExcelencia program." />
   <figcaption>
     Satisfaction dashboard view showing how graduates evaluated different components of the ProExcelencia program.
   </figcaption>

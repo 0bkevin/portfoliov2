@@ -2,7 +2,7 @@
 title: "Billingua Talent"
 pubYear: '2025-01-01T12:00:00Z'
 description: A bilingual talent platform built for AVAA and the U.S. Department of State's Venezuela Affairs Unit to help high-skilled Venezuelans access high-paying national jobs and improve their English readiness.
-image: { url: '/assets/projects/billingua/cover.png', alt: 'Billingua Talent homepage for English for Careers' }
+image: { url: '/assets/projects/billingua/cover.avif', alt: 'Billingua Talent homepage for English for Careers' }
 tags: [full-stack platform, talent network, dashboards, education operations]
 technologies: [full-stack platform, backend systems, dashboards, data modeling]
 language: en
@@ -15,7 +15,7 @@ Billingua Talent is a professional networking platform commissioned by the U.S. 
 The platform helps high-skilled Venezuelans with strong English levels access high-paying national jobs. It also gives Venezuelan-American Centers a shared system to identify candidates who need stronger English skills and offer them services, courses, and workshops to improve their readiness.
 
 <figure>
-  <img src="/assets/projects/billingua/homepage.png" alt="Billingua Talent homepage for English for Careers" />
+  <img src="/assets/projects/billingua/homepage.avif" alt="Billingua Talent homepage for English for Careers" />
   <figcaption>Billingua Talent homepage for English for Careers</figcaption>
 </figure>
 
@@ -42,7 +42,7 @@ My work covered:
 Billingua Talent combines candidate profiles, service management, and advisor analytics. Candidates can present experience, education, certifications, language level, social links, and CV. Advisors can review the talent pool, track participation, and identify training gaps.
 
 <figure>
-  <img src="/assets/projects/billingua/candidate-profile.png" alt="Candidate profile page with professional experience and English level" />
+  <img src="/assets/projects/billingua/candidate-profile.avif" alt="Candidate profile page with professional experience and English level" />
   <figcaption>Candidate profile page with professional experience and English level</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ Billingua Talent combines candidate profiles, service management, and advisor an
 The dashboard gives VAU and AVAA advisors a live view of candidates, services, registrations, service types, and English-level distribution. It helps the team decide which resources to promote, repeat, or adjust.
 
 <figure>
-  <img src="/assets/projects/billingua/advisor-dashboard.png" alt="Advisor dashboard with candidate totals, services, registrations, and charts" />
+  <img src="/assets/projects/billingua/advisor-dashboard.avif" alt="Advisor dashboard with candidate totals, services, registrations, and charts" />
   <figcaption>Advisor dashboard with candidate totals, services, registrations, and charts</figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ The dashboard gives VAU and AVAA advisors a live view of candidates, services, r
 The platform gives Venezuelan-American Centers a national funnel for candidate development. Advisors can monitor active users, publish targeted services, and guide candidates toward workshops, courses, webinars, and career preparation.
 
 <figure>
-  <img src="/assets/projects/billingua/service-management.png" alt="Service management screen with registrations, dates, modality, type, facilitator, and status" />
+  <img src="/assets/projects/billingua/service-management.avif" alt="Service management screen with registrations, dates, modality, type, facilitator, and status" />
   <figcaption>Service management screen with registrations, dates, modality, type, facilitator, and status</figcaption>
 </figure>
 
@@ -69,7 +69,7 @@ The platform gives Venezuelan-American Centers a national funnel for candidate d
 Each service page centralizes logistics, capacity, cost, modality, location, facilitator, and performance metrics. Advisors can manage services and review demand without rebuilding spreadsheets.
 
 <figure>
-  <img src="/assets/projects/billingua/service-detail.png" alt="Service detail page for an intermediate English grammar workshop" />
+  <img src="/assets/projects/billingua/service-detail.avif" alt="Service detail page for an intermediate English grammar workshop" />
   <figcaption>Service detail page for an intermediate English grammar workshop</figcaption>
 </figure>
 
