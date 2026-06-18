@@ -13,7 +13,7 @@ Getting to know a candidate is hard, and more when there is little time, too muc
 
 ## Recruiter TL;DR
 
-Software Engineer with 4+ years of experience building platforms, internal systems, and infrastructure across startups, government projects, and non-profits. Strong focus on backend architecture, AI tooling, distributed systems, and high-ownership engineering roles.
+Software Engineer with 5 years of experience building platforms, internal systems, and infrastructure across startups, government projects, and non-profits. Strong focus on backend architecture, AI tooling, distributed systems, and high-ownership engineering roles.
 
 Built and maintained production systems for the U.S. Department of State’s Venezuela Affairs Unit, Free2Z, and AVAA. Outside of work, I’ve spent years volunteering in education, tech and community initiatives, organizing hackathons and tech events, mentoring students, and helping build programs focused on entrepreneurship, leadership, and technology access.
 
@@ -21,7 +21,7 @@ Built and maintained production systems for the U.S. Department of State’s Ven
 
 ### What's your tech experience like?
 
-I’m a **Software Engineer** with 4+ years of experience building web platforms, internal tools, and data systems. I’ve worked in startups, government projects, and non-profits, leading technical architecture, full-stack development, and product design.
+I’m a **Software Engineer** with 5 years of experience building web platforms, internal tools, and data systems. I’ve worked in startups, government projects, and non-profits, leading technical architecture, full-stack development, and product design.
 
 Most of my experience has been building systems from the ground up, where I defined the architecture, modeled the data, and connected services. I’ve worked on frontend and backend projects, but I’m especially interested in backend architecture, cloud, infrastructure, AI tools, data distributed systems, and systems that other people can rely on.
 

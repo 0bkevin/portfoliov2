@@ -1,8 +1,16 @@
 ---
+const EXPERIENCE_START_YEAR = 2021;
+const EXPERIENCE_START_MONTH = 6;
+const today = new Date();
+const yearsOfExperience =
+  today.getFullYear() -
+  EXPERIENCE_START_YEAR -
+  (today.getMonth() + 1 < EXPERIENCE_START_MONTH ? 1 : 0);
+
 const ACHIEVEMENTS = [
   {
     title: "Experience",
-    value: `${new Date().getFullYear() - 2022}+ years`,
+    value: `${yearsOfExperience} years`,
   },
   {
     title: "Supported",
