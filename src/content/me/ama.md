@@ -1,9 +1,9 @@
 ---
 title: "Ask Me Anything: Kevin Bravo 🤺"
 pubDate: '2026-05-18T12:00:00Z'
-seoTitle: "Kevin Bravo | Backend, Infrastructure, AI & Full-Stack Engineer"
+seoTitle: "Kevin Bravo | Product Engineer, Full-Stack Software & AI Engineer"
 description: Discover Kevin Bravo's professional and personal background in this AMA-style self-interview. Learn about his software engineering experience, leadership work, volunteer projects, career goals, and technical skills in less than 5 minutes.
-seoDescription: Learn about Kevin Bravo's backend, infrastructure, AI engineering, and full-stack software work, including technical strengths, project ownership, and career fit.
+seoDescription: Learn about Kevin Bravo's full-stack product engineering, internal platforms, AI agents, and backend work, including technical strengths, project ownership, and career fit.
 profilePageType: ama
 ---
 
@@ -13,17 +13,17 @@ Getting to know a candidate is hard, and more when there is little time, too muc
 
 ## Recruiter TL;DR
 
-Software Engineer with 5 years of experience building platforms, internal systems, and infrastructure across startups, government projects, and non-profits. Strong focus on backend architecture, AI tooling, distributed systems, and high-ownership engineering roles.
+Product engineer with 5 years of experience building full-stack products, internal platforms, and AI agent systems across startups, government projects, and non-profits. Strong focus on high-ownership work: taking an ambiguous product or operations problem and turning it into architecture, data models, and software teams rely on every day.
 
-Built and maintained production systems for the U.S. Department of State’s Venezuela Affairs Unit, Free2Z, and AVAA. Outside of work, I’ve spent years volunteering in education, tech and community initiatives, organizing hackathons and tech events, mentoring students, and helping build programs focused on entrepreneurship, leadership, and technology access.
+Sole engineer on a platform for the U.S. Department of State’s Venezuela Affairs Unit, and builder of production systems for Free2Z and AVAA (including SEP, a multi-tenant platform serving ~300 scholars across 3 national chapters). Outside of work, I’ve spent years volunteering in education, tech and community initiatives, organizing hackathons and tech events, mentoring students, and helping build programs focused on entrepreneurship, leadership, and technology access.
 
 ## 🤷‍♀️ Overall
 
 ### What's your tech experience like?
 
-I’m a **Software Engineer** with 5 years of experience building web platforms, internal tools, and data systems. I’ve worked in startups, government projects, and non-profits, leading technical architecture, full-stack development, and product design.
+I’m a **product engineer** with 5 years of experience building full-stack products, internal platforms, AI agent systems, and data systems. I’ve worked in startups, government projects, and non-profits, leading technical architecture, full-stack development, and product design.
 
-Most of my experience has been building systems from the ground up, where I defined the architecture, modeled the data, and connected services. I’ve worked on frontend and backend projects, but I’m especially interested in backend architecture, cloud, infrastructure, AI tools, data distributed systems, and systems that other people can rely on.
+Most of my experience has been building systems from the ground up, where I defined the architecture, modeled the data, and connected services. I work across the full stack and like being close to product decisions, and I’m especially drawn to internal platforms, AI agents and tooling, cloud and backend architecture, and systems that other people can rely on.
 
 I like working on systems that matter and solving hard technical problems that force you to understand what is really happening. I like taking full ownership of the outcome and being trusted with difficult, ambiguous challenges. I do my best work when the systems, architecture, and foundations still need to be designed, built, and maintained.
 
@@ -44,11 +44,11 @@ Most of my experience has involved building systems from the ground up and turni
 I enjoy understanding the deeper constraints behind a problem, identifying what actually matters technically, and building solutions that balance scalability, maintainability, and speed without overengineering the system.
 
 ### Roles I’m a good fit for
-- Backend Engineer
-- Full-Stack Engineer
-- Infrastructure-minded Product Engineer
-- AI Tools / Agentic Systems Engineer
+- Product Engineer
+- Full-Stack Software Engineer
+- AI Engineer / Agentic Systems Engineer
 - Platform / Internal Tools Engineer
+- Backend Engineer
 - Technical Lead / Founding Engineer style roles
 
 ### Volunteer?
@@ -81,15 +81,15 @@ I also like being close to the product and understanding why something is being 
 
 ### [Billingua Talent](/projects/billingua-talent)
 
-Billingua Talent is a professional networking platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit. This is a platform built to connect highly skilled Venezuelan professionals with strong English proficiency to high-paying national job opportunities. As the sole engineer on the project, I designed and built the platform architecture, data model, and core product flows, then deployed and maintained the system in production.
+Billingua Talent is a multi-tenant professional networking and operations platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit. It connects highly skilled bilingual Venezuelans to companies hiring locally, so the country retains talent that would otherwise emigrate, with role-based access for four kinds of users: Binational Centers offering English courses, businesses posting jobs and searching talent, candidates applying and enrolling in courses, and administrators. As the sole engineer, I designed and built the platform architecture, data model, and core product flows end to end, then tested it in internal pilots with 50 users from the AVAA ProExcelencia program and 5 companies ahead of a broader rollout.
 
 ### [PES - Participant Evaluation System](/projects/sep)
 
-The platform I built for AVAA to manage ProExcelencia with live data instead of scattered spreadsheets. It became the source of truth for scholar records, activities, volunteer hours, attendance, and reports across three national chapters.
+The platform I built for AVAA to manage ProExcelencia with live data instead of scattered spreadsheets. Built with Next.js, PostgreSQL, Prisma, and Auth.js and deployed on Azure, it is a multi-tenant system serving around 300 scholars and their program staff across three national chapters, and became the source of truth for scholar records, activities, volunteer hours, attendance, and reports. I started on this program as an intern cleaning its historical data, then proposed and built the platform on top of it.
 
 ### [Free2Z platform migration](/me/who-is-kevin-bravo)
 
-I directed the technical migration and architecture redesign of a web platform, moving the frontend from React to SvelteKit to improve performance and code maintainability. The work included live video integration with Dyte, Svelte stores, Tailwind CSS, SSR optimization, backend API connections, and a custom CMS suite with a Markdown editor and blog engine.
+I directed the technical migration and architecture redesign of a live startup product, moving the frontend from React to SvelteKit, with real users on it, to improve performance and code maintainability. The work included live video integration with Dyte, Svelte stores, Tailwind CSS, SSR optimization, backend API connections to Python/Django, and a custom CMS suite with a Markdown editor and blog engine.
 
 ## What AI tools, models, and workflows are you currently using?
 
