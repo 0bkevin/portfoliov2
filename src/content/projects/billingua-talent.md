@@ -1,18 +1,18 @@
 ---
 title: "Billingua Talent"
 pubYear: '2025-01-01T12:00:00Z'
-description: A bilingual talent platform built for AVAA and the U.S. Department of State's Venezuela Affairs Unit to help high-skilled Venezuelans access high-paying national jobs and improve their English readiness.
+description: A multi-tenant bilingual talent platform I built solo for AVAA and the U.S. Department of State's Venezuela Affairs Unit, connecting high-skilled bilingual Venezuelans with companies hiring locally so the country retains talent that would otherwise emigrate.
 image: { url: '/assets/projects/billingua/cover.avif', alt: 'Billingua Talent homepage for English for Careers' }
-tags: [full-stack platform, talent network, dashboards, education operations]
-technologies: [full-stack platform, backend systems, dashboards, data modeling]
+tags: [full-stack platform, talent network, multi-tenant, dashboards]
+technologies: [multi-tenant platform, role-based access, backend systems, dashboards, data modeling]
 language: en
 ---
 
 ## Overview
 
-Billingua Talent is a professional networking platform commissioned by the U.S. Department of State's Venezuela Affairs Unit and led through AVAA in 2025. I led the full product development, from data architecture to the candidate and advisor interfaces.
+Billingua Talent is a professional networking and operations platform commissioned by the U.S. Department of State's Venezuela Affairs Unit and led through AVAA in 2025. I was the sole engineer, building it end to end from the requirements and data architecture to the candidate, employer, and advisor interfaces.
 
-The platform helps high-skilled Venezuelans with strong English levels access high-paying national jobs. It also gives Venezuelan-American Centers a shared system to identify candidates who need stronger English skills and offer them services, courses, and workshops to improve their readiness.
+The mission was concrete: connect Venezuelan professionals with strong English skills to companies hiring bilingual talent locally, so the country stops losing that talent to emigration. It is a multi-tenant platform with role-based access for four kinds of users: Binational Centers reaching candidates to offer English courses, businesses posting jobs and searching for talent, candidates applying to jobs and enrolling in courses, and administrators supervising every side of the system. Candidates who need a stronger English level can take courses through the Centers to qualify for the opportunities on the platform.
 
 <figure>
   <img src="/assets/projects/billingua/homepage.avif" alt="Billingua Talent homepage for English for Careers" />
@@ -79,9 +79,9 @@ The analytics views help the team understand candidate composition, offer activi
 
 ## Outcome
 
-Billingua Talent gave candidates a structured professional presence and gave advisors the data needed to coordinate training, monitor English readiness, and support access to high-paying national opportunities.
+I delivered Billingua Talent as a complete, production-ready product and tested it in internal pilots with 50 users from the AVAA ProExcelencia program and 5 companies, then turned their feedback into refined workflows and reporting ahead of a broader rollout.
 
-The platform improved talent visibility, service coordination, and planning across the Binational Center network.
+By design, it gives candidates a structured professional presence, gives businesses a way to reach vetted bilingual talent, and gives advisors the data to coordinate training, monitor English readiness, and support access to national opportunities, all built to keep skilled professionals working from within the country.
 
 ## What I learned
 

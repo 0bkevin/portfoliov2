@@ -4,7 +4,7 @@ pubYear: '2024-01-01T12:00:00Z'
 description: An internal platform for EducationUSA advisory operations, centralizing student histories, outreach activities, institutional alliances, and funnel visibility.
 image: { url: '/assets/projects/sea/cover.avif', alt: 'Minimal abstract cover for the SEA EducationUSA advisory operations platform' }
 tags: [platform, education, full-stack, operations]
-technologies: [full-stack platform, data modeling, dashboards, education operations]
+technologies: [Next.js, PostgreSQL, Prisma, Auth.js, Azure, data modeling]
 language: en
 ---
 
@@ -27,7 +27,7 @@ Before SEA, that information was harder to manage as a single record. Student hi
 
 ## My role
 
-I built the system from requirements to implementation, focusing on the workflows the advisor needed to operate every week. My work covered data modeling, interface structure, feature development, and the core backend flows for advisory and outreach records.
+I built the system alone, from requirements to implementation, focusing on the workflows the advisor needed to operate every week. I built it with Next.js, PostgreSQL, Prisma, and Auth.js, deployed on Azure, and my work covered the relational data model, interface structure, feature development, and the core backend flows for advisory and outreach records.
 
 The product had to support real operational use, not just store information. Each section was designed around the questions an advisor needs to answer quickly: who needs follow-up, what has already happened, which outreach activities are active, and what alliances can create new study opportunities.
 

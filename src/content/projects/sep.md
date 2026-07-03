@@ -3,14 +3,14 @@ title: "SEP: Participant Evaluation System"
 pubYear: '2024-01-01T12:00:00Z'
 description: A platform for ProExcelencia operations, replacing scattered Excel files with real-time scholar, activity, volunteer-hour, and performance tracking.
 image: { url: '/assets/projects/sep/cover.avif', alt: 'Generated portfolio cover for the SEP participant evaluation system platform' }
-tags: [platform, education, full-stack, operations]
-technologies: [full-stack platform, data modeling, dashboards, education operations]
+tags: [platform, education, full-stack, multi-tenant, operations]
+technologies: [Next.js, PostgreSQL, Prisma, Auth.js, Azure, data modeling]
 language: en
 ---
 
 ## Overview
 
-SEP, the **Participant Evaluation System**, is the platform I built to help AVAA manage ProExcelencia with live data instead of scattered spreadsheets. It centralizes scholar records, activities, chat clubs, volunteer hours, attendance, and reports across three national chapters.
+SEP, the **Participant Evaluation System**, is the platform I built to help AVAA manage ProExcelencia with live data instead of scattered spreadsheets. It is a multi-tenant system serving around 300 scholars and program staff of roughly four to six people per chapter, across three national chapters in Venezuela, centralizing scholar records, activities, chat clubs, volunteer hours, attendance, and reports.
 
 <figure>
   <img src="/assets/projects/sep/cover.avif" alt="Generated SEP cover showing an education operations platform" />
@@ -27,7 +27,9 @@ The team needed one operational record for activity planning, scholar follow-up,
 
 ## My role
 
-I worked on the product structure, data organization, interface design, backend workflows, and implementation. My focus was to move the team from manual spreadsheet management to a digital workflow that matched how ProExcelencia actually operates.
+I built SEP alone, from the first conversation to production. I started on this program as an intern, writing Python ETL scripts to clean and normalize historical records from 2020 to 2023. After months inside that data I understood the problem better than anyone, so instead of cleaning spreadsheets forever I proposed and built a single system the team could run the program from. The data I had cleaned became the seed dataset.
+
+I built it with Next.js, PostgreSQL, Prisma, and Auth.js, deployed on Azure, and I owned the product structure, relational data model, interface design, backend workflows, and implementation. It is multi-tenant: each of the three national chapters manages its own scholars and operation while coordinators keep visibility over the whole program. After launch, I stayed the technical owner: I operated it in production on Azure, debugged and fixed errors, and turned staff feedback into workflow improvements.
 
 ## Product scope
 

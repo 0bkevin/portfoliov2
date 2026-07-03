@@ -10,9 +10,9 @@ import BlogSection from "../components/blog/section/BlogSection.astro";
 import AchievementsSection from "../components/achievements/AchievementsSection.astro";
 import { createPersonSchema, createWebsiteSchema, seoConfig } from "@lib/seo";
 
-const title = "Kevin Bravo | Backend, Infrastructure, AI & Full-Stack Engineer";
+const title = "Kevin Bravo | Product Engineer, Full-Stack Software & AI Engineer";
 const description =
-  "Explore Kevin Bravo's software engineering portfolio, case studies, and technical writing on backend systems, infrastructure, AI engineering, and full-stack product work.";
+  "Explore Kevin Bravo's software engineering portfolio, case studies, and technical writing on full-stack product engineering, internal platforms, AI agents, and backend systems.";
 const image = seoConfig.defaultOgImage;
 
 const webPageSchema = {
@@ -49,7 +49,7 @@ const websiteSchema = createWebsiteSchema({
 
 const personSchema = createPersonSchema({
   description:
-    "Software engineer focused on backend systems, infrastructure, AI engineering, full-stack products, and product delivery.",
+    "Product engineer focused on full-stack products, internal platforms, AI agents, and backend systems, with full ownership from architecture to production.",
   worksFor: [
     {
       "@type": "Organization",
@@ -57,11 +57,12 @@ const personSchema = createPersonSchema({
     },
   ],
   knowsAbout: [
-    "Backend engineering",
-    "Infrastructure",
-    "AI engineering",
-    "Full-stack engineering",
     "Product engineering",
+    "Full-stack engineering",
+    "AI engineering",
+    "AI agents",
+    "Internal platforms",
+    "Backend engineering",
     "Data systems",
     "Blockchain security",
   ],

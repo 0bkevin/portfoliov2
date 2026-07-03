@@ -79,10 +79,6 @@ I also like being close to the product and understanding why something is being 
 
 ## Best professional projects
 
-### [Free2Z platform migration](/me/who-is-kevin-bravo)
-
-I directed the technical migration and architecture redesign of a web platform, moving the frontend from React to SvelteKit to improve performance and code maintainability. The work included live video integration with Dyte, Svelte stores, Tailwind CSS, SSR optimization, backend API connections, and a custom CMS suite with a Markdown editor and blog engine.
-
 ### [Billingua Talent](/projects/billingua-talent)
 
 Billingua Talent is a professional networking platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit. This is a platform built to connect highly skilled Venezuelan professionals with strong English proficiency to high-paying national job opportunities. As the sole engineer on the project, I designed and built the platform architecture, data model, and core product flows, then deployed and maintained the system in production.
@@ -91,6 +87,10 @@ Billingua Talent is a professional networking platform commissioned by the U.S. 
 
 The platform I built for AVAA to manage ProExcelencia with live data instead of scattered spreadsheets. It became the source of truth for scholar records, activities, volunteer hours, attendance, and reports across three national chapters.
 
+### [Free2Z platform migration](/me/who-is-kevin-bravo)
+
+I directed the technical migration and architecture redesign of a web platform, moving the frontend from React to SvelteKit to improve performance and code maintainability. The work included live video integration with Dyte, Svelte stores, Tailwind CSS, SSR optimization, backend API connections, and a custom CMS suite with a Markdown editor and blog engine.
+
 ## What AI tools, models, and workflows are you currently using?
 
 I actively use AI models and coding tools as part of my daily engineering workflow to speed up research, prototyping, debugging, system design, and development. They’ve become an important part of how I explore, validate, and iterate while building.
@@ -98,11 +98,10 @@ I actively use AI models and coding tools as part of my daily engineering workfl
 The models I use the most right now are:
 
 * **ChatGPT 5.5** for deep technical reasoning, architecture discussions, and coding.
-* **Gemini 3.1 Pro / Flash** and **Claude 4.7** for frontend work, UI exploration, and product-oriented tasks.
+* **Claude 4.8 | Claude Fable 5(while available)** for frontend work, UI exploration, and product-oriented tasks.
 * **Mimo v2.5 Pro**, **Kimi K2.6**, **Composer 2.5**, and newer open-source models like **DeepSeek** when I want to experiment, compare behaviors, and test different workflows.
 
-
-For coding harnesses and tools, I’m currently using [T3Code](https://t3.codes/), [Pi](https://pi.dev/), and [OpenCode](https://opencode.ai/). I also use [Cursor](https://www.cursor.com) and [Zed](https://zed.dev) from time to time, depending on the project and the workflow I want to test.
+For coding harnesses and tools, I’m currently using [Zrode](https://github.com/0bkevin/zrode) An Agentic Development Environment I'm currently building as my daily driver, but I also use [T3Code](https://t3.codes/), [Pi](https://pi.dev/), and [OpenCode](https://opencode.ai/). Sometimes I use [Cursor](https://www.cursor.com) and [Zed](https://zed.dev) or VsCode from time to time, depending on the project and the workflow I want to test.
 
 I also have a Hermes agent running 24/7 on a VPS, which works as a general personal assistant and helps me keep track of tasks, ideas, research, and my master's work.
 
@@ -123,10 +122,10 @@ I also value collaborative teams with strong technical curiosity, open discussio
 In order of importance:
 
 1. **Ownership:** I like environments where people trust you with meaningful responsibility and expect you to drive things forward independently.
-2. **Autonomy and flexibility:** I value teams that optimize for outcomes, trust, and good judgment rather than rigid schedules, unnecessary oversight, or performative productivity.
-3. **Interesting technical problems:** I enjoy complex engineering work, especially when there’s still space to shape the architecture, systems, and technical direction.
+2. **Interesting technical problems:** I enjoy complex engineering work, especially when there’s still space to shape the architecture, systems, and technical direction.
+3. **Mission and long-term impact:** I care about building things that are genuinely useful and that improve how people, organizations, or systems operate over time.
 4. **Smart and curious people:** I want to work with people who care about learning, questioning assumptions, and improving how things are built.
-5. **Mission and long-term impact:** I care about building things that are genuinely useful and that improve how people, organizations, or systems operate over time.
+5. **Autonomy and flexibility:** I value teams that optimize for outcomes, trust, and good judgment rather than rigid schedules, unnecessary oversight, or performative productivity.
 6. **Strong engineering culture:** Good technical discussions, thoughtful decision-making, and attention to quality matter a lot to me.
 
 ### How do you keep yourself up to date?
