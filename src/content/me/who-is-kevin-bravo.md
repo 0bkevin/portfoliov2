@@ -20,8 +20,8 @@ He works best when he has full agency to turn an unclear technical problem into 
 - In 2025, his team won **3rd place at the first EmprendeTECH Hackathon at IESA**.
 - In 2024, he became an **Education Committee Member at AVAA**, providing technical support for Programa Excelencia and maintaining the Participant Evaluation System.
 - In 2024, he worked as a **Freelance Software Engineer**, building websites, automation scripts, and technical solutions for clients.
-- From 2023 to 2024, he worked as a **Software Developer at AVAA**, building systems that moved program operations away from scattered spreadsheets.
-- From 2022 to 2023, he worked as a **Software Developer Intern at AVAA**, building a Power BI dashboard, organizing historical data, and writing automation scripts.
+- From 2022 to 2024, he worked as a **Software Developer at AVAA**, building systems that moved program operations away from scattered spreadsheets.
+- From 2021 to 2022, he worked as a **Software Developer Intern at AVAA**, building a Power BI dashboard, organizing historical data, and writing automation scripts.
 - In 2023, he graduated **Cum Laude in Occupational Therapy** from Universidad Central de Venezuela.
 - From 2019 to 2023, he was an **AVAA ProExcelencia scholarship holder**, where he grew through leadership, English training, volunteering, and professional development.
 
