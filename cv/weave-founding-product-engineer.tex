@@ -1,0 +1,107 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[left=1.05cm,top=0.92cm,right=1.05cm,bottom=0.78cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Founding Product Engineer},
+    pdfsubject={CV tailored for the Weave founding product engineer role: whole-arc product engineering, React/TypeScript, Go, Python, developer tooling, and 0-to-1 ownership},
+    pdfkeywords={Kevin Bravo, Founding Product Engineer, Product Engineer, Full-Stack, React, TypeScript, Go, Python, developer tools, developer experience, AI, LLM, agents, 0-to-1, ownership, startups}
+}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=1pt, partopsep=0pt, parsep=1pt, label={\textbf{-}}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{5pt}
+    \begin{center}
+        \textbf{#1}
+    \end{center}
+    \vspace{-6pt}
+}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Founding Product Engineer / Full-Stack Software Engineer \\
+    React \& TypeScript, Go, Python | Developer Tooling \& 0-to-1 Product \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    Email: \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    | Portfolio: \href{https://kevinbravo.com}{https://kevinbravo.com}
+    | GitHub: \href{https://github.com/0bkevin}{https://github.com/0bkevin}
+    | LinkedIn: \href{https://www.linkedin.com/in/0bkevin/}{https://www.linkedin.com/in/0bkevin}
+    | Remote
+\end{center}
+
+\sectiontitle{Professional Summary}
+Product engineer with 5 years of experience owning the whole arc: the problem, the design, the code, and the thing customers actually touch. I take features from a rough idea to shipped and own them after they ship, talking to users, designing the solution, writing the backend and frontend, provisioning the infrastructure, and closing the loop on feedback. I build with React and TypeScript, Go, and Python, and I spend my own time building developer tooling for AI coding agents, so a product about how engineering teams actually work is one I would be building for myself. I move fast without getting sloppy, and I do my best work with a founder and a clear problem, not a ticket queue.
+
+\sectiontitle{Technical Skills}
+\textbf{Core stack:} \textbf{React} and \textbf{TypeScript} (core, daily), \textbf{Go} (Brio companion and relay services), \textbf{Python} (Django backends, ETL and data pipelines). \\
+\textbf{Full-stack:} Next.js, SvelteKit, Astro, Node.js, REST APIs, PostgreSQL, Prisma, SQL, Supabase-compatible schema design, backend architecture, data modeling. \\
+\textbf{Infrastructure:} Azure, AWS/GCP concepts, Cloudflare Workers, Docker, environment config, deployment ownership, production debugging, provisioning infra for the features I ship. \\
+\textbf{Developer tooling \& AI:} AI coding agents (Claude Code, Codex, OpenCode), LLM workflows, agent control planes, MCP; building daily with agents while keeping engineering judgment in the loop.
+
+\sectiontitle{Projects}
+\textbf{Brio} (Expo React Native, \textbf{Go}, Postgres): A control plane for a personal AI coding agent, designed as a small distributed system with a mobile app, a Go companion service, a Go relay, and a shared protocol, handling device pairing, an ownership model, background services, and health checks. \\
+\textbf{Zrode} (TypeScript): My own version of an open-source GUI for coding agents (Codex, Claude, OpenCode), shaping the developer workspace and agent experience the way I want to work. \\
+\textbf{Hermes:} A personal AI agent running 24/7 on a VPS for research, tasks, and daily workflows. \\
+\textit{I care about how engineers work because I keep rebuilding my own tools until they do.}
+
+\sectiontitle{Experience}
+
+\textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remote} \\
+\textbf{Software Engineer | Full-Stack Developer} \hfill \textit{Nov 2024 - Aug 2025}
+\begin{itemize}
+    \item \textbf{Sole engineer on Billingua Talent}, owning the whole arc with no project managers in between: requirements, data model, backend, frontend, deployment, and every release.
+    \item \textbf{Built a multi-tenant platform} with role-based access for four user types, then tested it in pilots with 50 users and 5 companies and turned their feedback into refined workflows.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Free2Z} \hfill \textit{Remote} \\
+\textbf{Principal Software Engineer} \hfill \textit{Apr 2025 - Apr 2026}
+\begin{itemize}
+    \item \textbf{Led the migration of a live product from React to SvelteKit} with real users on it, rebuilding frontend architecture and SSR without breaking a running product.
+    \item \textbf{Shipped full-stack features end to end}, integrated Dyte live video, and built a CMS suite, choosing the quick fix or the durable fix based on what the moment needed.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Proyecto Educa} \hfill \textit{Remote} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dec 2025 - Present}
+\begin{itemize}
+    \item \textbf{Own product and technical direction} end to end for an education platform, setting the direction and writing the code, currently building an internal course-streaming product.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remote} \\
+\textbf{Software Developer} \hfill \textit{Oct 2022 - Jul 2024}
+\begin{itemize}
+    \item \textbf{Built and operate SEP} (Next.js, PostgreSQL, Prisma on Azure), a multi-tenant platform serving around 300 scholars and staff across 3 national chapters; I proposed it myself, built it alone, and stayed its technical owner in production.
+    \item \textbf{Turned recurring user feedback into workflow and reporting improvements}, and wrote Python scripts for analytics and data validation.
+\end{itemize}
+
+\sectiontitle{Why Weave}
+I believe most engineering metrics measure the wrong thing, and I have felt it: the work that mattered most in my projects was rarely the work that showed up as output. A product that gives teams an honest view of how engineering actually happens, without vanity metrics or surveillance, is one I want to exist. I build developer tools for myself constantly, I am comfortable across React, Go, and Python, and I like being close to customers and shipping fast. The slope matters more than the intercept, and mine is steep.
+
+\sectiontitle{Education}
+\textbf{IESA}, Master of Public Administration \hfill \textit{In Progress} \\
+\textbf{Universidad Central de Venezuela}, Occupational Therapy, Cum Laude \hfill \textit{2023}
+
+\sectiontitle{Additional Skills}
+\textbf{Frontend:} React, TypeScript, Next.js, SvelteKit, Tailwind CSS, design sensibility from shipping consumer products. \textbf{Backend:} Go, Python, Node.js, PostgreSQL, Prisma, REST APIs. \textbf{Tooling/AI:} coding agents, LLM workflows, developer experience. \textbf{Languages:} Spanish (Native), English (C1).
+
+\end{document}

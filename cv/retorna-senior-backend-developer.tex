@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.15cm,top=1.35cm,right=1.15cm,bottom=0.9cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Senior Backend Developer (Node.js, TypeScript, IA en Produccion)},
+    pdfsubject={CV para el rol de Sr. Backend Developer en Retorna: backend Node.js y TypeScript de alta criticidad, IA en produccion real, agentes autonomos, arquitectura multi-tenant y ownership end to end},
+    pdfkeywords={Kevin Bravo, Senior Backend Developer, Node.js, TypeScript, IA en produccion, agentes autonomos, LLM, guardrails, human-in-the-loop, PostgreSQL, multi-tenant, arquitectura distribuida, Go, Python, fintech}
+}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=2pt, partopsep=0pt, parsep=2pt, label={\textbf{-}}}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Senior Backend Developer | Node.js, TypeScript, IA en Producción \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    \textbullet\
+    \href{https://kevinbravo.com}{kevinbravo.com}
+    \textbullet\
+    \href{https://github.com/0bkevin}{github.com/0bkevin}
+    \textbullet\
+    \href{https://www.linkedin.com/in/0bkevin/}{linkedin.com/in/0bkevin}
+    \textbullet\
+    Remoto, Venezuela
+\end{center}
+
+\vspace{4pt}
+\begin{center}
+    \textbf{Perfil Profesional}
+\end{center}
+\vspace{-4pt}
+Ingeniero backend con 5 años de experiencia construyendo y operando sistemas en producción de extremo a extremo en Node.js, TypeScript, Python y Go. Diseño la arquitectura, escribo el código y me quedo como dueño en producción, sin esperar a que me digan qué construir: lo propongo, lo diseño y lo llevo a producción. Corro mis propios agentes de IA en producción real sobre APIs de LLM, no en notebooks ni en demos, y he construido planos de control para agentes con enrutamiento, propiedad por usuario, logs de acciones, health checks y escalamiento a humano. He entregado plataformas multi-tenant con aislamiento por tenant y control de acceso por rol, donde la integridad de los datos no era negociable. Me interesan los sistemas distribuidos, la alta criticidad y los problemas donde la corrección importa.
+
+\vspace{8pt}
+\begin{center}
+    \textbf{Habilidades Técnicas}
+\end{center}
+\vspace{-4pt}
+\textbf{Backend:} Node.js, TypeScript, JavaScript, Python, Django, Go, REST APIs, diseño de APIs, arquitectura de servicios, integraciones con terceros, ownership end to end \\
+\textbf{IA en producción:} APIs de LLM (Anthropic, OpenAI), agentes autónomos, planos de control de agentes, tool use y routing, MCP, guardrails, human-in-the-loop y escalamiento a humano, criterio de ingeniería en el loop \\
+\textbf{Datos y arquitectura:} PostgreSQL, Prisma, SQL, modelado de datos relacional, arquitectura multi-tenant, control de acceso por rol, aislamiento por tenant, logging de acciones y observabilidad, ETL \\
+\textbf{Cloud y entrega:} Azure, Cloudflare Workers, Docker, ownership de despliegue, debugging en producción, releases y entrega continua
+
+\vspace{8pt}
+\begin{center}
+    \textbf{Sistemas de IA en Producción}
+\end{center}
+\vspace{-4pt}
+\textbf{Hermes:} Agente de IA personal corriendo 24/7 en un VPS sobre APIs de LLM, ejecutando investigación y tareas de forma autónoma. Código que hoy está corriendo, no un prototipo. \\
+\textbf{Brio} (Go, React Native, PostgreSQL): Plano de control para un agente de IA, construido como un sistema distribuido con un servicio companion, un relay y un protocolo compartido; maneja enrutamiento, modelo de propiedad por usuario, logs de acciones y health checks, las piezas que necesita un agente gobernado con escalamiento a humano. \\
+\textbf{Zrode} (TypeScript): Mi propia versión de una GUI open-source para agentes de coding; construyo a diario con agentes manteniendo el criterio de ingeniería en el loop.
+
+\vspace{8pt}
+\begin{center}
+    \textbf{Experiencia}
+\end{center}
+\vspace{-4pt}
+
+\textbf{Proyecto Educa} \hfill \textit{Remoto, Venezuela} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dic 2025 -- Presente}
+\begin{itemize}
+    \item \textbf{Dueño de la dirección técnica y de producto}, traduciendo necesidades operativas ambiguas en decisiones de arquitectura, prioridades de entrega y software en producción.
+    \item \textbf{Ejecuto de forma hands-on en todo el stack}, desde el backend y las APIs hasta la calidad de release, para productos usados en operación real.
+\end{itemize}
+
+\vspace{10pt}
+\textbf{Free2Z} \hfill \textit{Remoto} \\
+\textbf{Principal Software Engineer} \hfill \textit{Abr 2025 -- Abr 2026}
+\begin{itemize}
+    \item \textbf{Envié features full-stack de punta a punta} integrando APIs en Node y Python/Django sobre un producto en vivo con usuarios reales.
+    \item \textbf{Lideré la migración de un producto en producción de React a SvelteKit} sin romper el servicio, mejorando mantenibilidad y rendimiento.
+\end{itemize}
+
+\vspace{10pt}
+\textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remoto, Venezuela} \\
+\textbf{Software Engineer | Backend y Full-Stack} \hfill \textit{Nov 2024 -- Ago 2025}
+\begin{itemize}
+    \item \textbf{Único ingeniero de Billingua Talent}, dueño del arco completo sin project managers de por medio: requisitos, modelo de datos, backend, frontend, despliegue y cada release.
+    \item \textbf{Construí una plataforma multi-tenant} con control de acceso por rol para cuatro tipos de usuario y aislamiento estricto por tenant, donde la integridad y la separación de los datos no eran negociables.
+\end{itemize}
+
+\vspace{10pt}
+\textbf{Freelance} \hfill \textit{Remoto} \\
+\textbf{Software Engineer} \hfill \textit{Sep 2024 -- Dic 2024}
+\begin{itemize}
+    \item \textbf{Entregué builds full-stack y scripts de automatización} en varios sectores, desde el descubrimiento y la priorización hasta el lanzamiento, la iteración y el soporte técnico.
+\end{itemize}
+
+\vspace{10pt}
+\textbf{Asociación Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remoto, Venezuela} \\
+\textbf{Software Developer} \hfill \textit{Oct 2022 -- Jul 2024}
+\begin{itemize}
+    \item \textbf{Propuse y construí SEP} (Node, PostgreSQL, Prisma sobre Azure), una plataforma multi-tenant que hoy sirve a alrededor de 300 becarios y staff en \textbf{3 capítulos nacionales}; empecé como pasante limpiando la data histórica, vi el problema real y me quedé como dueño técnico en producción.
+    \item \textbf{Desarrollé SEA para EducationUSA}, centralizando historiales, pagos, servicios y reportes en un solo sistema operativo para los asesores.
+\end{itemize}
+
+\vspace{10pt}
+\textbf{Asociación Venezolano Americana de Amistad (AVAA)} \hfill \textit{Caracas, Venezuela} \\
+\textbf{Software Developer Intern} \hfill \textit{Sep 2021 -- Ago 2022}
+\begin{itemize}
+    \item \textbf{Construí un dashboard interactivo en Power BI} y escribí pipelines de datos en Python que mejoraron la confiabilidad del reporting y redujeron la limpieza manual.
+\end{itemize}
+
+\vspace{8pt}
+\begin{center}
+    \textbf{Educación}
+\end{center}
+\vspace{-4pt}
+\textbf{Instituto de Estudios Superiores de Administración (IESA)} \hfill \textit{Caracas, Venezuela} \\
+Maestría en Administración Pública (MPA) \hfill \textit{En curso} \\
+\textbf{Universidad Central de Venezuela} \hfill \textit{Caracas, Venezuela} \\
+Licenciatura en Terapia Ocupacional, Cum Laude \hfill \textit{2023}
+
+\vspace{8pt}
+\begin{center}
+    \textbf{Idiomas}
+\end{center}
+\vspace{-4pt}
+Español (nativo), Inglés (C1)
+
+\end{document}

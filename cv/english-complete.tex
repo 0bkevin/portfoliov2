@@ -6,14 +6,23 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage[left=1.15cm,top=1.35cm,right=1.15cm,bottom=0.9cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Tech Lead and Agent Architect CV},
+    pdfsubject={Curriculum vitae focused on SaaS architecture, AI agent systems, and engineering leadership},
+    pdfkeywords={Kevin Bravo, Tech Lead, Agent Architect, SaaS Architecture, AI Agents, LLMs, TypeScript, React, SvelteKit, Python, Django, PostgreSQL}
+}
 \setlength{\parindent}{0pt}
+\pagestyle{empty}
 \setlist[itemize]{leftmargin=*, noitemsep, topsep=2pt, partopsep=0pt, parsep=2pt, label={\textbf{-}}}
 
 \begin{document}
 
 \begin{center}
     {\LARGE \textbf{Kevin Bravo}}\\
-    Product Engineer | TypeScript, React, Full-Stack Products \\
+    Tech Lead | Agent Architect \\
     \hrulefill
 \end{center}
 
@@ -34,17 +43,17 @@
     \textbf{Professional Summary}
 \end{center}
 \vspace{-4pt}
-Product engineer with 4+ years of experience building and shipping customer-facing products, internal platforms, dashboards, and workflow systems across startup, government, and nonprofit environments. Strong background in TypeScript, React, full-stack delivery, data modeling, API integrations, and taking software from rough idea to production. I work best in high-ownership teams where UX, speed, correctness, and product judgment all matter. Interested in financial infrastructure, Web3 systems, and products where reliability is part of the user experience.
+Software engineer with 5 years of experience designing and operating SaaS products, internal platforms, and AI agent systems across startup, government, and nonprofit environments. Currently CTO at Proyecto Educa, responsible for architecture, technical priorities, and software delivery. Led a production platform migration at Free2Z and independently built multi-tenant systems with role-based access, relational data models, and operational dashboards. Seeking a Tech Lead or Agent Architect role focused on system architecture, engineering leadership, and production software.
 
 \vspace{8pt}
 \begin{center}
     \textbf{Core Skills}
 \end{center}
 \vspace{-4pt}
-\textbf{Frontend:} TypeScript, JavaScript, React, Next.js, Svelte, SvelteKit, HTML, CSS, Tailwind CSS, responsive UI, server-side rendering, performance optimization \\
-\textbf{Backend and Data:} Python, Django, SQL, PostgreSQL, REST APIs, data modeling, backend architecture, service integrations, reporting systems \\
-\textbf{Product Engineering:} zero-to-one product delivery, customer-facing features, internal tools, dashboard development, workflow automation, cross-functional collaboration, testing, release ownership \\
-\textbf{Web3 and Systems:} smart contract security research, DeFi concepts, blockchain tooling, distributed systems, AI-assisted development
+\textbf{Architecture and Platforms:} SaaS architecture, multi-tenant systems, role-based access, relational data modeling, REST APIs, service integrations, internal platforms, production migrations \\
+\textbf{AI Agents and LLMs:} agent control planes, multi-provider agent workflows, session management, relay routing, runtime logs, system health, LLM-assisted development \\
+\textbf{Engineering Leadership:} team leadership, technical planning, architecture decisions, implementation priorities, stakeholder coordination, release management, production support \\
+\textbf{Technology:} TypeScript, Next.js, SvelteKit, Python, Go, Django, PostgreSQL, Docker, Azure / AWS
 
 \vspace{8pt}
 \begin{center}
@@ -55,27 +64,28 @@ Product engineer with 4+ years of experience building and shipping customer-faci
 \textbf{Proyecto Educa} \hfill \textit{Remote, Venezuela} \\
 \textbf{Chief Technology Officer} \hfill \textit{Dec 2025 -- Present}
 \begin{itemize}
-    \item \textbf{Own product and technical direction} for education platforms, translating ambiguous operating needs into product plans, architecture decisions, delivery priorities, and shipped software.
-    \item \textbf{Lead hands-on execution across the stack} spanning frontend, backend, testing, release quality, and system decisions for products used in live operations.
+    \item \textbf{Set the architecture and technical priorities} for education platforms, translating operating requirements into system designs, implementation plans, and releases.
+    \item \textbf{Lead software delivery across contributors and stakeholders}, setting development priorities, reviewing technical decisions, and remaining responsible for release quality and production support.
 \end{itemize}
 
 \vspace{10pt}
 \textbf{Free2Z} \hfill \textit{Remote, Venezuela} \\
 \textbf{Principal Software Engineer} \hfill \textit{Apr 2025 -- Apr 2026}
 \begin{itemize}
-    \item \textbf{Led a production frontend migration from React to SvelteKit}, improving maintainability, server-side rendering, cross-platform behavior, and performance for a live user-facing product.
-    \item \textbf{Shipped customer-facing and operational features end to end} by integrating Python and Django APIs, live video capabilities, and a CMS suite for content and product workflows.
+    \item \textbf{Led the architecture and implementation of a production migration from React to SvelteKit}, improving maintainability, server-side rendering, state management, and performance for a live platform.
+    \item \textbf{Defined integration patterns for Python and Django APIs} and delivered live video capabilities and a CMS suite used in customer-facing and publishing workflows.
 \end{itemize}
 
 \vspace{10pt}
 \textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remote, Venezuela} \\
-\textbf{Software Engineer | Full-Stack Developer} \hfill \textit{Nov 2024 -- Aug 2025}
+\textbf{Product Engineer | Billingua Talent} \hfill \textit{Nov 2024 -- Aug 2025}
 \begin{itemize}
-    \item \textbf{Built Billingua Talent as the sole engineer}, owning requirements, relational data architecture, frontend and backend implementation, and production delivery.
-    \item \textbf{Shipped candidate profiles, advisor dashboards, and service-management workflows} used across multiple centers to track talent readiness, registrations, and operational follow-up.
+    \item \textbf{Designed and built Billingua Talent as the sole engineer}, a multi-tenant SaaS platform with role-based access for candidates, employers, advisors, and administrators.
+    \item \textbf{Owned the system from requirements through production}, including the relational data model, frontend and backend, dashboards, reporting, deployment, and maintenance.
+    \item \textbf{Tested the platform with 50 users and 5 companies}, then revised workflows and reporting based on pilot feedback before the broader rollout.
 \end{itemize}
 
-\vspace{10pt}
+\newpage
 \textbf{Freelance} \hfill \textit{Remote} \\
 \textbf{Software Engineer} \hfill \textit{Sep 2024 -- Dec 2024}
 \begin{itemize}
@@ -84,27 +94,27 @@ Product engineer with 4+ years of experience building and shipping customer-faci
 
 \vspace{10pt}
 \textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remote, Venezuela} \\
-\textbf{Software Developer} \hfill \textit{Aug 2023 -- Sep 2024}
+\textbf{Junior Product Engineer} \hfill \textit{Oct 2022 -- Jul 2024}
 \begin{itemize}
-    \item \textbf{Built SEP}, a live platform for scholar records, attendance, volunteer hours, and reporting, replacing spreadsheet-heavy workflows across \textbf{3 national chapters}.
-    \item \textbf{Engineered SEA for EducationUSA}, centralizing student histories, payments, services, outreach, receipts, and reporting into one operating system for advisors.
+    \item \textbf{Designed, deployed, and maintained SEP}, a multi-tenant platform serving approximately 300 scholars across 3 national chapters with Auth.js, PostgreSQL, Prisma, and Azure.
+    \item \textbf{Built SEA for EducationUSA}, centralizing student histories, payments, services, outreach, institutional relationships, and reporting in one platform.
+    \item \textbf{Supported both systems in production}, resolving defects, maintaining data quality, and revising workflows based on staff feedback.
 \end{itemize}
 
 \vspace{10pt}
 \textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Caracas, Venezuela} \\
-\textbf{Software Developer Intern} \hfill \textit{Oct 2022 -- Aug 2023}
+\textbf{Software Developer Intern} \hfill \textit{Sep 2021 -- Aug 2022}
 \begin{itemize}
     \item \textbf{Built an interactive Power BI dashboard} and wrote Python data pipelines that improved reporting reliability and reduced manual cleanup for AVAA analytics workflows.
 \end{itemize}
 
 \vspace{8pt}
 \begin{center}
-    \textbf{Proof of Work}
+    \textbf{Selected AI Agent Work}
 \end{center}
 \vspace{-4pt}
-\textbf{Portfolio:} \href{https://kevinbravo.com/projects}{kevinbravo.com/projects} with case studies for Billingua Talent, SEA, SEP, and other shipped products. \\
-\textbf{Technical Writing:} \href{https://kevinbravo.com/0b}{kevinbravo.com/0b} with walkthroughs on Ethernaut, Damn Vulnerable DeFi, Brownie, wallet behavior, flash loans, and smart contract security. \\
-\textbf{GitHub:} \href{https://github.com/0bkevin}{github.com/0bkevin}
+\textbf{Zrode:} Built and use an agent development environment for multi-provider coding workflows, with a unified interface for working with different coding agents during software development. \\
+\textbf{Brio:} Built a mobile control plane for an AI agent system with device pairing, session control, relay routing, runtime logs, and health checks.
 
 \vspace{8pt}
 \begin{center}
@@ -122,7 +132,14 @@ Product engineer with 4+ years of experience building and shipping customer-faci
 \textbf{JA Venezuela Alumni} \hfill \textit{Remote} \\
 \textbf{Vice President} \hfill \textit{Mar 2026 -- Present}
 \begin{itemize}
-    \item Support strategy, partnerships, and operations for the alumni network, with direct involvement in planning, community initiatives, and institutional growth.
+    \item Lead planning and delivery for training, partnerships, and community initiatives with the President, alumni team, and external organizations.
+\end{itemize}
+
+\vspace{6pt}
+\textbf{Technovation Girls Venezuela} \hfill \textit{Caracas, Venezuela} \\
+\textbf{Code Mentor} \hfill \textit{2026}
+\begin{itemize}
+    \item Guided a student team through problem definition, prototyping, technical decisions, and mobile application development with MIT App Inventor.
 \end{itemize}
 
 \vspace{8pt}

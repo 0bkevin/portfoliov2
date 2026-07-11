@@ -1,0 +1,102 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[left=1.05cm,top=0.75cm,right=1.05cm,bottom=0.5cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Software Engineer (Full-Stack, AI Agents)},
+    pdfsubject={CV tailored for the Paddox Technologies software engineer role: full-stack TypeScript, AI agent platforms, multi-tenant isolation, LLM APIs, and end-to-end ownership},
+    pdfkeywords={Kevin Bravo, Software Engineer, Full-Stack, TypeScript, React, Next.js, Node, PostgreSQL, Supabase, AI agents, LLM, Anthropic, OpenAI, MCP, multi-tenant, isolation, agent frameworks, Google Cloud, RAG, vector store}
+}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=1pt, partopsep=0pt, parsep=1pt, label={\textbf{-}}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{5pt}
+    \begin{center}
+        \textbf{#1}
+    \end{center}
+    \vspace{-6pt}
+}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Software Engineer / Full-Stack TypeScript \\
+    AI Agents, Multi-Tenant Platforms, and LLM-Powered Products \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    Email: \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    | Portfolio: \href{https://kevinbravo.com}{https://kevinbravo.com}
+    | GitHub: \href{https://github.com/0bkevin}{https://github.com/0bkevin}
+    | LinkedIn: \href{https://www.linkedin.com/in/0bkevin/}{https://www.linkedin.com/in/0bkevin}
+    | Remote
+\end{center}
+
+\sectiontitle{Professional Summary}
+Full-stack software engineer with 5 years of experience shipping production systems end to end, from the data model to the surfaces people use, in TypeScript, React, Next.js, Node, and PostgreSQL. I build and operate my own AI agent infrastructure on top of LLM APIs, and I have built multi-tenant platforms with role-based access and strict per-tenant isolation, the same problem an accountable digital employee solves for memory and governance. I pick up new tools fast and own problems until they are solved.
+
+\sectiontitle{Technical Skills}
+\textbf{Web stack:} TypeScript, JavaScript, React, Next.js, Node.js, REST APIs, PostgreSQL (Supabase-compatible), Prisma, SQL, Tailwind CSS, SvelteKit. \\
+\textbf{AI and agents:} LLM APIs (Anthropic, OpenAI), AI agents, agent control planes, tool use and routing, MCP; building daily with coding agents while keeping engineering judgment in the loop. \\
+\textbf{Backend and data:} multi-tenant architecture, role-based access control, per-tenant isolation, relational data modeling, Python and Django, ETL, action logging and observability. \\
+\textbf{Cloud and infra:} Azure, Cloudflare Workers, Docker, Google Cloud (familiar), deployment ownership, building against third-party APIs, production debugging. \\
+\textbf{Languages:} Spanish (Native), English (C1).
+
+\sectiontitle{Projects}
+\textbf{Brio} (React Native, Go, Postgres): A control plane for a personal AI agent, built as a small distributed system with a companion service, a relay, and a shared protocol. Handles routing, per-user ownership, action logs, and health checks, the same building blocks a governed agent needs. \\
+\textbf{Hermes:} A personal AI agent running 24/7 on a VPS on top of LLM APIs, handling research and tasks unattended. \\
+\textbf{Zrode} (TypeScript): My own version of an open-source GUI for coding agents (Codex, Claude, OpenCode).
+
+\sectiontitle{Experience}
+
+\textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remote} \\
+\textbf{Software Engineer | Full-Stack Developer} \hfill \textit{Nov 2024 - Aug 2025}
+\begin{itemize}
+    \item \textbf{Sole engineer on Billingua Talent, a multi-tenant platform} with role-based access for four distinct user types and strict data isolation between tenants, built end to end from the data model to the interfaces managers use.
+    \item \textbf{Owned the whole arc} with no project managers in between: requirements, architecture, backend, frontend, deployment, and every release; tested in pilots with 50 users and 5 companies.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remote} \\
+\textbf{Software Developer} \hfill \textit{Oct 2022 - Jul 2024}
+\begin{itemize}
+    \item \textbf{Built and operate SEP} (Next.js, Node, PostgreSQL, Prisma), a multi-tenant platform serving around 300 scholars and staff across 3 national chapters, each isolated with visibility for coordinators; I stayed its technical owner in production, from deployment and debugging to data validation.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Free2Z} \hfill \textit{Remote} \\
+\textbf{Principal Software Engineer} \hfill \textit{Apr 2025 - Apr 2026}
+\begin{itemize}
+    \item \textbf{Led the migration of a live product from React to SvelteKit} with real users on it, shipped full-stack features against Node and Python/Django APIs, integrated Dyte live video, and built a CMS suite.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Proyecto Educa} \hfill \textit{Remote} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dec 2025 - Present}
+\begin{itemize}
+    \item \textbf{Own product and technical direction} end to end for an education platform, setting the direction and writing the code, currently building an internal course-streaming product.
+\end{itemize}
+
+\sectiontitle{Why Paddox}
+An accountable digital employee is a systems problem I recognize: identity, memory isolated per client, tools, and a governance trail for every action. I have built the multi-tenant, isolated platforms products run on, and I run my own agents on LLM APIs. I want to go deeper on the agent and memory layers, and Paddox is building exactly that.
+
+\sectiontitle{Education}
+\textbf{IESA}, Master of Public Administration \hfill \textit{In Progress} \\
+\textbf{Universidad Central de Venezuela}, Occupational Therapy, Cum Laude \hfill \textit{2023}
+
+\end{document}
