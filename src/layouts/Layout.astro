@@ -12,6 +12,9 @@ interface Props {
   seoDescription?: string | undefined;
   image?: string | null | undefined;
   imageAlt?: string | undefined;
+  imageWidth?: number | undefined;
+  imageHeight?: number | undefined;
+  imageType?: string | undefined;
   canonical?: string | undefined;
   noindex?: boolean | undefined;
   robots?: string | undefined;
@@ -32,6 +35,9 @@ const {
   seoDescription,
   image,
   imageAlt,
+  imageWidth,
+  imageHeight,
+  imageType,
   canonical,
   noindex = false,
   robots,
@@ -52,6 +58,9 @@ const seo = resolveSeo({
   seoDescription,
   image,
   imageAlt,
+  imageWidth,
+  imageHeight,
+  imageType,
   canonical,
   noindex,
   robots,
@@ -120,6 +129,7 @@ const schemaItems = Array.isArray(structuredData)
     <meta property="og:type" content={seo.openGraph.type} />
     <meta property="og:url" content={seo.openGraph.url} />
     <meta property="og:image" content={seo.openGraph.image} />
+    <meta property="og:image:secure_url" content={seo.openGraph.image} />
     <meta property="og:image:alt" content={seo.openGraph.imageAlt} />
     {
       seo.openGraph.imageWidth ? (
@@ -140,6 +150,7 @@ const schemaItems = Array.isArray(structuredData)
     <meta name="twitter:card" content={seo.twitter.card} />
     <meta name="twitter:title" content={seo.twitter.title} />
     <meta name="twitter:description" content={seo.twitter.description} />
+    <meta name="twitter:url" content={seo.canonical} />
     <meta name="twitter:image" content={seo.twitter.image} />
     <meta name="twitter:image:alt" content={seo.twitter.imageAlt} />
     <meta name="twitter:creator" content={seo.twitter.creator} />

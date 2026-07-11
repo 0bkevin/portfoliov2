@@ -3,10 +3,13 @@ const SITE_NAME = "Kevin Bravo";
 const SITE_TITLE = "Kevin Bravo — Backend, Infrastructure, AI & Full-Stack Engineer";
 const SITE_DESCRIPTION =
   "Kevin Bravo is a software engineer building production-ready backend, infrastructure, AI engineering, and full-stack systems.";
-const DEFAULT_OG_IMAGE = "/assets/main_photo.avif";
-const DEFAULT_OG_IMAGE_WIDTH = 935;
-const DEFAULT_OG_IMAGE_HEIGHT = 935;
-const DEFAULT_OG_IMAGE_TYPE = "image/avif";
+const DEFAULT_OG_IMAGE = "/assets/kevin-bravo-og.png";
+const DEFAULT_OG_IMAGE_ALT =
+  "Kevin Bravo — Product Engineer, AI Engineer, and Full-Stack Software Engineer";
+const DEFAULT_OG_IMAGE_WIDTH = 1200;
+const DEFAULT_OG_IMAGE_HEIGHT = 630;
+const DEFAULT_OG_IMAGE_TYPE = "image/png";
+const AUTHOR_IMAGE = "/assets/main_photo.avif";
 const DEFAULT_LOCALE = "en_US";
 const TWITTER_HANDLE = "@0bkevin";
 const DEFAULT_ROBOTS =
@@ -18,6 +21,7 @@ export const seoConfig = {
   siteTitle: SITE_TITLE,
   siteDescription: SITE_DESCRIPTION,
   defaultOgImage: DEFAULT_OG_IMAGE,
+  defaultOgImageAlt: DEFAULT_OG_IMAGE_ALT,
   defaultOgImageWidth: DEFAULT_OG_IMAGE_WIDTH,
   defaultOgImageHeight: DEFAULT_OG_IMAGE_HEIGHT,
   defaultOgImageType: DEFAULT_OG_IMAGE_TYPE,
@@ -26,7 +30,7 @@ export const seoConfig = {
   author: {
     name: "Kevin Bravo",
     url: `${SITE_URL}/me/ama`,
-    image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
+    image: `${SITE_URL}${AUTHOR_IMAGE}`,
     jobTitle: "Software Engineer",
     sameAs: [
       "https://github.com/0bkevin",
@@ -46,6 +50,9 @@ export interface BaseSeoInput {
   canonical?: string | URL | undefined;
   image?: string | null | undefined;
   imageAlt?: string | undefined;
+  imageWidth?: number | undefined;
+  imageHeight?: number | undefined;
+  imageType?: string | undefined;
   type?: "website" | "article" | "profile" | undefined;
   noindex?: boolean | undefined;
   robots?: string | undefined;
@@ -61,6 +68,16 @@ const normalizeDate = (value?: Date | string) => {
   if (!value) return undefined;
   const date = value instanceof Date ? value : new Date(value);
   return Number.isNaN(date.getTime()) ? undefined : date.toISOString();
+};
+
+const inferImageType = (value?: string) => {
+  const pathname = value?.split(/[?#]/, 1)[0]?.toLowerCase();
+  if (pathname?.endsWith(".png")) return "image/png";
+  if (pathname?.endsWith(".jpg") || pathname?.endsWith(".jpeg")) return "image/jpeg";
+  if (pathname?.endsWith(".webp")) return "image/webp";
+  if (pathname?.endsWith(".avif")) return "image/avif";
+  if (pathname?.endsWith(".svg")) return "image/svg+xml";
+  return undefined;
 };
 
 export const toAbsoluteUrl = (value?: string | URL | null) => {
@@ -88,6 +105,9 @@ export const resolveSeo = ({
   canonical,
   image,
   imageAlt,
+  imageWidth,
+  imageHeight,
+  imageType,
   type = "website",
   noindex = false,
   robots,
@@ -103,7 +123,12 @@ export const resolveSeo = ({
   const absoluteImage = toAbsoluteUrl(image || DEFAULT_OG_IMAGE);
   const resolvedTitle = seoTitle || title || SITE_TITLE;
   const resolvedDescription = seoDescription || description || SITE_DESCRIPTION;
-  const resolvedImageAlt = imageAlt || resolvedTitle;
+  const resolvedImageAlt =
+    imageAlt || (usesDefaultImage ? DEFAULT_OG_IMAGE_ALT : resolvedTitle);
+  const resolvedImageWidth = imageWidth ?? (usesDefaultImage ? DEFAULT_OG_IMAGE_WIDTH : undefined);
+  const resolvedImageHeight = imageHeight ?? (usesDefaultImage ? DEFAULT_OG_IMAGE_HEIGHT : undefined);
+  const resolvedImageType =
+    imageType ?? inferImageType(absoluteImage) ?? (usesDefaultImage ? DEFAULT_OG_IMAGE_TYPE : undefined);
   const normalizedPublished = normalizeDate(publishedTime);
   const normalizedModified = normalizeDate(modifiedTime);
 
@@ -122,9 +147,9 @@ export const resolveSeo = ({
       type,
       image: absoluteImage,
       imageAlt: resolvedImageAlt,
-      imageWidth: usesDefaultImage ? DEFAULT_OG_IMAGE_WIDTH : undefined,
-      imageHeight: usesDefaultImage ? DEFAULT_OG_IMAGE_HEIGHT : undefined,
-      imageType: usesDefaultImage ? DEFAULT_OG_IMAGE_TYPE : undefined,
+      imageWidth: resolvedImageWidth,
+      imageHeight: resolvedImageHeight,
+      imageType: resolvedImageType,
       locale: DEFAULT_LOCALE,
       siteName: SITE_NAME,
       publishedTime: normalizedPublished,
@@ -367,4 +392,4 @@ export const createBreadcrumbSchema = (
 });
 
 export const stringifySchema = (schema: SchemaValue | SchemaValue[]) =>
-  JSON.stringify(schema, null, 2);
+  JSON.stringify(schema, null, 2).replace(/</g, "\\u003c");

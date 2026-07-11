@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /sendEmail
+Disallow: /projects.json
 
 Sitemap: https://kevinbravo.com/sitemap-index.xml
