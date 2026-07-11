@@ -70,6 +70,11 @@
     display: none;
   }
 
+  /* Keep long URLs and inline tokens inside the article on narrow screens. */
+  .prose :where(p, li, dd, th, td, a) {
+    overflow-wrap: anywhere;
+  }
+
   .prose pre {
     @apply !bg-[#121212] !text-surface-200 border border-white/[0.03] rounded-xl shadow-[0_18px_40px_rgba(0,0,0,0.3)] p-5 overflow-x-auto my-6 text-[0.875em] leading-relaxed;
     background-image:
