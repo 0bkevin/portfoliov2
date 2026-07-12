@@ -102,8 +102,7 @@ The models I use the most right now are:
 * **Mimo v2.5 Pro**, **Kimi K2.6**, **Composer 2.5**, and newer open-source models like **DeepSeek** when I want to experiment, compare behaviors, and test different workflows.
 
 For coding harnesses and tools, I’m currently using [Zrode](https://github.com/0bkevin/zrode) An Agentic Development Environment I'm currently building as my daily driver, but I also use [T3Code](https://t3.codes/), [Pi](https://pi.dev/), and [OpenCode](https://opencode.ai/). Sometimes I use [Cursor](https://www.cursor.com) and [Zed](https://zed.dev) or VsCode from time to time, depending on the project and the workflow I want to test.
-
-I also have a Hermes agent running 24/7 on a VPS, which works as a general personal assistant and helps me keep track of tasks, ideas, research, and my master's work.
+I also run a Hermes agent 24/7 on a VPS as a general personal assistant to help me keep track of tasks, ideas, research, and my master's homework.
 
 ### What other technologies do you find interesting?
 
