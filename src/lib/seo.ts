@@ -5,7 +5,7 @@ const SITE_DESCRIPTION =
   "Kevin Bravo is a software engineer building production-ready backend, infrastructure, AI engineering, and full-stack systems.";
 const DEFAULT_OG_IMAGE = "/assets/kevin-bravo-og.png";
 const DEFAULT_OG_IMAGE_ALT =
-  "Kevin Bravo — Product, Backend, Infrastructure, and Full-Stack Engineer";
+  "Kevin Bravo — Product Engineer focused on full-stack, backend, infrastructure, and tooling";
 const DEFAULT_OG_IMAGE_WIDTH = 1200;
 const DEFAULT_OG_IMAGE_HEIGHT = 630;
 const DEFAULT_OG_IMAGE_TYPE = "image/png";

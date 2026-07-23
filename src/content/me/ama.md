@@ -3,7 +3,7 @@ title: "Ask Me Anything: Kevin Bravo 🤺"
 pubDate: '2026-05-18T12:00:00Z'
 seoTitle: "Kevin Bravo | Product, Backend & Full-Stack Engineer"
 description: Discover Kevin Bravo's professional and personal background in this AMA-style self-interview. Learn about his software engineering experience, leadership work, volunteer projects, career goals, and technical skills in less than 5 minutes.
-seoDescription: I turn messy product and operations problems into backend platforms, AI tooling, infrastructure, and full-stack software that teams can trust, ship, and scale.
+seoDescription: Product engineer building backend systems, AI agent tooling, infrastructure, and full-stack products from messy ideas to production-ready software.
 profilePageType: ama
 ---
 

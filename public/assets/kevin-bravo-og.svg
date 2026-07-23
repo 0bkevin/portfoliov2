@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Kevin Bravo — Product, Backend, Infrastructure, and Full-Stack Engineer</title>
-  <desc id="desc">Social preview for Kevin Bravo's engineering portfolio, featuring a compact portrait and his focus on product engineering, backend systems, infrastructure, AI tooling, and full-stack delivery.</desc>
+  <title id="title">Kevin Bravo — Product Engineer</title>
+  <desc id="desc">Social preview for Kevin Bravo's engineering portfolio, featuring a compact portrait and his focus on backend systems, infrastructure, AI tooling, and full-stack delivery.</desc>
   <defs>
     <linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#090909"/>
@@ -60,11 +60,10 @@
 
   <!-- Professional positioning -->
   <g font-family="Inter, Helvetica Neue, Arial, sans-serif">
-    <text x="76" y="232" fill="#fafafa" font-size="61" font-weight="800" letter-spacing="-2.2">Product, Backend &amp;</text>
-    <text x="76" y="296" fill="#fafafa" font-size="61" font-weight="800" letter-spacing="-2.2">Full-Stack Engineer</text>
-    <text x="79" y="338" fill="#fbbf24" font-size="17" font-weight="650" letter-spacing="0.2">Infrastructure · AI Agent Tooling · Reliable Systems</text>
-    <text x="79" y="394" fill="#c8c8c8" font-size="19" font-weight="400" letter-spacing="-0.1">I turn messy product and operations problems into backend platforms,</text>
-    <text x="79" y="424" fill="#c8c8c8" font-size="19" font-weight="400" letter-spacing="-0.1">AI tooling, and full-stack software that teams can trust, ship, and scale.</text>
+    <text x="76" y="252" fill="#fafafa" font-size="70" font-weight="800" letter-spacing="-3">Product Engineer</text>
+    <text x="79" y="298" fill="#fbbf24" font-size="17" font-weight="650" letter-spacing="0.2">Full-Stack Software Engineer · Backend Engineer · Infra &amp; Tooling</text>
+    <text x="79" y="360" fill="#c8c8c8" font-size="19" font-weight="400" letter-spacing="-0.1">Product engineer building backend systems, AI agent tooling, infrastructure,</text>
+    <text x="79" y="390" fill="#c8c8c8" font-size="19" font-weight="400" letter-spacing="-0.1">and full-stack products from messy ideas to production-ready software.</text>
   </g>
 
   <!-- Technical focus and working style -->
