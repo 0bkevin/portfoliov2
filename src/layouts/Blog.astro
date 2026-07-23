@@ -77,7 +77,7 @@ const imageAlt =
     ? entry.data.ogImage.alt
     : "image" in entry.data && entry.data.image?.alt
       ? entry.data.image.alt
-      : entry.data.title;
+      : undefined;
 
 const resolvedSeoTitle =
   seoTitle ?? ("seoTitle" in entry.data ? entry.data.seoTitle : undefined);
