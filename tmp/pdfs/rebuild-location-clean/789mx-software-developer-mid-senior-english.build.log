@@ -1,0 +1,36 @@
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  cv/789mx-software-developer-mid-senior-english.tex
+Category 'changed_user':
+  cv/789mx-software-developer-mid-senior-english.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder -output-directory="tmp/pdfs/rebuild-location-clean"  "cv/789mx-software-developer-mid-senior-english.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./cv/789mx-software-developer-mid-senior-english.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo)) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/cmap/cmap.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty<<t1.cmap>>) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/babel-english/english.ldf)) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/pdftex/glyphtounicode.tex) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.aux) (tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.out) (tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.out)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+[1{/Users/0bkevin/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.aux) )</Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
+Output written on tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.pdf (1 page, 109509 bytes).
+Transcript written on tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.log.
+Latexmk: Getting log file 'tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.log'
+Latexmk: Examining 'tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.fls'
+Latexmk: Examining 'tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.log'
+Latexmk: Log file says output to 'tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.pdf'
+Latexmk: All targets (tmp/pdfs/rebuild-location-clean/789mx-software-developer-mid-senior-english.pdf) are up-to-date
+

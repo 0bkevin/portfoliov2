@@ -1,0 +1,109 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[left=1.05cm,top=0.82cm,right=1.05cm,bottom=0.68cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Software Developer Mid Senior - 789.mx},
+    pdfsubject={CV ATS para la posicion Software Developer Mid Senior en 789.mx},
+    pdfkeywords={Software Developer, Backend, TypeScript, JavaScript, Node.js, PostgreSQL, SQL, APIs REST, microservicios, AWS, Java, C Sharp, SQL Server, MongoDB, software empresarial, infraestructura, cloud}
+}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, label={\textbf{-}}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{4pt}
+    \begin{center}
+        \textbf{#1}
+    \end{center}
+    \vspace{-5pt}
+}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Software Developer Mid/Senior | Backend y Sistemas Empresariales \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    | \href{https://kevinbravo.com}{kevinbravo.com}
+    | \href{https://github.com/0bkevin}{github.com/0bkevin}
+    | \href{https://www.linkedin.com/in/0bkevin/}{linkedin.com/in/0bkevin}
+    | Remote
+\end{center}
+
+\fontsize{10}{11.3}\selectfont
+
+\sectiontitle{Perfil Profesional}
+Desarrollador de software con 5 años de experiencia convirtiendo operaciones complejas en sistemas empresariales claros, mantenibles y medibles. He acompañado productos desde el levantamiento de necesidades y el modelado de datos hasta APIs, interfaces, despliegue, soporte y mejora continua. Trabajo principalmente con TypeScript, JavaScript, Node.js, Python, Django, PostgreSQL y SQL; también cuento con fundamentos transferibles para integrarme a microservicios en C\# o Java y a entornos con SQL Server, MongoDB y AWS. Me interesa el enfoque de 789.mx: entender cómo funciona un negocio, reducir fricción y construir la infraestructura que le permita operar y crecer con mayor control.
+
+\sectiontitle{Experiencia Profesional}
+
+\textbf{Proyecto Educa} \hfill \textit{Remoto, Venezuela} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dic 2025 - Actualidad}
+\begin{itemize}
+    \item \textbf{Traduzco necesidades operativas en arquitectura, prioridades y entregas} para plataformas educativas; coordino colaboradores y stakeholders y respondo por la calidad de releases y la continuidad en producción.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Free2Z} \hfill \textit{Remoto, Venezuela} \\
+\textbf{Principal Software Engineer} \hfill \textit{Abr 2025 - Abr 2026} \\
+\textbf{Open-Source Contributor} \hfill \textit{Jul 2026}
+\begin{itemize}
+    \item \textbf{Lideré una migración en producción de React a SvelteKit} y desarrollé flujos completos sobre APIs REST en Django, PostgreSQL, Docker, GKE, Cloud SQL, GCS, Pub/Sub y Cloud Build.
+    \item \textbf{Fortalecí procesos asíncronos, webhooks y despliegues} con idempotencia, transacciones, reintentos, ACK/NACK, health checks, rollback automático y estados de fallo explícitos.
+    \item \textbf{Protegí la continuidad de la plataforma} con migraciones concurrentes de PostgreSQL, pruebas de integración y concurrencia sobre una base real, logging y depuración operativa.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{U.S. Department of State (a través de AVAA)} \hfill \textit{Remoto, Venezuela} \\
+\textbf{Product Engineer | Billingua Talent} \hfill \textit{Nov 2024 - Ago 2025}
+\begin{itemize}
+    \item \textbf{Construí una plataforma B2B multi-tenant como único ingeniero}, desde el diagnóstico con stakeholders hasta el modelo relacional en PostgreSQL, permisos por roles, APIs, dashboards, despliegue y mantenimiento.
+    \item \textbf{La validé con 50 usuarios y 5 empresas} y convertí su retroalimentación en flujos más simples, datos más confiables y mejores reportes para la operación.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Freelance} \hfill \textit{Remoto} \\
+\textbf{Software Engineer} \hfill \textit{Sep 2024 - Dic 2024}
+\begin{itemize}
+    \item \textbf{Entregué productos web y automatizaciones a la medida} para distintos sectores, cubriendo descubrimiento, priorización, desarrollo, lanzamiento, iteración y soporte técnico.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Asociación Venezolano Americana de Amistad (AVAA)} \hfill \textit{Caracas, Venezuela} \\
+\textbf{Junior Product Engineer} \hfill \textit{Oct 2022 - Jul 2024} \\
+\textbf{Software Developer Intern} \hfill \textit{Sep 2021 - Ago 2022}
+\begin{itemize}
+    \item \textbf{Diseñé, desplegué y mantuve SEP}, un sistema multi-tenant con Next.js, PostgreSQL, Prisma, Auth.js y Azure que centralizó actividades, asistencia, voluntariado y reportes de unos 300 becarios en 3 capítulos.
+    \item \textbf{Construí SEA para EducationUSA} para integrar historias de estudiantes, servicios, pagos, recibos, actividades, alianzas y reportes; normalicé datos históricos mediante ETL en Python.
+    \item \textbf{Mantuve ambos sistemas en producción}, resolviendo defectos, cuidando la calidad de los datos y ajustando procesos con base en la retroalimentación del equipo operativo.
+\end{itemize}
+
+\sectiontitle{Voluntariado Relevante}
+\textbf{AVAA | Miembro del Comité de Educación} \hfill \textit{Sep 2024 - Actualidad} \\
+Administro SEP y mantengo sus flujos de asistencia, voluntariado y reportes para unos 300 becarios; asesoro requisitos, calidad de datos y viabilidad técnica. \\
+\textbf{JA Venezuela Alumni | Vicepresidente} \hfill \textit{Mar 2026 - Actualidad} \\
+Defino prioridades con la junta y coordino operaciones, comités, alianzas y proyectos de la red nacional de egresados.
+
+\sectiontitle{Educación e Idiomas}
+\textbf{Instituto de Estudios Superiores de Administración (IESA)} \hfill \textit{Caracas, Venezuela} \\
+Maestría en Gerencia Pública, en curso \hfill \textit{2025 - 2027} \\
+\textbf{Idiomas:} Español (Nativo), Inglés (C1 - competencia profesional).
+
+\end{document}

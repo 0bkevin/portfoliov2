@@ -1,0 +1,101 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[left=0.92cm,top=0.78cm,right=0.92cm,bottom=0.58cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Mastra Product Engineer CV},
+    pdfsubject={ATS-compliant Harvard-style CV for the Product Engineer role at Mastra},
+    pdfkeywords={Product Engineer, Mastra, TypeScript, Node.js, AI agents, agent-driven development, full-stack engineering, PostgreSQL, database migrations, open source, cloud platforms, Kubernetes, Google Cloud, Railway, product ownership, customer feedback, issue triage, async communication}
+}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, label={\textbf{-}}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{3pt}
+    \begin{center}
+        \textbf{#1}
+    \end{center}
+    \vspace{-7pt}
+}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Product Engineer | TypeScript, AI Agents \& Full-Stack Systems \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    Email: \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    | Portfolio: \href{https://kevinbravo.com}{kevinbravo.com}
+    | GitHub: \href{https://github.com/0bkevin}{github.com/0bkevin}
+    | LinkedIn: \href{https://www.linkedin.com/in/0bkevin/}{linkedin.com/in/0bkevin} \\
+    Remote across AMER time zones
+\end{center}
+
+\fontsize{9.6}{10.7}\selectfont
+
+\sectiontitle{Professional Summary}
+Product engineer with 5 years of experience taking ambiguous product and operations problems from requirements to architecture, data models, production software, and support. Built multi-tenant platforms, migrated a live startup product, and created AI agent tooling using TypeScript, JavaScript, React, SvelteKit, Next.js, Python, Django, PostgreSQL, REST APIs, Docker, and cloud services. Daily user and builder of agent-driven development workflows, comfortable owning features end to end, working directly with users, and shipping across frontend, backend, data, and deployment concerns.
+
+\sectiontitle{Technical Skills}
+\textbf{Product and full-stack engineering:} TypeScript, JavaScript, React, SvelteKit, Next.js, Astro, Node.js ecosystem, Tailwind CSS, server-side rendering, responsive interfaces, product discovery, rapid prototyping, customer feedback, issue triage, code review, and release ownership. \\
+\textbf{Backend, data, and cloud:} Python, Django, PostgreSQL, SQL, SQLite, REST APIs, relational modeling, schema changes, database migrations, service integrations, request validation, Docker, Azure, Cloudflare, CI/CD concepts, logs, production debugging, and familiarity with GCP and Kubernetes concepts. \\
+\textbf{AI agents and developer tools:} Multi-provider coding agents, agent control planes, session management, relay routing, runtime logs, health checks, MCP concepts, Codex, Claude, Gemini, Cursor, OpenCode, model comparison, prompt iteration, and AI-assisted testing and review.
+
+\sectiontitle{Professional Experience}
+
+\textbf{Proyecto Educa} \hfill \textit{Remote, Venezuela} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dec 2025 - Present}
+\begin{itemize}
+    \item \textbf{Own product and technical direction} for education platforms, turning ambiguous stakeholder needs into architecture, implementation priorities, working releases, quality standards, and production support.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Free2Z} \hfill \textit{Remote, Venezuela} \\
+\textbf{Principal Software Engineer} \hfill \textit{Apr 2025 - Apr 2026}
+\begin{itemize}
+    \item \textbf{Led a production migration from React to SvelteKit}, improving architecture, server-side rendering, state management, maintainability, and performance for a live startup platform.
+    \item \textbf{Shipped full-stack features across product boundaries} by integrating Python and Django APIs, adding Dyte live video, and building a CMS suite with a Markdown editor and blog engine.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remote, Venezuela} \\
+\textbf{Software Engineer | Full-Stack Developer} \hfill \textit{Nov 2024 - Aug 2025}
+\begin{itemize}
+    \item \textbf{Built Billingua Talent as the sole engineer}, owning requirements, multi-tenant architecture, relational schema, backend flows, frontend, dashboards, deployment, and maintenance.
+    \item \textbf{Tested the platform with 50 users and 5 companies}, then converted user feedback into revised workflows, reporting, service management, and product improvements.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remote, Venezuela} \\
+\textbf{Software Developer} \hfill \textit{Oct 2022 - Jul 2024}
+\begin{itemize}
+    \item \textbf{Built, deployed, and maintained SEP}, a multi-tenant platform serving about 300 scholars across 3 national chapters with Next.js, PostgreSQL, Prisma, Auth.js, and Azure.
+    \item \textbf{Engineered SEA for EducationUSA}, centralizing student histories, outreach, services, payments, institutional relationships, and reporting in one full-stack operations platform.
+\end{itemize}
+
+\sectiontitle{Selected AI Agent Work}
+\textbf{\href{https://github.com/0bkevin/zrode}{Zrode - Agentic Development Environment}} \hfill \textit{Independent, ongoing} \\
+Built and use a unified environment for multi-provider coding-agent workflows, supporting hands-on experimentation with agent-driven planning, implementation, debugging, review, and model comparison. \\
+\textbf{Brio - Mobile Agent Control Plane} \hfill \textit{Independent} \\
+Built a mobile control surface for device pairing, session control, relay routing, runtime logs, and health checks around an AI agent system.
+
+\sectiontitle{Education, Leadership and Languages}
+\textbf{IESA:} Master of Public Administration, in progress. \textbf{Universidad Central de Venezuela:} Occupational Therapy, Cum Laude, 2023. \\
+\textbf{Leadership:} CTO; JA Venezuela Alumni Vice President; Dev3pack Web3 and AI hackathon hub organizer; Technovation Girls code mentor. \textbf{Languages:} Spanish (Native), English (C1).
+
+\end{document}

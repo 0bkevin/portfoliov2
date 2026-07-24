@@ -1,0 +1,36 @@
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  cv/english-complete.tex
+Category 'changed_user':
+  cv/english-complete.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder -output-directory="tmp/pdfs/rebuild-location-clean"  "cv/english-complete.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./cv/english-complete.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/base/size11.clo)) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/cmap/cmap.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty<<t1.cmap>>) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/babel-english/english.ldf)) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/generic/pdftex/glyphtounicode.tex) (/Users/0bkevin/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (tmp/pdfs/rebuild-location-clean/english-complete.aux) (tmp/pdfs/rebuild-location-clean/english-complete.out) (tmp/pdfs/rebuild-location-clean/english-complete.out)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+[1{/Users/0bkevin/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (tmp/pdfs/rebuild-location-clean/english-complete.aux) ) </Users/0bkevin/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </Users/0bkevin/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </Users/0bkevin/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </Users/0bkevin/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </Users/0bkevin/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk>
+Output written on tmp/pdfs/rebuild-location-clean/english-complete.pdf (2 pages, 60785 bytes).
+Transcript written on tmp/pdfs/rebuild-location-clean/english-complete.log.
+Latexmk: Getting log file 'tmp/pdfs/rebuild-location-clean/english-complete.log'
+Latexmk: Examining 'tmp/pdfs/rebuild-location-clean/english-complete.fls'
+Latexmk: Examining 'tmp/pdfs/rebuild-location-clean/english-complete.log'
+Latexmk: Log file says output to 'tmp/pdfs/rebuild-location-clean/english-complete.pdf'
+Latexmk: All targets (tmp/pdfs/rebuild-location-clean/english-complete.pdf) are up-to-date
+

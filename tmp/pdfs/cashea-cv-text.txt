@@ -1,0 +1,90 @@
+                                                      Kevin Bravo
+                              Senior Backend Engineer | APIs, PostgreSQL & Distributed Workflows
+
+Email: 0bravokevin@gmail.com | Portfolio: kevinbravo.com | GitHub: github.com/0bkevin | LinkedIn: linkedin.com/in/0bkevin
+                               Caracas, Venezuela (UTC-4) | Spanish and English | Remote
+
+                                                     Professional Summary
+Backend-focused software engineer with 5 years of experience designing, shipping, and operating production systems across
+startup, government, and nonprofit environments. Owns systems end to end: relational data models, APIs, business rules,
+asynchronous workflows, tests, deployments, and production failures. Recent open-source work on Free2Z hardened
+money-moving and media-processing flows with PostgreSQL transactions, durable idempotency, GCP Pub/Sub retry semantics,
+webhook receipts, and concurrency tests. Currently CTO at Proyecto Educa, responsible for architecture, delivery standards,
+and production support.
+                                                        Technical Skills
+Backend: TypeScript, JavaScript, Node.js ecosystem, Python, Django, Django REST Framework, RESTful APIs, OpenAPI,
+PostgreSQL, SQL, Prisma, relational modeling, authentication, role-based access.
+Reliability and distributed systems: GCP Pub/Sub, event-driven workflows, webhooks, idempotency keys, database
+transactions, retries, ACK/NACK handling, reconciliation and audit trails, concurrency control, well-defined failure states.
+Cloud and delivery: GCP (Pub/Sub, GCS, Cloud SQL, GKE, Cloud Build), Docker, Kubernetes, Azure, CI/CD,
+environment configuration, production deployments, logging and operational debugging.
+Quality and collaboration: pytest, unit tests, integration tests, real-PostgreSQL concurrency and rollback tests, regression
+testing, code review, technical documentation, architecture decisions, mentoring.
+Product interfaces: SvelteKit, Next.js, React, server-side rendering, API-connected user flows.
+                                                   Professional Experience
+Proyecto Educa
+Chief Technology Officer
+                                                                                                               Remote, Venezuela
+
+
+- Own architecture and technical priorities for education platforms, lead hands-on delivery, review system decisions, and remain
+                                                                                                              Dec 2025 - Present
+
+
+  accountable for release quality and production support.
+Free2Z
+Principal Software Engineer
+                                                                                                                          Remote
+
+
+Open-Source Contributor
+                                                                                                            Apr 2025 - Apr 2026
+
+
+- Led the production migration from React to SvelteKit and delivered API-connected product workflows across a
+                                                                                                                         Jul 2026
+
+
+  Python/Django, PostgreSQL, and SvelteKit platform, including live video and publishing systems.
+- Hardened an AI comment-scoring consumer that changes user balances: added durable idempotency by comment UUID,
+    atomic balance, score, moderation, and audit effects, publish-after-commit behavior, and explicit Pub/Sub ACK/NACK paths
+    for duplicates, poison messages, and transient failures.
+-   Made paid-meeting webhooks and recording ingestion idempotent across Django, PostgreSQL, Pub/Sub, and GCS using
+    signed payload validation, unique business-event receipts, processing leases, atomic ledger effects, bounded resource use, and
+    safe retry behavior.
+-   Added real-PostgreSQL integration, race, rollback, replay, and failure-path tests; the comment-scoring change passed the
+    721-test backend suite and the recording pipeline passed 151 focused tests.
+U.S. Department of State (via AVAA)
+Product Engineer | Billingua Talent
+                                                                                                               Remote, Venezuela
+
+
+- Built and operated a multi-tenant B2B platform as the sole engineer, owning requirements, relational architecture, role-based
+                                                                                                            Nov 2024 - Aug 2025
+
+
+  authorization, backend workflows, dashboards, deployment, and every production release.
+- Piloted the system with 50 users and 5 companies, then revised registration, service-management, data-quality, and reporting
+  flows from operational feedback.
+Asociacion Venezolano Americana de Amistad (AVAA)
+Software Developer
+                                                                                                              Caracas, Venezuela
+
+
+Software Developer Intern
+                                                                                                             Oct 2022 - Jul 2024
+
+
+- Designed, deployed, and maintained SEP with Next.js, PostgreSQL, Prisma, Auth.js, and Azure, replacing spreadsheet-based
+                                                                                                            Sep 2021 - Aug 2022
+
+
+  operations with a multi-tenant source of truth for about 300 scholars across 3 chapters.
+- Built SEA for EducationUSA, modeling advisee histories, paid services, payment and receipt records, outreach, and reporting;
+    began by writing Python ETL workflows to normalize historical data and improve data integrity.
+                                            Education, Leadership and Languages
+IESA: Master of Public Administration, 2025 - 2027 (in progress).
+Leadership: CTO; JA Venezuela Alumni Vice President; Technovation Girls code mentor; Dev3pack Web3 and AI hackathon
+hub organizer.
+Languages: Spanish (Native), English (C1 professional proficiency).
+
