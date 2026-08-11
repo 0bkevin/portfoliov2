@@ -8,7 +8,6 @@ dist/
 /*.aux
 /*.log
 /*.out
-/*.pdf
 /*.fls
 /*.fdb_latexmk
 /*.synctex.gz
