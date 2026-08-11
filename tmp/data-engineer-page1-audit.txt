@@ -1,0 +1,43 @@
+                                             Kevin Bravo
+               0bravokevin@gmail.com | +58 412 205 7346 | kevinbravo.com
+                       github.com/0bkevin | linkedin.com/in/0bkevin
+                              Spanish (Native) | English (C1)
+
+Work History
+Chief Technology Officer at Proyecto Educa, Remote                                December 2025 to Current
+
+
+ • Owned data architecture for internal education platforms, translating stakeholder workflows into
+    relational data models, validation rules, and reports so staff could rely on consistent information.
+ • Owned data delivery across the software development lifecycle (SDLC), using Git and GitHub to
+    coordinate database changes and production releases while managing multiple deadlines and
+    explaining data plans and risks to non-technical leaders.
+ • Used Zrode, Claude Code, Codex, and Cursor to accelerate requirements analysis, scripts, testing,
+   debugging, and documentation, then reviewed generated work for correctness, security,
+   maintainability, and production readiness.
+
+Principal Software Engineer at Free2Z, Remote                                         April 2025 to April 2026
+
+
+ • Built and operated production ETL and event-driven data pipelines with Python, SQL, PostgreSQL,
+    and Google Cloud Storage (GCS) to move meeting, recording, webhook, and account data across a
+    live customer platform.
+ • Made Pub/Sub and webhook pipelines reliable with idempotency, durable event receipts, retries, and
+   failure handling so duplicate delivery and transient failures did not corrupt business data.
+ • Protected data consistency with atomic database writes, audit records, concurrency tests, and
+   failure-path testing so asynchronous processing stayed reliable during retries and outages.
+ • Improved pipeline and database reliability through a concurrent PostgreSQL index migration, GCP
+   CI/CD, production logs, and automated rollback so releases remained observable and recoverable.
+
+Product Engineer at U.S. Department of State via AVAA                        November 2024 to August 2025
+
+
+ • Built and operated Billingua Talent as the sole engineer, using PostgreSQL, SQL, Prisma, REST APIs,
+   and Node.js to replace disconnected spreadsheets with a shared source of operational data.
+ • Designed the relational schema, migrations, validation rules, role-based access, dashboards, and
+   reporting flows so candidates, advisors, employers, and administrators could use consistent data in
+    one platform.
+ • Gathered requirements from program and business users, mapped their reporting needs, piloted the
+    system, and converted feedback into data-quality improvements, documented decisions, and
+    production releases.
+

@@ -1,0 +1,112 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[left=1.02cm,top=0.78cm,right=1.02cm,bottom=0.62cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Full Stack Engineer React TypeScript Node.js},
+    pdfsubject={ATS-compliant CV tailored for Emblem},
+    pdfkeywords={Full Stack Engineer, React, TypeScript, Node.js, JavaScript, Next.js, PostgreSQL, Python, Django, AI APIs, data processing pipelines, document processing, agentic workflows, dashboards, reporting, GCP, cloud platforms, API integrations, product engineering}
+}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, label={\textbf{-}}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{4pt}
+    \begin{center}
+        \textbf{#1}
+    \end{center}
+    \vspace{-5pt}
+}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Full-Stack Engineer | React, TypeScript, Node.js and AI Systems \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    | \href{https://kevinbravo.com}{kevinbravo.com}
+    | \href{https://github.com/0bkevin}{github.com/0bkevin}
+    | \href{https://www.linkedin.com/in/0bkevin}{linkedin.com/in/0bkevin}
+\end{center}
+
+\fontsize{9.35}{10.2}\selectfont
+
+\sectiontitle{Professional Summary}
+Full-stack software engineer with 5 years of experience building production web products, internal platforms, dashboards, APIs, and data workflows. Strong in React, TypeScript, Next.js, SvelteKit, Node.js services, server-side JavaScript, Python, Django, and PostgreSQL. Build from relational models and data ingestion through API design, document and data processing, responsive interfaces, reporting, deployment, and production support. Experience integrating AI into user-facing workflows, building research and automation agents, and turning messy source data into structured, reviewable information. Comfortable owning ambiguous problems end-to-end and shipping in small, high-ownership teams.
+
+\sectiontitle{Technical Skills}
+\textbf{Frontend and product:} React, TypeScript, JavaScript, Next.js, SvelteKit, Tailwind CSS, server-side rendering, responsive UI, state management, frontend architecture, performance optimization, accessible interfaces, data visualization, and product discovery. \\
+\textbf{Backend and data:} Node.js services, server-side JavaScript, REST APIs, Python, Django, PostgreSQL, SQL, Prisma, relational data modeling, schema changes, migrations, data ingestion and processing, data validation, API integrations, dashboards, and reporting systems. \\
+\textbf{AI and workflow systems:} OpenAI and Anthropic APIs, function calling, tool use, structured outputs, document extraction, source verification, retrieval and RAG-style workflows, Playwright, multi-step agent workflows, retries, fallbacks, uncertainty handling, and evaluation criteria. \\
+\textbf{Engineering and cloud:} Git, code reviews, technical decision records, manual QA, regression checks, CI/CD, Docker, GCP, Azure, AWS, DigitalOcean, Cloudflare, production debugging, release ownership, and end-to-end delivery.
+
+\sectiontitle{Work Experience}
+\textbf{Proyecto Educa} \hfill \textit{Remote} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dec 2025 - Present}
+\begin{itemize}
+    \item Set product and technical direction for education platforms, turning stakeholder needs into architecture, implementation priorities, release standards, and production support.
+    \item Review implementation decisions and contributor work, raising quality across frontend, backend, data workflows, and delivery.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Free2Z} \hfill \textit{Remote} \\
+\textbf{Principal Software Engineer} \hfill \textit{Apr 2025 - Jun 2026}
+\begin{itemize}
+    \item Led a live React-to-SvelteKit migration, improving frontend architecture, server-side rendering, state management, maintainability, and performance for a product with real users.
+    \item Built backend-connected workflows with Python and Django APIs, Node.js and Next.js server-side logic, a Markdown editor, custom CMS, publishing and search systems, Tailwind CSS, and Dyte live video.
+    \item Integrated and shipped an AI writing assistant into the blogging workflow, helping users draft posts and choose topics from high-interest activity on the platform.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remote} \\
+\textbf{Product Engineer | Billingua Talent} \hfill \textit{Nov 2024 - Oct 2025}
+\begin{itemize}
+    \item Built Billingua Talent as the sole engineer, owning the relational data model, PostgreSQL workflows, role-based access, APIs, dashboards, reports, deployment, and maintenance.
+    \item Ran demos and a pilot with 50 users and 5 companies, then revised registration, service management, validation, and reporting workflows from user feedback.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Freelance} \hfill \textit{Remote} \\
+\textbf{Software Engineer} \hfill \textit{Sep 2024 - Dec 2024}
+\begin{itemize}
+    \item Delivered client web products, TypeScript and Node.js API routes, automation scripts, and API-connected workflows, owning discovery, implementation, deployment, iteration, and support.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remote} \\
+\textbf{Software Developer} \hfill \textit{Sep 2022 - Jul 2024} \\
+\textbf{Software Developer Intern} \hfill \textit{Sep 2021 - Aug 2022}
+\begin{itemize}
+    \item Built, deployed, and maintained SEP with Next.js, PostgreSQL, Prisma, Auth.js, and Azure, replacing spreadsheets with a multi-tenant source of truth for approximately 300 scholars across 3 chapters.
+    \item Built SEA for EducationUSA, centralizing student histories, outreach, services, payments, receipts, institutional relationships, and reporting in a full-stack operations platform.
+    \item Built Python data scripts and Power BI workflows to clean, validate, aggregate, and report operational records for program teams.
+\end{itemize}
+
+\sectiontitle{Selected AI, Product, and Open-Source Work}
+\textbf{Zrode and Brio} \hfill \textit{Independent Projects} \\
+Build and use an agentic development environment and mobile control plane for developer workflows, pairing, session control, relay routing, runtime logs, health checks, and operational visibility. Use Claude Code, Codex, Cursor, Gemini, and other AI coding tools for planning, implementation, debugging, refactoring, and review while verifying correctness and maintainability. \\
+Built research workflows that ingest incident files, extract evidence from PDFs and web sources, score and verify candidate sources, cache intermediate results, and produce structured reports with uncertainty and rejection reasons. \\
+\textbf{Open Source and Leadership:} Contributed to the Zed code editor; Vice President of JA Venezuela Alumni; organized a global Web3 and AI hackathon hub; mentored students from product research through a working mobile prototype.
+
+\sectiontitle{Education and Languages}
+\textbf{Instituto de Estudios Superiores de Administracion (IESA)} \hfill \textit{2025 - 2027} \\
+Master of Public Administration, in progress. \textbf{Languages:} Spanish (Native), English (C1 professional proficiency).
+
+\end{document}

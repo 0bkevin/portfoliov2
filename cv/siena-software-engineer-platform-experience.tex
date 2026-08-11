@@ -1,0 +1,151 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,left=0.82in,right=0.82in,top=0.68in,bottom=0.68in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+
+\setmainfont{Arial}
+\definecolor{linkblue}{HTML}{1155CC}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=black,
+  pdfauthor={Kevin Bravo},
+  pdftitle={Kevin Bravo - Software Engineer, Platform Experience},
+  pdfsubject={Resume for the Software Engineer, Platform Experience role at Siena},
+  pdfkeywords={Software Engineer Platform Experience, Siena, production support, AI agents, prompts, LLM workflows, retrieval, TypeScript, JavaScript, React, Node.js, Python, Django, PostgreSQL, SQL, REST APIs, webhooks, root cause analysis, customer support, automation, runbooks, observability, Claude Code, OpenAI Codex, Cursor}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{2em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\urlstyle{same}
+
+\newcommand{\bodyfont}{\fontsize{10.5}{15.75}\selectfont}
+\newcommand{\contactfont}{\fontsize{11.5}{14.5}\selectfont}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{7pt}
+  {\bodyfont\textbf{#1}}\par
+  \nopagebreak[4]
+  \vspace{4pt}
+}
+
+\newcommand{\roleline}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \bodyfont\textit{#1} & \bodyfont\textit{#2}
+  \end{tabularx}
+  \nopagebreak[4]
+  \vspace{1pt}
+}
+
+\setlist[itemize]{
+  label=\textbullet,
+  leftmargin=0.30in,
+  labelsep=0.12in,
+  itemsep=2.8pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\begin{document}
+\bodyfont
+
+\begin{center}
+  {\fontsize{14}{17}\selectfont\textbf{Kevin Bravo}}\par
+  \vspace{3pt}
+  {\contactfont
+    \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    \enspace|\enspace
+    \href{tel:+584122057346}{+58 412 205 7346}
+    \enspace|\enspace
+    \href{https://kevinbravo.com}{kevinbravo.com}
+  }\par
+  {\contactfont
+    \href{https://github.com/0bkevin}{github.com/0bkevin}
+    \enspace|\enspace
+    \href{https://www.linkedin.com/in/0bkevin/}{linkedin.com/in/0bkevin}
+  }\par
+  {\contactfont Spanish (Native) \enspace|\enspace English (C1)}
+\end{center}
+
+\sectiontitle{Education \& Certificates}
+\begin{itemize}
+  \item M.P.A. from IESA (Instituto de Estudios Superiores de Administracion), in progress \hfill Expected 2027
+\end{itemize}
+
+\sectiontitle{Work History}
+
+\roleline{Chief Technology Officer at Proyecto Educa, Remote}{December 2025 to Current}
+\begin{itemize}
+  \item Owned product direction and production support for education platforms by reproducing issues from vague operator reports, separating data or configuration failures from product bugs, and turning root causes into documented workflows and release priorities so staff could keep programs running.
+  \item Reviewed contributor code and technical decisions, wrote runbooks and release notes, and walked non-technical stakeholders through tradeoffs so teammates could resolve recurring issues without creating an engineering bottleneck.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Principal Software Engineer at Free2Z, Remote}{April 2025 to April 2026}
+\begin{itemize}
+  \item Led a live React-to-SvelteKit migration across TypeScript, JavaScript, Python, Django REST APIs, PostgreSQL, Docker, and GCP so the startup could improve architecture and reliability without interrupting the product used by its community.
+  \item Traced production failures across browser JavaScript, REST APIs, PostgreSQL, Pub/Sub, and verified webhooks using logs and integration tests, then added idempotency, retry handling, health checks, and rollback safeguards so duplicate events and transient outages would not corrupt user workflows.
+  \item Integrated an AI writing assistant into the production blogging flow using LLM prompts, Django APIs, and live platform activity as context, then debugged prompt and context misfires so non-technical creators could turn community interests into relevant drafts and publishable posts.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Product Engineer at U.S. Department of State via AVAA, Remote}{November 2024 to August 2025}
+\begin{itemize}
+  \item Built Billingua Talent as the sole engineer after mapping an undocumented customer workflow, using Next.js, React, TypeScript, Node.js web tooling, REST APIs, PostgreSQL, and role-based access so advisors and employers could manage bilingual candidates, training services, and reports in one product.
+  \item Worked directly with advisors and employers during demos and a live pilot, using browser traces, logs, diagnostic SQL, and data validation to reproduce onboarding and reporting issues, resolve them, and convert repeated questions into stronger validation rules and clearer workflows.
+\end{itemize}
+
+\newpage
+\sectiontitle{Work History (continued)}
+\roleline{Software Developer at AVAA, Caracas}{October 2022 to July 2024}
+\begin{itemize}
+  \item Built, deployed, and maintained SEP and SEA with Next.js, TypeScript, React, Node.js tooling, PostgreSQL, Prisma, Auth.js, and Azure, replacing spreadsheet-heavy operations with internal platforms serving approximately 300 scholars, advisors, and staff.
+  \item Supported non-technical operators through issue reports, data cleanup, report reconciliation, and workflow changes, using diagnostic SQL, Python ETL and validation scripts, and written walkthroughs so the team could solve recurring cases with less manual engineering help.
+\end{itemize}
+
+\sectiontitle{Selected AI Agent \& Developer Tooling Projects}
+
+\roleline{Research and Incident Verification Agent}{Python, Playwright, LLM APIs}
+\begin{itemize}
+  \item Built an agent workflow with prompt engineering, retrieval from source knowledge bases, structured outputs, and human-review signals to turn incident files into evidence records and debug reports instead of unsupported black-box answers.
+  \item Tested prompt, retrieval, and model failures with scoring, rejection reasons, uncertainty labels, retries, fallbacks, and model escalation so weak evidence was stopped before reaching users.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Zrode and Brio}{AI Coding Agents and Developer Tooling}
+\begin{itemize}
+  \item Built multi-provider coding workflows with Claude Code, OpenAI Codex, and Cursor, adding session control, runtime logs, and health checks so developers could monitor agent runs and recover stalled sessions.
+\end{itemize}
+
+\sectiontitle{Open Source \& Volunteer Leadership}
+
+\roleline{Open-Source Contributor at Zed}{July 2026 to Current}
+\begin{itemize}
+  \item Contributed Rust pull requests across terminal focus, Git state, settings, LSP, and Markdown navigation, using Zed's public issue and review workflows to improve the developer experience.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Education Committee Member at AVAA}{September 2024 to Current}
+
+\vspace{3pt}
+\roleline{Vice President at Junior Achievement Venezuela Alumni}{March 2026 to Current}
+\begin{itemize}
+  \item Set strategy with the board and led partnerships, operations, onboarding, and community programs for a national youth entrepreneurship and technology network.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Technovation Girls Code Mentor and Dev3pack Hub Organizer}{2026}
+\begin{itemize}
+  \item Mentored four students from research to a mobile prototype and guided Web3 and AI hackathon teams on debugging, product scope, technical decisions, submissions, and pitches.
+\end{itemize}
+
+\end{document}

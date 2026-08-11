@@ -1,8 +1,198 @@
 # Direct-company opportunity research for Kevin Bravo
 
-Verified: 2026-07-24 (America/Caracas, UTC-4)
+Verified: 2026-07-25 (America/Caracas, UTC-4); current-source re-check: 2026-07-27
 
-Scope: Kevin’s local portfolio and CV, the live kevinbravo.com pages, and primary company sources only. Direct LinkedIn review was attempted, but LinkedIn returned its sign-in wall and no signed-in browser session was available. The profile analysis therefore uses the richer first-party CV and portfolio sources rather than scraped LinkedIn copies. Discovery and verification used company websites, official careers pages, company blogs, public GitHub/community channels, and company-controlled ATS feeds. No general job board or recruiting marketplace is used as an application source.
+## Current-source re-check — 2026-07-27
+
+The highest-priority sources were re-opened on 2026-07-27. The following remain visibly active on official company-controlled pages: Pydantic Content Engineer and Developer Success Engineer, PostHog Context Engineer, Metabase Success Engineer (Global), Railway Senior Product Engineer: Scalability, Canonical Software Developer (Backend SaaS), Resend Americas roles, Clipboard Health Technical Support Engineer (Remote Global - Non U.S.), Automattic Experienced Software Engineer, Trigger.dev Technical Content Engineer, Lightning Labs AI Product Engineer, and Firecrawl’s hiring/company materials. Current geography caveats remain important: Pydantic is PT–CET, PostHog is GMT+2 to GMT-8, Railway says remote anywhere, Canonical’s role is Americas, Resend is Americas, Clipboard is explicitly non-U.S., and Trigger.dev still says Remote or Hybrid UK.
+
+The fresh checks also confirmed that the research should not collapse all “remote” labels into one category. Role-level country restrictions, contractor/EOR availability, travel, shifts, and relocation requirements must be confirmed directly with the company even when the page says “remote.” No applications, emails, or outreach were submitted.
+
+## LATAM expansion — country-focused re-check — 2026-07-27
+
+This expansion searched official company sites and company-controlled ATS pages in English, Spanish, and Portuguese, with particular attention to Argentina, Brazil, Chile, Colombia, Mexico, Peru, Uruguay, and roles that could accept a worker in Venezuela. Aggregators, recruiting marketplaces, and talent networks were excluded from the ranked evidence. “Remote LATAM” is a positive signal, not proof that Venezuela can be engaged: employment entity, contractor/EOR coverage, tax rules, sanctions/compliance review, and time-zone overlap still need confirmation.
+
+### Best new opportunities for Kevin
+
+#### 1. Sezzle — AI Engineer II, Remote Latin America
+
+- Company / website: [Sezzle](https://sezzle.com/)
+- What it does / background: A U.S.-listed fintech and buy-now-pay-later platform. Sezzle’s investor materials report approximately $4.2B in trailing-12-month GMV and 3.1M active consumers as of March 31, 2026. It operates a remote-friendly engineering organization.
+- Current opening: [AI Engineer II — Remote, Latin America](https://job-boards.greenhouse.io/sezzle/jobs/7633985003). A second relevant posting is [AI Engineer II — Marketing, Latin America](https://job-boards.greenhouse.io/sezzle/jobs/7709992003).
+- Location / conditions: Latin America, remote; the role lists $3,333–$6,000/month gross USD. The application asks for country of residence and authorization to work in Latin America, so Venezuela eligibility is plausible but must be confirmed.
+- Role scope: Applied AI platforms, automation/orchestration, customer-facing products, backend APIs, data and frontend work, permissions, auditability, reliability, production support, and mentorship. Core requirements include 3–5 years, production AI, Python, SQL, React, and complex systems; agentic systems, RAG, vector databases, Docker/Kubernetes, and Go are preferred.
+- Why it fits: Kevin’s Billingua and SEP work demonstrates multi-tenant operational software; Zrode and Brio demonstrate AI-agent control, session/routing, logs, health, and tool integration. The role rewards exactly the combination of product judgment, full-stack execution, and production AI ownership that Kevin can credibly show.
+- Application / contact: Apply through the official Greenhouse form and answer the country, English, AI-production, Python/SQL/React, and salary questions directly. No public recruiter email was verified; use the official [Sezzle careers page](https://sezzle.com/careers/) and the application channel for follow-up.
+- Outreach angle: Present Kevin as an engineer who turns ambiguous operational processes into reliable internal platforms, then add the agent-control-plane evidence from Zrode/Brio. Lead with production reliability, permissions, auditability, and measurable user outcomes rather than generic AI enthusiasm.
+- Status: **Confirmed active matching role.** Verified 2026-07-27.
+
+#### 2. Reacher — Software Engineer, LATAM
+
+- Company / website: [Reacher](https://reacher.ai/) — the official role is hosted on [Ashby](https://jobs.ashbyhq.com/reacher/e4d436eb-dd77-44d0-9586-44d48ad84aea).
+- What it does / background: A YC-backed AI SaaS platform for TikTok Shop brands and creators, backed by YC, Pioneer Fund, Rebel Fund, and operators; its materials cite customers such as Under Armour, Hanes, Logitech, and Goli.
+- Current opening: [Software Engineer — Latam](https://jobs.ashbyhq.com/reacher/e4d436eb-dd77-44d0-9586-44d48ad84aea).
+- Location / conditions: Remote LATAM, full-time, listed at $60K–$85K plus equity. The role asks for 2–6 years and is designed for end-to-end product ownership; confirm Venezuela contracting mechanics in the first exchange.
+- Role scope: Python/FastAPI/PostgreSQL/GCP, React/TypeScript/Tailwind, architecture, direct customer conversations, internal tools and dashboards, MCP, agentic workflows, and AI-native development with Claude Code.
+- Why it fits: This is one of the closest matches in the entire search. Kevin has the required experience band, full-stack product ownership, PostgreSQL, cloud deployment, customer/stakeholder discovery, and unusually relevant AI-native development work through Zrode, Brio, and Hermes.
+- Application / contact: Use the official Ashby application. It explicitly asks for a complex problem solved or a skill mastered with an AI-driven workflow, plus GitHub/LinkedIn/resume. No public hiring contact was verified; use the company’s official application and public company channel.
+- Outreach angle: Include a compact “AI-native build log” showing how Kevin used agents, tools, tests, review boundaries, and observability to ship a real feature. Pair it with Billingua or SEP as evidence of owning the product after the prototype.
+- Status: **Confirmed active matching role.** Verified 2026-07-27.
+
+#### 3. Bitso — Software / Product / Platform Engineering, Latin America
+
+- Company / website: [Bitso](https://bitso.com/)
+- What it does / background: A Mexico-origin crypto exchange and financial-services platform focused on making digital assets and cross-border financial products usable across Latin America. Its values page says it hires across Latin America and beyond and supports a remote environment or offices.
+- Current openings: Bitso’s [official jobs page](https://bitso.com/jobs?gh_jid=6597893003) showed 16 openings on 2026-07-27, including Senior React Native Engineer — Latin America, Software Engineer — Latam, Senior Product Engineer — Guardians — Latin America, Platform Engineer — Latin America, Security Operations Engineer — Mexico, Senior Engineering Manager — Latin America, and Growth AI Operator in Argentina/Colombia/Mexico.
+- Location / conditions: Several roles explicitly say Latin America; others are Mexico-specific or country-specific. Remote/office and employment mechanics are role-level details, so verify Venezuela eligibility before investing in a process.
+- Why it fits: Kevin’s EVM/Solidity, ZK, cryptography, and cybersecurity interests create a credible domain narrative, while his actual product/platform experience maps to the Software Engineer, Product Engineer, and Platform Engineer tracks. The combination of security-mindedness, relational systems, API integration, and user-facing product work is more relevant here than a purely frontend application would be.
+- Application / contact: Apply through the official Bitso jobs board and select the exact role. No public recruiting email was verified; use the job-specific application and Bitso’s public company LinkedIn for follow-up.
+- Outreach angle: Focus on building trustworthy financial workflows: authorization boundaries, auditability, operational dashboards, integrations, and clear user experiences. Mention blockchain study as context, but lead with shipped systems and production ownership.
+- Status: **Confirmed active company hiring; several relevant LATAM roles, with exact role fit and Venezuela eligibility to be confirmed.** Verified 2026-07-27.
+
+#### 4. Infinity / Labrynth — Software Engineer, LATAM
+
+- Company / website: [Infinity / Labrynth role](https://jobs.ashbyhq.com/infinity-constellation/bf706ca9-983a-4ba3-8499-f3d9b599a3c6)
+- What it does / background: Builds AI-powered platforms for navigating regulatory complexity and producing audit-level documentation. Labrynth is described as a forward-deployed engineering organization embedded with clients. Public material indicates an emerging company, but I did not find a reliable official funding figure and do not infer one.
+- Current opening: [Software Engineer — LATAM](https://jobs.ashbyhq.com/infinity-constellation/bf706ca9-983a-4ba3-8499-f3d9b599a3c6).
+- Location / conditions: LATAM, remote, full-time. The role is designed around foundational ownership and client-facing solution design; confirm country, contractor/EOR, and travel conditions.
+- Role scope: Platform reliability, architectural decisions, GCP/AWS cloud services, APIs, CI/CD, observability, developer experience, and translating client problems into durable systems. The posting asks for strong Python and roughly five-plus years.
+- Why it fits: Billingua and SEP are strong evidence of building systems around rules, stakeholders, permissions, and operational complexity. Kevin’s MPA and public-systems work strengthen the regulatory/compliance narrative, while Zrode/Brio add an AI-platform angle.
+- Application / contact: Apply through the official Ashby form. No named public hiring contact was verified; use the company-controlled ATS and public company channel.
+- Outreach angle: Offer a concrete example of replacing spreadsheet-driven or fragmented workflows with a multi-tenant system, then explain how Kevin would add traceability, evaluation, and human-review boundaries to agentic automation.
+- Status: **Confirmed active matching role.** Verified 2026-07-27.
+
+#### 5. IntegrAI — Senior AI Engineer / Full-Stack Engineer / AI Engineer
+
+- Company / website: [IntegrAI careers](https://integrai.com.mx/es/careers)
+- What it does / background: Builds AI coworkers for operational functions in areas including healthcare and logistics. Its official careers page describes a Mexico/United States company, a 2025 pre-seed round, and eight openings, four of them remote.
+- Current openings: Senior AI Engineer — Agent Platform (remote, MX or US), Full-Stack Engineer (remote, MX or US), AI Engineer (remote, MX or US), and AI Operations/Trainer (Remote LATAM). The page says the senior platform role is immediate and reports to the CTO.
+- Location / conditions: Engineering postings specify Mexico or the U.S.; the operations/trainer role says Remote LATAM. The FAQ says some roles may be 100% remote from another country, with at least four hours of overlap with Mexico City. Venezuela must be confirmed before applying.
+- Role scope: Production LLMs, RAG, function calling, agent orchestration, evaluation, memory, Next.js, tRPC, PostgreSQL, Tailwind, strict TypeScript, and operational documentation.
+- Why it fits: Kevin’s AI-agent projects and TypeScript/Python/PostgreSQL stack are directly relevant. Billingua and SEP prove he can understand and encode real operational workflows; his Occupational Therapy background makes the healthcare angle unusually credible.
+- Application / contact: Use the official open-application form on the careers page or email `contact@integrai.com.mx`. Ask whether the engineering roles can engage a Venezuelan contractor or EOR and mention UTC-4 overlap.
+- Outreach angle: Connect healthcare/workflow empathy with production agent engineering: tool boundaries, human escalation, permissions, logs, evals, and reliable handoff from AI output to operational action.
+- Status: **Confirmed active hiring; strongest exact engineering roles are country-constrained, while one LATAM role is less senior.** Verified 2026-07-27.
+
+### Country-specific and speculative LATAM targets
+
+#### 6. Witek — Brazil, remote-first speculative outreach
+
+- Website: [Witek careers](https://witek.sh/carreiras/). What it does: describes itself as Brazil’s first “Service as Software” company, using AI-augmented engineers to build software products with Cloudflare Workers, D1, R2, Durable Objects, TypeScript, Hono, React, Go, Astro, Drizzle, Playwright, and Vitest.
+- Background / status: Emerging Brazil-based company; the official careers page currently says no positions are open. It is remote-first, global, async/documentation-oriented, and states contractor/PJ engagement.
+- Why it fits: The technical culture and stack are unusually close to Kevin’s Cloudflare, TypeScript, AI-agent, and product-engineering interests. This is a high-value speculative target even without an open requisition.
+- Application / contact: Send a concise profile and portfolio to the public `hello@witek.com.br`; do not send a generic CV only.
+- Outreach angle: Offer a small proof-of-work around an edge-hosted agent control plane, durable session state, permissions, health/logging, or a developer-facing workflow. Mention Zrode and Brio first.
+- Status: **Promising speculative outreach; no current opening.** Verified 2026-07-27.
+
+#### 7. ITSense — Colombia, Bogotá-remote hiring
+
+- Website: [ITSense careers](https://www.itsense.com.co/en/careers/). What it does: AI-first software engineering for banking, cooperatives, education, and public-sector workflows; its official blog discusses production AI agents, multi-model stacks, AML/CFT intelligence, and reported 35–62% time-to-market reductions in case studies.
+- Current openings: The careers page lists Software Architect, QA Tester, and Ruby on Rails Developer, described as remote Bogotá-based. Applications are routed through the official [jobs page](https://itsense.com.co/jobs/); the page also invites direct messages when no exact role exists.
+- Location / conditions: Remote from Bogotá, not confirmed Venezuela-remote. Ask about contractor engagement and whether UTC-4 is acceptable.
+- Why it fits: Strong overlap with Kevin’s AI-native workflow, technical communication, public/education systems, stakeholder discovery, and full-stack delivery. Ruby on Rails is a gap; architecture or AI-enabled engineering is the better conversation.
+- Contact / outreach: Use the official careers page, jobs page, or its listed direct contact/WhatsApp channel. Lead with Billingua/SEP plus Zrode/Brio and the public-systems narrative.
+- Status: **Company appears to be hiring, but no confirmed Venezuela-eligible matching role.** Verified 2026-07-27.
+
+#### 8. Emblem — Peru, remote-first AI/data platform
+
+- Website: [Emblem careers](https://www.emblem.pe/careers). What it does: An AI-powered operating system for investors, with full-stack and backend systems supporting data-heavy workflows.
+- Current openings: Full-Stack Engineer (“build and scale AI-powered platform”) and Back-End Engineer (“develop backend systems and AI infrastructure”). The official page describes the company as remote-first/flexible, but did not expose exact country, contract, or application mechanics.
+- Why it fits: Kevin’s multi-tenant platforms, relational data modeling, dashboards, integrations, and AI-agent work map well to an operational data product. His MPA helps with complex decision workflows.
+- Application / contact: The page lists `luke@emblem.pe`; use it to ask whether Venezuela is supported and which role is still active. The page’s apply link redirected to a login portal, so email is the cleaner first channel.
+- Outreach angle: Send a short note with one architecture diagram or case-study link showing how Kevin turned fragmented operational data into a dependable product.
+- Status: **Promising direct outreach; opening status and Venezuela eligibility need confirmation.** Verified 2026-07-27.
+
+#### 9. Horarius IA — Brazil, active but Brazil-only roles
+
+- Website: [Horarius careers](https://horarius.ai/carreiras). What it does: AI for school scheduling and optimization, with a small, autonomous team and stock-option language on the careers page.
+- Current openings: Senior Full-stack Software Engineer — Remote Brazil, Optimization/OR Engineer — Remote Brazil, Customer Success Manager — Hybrid São Paulo, and Product Designer — Remote Brazil. Public contact: `carreiras@horarius.ai`.
+- Location / conditions: The engineering roles say Remote Brazil and CLT; they are not confirmed for Venezuela.
+- Why it fits: Education operations, full-stack ownership, AI, and optimization connect directly to SEP/SEA and Kevin’s interest in practical AI systems. The operations-research role is a domain stretch; the senior full-stack role is the better match.
+- Application / outreach: Email the public careers address with a Brazil-eligibility question and a concise SEP/SEA plus AI-agent portfolio. Ask whether international contractor engagement is possible.
+- Status: **Confirmed active Brazil hiring; speculative for Venezuela.** Verified 2026-07-27.
+
+#### 10. RYZ Labs — Argentina, Full Stack AI Engineer
+
+- Website: [RYZ Labs official Lever posting](https://jobs.lever.co/RyzLabs/340f70d9-7018-41e7-b8ee-ca85165367aa). What it does: A startup studio building software teams and products across the U.S. and Latin America; founded in 2021.
+- Current opening: Full Stack AI Engineer, Argentina, full-time contract, remote. A second [AI Fullstack Engineer — Argentina](https://jobs.lever.co/RyzLabs/965ea2b3-0e46-4d05-ad7e-86df8dd35605) posting has React/Node/GraphQL/AWS and AI-assisted development.
+- Location / conditions: Remote within Argentina, contract; not confirmed for Venezuela. The application asks location, English, and monthly salary.
+- Why it fits: Full-stack/cloud/AI breadth, startup delivery, and AI-assisted development are strong matches. Country restriction is the main obstacle.
+- Application / contact: Use the official Lever form; ask whether the studio can contract in Venezuela or only Argentina.
+- Outreach angle: Emphasize adaptability across client/product contexts and show a reusable AI-native delivery workflow, not just a list of frameworks.
+- Status: **Confirmed active Argentina role; country-constrained.** Verified 2026-07-27.
+
+#### 11. Arango — global remote-first AI data platform
+
+- Website: [Arango careers](https://arango.ai/careers/). What it does: A graph-powered data platform for trusted generative AI and operational analytics.
+- Status / background: The company says it is remote-first, async-friendly, growing across engineering/support/product, and accepts an open application when no exact role is listed. No exact current role was verified as a close match.
+- Why it fits: Graph/data infrastructure, developer platforms, AI reliability, technical writing, and product ownership align with Kevin’s target direction. Low-level graph/database depth is the main gap.
+- Application / contact: Use the careers page’s open-application route and public company channel. Ask specifically about product engineer, developer success, solutions, or AI-platform roles open to Latin America.
+- Outreach angle: Tie Billingua/SEP’s operational data modeling to trustworthy agent context, then point to Zrode/Brio as evidence of building the surrounding control plane.
+- Status: **Promising company for open application; no confirmed matching opening.** Verified 2026-07-27.
+
+#### 12. dLocal — Uruguay, global payments infrastructure
+
+- Website: [dLocal careers](https://www.dlocal.com/careers/). What it does: Uruguay-born payments infrastructure connecting global merchants to consumers across emerging markets, including Latin America; its [About page](https://www.dlocal.com/company/about-us/) describes API and payment infrastructure.
+- Status / conditions: The current official careers page did not show a matching opening under the checked filters. It advertises flexible schedules and the possibility of working from anywhere for up to three months per year, but this is not the same as permanent Venezuela eligibility.
+- Why it fits: APIs, integrations, payment/operational reliability, LATAM context, and production systems are relevant; fintech domain experience would need to be learned.
+- Application / contact: Monitor the official careers page and use its public company channel for an open application; no public hiring email was verified.
+- Outreach angle: Position Billingua/SEP as evidence of dependable multi-tenant workflows and stakeholder-sensitive systems, then ask about platform, integrations, developer experience, or customer-engineering needs in the region.
+- Status: **Promising Uruguay/LATAM company; no confirmed matching role.** Verified 2026-07-27.
+
+#### 13. Clip — Mexico fintech watchlist
+
+- Website: [Clip careers](https://www.clip.mx/go/careers-en). What it does: A Mexican digital-payments and data/technology platform; its official company page describes a 2012 founding and a 900-plus-person organization.
+- Status / conditions: The official careers page exposes the open-jobs route but did not render a reliable role list in the public page checked. Remote policy and Venezuela eligibility are unconfirmed and likely role-specific.
+- Why it fits: Payments, scalable applications, data products, and operational tooling match Kevin’s backend/full-stack strengths and LATAM context.
+- Application / contact: Use the official careers route and search for product/backend/platform roles; do not rely on indexed third-party listings. Ask about Mexico-based contractor or relocation options.
+- Outreach angle: Lead with production ownership and multi-tenant workflow design rather than fintech as an unearned specialty.
+- Status: **Company watchlist; no confirmed matching role.** Verified 2026-07-27.
+
+#### 14. Kavak — Mexico and Latin America operations platform
+
+- Website: [Kavak careers](https://www.kavak.com/mx/empleos/). What it does: A LATAM used-car marketplace and financing/operations platform. Its official February 2026 announcement says it raised a $300M Series F, processed 120,000 transactions in 2025, and reached its first consolidated profitable month in December 2025.
+- Status / conditions: The official careers page has a current openings route but did not expose a reliable matching role in the public page checked. Roles are likely market/country-specific; remote, contractor, and relocation conditions require confirmation.
+- Why it fits: Complex operational workflows, internal platforms, data, marketplaces, and fintech-adjacent systems are strong overlaps with Billingua and SEP.
+- Application / contact: Use the official Mexico careers page and target backend, platform, data, or product-engineering roles. Use the public company channel for follow-up, not an aggregator.
+- Outreach angle: Show how Kevin replaces spreadsheet/manual operations with auditable systems and can work across product, backend, data, and stakeholder needs.
+- Status: **Company watchlist; no confirmed Venezuela-eligible matching role.** Verified 2026-07-27.
+
+#### 15. Siena AI — Argentina, Brazil, Mexico remote roles, stale deadline
+
+- Website: [Siena careers](https://jobs.ashbyhq.com/siena/9b020e8d-d953-4e52-b13e-f20397cc9199). What it does: An “Agent of Record” platform for consumer brands, with shared memory, context, and tools across the customer journey; its site says hundreds of brands use the product in production.
+- Recent openings: Software Engineer — Platform Experience and Senior Fullstack Engineer listed Argentina, Brazil, Buenos Aires, Mexico City, Rio de Janeiro, and São Paulo as remote locations.
+- Status / conditions: Both checked postings showed a June 30, 2026 deadline, now past as of this report. They should be treated as recently advertised but stale, not confirmed active.
+- Why it fits: AI agents, platform experience, full-stack product work, and globally distributed collaboration are excellent matches.
+- Application / contact: Check the live company careers page or LinkedIn before applying; if the role reopens, use the official Ashby form. No public hiring contact was verified.
+- Outreach angle: Send a brief note only if a current role or founder/engineering post confirms continued hiring; reference Zrode/Brio and customer-facing platform ownership.
+- Status: **Recently advertised; status unclear/stale.** Verified 2026-07-27.
+
+#### 16. Vambe AI — Chile, relocation lead
+
+- Website: [Vambe careers](https://www.vambe.ai/careers/software-engineer). What it does: AI-powered customer/operations software for businesses.
+- Current opening: Software Engineer, Las Condes, Chile, full-time, published June 8, 2026. The role covers end-to-end full-stack work, AI-tool integration, architecture, and product collaboration.
+- Location / conditions: On-site in Chile; no visa sponsorship or relocation package was stated.
+- Why it fits: The role is technically strong for Kevin’s full-stack/product/AI profile, but geography makes it a relocation opportunity rather than a remote LATAM application.
+- Application / contact: Use the official role page and ask directly about sponsorship, relocation, and whether a transition period can begin remotely.
+- Outreach angle: Lead with Zrode/Brio plus the operational-platform case studies, and explicitly state willingness to consider Chile relocation if the company supports it.
+- Status: **Confirmed active role with on-site relocation constraint.** Verified 2026-07-27.
+
+### Country-level conclusions
+
+- **Best immediate Venezuela-eligible leads:** Sezzle, Reacher, and Labrynth. Their official postings explicitly identify Latin America/LATAM and match Kevin’s experience band and AI/full-stack direction.
+- **Best regional platform target:** Bitso. It has the strongest combination of LATAM presence, crypto/security relevance, and multiple engineering tracks, though each role must be checked individually.
+- **Best direct-outreach targets:** Witek, IntegrAI, ITSense, and Emblem. They expose a public email or open-application route and have unusually close technical/company narratives.
+- **Brazil:** Witek is the best culture/technical fit but is speculative; Horarius is active but Brazil-only. Portuguese-language research found more local opportunities than Venezuela-eligible ones.
+- **Argentina:** RYZ Labs is active but Argentina-constrained; Siena is a strong fit whose checked deadlines have passed.
+- **Chile:** Vambe is a strong technical match but currently on-site in Las Condes.
+- **Colombia:** ITSense is a strong AI-first engineering target but currently describes roles as Bogotá-based remote.
+- **Mexico:** IntegrAI, Clip, and Kavak are the most relevant; IntegrAI is the only one found with clearly described AI-engineering openings, but its strongest roles specify Mexico or the U.S.
+- **Peru:** Emblem is promising and remote-first, but its current public page does not establish Venezuela eligibility.
+- **Uruguay:** dLocal is strategically relevant for payments/API infrastructure, but no clean current match was visible on its official board.
+
+All entries above were verified on 2026-07-27. No application, email, or outreach was submitted.
+
+Scope: Kevin’s local portfolio and CV, the live kevinbravo.com pages, LinkedIn’s publicly indexed profile surface, and primary company sources only. LinkedIn’s interactive page returned its sign-in wall, so private/session-only sections were not accessible; public profile facts were cross-checked against Kevin’s first-party CV and portfolio. Discovery and verification used company websites, official careers pages, company blogs, public GitHub/community channels, and company-controlled ATS feeds. No general job board or recruiting marketplace is used as an application source.
 
 Companion analyses:
 
@@ -13,7 +203,7 @@ Companion analyses:
 
 Kevin is best positioned as a high-agency product engineer who can own ambiguous work across product, frontend, backend, data, integrations, deployment, and production support. His strongest differentiators are not narrow framework expertise; they are repeated zero-to-one ownership, unusually broad product responsibility, strong written communication, and credible hands-on work with AI agents and internal platforms.
 
-The strongest immediate targets are PostHog’s Context Engineer role, Mastra’s Product Engineer role, Runlayer’s Support Engineer role, Aleph’s Software Engineer role, Supabase’s Support Engineer (AMER) role, and Goldsky’s Growth Engineer role. These reward Kevin’s combination of end-to-end product building, internal-platform ownership, AI-agent workflows, strong communication, and interest in developer infrastructure. Firecrawl remains attractive, but its requisition changed from support engineering to product-growth engineering and now needs stronger proof of funnel experimentation.
+The strongest immediate targets are Pydantic’s Content Engineer and Developer Success Engineer roles, PostHog’s Context Engineer role, Mastra’s Product Engineer role, Aleph’s Software Engineer role, Resend’s Customer Success Engineer role, Clipboard Health’s Technical Support Engineer role, and Supabase’s Support Engineer (AMER) role. These reward Kevin’s combination of end-to-end product building, PostgreSQL-backed operational systems, AI-agent workflows, production support, and strong technical communication. Camunda’s AI Process Forward Deployed Engineer is a particularly interesting high-upside stretch.
 
 ## Candidate profile used for ranking
 
@@ -59,10 +249,14 @@ The strongest immediate targets are PostHog’s Context Engineer role, Mastra’
 - Security, blockchain, and ZK are credible interests, but the proof remains educational. A recent Foundry audit, CTF series, or open-source contribution would be needed before targeting protocol-security roles as anything other than a stretch.
 - The “Check CV” button points to Google Drive. Hosting the current PDF on the same domain would reduce friction, version drift, and access-policy risk.
 - The AMA opening contains a visible typo (“stoping”). More importantly, the page is long; placing the quantified proof, role targets, and current availability above the conversational material would help time-constrained readers.
+- The homepage refers to AVAA’s scholar platform as “SAP,” while the case study and CV call it “SEP.” Resolve the naming inconsistency before linking it in applications.
+- RegistroCiberVE, the Occupational Therapy degree, MPA studies, and community leadership are valuable LinkedIn differentiators but are not prominent in the project/career narrative on the site. Add them selectively where they sharpen a target-company story.
 
-### LinkedIn limitation
+### LinkedIn findings and access limitation
 
-LinkedIn returned its sign-in wall in the shared browser, and no signed-in fallback browser was available. I did not use scraped profile copies or infer LinkedIn-only details. The local CV and first-party portfolio contain enough detail for the ranking, but LinkedIn-specific headline, About, experience descriptions, recommendations, and activity should be checked manually before applications.
+LinkedIn’s interactive profile returned its sign-in wall, but its public indexed profile was accessible and was reviewed. It corroborates Kevin’s current Caracas location and adds useful differentiators: Occupational Therapy, Cum Laude; an MPA at IESA (2025–2027); current JA Venezuela Alumni leadership; Technovation Girls mentoring; EmprendeTECH, quantum-ML, blockchain, ZK, and cybersecurity learning; and the 2026 RegistroCiberVE public cybersecurity-incident registry. It also surfaces public recommendations that connect Kevin’s software work with AI, cybersecurity, and blockchain.
+
+These details strengthen three narratives that are underused on the website: a healthcare-trained engineer for health-tech and operational products; a public-systems builder for civic-tech/security companies; and a technical community leader for developer success, content, solutions, and early-stage customer-facing roles. Session-only LinkedIn sections and activity could not be audited, so the CV and portfolio remain authoritative where dates differ.
 
 ## Live-board audit notes
 
@@ -75,6 +269,75 @@ These checks prevent stale indexed pages from being treated as active openings:
 - Infisical’s current ATS feed says United States & Canada for Full Stack Engineer even though the indexed role copy previously said North-to-South America/LATAM. It is treated as geography-constrained until the company confirms otherwise.
 - Trigger.dev’s former Senior Backend Engineer page now says the role is filled. The only role on the live careers page is Technical Content Engineer.
 - Boundary/BAML now publishes a specific engineering opening in its official GitHub repository. It is five days per week on-site in Seattle, so it is an eligibility/relocation lead rather than a remote opportunity.
+
+## Priority additions from the 2026-07-25 re-audit
+
+These opportunities were discovered or materially changed after the original numbered sweep. They rank ahead of several entries below and are included in the final application order.
+
+### Pydantic — Content Engineer / Developer Success Engineer
+
+- Company / website: [Pydantic](https://pydantic.dev/)
+- What it does: Maintains the widely used Python data-validation library and builds Pydantic AI, Logfire observability, and infrastructure for production AI agents.
+- Background: Formed around Samuel Colvin’s open-source project; remote team. Pydantic announced a Sequoia-led seed round in 2023 and now lists multiple product, agent, observability, and developer-success roles on its [official About/jobs page](https://pydantic.dev/about).
+- Why it fits: The Content Engineer role is not conventional marketing. It asks an engineer to improve APIs, docs systems, `llms.txt`, structured retrieval, MCP surfaces, and agent-readable context. Kevin can connect Python/Django, TypeScript, Zrode/Brio agent work, production systems, case-study writing, and education/community experience. Developer Success is an equally realistic alternative through debugging, SQL, observability onboarding, technical writing, and support-to-product feedback.
+- Current openings: [Content Engineer](https://pydantic.dev/jobs/content-engineer), [Developer Success Engineer](https://pydantic.dev/jobs/developer-success-engineer), [Observability Experience Frontend Engineer](https://pydantic.dev/jobs/observability-experience-frontend-engineer), and the more infrastructure-heavy [Agent Infrastructure Engineer](https://pydantic.dev/jobs/agent-infrastructure-engineer).
+- Location / conditions: Fully remote from Pacific Time through Central European Time; Caracas UTC-4 qualifies. Some EU/UK/US offsite travel is required. No relocation requirement is stated.
+- Application: Email `careers@pydantic.dev` with the exact role title, concise evidence, portfolio, public writing, and relevant code. Apply to one primary role; mention the second only as an alternative rather than sending generic duplicate emails.
+- Relevant contact: Founder Samuel Colvin is identified on Pydantic’s [official team page](https://pydantic.dev/about). Public hiring channel: `careers@pydantic.dev`.
+- Outreach angle: “I build both halves of developer experience: production agent/platform systems and the docs, context, examples, and operational interfaces that make those systems usable by people and coding agents.” A small Pydantic AI/Logfire contribution would make this the strongest application in the set.
+- Verified: 2026-07-25. The Content Engineer page was updated 2026-07-09 and Developer Success Engineer on 2026-07-13.
+
+### Clipboard Health — Technical Support Engineer
+
+- Company / website: [Clipboard Health](https://www.clipboardhealth.com/)
+- What it does: A healthcare labor marketplace connecting clinicians and care facilities.
+- Background: Founded in 2016; YC W17. Its official hiring material says it has a globally distributed team of more than 1,000 and has been profitable since 2022.
+- Why it fits: This is a rare two-sided fit. Kevin is an Occupational Therapy graduate and a production engineer. The role handles SQL, APIs, backend configuration, feature toggles, Datadog, incident triage, root-cause analysis, internal dashboards, scoped fixes, documentation, and AI-assisted support—all supported by his engineering and operational history.
+- Current opening: [Technical Support Engineer — Remote Global, Non-U.S.](https://jobs.ashbyhq.com/clipboard/d77b2224-307f-48b1-a0ea-ab67153993c0).
+- Location / conditions: Explicitly remote global and non-U.S.; international eligibility is therefore much clearer than most “remote” roles. It is a 24/7 operation with shifts and possible weekend coverage. Confirm contractor/employer mechanics and exact shift before accepting any process.
+- Application: Use the official Ashby form. Center one production incident, one SQL/data investigation, one repeated support issue turned into tooling, and the healthcare-domain connection.
+- Relevant contact: Founder/CEO Wei Deng is listed on Clipboard Health’s [official YC company profile](https://www.ycombinator.com/companies/clipboard-health). Use the official application/candidate channel or company LinkedIn for follow-up; no private email was inferred.
+- Outreach angle: “I understand both the clinical workflow and the system behind it. I have been the engineer who diagnoses live issues, works directly with users, repairs data/workflows, and turns recurring support problems into durable product improvements.”
+- Verified: 2026-07-25 via Clipboard Health’s live company-controlled ATS posting.
+
+### Camunda — AI Process Forward Deployed Engineer
+
+- Company / website: [Camunda](https://camunda.com/)
+- What it does: Process orchestration for enterprise workflows spanning agents, people, APIs, and business systems.
+- Background: Founded in 2008 by Jakob Freund and Bernd Ruecker; raised a $100M Series B led by Insight Partners in 2021 and operates as a globally distributed enterprise software company.
+- Why it fits: The role owns ambiguous enterprise AI deployments end to end: process discovery, BPMN, agents/connectors, Java services, React interfaces, cloud/cluster integration, production rollout, and stakeholder translation. Kevin’s Billingua/SEP/SEA ownership and agent control-plane work map to the operating model, while Java/Spring and enterprise Camunda depth are honest gaps.
+- Current opening: [AI Process Forward Deployed Engineer](https://jobs.ashbyhq.com/camunda/08543cc4-7971-4ce4-8e7b-d42073faba89).
+- Location / conditions: Remote and globally accessible. The posting says candidates outside Camunda’s direct employment countries can be hired through Remote.com; occasional travel is expected.
+- Application: Use the official Ashby form. Present Billingua as a forward-deployed story: ambiguous multi-party process, schema and role design, full-stack implementation, deployment, pilot, feedback, and support.
+- Relevant contact: CEO/co-founder Jakob Freund, chief technologist/co-founder Bernd Ruecker, and CTO Daniel Meyer are listed on Camunda’s [official leadership page](https://camunda.com/about/leadership/). The role application/Talent Acquisition channel is the appropriate first contact.
+- Outreach angle: “I have repeatedly converted human processes into production software while owning discovery, technical design, delivery, and adoption. My agent work adds the newer problem Camunda is solving: keeping tools, context, logs, health, and human decisions coherent.”
+- Verified: 2026-07-25 via Camunda’s live company-controlled ATS posting.
+
+### Resend — Customer Success Engineer
+
+- Company / website: [Resend](https://resend.com/)
+- What it does: Developer-first transactional and marketing email infrastructure; also maintains React Email.
+- Background: Began as open source in 2022, launched the platform and joined YC W23 in 2023, and raised an a16z-led Series A. Its current materials describe a profitable, remote team across 13 countries serving roughly three million developers.
+- Why it fits: This newly posted role is a closer match than Resend’s six-plus-year Product Engineer opening. It combines API and deliverability debugging, customer engineering, scoped code/documentation fixes, product feedback, and training/evaluating an AI support agent. Kevin has adjacent production-support and customer ownership even without a formal Customer Success title.
+- Current openings: [Customer Success Engineer](https://jobs.ashbyhq.com/resend/01e6eb42-142b-4f33-9944-ca153bd3ae86) and the more senior [Product Engineer — Americas](https://jobs.ashbyhq.com/resend/9b68ba51-3895-4d29-8fd1-364bdf8956e7).
+- Location / conditions: Fully remote, Americas, UTC-3 through UTC-8. Caracas is UTC-4. Confirm Venezuela contractor/employment mechanics during the first exchange.
+- Application: Apply through the official form with a concise debugging story, a customer-to-product improvement story, and an example of improving an agent workflow or evaluation loop.
+- Relevant contact: Founder/CEO Zeno Rocha and the founding team are listed on Resend’s [official About page](https://resend.com/about); that page publishes `zeno@resend.com`.
+- Outreach angle: “I already operate at the boundary between developer, product, and support: reproducing production issues, repairing the underlying workflow, documenting the lesson, and changing the product so the problem recurs less often.”
+- Verified: 2026-07-25; the Customer Success Engineer posting was newly live on 2026-07-20.
+
+### Automattic — Experienced Software Engineer / Applied AI / customer-facing technical roles
+
+- Company / website: [Automattic](https://automattic.com/)
+- What it does: The distributed company behind WordPress.com, WooCommerce, Tumblr, Jetpack, Beeper, and other open-web products.
+- Background: Founded in 2005; more than 1,500 people distributed across roughly 70 countries.
+- Why it fits: Worldwide async remote work, open source, full-stack JavaScript/PHP products, written communication, autonomous delivery, and production/customer ownership all match. Kevin would need to ramp into PHP/WordPress for several teams.
+- Current openings: [Experienced Software Engineer](https://automattic.com/work-with-us/job/experienced-software-engineer/) plus Applied AI Engineer, VIP support/customer-success, and technical-account roles on the [official jobs list](https://automattic.com/work-with-us/).
+- Location / conditions: Remote worldwide. The engineering role publishes a global USD range paid in local currency. No relocation is required.
+- Application: Use the role’s official long-form application and follow its embedded instructions carefully. Write the application personally; do not paste generic outreach or generated prose.
+- Relevant contact: Automattic’s official Talent team and company LinkedIn are the right public channels; founder Matt Mullenweg is publicly identified on the company site.
+- Outreach angle: Lead with sustained async ownership rather than framework matching: ambiguous requirements, shipping, incident/support responsibility, written design, and production iteration across Billingua, SEP, and Free2Z.
+- Verified: 2026-07-25 via Automattic’s official role and jobs pages.
 
 ## Ranked opportunities
 
@@ -511,51 +774,141 @@ These do not have a verified matching opening. The objective is relationship-bui
 - Outreach angle: Long-term relationship only: publish a rigorous technical contribution around ZKsync system contracts or tooling, then engage the engineering community with specific questions.
 - Verified: 2026-07-24 via Matter Labs’ live public ATS feed.
 
+## Additional emerging and geography-constrained companies
+
+These are deliberately separated from confirmed matching openings. They are useful watch-list or contribution-first targets, not reasons to ignore clearer Tier 1 applications.
+
+### Inngest — current U.S.-remote platform role; international watch list
+
+- Company / website: [Inngest](https://www.inngest.com/about). Open-core execution layer for durable agents and event-driven workflows: queues, retries, flow control, observability, and evals.
+- Background / fit: Released in 2022; backed by a16z, Notable Capital, Altimeter, Kleiner Perkins, and developer-tool founders. The product maps directly to Kevin’s Brio/Zrode work with agent sessions, events, retries, execution, and observability.
+- Opening / location: The current Distributed Systems Engineer role is remote U.S.; the company describes itself as remote-first and able to work from “anywhere,” but role-level geography controls. No relocation or sponsorship path is stated.
+- Apply / contact: Use the role board linked from the [official About page](https://www.inngest.com/about) only when an eligible role appears. Founders Tony Holdstock-Brown and Dan Farrelly and public Discord/GitHub are listed there.
+- Outreach angle: Build a public Inngest agent workflow with retries, replay, concurrency controls, and operator-visible traces; ask one substantive question through the community.
+- Verified: 2026-07-25; hiring, no confirmed Venezuela-eligible matching vacancy.
+
+### Tinybird — open application; named roles currently Spain-only
+
+- Company / website: [Tinybird](https://www.tinybird.co/about#join-us). Managed ClickHouse and real-time data infrastructure that turns large data streams into low-latency APIs.
+- Background / fit: Backed by Balderton, CRV, Singular, and Crane. SQL, real-time APIs, dashboards, high ownership, and agent telemetry are relevant; ClickHouse/Kafka production depth is a gap.
+- Opening / location: Current SRE and Head of Customer Success & Support roles are Remote Spain. The official page offers an open application; no Venezuelan contractor promise is made.
+- Apply / contact: Use the open-application link on the official About page. Co-founder/CEO Jorge Sancha and COO Sergio Álvarez Leiva are listed publicly; Tinybird’s Slack is an appropriate technical community channel.
+- Outreach angle: Prototype a low-latency API for agent traces or operational events and explain schema, latency, and DX decisions.
+- Verified: 2026-07-25; speculative/open application, not a confirmed eligible role.
+
+### Belvo — Latin American fintech, but current roles are country-bound
+
+- Company / website: [Belvo](https://belvo.com/careers/). Open-finance APIs and payment/data rails for Latin America.
+- Background / fit: Founded in 2019 by Pablo Viguera and Oriol Tintoré. Its Python/Django, JavaScript, AWS, Postgres, integration, reliability, and bilingual customer context align closely with Kevin.
+- Openings / location: Current technical leads include Data Scraping Software Engineer in Mexico and Senior Customer Engineer in São Paulo, plus a future-opportunities route. Marketing says remote-friendly, but each requisition’s country controls; Venezuela is not confirmed.
+- Apply / contact: Use the official careers/future-opportunities form only if its geography accepts Venezuela or a contractor arrangement. Follow up through Belvo’s official company LinkedIn rather than guessing a personal email.
+- Outreach angle: Lead in Spanish with integration-heavy multi-tenant products built for institutions and small businesses, not generic fintech enthusiasm.
+- Verified: 2026-07-25; hiring, no confirmed Venezuela-eligible matching vacancy.
+
+### GitLab — LATAM signal, current country restriction
+
+- Company / website: [GitLab](https://about.gitlab.com/jobs/). Open-core DevSecOps platform and one of the best-established all-remote engineering organizations.
+- Background / fit: Founded in 2011 and publicly listed. Async writing, open source, TypeScript/Ruby services, customer engineering, CI/CD, and developer workflows are strong cultural/technical fits.
+- Opening / location: The current [Customer Success Engineer, LATAM](https://job-boards.greenhouse.io/gitlab/jobs/8637426002) is limited to Brazil, Mexico, or the U.S.; Venezuela is not a listed location. Do not interpret “LATAM” as continent-wide.
+- Apply / contact: Apply only if a future requisition lists Venezuela/global remote. Use GitLab’s official Talent Acquisition channel and public handbook/community.
+- Outreach angle: When geography opens, center async product ownership, developer-support work, CI/CD, and operating software across nontechnical stakeholders.
+- Verified: 2026-07-25; active company hiring, current matching role geographically ineligible.
+
+### Pulumi — remote infrastructure company, no rendered openings
+
+- Company / website: [Pulumi](https://www.pulumi.com/careers/). Open-source infrastructure as code using general-purpose languages across cloud platforms.
+- Background / fit: Founded in 2017; deeply aligned with developer tools, cloud abstractions, TypeScript/Python, open source, and Kevin’s move toward platform engineering.
+- Hiring state / location: The official page says “Pulumi is hiring,” describes the company as fully remote since 2020, and says roles are remote unless specified, but the Open Positions section currently renders no jobs. No application, visa, or Venezuela-specific path can be claimed.
+- Apply / contact: Monitor the official careers page and GitHub. Use public community channels for real technical participation, not a fabricated application.
+- Outreach angle: Publish a Pulumi TypeScript deployment for an observable agent service with Postgres, secrets, rollback, and cost notes.
+- Verified: 2026-07-25; hiring signal without a specific opening.
+
+### Unkey — seed-stage API infrastructure; direct outreach only after proof
+
+- Company / website: [Unkey](https://www.unkey.com/about). Open-source API infrastructure for keys, authorization, rate limits, usage, and deployment.
+- Background / fit: Founded in 2023 by James Perkins and Andreas Thomas; announced a $4.5M seed led by Uncork Capital on 2026-04-23. It is one of the closest emerging “next Railway” leads for Kevin’s API, DX, agent, and open-source interests.
+- Hiring state / location: The seed announcement says Unkey is hiring engineers who care about DX, but its current careers URL does not list a requisition. The team is remote across Germany, Turkey, and the U.S.; international terms are unstated.
+- Apply / contact: No official application is currently visible. Use the public Discord/GitHub linked from the About page and follow its contribution guidance. Founders James Perkins and Andreas Thomas are the relevant public contacts.
+- Outreach angle: Deploy an agent-facing API with Unkey, document specific DX observations, and discuss any contribution publicly before opening a PR.
+- Verified: 2026-07-25; appears to be hiring, no specific role.
+
+### Arcjet — speculative developer-security target
+
+- Company / website: [Arcjet](https://arcjet.com/). Developer-first runtime security for web apps and AI agents, with TypeScript and Python SDKs.
+- Background / fit: Early developer-tools company whose public engineering work covers Go, gRPC, WebAssembly, ClickHouse, SDK design, and agent security. It intersects Kevin’s TypeScript/Python, agent, cybersecurity, and public RegistroCiberVE interests.
+- Hiring state / location: No official careers page or active matching opening was found. Engineering writing describes a distributed team focused on North America and Europe; international eligibility remains unknown.
+- Apply / contact: No application path. Founder/CEO David Mytton publishes through the [official engineering blog](https://blog.arcjet.com/author/david/); GitHub issues/discussions are appropriate only for substantive technical participation.
+- Outreach angle: Build a concrete Arcjet policy/runtime-security example for an agent API and share a finding or legitimate contribution.
+- Verified: 2026-07-25; speculative outreach only.
+
+### Svix — webhook infrastructure with a general-application signal
+
+- Company / website: [Svix](https://www.svix.com/careers/). Open-source webhook delivery and event infrastructure.
+- Background / fit: YC-backed and funded by a16z; APIs, integrations, idempotency, retries, replay, observability, and server-to-server reliability map well to Kevin’s operational platforms and agent-event flows.
+- Hiring state / location: The careers page invites strong candidates who do not match a listed position, but no specific matching vacancy or Venezuela eligibility was confirmed.
+- Apply / contact: Use the official general-application route. Founder Tom Hacohen is identified in Svix’s official funding writing; public Slack and GitHub are linked from the company site.
+- Outreach angle: Build a compact webhook reliability demo covering signatures, idempotency, retries, replay, and observability, then approach with the artifact.
+- Verified: 2026-07-25; appears open to talent, no matching role confirmed.
+
 ## Recommended application order
 
-### Apply or initiate eligibility check first
+The order below supersedes the original section numbering. It weights actual skill overlap, international eligibility, required seniority, and whether Kevin can make a differentiated case—not company prestige alone.
 
-1. PostHog — Context Engineer
-2. Mastra — Product Engineer
-3. Runlayer — Support Engineer (first confirm international contractor eligibility)
-4. Aleph — Software Engineer
-5. Supabase — Support Engineer (AMER)
-6. Goldsky — Growth Engineer (confirm international employment or contractor eligibility)
-7. Resend — Product Engineer, Americas
-8. Firecrawl — Growth Engineer, Product Growth (confirm eligible remote-hire region)
-9. Lightning Labs — AI Product Engineer (confirm international employment)
-10. Evolve Decision Science — AI Engineer / Full Stack Developer (confirm Venezuela contractor eligibility)
+### Tier 1 — apply now or make one short eligibility check
 
-### High-value stretch applications
+1. **Pydantic — Content Engineer.** Best role-shape match; PT–CET explicitly includes UTC-4.
+2. **PostHog — Context Engineer.** Best overlap of production engineering, agents/context, writing, and public proof.
+3. **Pydantic — Developer Success Engineer.** High-probability alternative; do not send an undifferentiated duplicate application.
+4. **Mastra — Product Engineer.** Excellent TypeScript/agents/product fit; confirm international AMER contracting.
+5. **Aleph — Software Engineer.** Explicit Americas/LATAM, high-agency full-stack/data product work.
+6. **Resend — Customer Success Engineer.** Strong developer-support-plus-product loop, explicit Americas time zones.
+7. **Clipboard Health — Technical Support Engineer.** Explicit global non-U.S.; unusually differentiated healthcare plus engineering story.
+8. **Supabase — Support Engineer (AMER).** PostgreSQL, JavaScript frameworks, debugging, writing, and global remote infrastructure.
+9. **Evolve Decision Science — AI Engineer / AI Developer / Full Stack.** Spanish-language, 100% remote LatAm product/agent work; confirm Venezuelan contracting.
+10. **Camunda — AI Process Forward Deployed Engineer.** Global via Remote.com; strong ownership/process fit, with a real Java/Spring gap.
+11. **Runlayer — Support Engineer.** Excellent MCP/security/support fit; first ask whether “Remote (US Timezones)” includes a Venezuelan contractor.
+12. **Automattic — Experienced Software Engineer.** Clearest worldwide employment signal; open-source and async fit, with a PHP ramp.
 
-11. Railway — Senior Product Engineer, Scalability
-12. Sourcegraph — Agent Engineer
-13. Canonical — Backend SaaS
-14. PlanetScale — Postgres
+### Tier 2 — valuable, but needs a proof artifact or candid gap handling
 
-### Eligibility or relocation first
+13. **Goldsky — Growth Engineer.** Strong TypeScript/AI-automation/Web3 overlap; show growth/automation outcomes and confirm international eligibility.
+14. **Firecrawl — Technical Writer or Product Growth Engineer.** Americas timezone fit, but the writer posting contains contradictory U.S.-authorization language; resolve it before doing a work sample.
+15. **Lightning Labs — AI Product Engineer.** Strong agent-payments/Web3 angle; international employment is unstated.
+16. **Canonical — Backend SaaS.** Worldwide/home-based Americas and Python; write every application answer personally because the page rejects generated content.
+17. **Trigger.dev — Technical Content Engineer.** Excellent TypeScript/agent/workflow fit; current page says remote or hybrid UK, so ask about contractor geography first.
+18. **Railway — Senior Product Engineer, Scalability.** Exceptional company fit, but the live role requires deeper scaling, billing/metering, and distributed-systems proof.
+19. **Sourcegraph — Agent Engineer.** “Almost anywhere” and relevant agent work, but staff-level production ML/evals depth makes it a stretch.
+20. **PlanetScale — Software Engineer, Postgres.** Global PEO signal; deep Go/Kubernetes/database internals remain a major stretch.
 
-15. Infisical
-16. Better Stack
-17. Langfuse
-18. Kestra
-19. Trigger.dev — Technical Content Engineer
-20. E2B
-21. Browserbase
-22. Composio
-23. Browser Use
-24. Daytona
+### Tier 3 — hiring, but no clean Venezuela-eligible matching role
 
-### Build relationship / proof first
+21. **Alpen Labs — General Application.** Real Bitcoin/ZK interest; use only with a concrete technical artifact.
+22. **Nethermind — General Application.** Fully remote, global, open-source Ethereum/ZK; current matching roles require deeper protocol/audit depth.
+23. **Tinybird — Open Application.** Strong real-time data/agent telemetry fit; current named roles are Spain-only.
+24. **Belvo — Future Opportunities.** Strong bilingual fintech/API/Django fit; live technical roles are Mexico- or Brazil-bound.
+25. **Inngest — monitor/contribute.** Company is remote-first, but the current distributed-systems role is U.S.-remote.
+26. **GitLab — monitor.** Current LATAM customer-success engineering geography is Brazil/Mexico/U.S., not Venezuela.
+27. **OpenZeppelin — future security openings.** Excellent long-term ZK/security mission fit; current proof is not yet senior audit/research depth.
+28. **Pulumi — monitor.** Official page says remote and hiring but currently renders no open positions.
 
-25. Alpen Labs
-26. Nethermind
-27. OpenZeppelin
-28. Fly.io
-29. Hatchet
-30. Riza
-31. Boundary/BAML — on-site Seattle engineer
-32. Matter Labs
+### Tier 4 — speculative, contribution-first outreach
+
+29. **Unkey.** A close “next Railway” API/DX/open-source target; its April 2026 seed post says it is hiring, but `/careers` currently lists no role.
+30. **Hatchet.** YC W24, open-source Postgres-backed durable workflow orchestration; contribute or build before approaching founders.
+31. **Riza.** Safe code execution for agents, Go/TypeScript/Rust; no active official requisition found.
+32. **Fly.io.** Globally distributed infrastructure team with equal compensation, but its official page currently says no open positions.
+33. **Arcjet.** Developer security for apps and agents; attractive TypeScript/Python/security intersection, no current careers page.
+34. **Svix.** Webhook/event infrastructure; use its general application or public community only after a legitimate reliability artifact.
+
+### Do not prioritize under current constraints
+
+- Infisical is currently U.S./Canada.
+- Better Stack’s matching role geography is not a clean Venezuela path.
+- Langfuse and Kestra are Europe-bound.
+- E2B, Browserbase, and most Composio roles are on-site in San Francisco/Prague/New York/Bangalore or U.S.-only.
+- Daytona’s current roles cluster around New York, San Francisco, or Croatia.
+- Boundary/BAML is five days per week on-site in Seattle; treat it only as a relocation lead.
+- Matter Labs’ current technical opening is U.S.-remote and not matched to Kevin’s present depth.
 
 ## Portfolio positioning by company cluster
 
@@ -606,8 +959,8 @@ This should be customized, not mass-sent. For Canonical, Kevin must write the ap
 
 ## Verification standard and limitations
 
-- “Confirmed” means the opening appeared on the company’s official careers page or current public ATS feed on 2026-07-24.
+- “Confirmed” means the opening appeared on the company’s official careers page or current public ATS feed. Priority roles and status changes were re-audited on 2026-07-25; older numbered entries retain their 2026-07-24 per-entry verification date where the previous day’s evidence was not materially changed.
 - “Remote” is not treated as worldwide unless the company says so. Time-zone, country, contractor, visa, and relocation wording is recorded separately.
 - Company-controlled Ashby and Greenhouse pages are treated as official application infrastructure, not third-party job discovery boards.
-- The shared browser reached LinkedIn’s sign-in wall, and no signed-in fallback browser was available. LinkedIn-specific claims were not used. Profile facts were cross-checked against the local CV and portfolio source files and the live kevinbravo.com pages.
+- The shared browser reached LinkedIn’s interactive sign-in wall. LinkedIn’s public indexed profile surface was reviewed, and distinctive facts were cross-checked against the local CV and live kevinbravo.com pages. Session-only activity and private sections were not accessible.
 - No applications were submitted and no person or company was contacted.

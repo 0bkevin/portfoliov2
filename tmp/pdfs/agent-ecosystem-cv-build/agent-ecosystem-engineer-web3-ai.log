@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.22)  24 JUL 2026 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.22)  24 JUL 2026 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -299,13 +299,13 @@ Package rerunfilecheck Info: File `agent-ecosystem-engineer-web3-ai.out' has not
 Here is how much of TeX's memory you used:
  9775 strings out of 469472
  156847 string characters out of 5467684
- 601698 words of memory out of 5000000
+ 600698 words of memory out of 5000000
  38351 multiletter control sequences out of 15000+600000
  647735 words of font info for 47 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 75i,5n,79p,745b,458s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,682b,458s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/0bkevin/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on tmp/pdfs/agent-ecosystem-cv-build/agent-ecosystem-engineer-web3-ai.pdf (1 page, 110598 bytes).
+Output written on tmp/pdfs/agent-ecosystem-cv-build/agent-ecosystem-engineer-web3-ai.pdf (1 page, 110284 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  27 compressed objects within 1 object stream

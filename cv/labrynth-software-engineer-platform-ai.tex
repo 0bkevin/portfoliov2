@@ -1,0 +1,104 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[left=1.05cm,top=0.82cm,right=1.05cm,bottom=0.68cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Labrynth Software Engineer CV},
+    pdfsubject={ATS-compliant CV tailored for the Software Engineer role at Labrynth},
+    pdfkeywords={Software Engineer, Labrynth, platform engineering, forward-deployed engineering, Python, Django, REST APIs, PostgreSQL, GCP, AWS, Docker, Kubernetes, GKE, Pub/Sub, CI/CD, observability, production reliability, architecture, AI agents, RAG, document processing, LLM orchestration, client-facing engineering, code review, mentoring, open source}
+}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, label={\textbf{-}}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{4pt}
+    \begin{center}
+        \textbf{#1}
+    \end{center}
+    \vspace{-5pt}
+}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Software Engineer | Platform, Cloud and AI Systems \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    | \href{https://kevinbravo.com}{kevinbravo.com}
+    | \href{https://github.com/0bkevin}{github.com/0bkevin}
+    | \href{https://www.linkedin.com/in/0bkevin/}{linkedin.com/in/0bkevin}
+\end{center}
+
+\fontsize{9.8}{10.9}\selectfont
+
+\sectiontitle{Professional Summary}
+Software engineer with 5 years of experience owning production platforms from architecture and API design through deployment, incident response, and iteration. Cloud work spans GCP, Azure, AWS, and DigitalOcean, with responsibility for deployments, environment configuration, debugging, and production support. Current CTO at Proyecto Educa, responsible for technical direction, contributor reviews, release quality, and production support. At Free2Z, made asynchronous systems safe under retries and duplicate delivery; for a U.S. Department of State unit, built a multi-tenant platform from an undocumented workflow.
+
+\sectiontitle{Technical Skills}
+\textbf{Platform and cloud:} Cloud work spans GCP, Azure, AWS, and DigitalOcean, from Dockerized services and PostgreSQL-backed systems to CI/CD, environment configuration, health checks, rollbacks, and production debugging. Backend work centers on Python, Django, TypeScript, JavaScript, REST APIs, webhooks, Pub/Sub, data modeling, and asynchronous workflows. \\
+\textbf{AI systems:} Built agent pipelines for document and web research that extract facts, retrieve sources, render blocked pages, evaluate evidence, and write structured records. Experience includes RAG-style retrieval, document processing, OpenAI and Anthropic APIs, tool use, structured outputs, prompt iteration, evaluation criteria, uncertainty handling, source rejection, human-review checkpoints, caching, retries, fallbacks, and multi-model orchestration. \\
+\textbf{Engineering practice:} Architecture decisions, API design, code review, mentoring, client discovery, technical tradeoffs, release ownership, CI/CD, logs, health checks, production support, and end-to-end debugging.
+
+\sectiontitle{Work Experience}
+\textbf{Proyecto Educa} \hfill \textit{Remote} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dec 2025 - Present}
+\begin{itemize}
+    \item Set architecture and delivery priorities for education products, taking features from operating requirements to system design, implementation, release, and production support.
+    \item Review contributor code and system decisions, define release criteria, unblock implementation, and take responsibility for production issues.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Free2Z} \hfill \textit{Remote} \\
+\textbf{Principal Software Engineer} \hfill \textit{Apr 2025 - Jun 2026}
+\begin{itemize}
+    \item Led a live React-to-SvelteKit migration across Dockerized Django services on GKE, Cloud SQL, GCS, Pub/Sub, Artifact Registry, Cloud Build, and Workload Identity.
+    \item Made Pub/Sub consumers, paid-meeting webhooks, and recording ingestion safe to retry with durable event receipts, atomic database effects, processing leases, explicit ACK/NACK behavior, deployment health gates, automatic rollback, and failure-path tests.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remote} \\
+\textbf{Product Engineer | Billingua Talent} \hfill \textit{Nov 2024 - Oct 2025}
+\begin{itemize}
+    \item Built Billingua Talent as the sole engineer after mapping an undocumented client workflow; designed the PostgreSQL schema, four-role access model, REST APIs, dashboards, reporting, deployment, and support process.
+    \item Ran product demos and a pilot with 50 users and 5 companies, then revised onboarding, service management, data validation, and reporting from what broke or confused users.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remote} \\
+\textbf{Software Developer} \hfill \textit{Sep 2022 - Jul 2024} \\
+\textbf{Software Developer Intern} \hfill \textit{Sep 2021 - Aug 2022}
+\begin{itemize}
+    \item Built and operated SEP and SEA for approximately 300 scholars, advisors, and staff, replacing spreadsheet workflows with PostgreSQL-backed records, payments, attendance, reporting, issue triage, and Python data checks.
+\end{itemize}
+
+\sectiontitle{Selected AI and Platform Projects}
+\textbf{Research and Incident Verification Agent} \hfill \textit{Python, Playwright, LLM APIs} \\
+Built a Python pipeline that reads incident files, generates searches, retrieves candidate sources, renders blocked pages with Playwright, and uses LLMs to judge incident-specific evidence. Added candidate scoring, rejection reasons, uncertainty labels, caching, retries, source fallbacks, human-review signals, and model escalation. \\
+\textbf{Zrode and Brio} \hfill \textit{AI Agents, Platform Tooling} \\
+Build and use an agentic development environment and control plane for multi-provider coding workflows, session control, relay routing, runtime logs, health checks, and operational visibility.
+
+\sectiontitle{Open Source, Mentoring and Leadership}
+\textbf{Zed:} Contributed to the open-source Zed code editor. \textbf{Technovation Girls Venezuela:} Mentored 4 students from research to a working mobile prototype. \textbf{Dev3pack:} Organized a global Web3 and AI hackathon hub and mentored teams on scope and technical decisions.
+
+\sectiontitle{Education and Languages}
+\textbf{Instituto de Estudios Superiores de Administracion (IESA)} \hfill \textit{2025 - 2027} \\
+Master of Public Administration, in progress. \textbf{Languages:} Spanish (Native), English (C1 professional proficiency).
+
+\end{document}

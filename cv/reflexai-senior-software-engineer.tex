@@ -1,0 +1,154 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,left=0.82in,right=0.82in,top=0.68in,bottom=0.68in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+
+\setmainfont{Arial}
+\definecolor{linkblue}{HTML}{1155CC}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=black,
+  pdfauthor={Kevin Bravo},
+  pdftitle={Kevin Bravo - Senior Software Engineer},
+  pdfsubject={Resume for Senior Software Engineer and Senior Full-Stack Engineer roles}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{2em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\urlstyle{same}
+
+\newcommand{\bodyfont}{\fontsize{10.5}{15.75}\selectfont}
+\newcommand{\contactfont}{\fontsize{12}{15}\selectfont}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{4pt}
+  {\bodyfont\textbf{#1}}\par
+  \nopagebreak[4]
+  \vspace{2pt}
+}
+
+\newcommand{\roleline}[2]{%
+  \begin{tabularx}{\textwidth}{@{}Xr@{}}
+    \bodyfont\textit{#1} & \bodyfont\textit{#2}
+  \end{tabularx}
+  \nopagebreak[4]
+  \vspace{1pt}
+}
+
+\setlist[itemize]{
+  label=\textbullet,
+  leftmargin=0.30in,
+  labelsep=0.12in,
+  itemsep=2.5pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\begin{document}
+\bodyfont
+\raggedright
+
+\begin{center}
+  {\fontsize{14}{17}\selectfont\textbf{Kevin Bravo}}\par
+  \vspace{3pt}
+  {\contactfont
+    \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    \enspace|\enspace
+    \href{tel:+584122057346}{+58 412 205 7346}
+    \enspace|\enspace
+    \href{https://kevinbravo.com}{kevinbravo.com}
+  }\par
+  {\contactfont
+    \href{https://github.com/0bkevin}{github.com/0bkevin}
+    \enspace|\enspace
+    \href{https://www.linkedin.com/in/0bkevin/}{linkedin.com/in/0bkevin}
+  }\par
+  {\contactfont Spanish (Native) \enspace|\enspace English (C1)}
+\end{center}
+
+\sectiontitle{Work History}
+
+\roleline{Chief Technology Officer at Proyecto Educa, Remote}{December 2025 to Current}
+\begin{itemize}
+  \item Owned product and technical direction for full-stack education platforms, translating customer, business, and technical requirements into architecture, priorities, production releases, and continuous improvements so staff could use reliable systems.
+  \item Led Agile planning and GitHub code reviews, mentored contributors, set testing and release expectations, and explained architecture and tradeoffs to non-technical stakeholders so the team could focus on the highest-impact work.
+  \item Used Zrode, Claude Code, Codex, and Cursor to accelerate requirements analysis, implementation, testing, debugging, and documentation, then reviewed generated work for correctness, security, maintainability, and production readiness.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Principal Software Engineer at Free2Z, Remote}{April 2025 to April 2026}
+\begin{itemize}
+  \item Led the production migration of a live React application to SvelteKit using TypeScript, JavaScript, HTML, CSS, and GCP so customers received a faster and more maintainable product without interrupting service.
+  \item Built full-stack features end to end by connecting frontend workflows to Python and Django REST APIs, Node.js web tooling, PostgreSQL, and SQL so users could create, manage, discover, and publish content in one platform.
+  \item Built automated regression, API, concurrency, and failure-path tests for database and event-driven workflows so releases remained stable during retries, duplicate events, and partial outages.
+  \item Managed Dockerized GCP deployments and DevOps workflows with GitHub, Cloud Build CI/CD, production logs, health gates, and automated rollback so releases remained observable and recoverable.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Product Engineer at U.S. Department of State via AVAA, Remote}{November 2024 to August 2025}
+\begin{itemize}
+  \item Built Billingua Talent as the sole engineer using TypeScript, JavaScript, React, Next.js, Node.js, and PostgreSQL so candidates, advisors, employers, and administrators could manage services and opportunities in one full-stack platform.
+  \item Designed REST APIs, relational schemas, Prisma migrations, role-based access, dashboards, and reporting workflows so users could share dependable operational data without disconnected spreadsheets.
+  \item Gathered requirements from program and business stakeholders, rapidly prototyped workflows, ran demonstrations and a live pilot, and converted feedback into documented decisions and production releases.
+\end{itemize}
+
+\newpage
+\sectiontitle{Work History (continued)}
+
+\roleline{Software Developer at AVAA, Caracas}{October 2022 to July 2024}
+\roleline{Software Developer Intern at AVAA, Caracas}{September 2021 to August 2022}
+\begin{itemize}
+  \item Built, deployed, and maintained SEP and SEA with TypeScript, JavaScript, React, Next.js, PostgreSQL, and Azure, replacing spreadsheet-based operations for approximately 300 scholars, advisors, and staff.
+  \item Designed relational schemas, REST APIs, role-based access, dashboards, reporting, payment, and service workflows so education teams could run daily programs from consistent data and shared interfaces.
+  \item Diagnosed production issues with browser debugging, logs, SQL, and Python validation scripts, then turned user feedback into regression fixes, clearer interfaces, and release documentation.
+\end{itemize}
+
+\sectiontitle{Selected AI and Developer Tooling}
+
+\roleline{Zrode - Open-Source Agent Development Environment}{TypeScript, React, Node.js}
+\begin{itemize}
+  \item Built an open-source environment for multi-provider coding-agent workflows, helping developers work with Codex, Claude Code, Cursor, and OpenCode in one development workspace.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Brio - Mobile Agent Control Plane}{React Native, Go, PostgreSQL}
+\begin{itemize}
+  \item Built a mobile control plane for an AI agent system with device pairing, session control, relay routing, runtime logs, and health checks for operating agents across devices.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{RegistroCiberVE Research and Incident Verification Agent}{Python, Playwright, LLM APIs}
+\begin{itemize}
+  \item Built a workflow that ingested cyber incident files, generated searches, scraped and rendered web pages, extracted evidence from PDFs, and produced structured records for a public bilingual cybersecurity registry.
+  \item Added source scoring, rejection reasons, uncertainty labels, caching, retries, fallbacks, and human-review signals so unsupported evidence was stopped before publication.
+\end{itemize}
+
+\sectiontitle{Open Source, Mentoring and Volunteer Leadership}
+
+\roleline{Open-Source Contributor: Zed, Orca, and Hermes Agent}{July 2026 to Current}
+\begin{itemize}
+  \item Contributed fixes for editor behavior, Windows agent setup, stale SSH sessions, prompt preservation, and board-scoped defaults through public issues, regression tests, and maintainer code review.
+\end{itemize}
+
+\vspace{3pt}
+\roleline{Vice President at Junior Achievement Venezuela Alumni}{March 2026 to Current}
+\begin{itemize}
+  \item Led strategy, partnerships, operations, and onboarding for a national youth entrepreneurship network.
+\end{itemize}
+
+\sectiontitle{Education}
+\begin{itemize}
+  \item M.P.A. from IESA (Instituto de Estudios Superiores de Administracion), in progress \hfill Expected 2027
+\end{itemize}
+
+\end{document}

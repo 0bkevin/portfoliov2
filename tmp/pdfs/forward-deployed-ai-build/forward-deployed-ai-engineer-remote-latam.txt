@@ -1,0 +1,71 @@
+                                                     Kevin Bravo
+                           Forward-Deployed AI Engineer | Product Engineering and Client Delivery
+
+                   0bravokevin@gmail.com | kevinbravo.com | github.com/0bkevin | linkedin.com/in/0bkevin
+
+                                                    Professional Summary
+Product engineer with 5 years of experience taking messy operational problems from discovery to production software. Work
+directly with stakeholders to map workflows, decide what should be automated, ship a first version, and stay with it through pilot
+feedback, deployment, and support. Built a multi-tenant platform as the sole engineer for a U.S. Department of State unit and
+build AI agent systems with Python, TypeScript, LLM APIs, browser automation, structured outputs, retrieval, retries, fallbacks,
+and production diagnostics.
+
+                                                        Technical Skills
+Client discovery and delivery: Workflow mapping, automation judgment, rapid prototyping, demos, pilot support, tradeoffs
+with non-technical stakeholders, API integrations, and production ownership.
+Production AI systems: Python, OpenAI and Anthropic APIs, function calling, tool use, structured outputs, prompt
+engineering, retrieval and RAG-style verification, document processing, evaluation criteria, uncertainty handling, human-review
+checkpoints, Playwright, model escalation, cost and latency tradeoffs, and multi-provider workflows.
+Production systems: TypeScript, JavaScript, Django, REST APIs, webhooks, authentication, OAuth2 concepts, PostgreSQL,
+Docker, GCP, AWS, Azure, DigitalOcean, CI/CD, logs, health checks, idempotency, retries, timeouts, fallbacks, and production
+debugging.
+
+                                                        Work Experience
+Proyecto Educa                                                                                                             Remote
+Chief Technology Officer                                                                                        Dec 2025 - Present
+- Set product and technical direction for education platforms, taking unclear stakeholder needs through architecture,
+  implementation priorities, working releases, and production support.
+- Review contributor work and technical decisions, define release standards, unblock implementation, and remain responsible
+  when production issues occur.
+Free2Z                                                                                                                     Remote
+Principal Software Engineer                                                                                   Apr 2025 - Jun 2026
+- Led a live React-to-SvelteKit migration across Dockerized Django services, REST APIs, PostgreSQL, GKE, Cloud SQL, GCS,
+  Pub/Sub, Cloud Build, and Workload Identity.
+- Made asynchronous workflows safe under duplicate delivery and transient failure with durable idempotency, verified webhooks,
+  processing leases, explicit ACK/NACK behavior, health gates, automatic rollback, retry-safe migrations, and failure-path tests.
+- Integrated and shipped an AI writing assistant into Free2Z’s live blogging workflow, helping users draft posts and choose topics
+  from high-interest activity on the platform, turning current community interest into clearer ideas and publishable content.
+U.S. Department of State (via AVAA)                                                                                        Remote
+Product Engineer | Billingua Talent                                                                           Nov 2024 - Oct 2025
+- Built Billingua Talent as the sole engineer after mapping an undocumented client workflow; designed the PostgreSQL schema,
+  four-role access model, REST APIs, dashboards, reporting, deployment, and support process.
+- Ran demos and a pilot with 50 users and 5 companies, then revised onboarding, service management, data validation, and
+  reporting based on what confused users or failed in practice.
+Freelance                                                                                                                  Remote
+Software Engineer                                                                                             Sep 2024 - Dec 2024
+- Delivered client web products, automation scripts, and API-connected workflows, owning discovery, prioritization,
+  implementation, deployment, iteration, and technical support.
+Asociacion Venezolano Americana de Amistad (AVAA)                                                                          Remote
+Software Developer                                                                                             Sep 2022 - Jul 2024
+Software Developer Intern                                                                                     Sep 2021 - Aug 2022
+- Built, deployed, and supported two internal platforms for approximately 300 scholars, advisors, and staff, replacing
+  spreadsheet-heavy workflows with PostgreSQL-backed records, services, payments, attendance, and reporting.
+- Worked directly with non-technical operators on issue reports, data cleanup, workflow changes, user support, and Python scripts
+  for analytics and validation.
+
+                                      Selected AI Agent and Developer Tooling Work
+Research and Incident Verification Agent                                                           Python, Playwright, LLM APIs
+Built a Python agent that reads incident files, searches and renders sources with Playwright, judges incident-specific evidence, and
+writes structured records and debug reports. Added candidate scoring, rejection reasons, uncertainty labels, caching, retries,
+timeouts, browser and social-source fallbacks, human-review signals, staged search, and model escalation to control latency and
+cost.
+Zrode and Brio                                                                                        AI Agents, Developer Tooling
+Build and use an agentic development environment and control plane for multi-provider coding workflows, session control, relay
+routing, runtime logs, health checks, and operational visibility.
+
+                                 Open Source, Leadership, Education and Languages
+Zed: Open-source contributor to the Zed code editor. JA Venezuela Alumni: Vice President. Dev3pack: Global Web3 and
+AI hackathon hub organizer.
+Instituto de Estudios Superiores de Administracion (IESA): Master of Public Administration, in progress, 2025 - 2027.
+Languages: Spanish (Native), English (C1 professional proficiency).
+

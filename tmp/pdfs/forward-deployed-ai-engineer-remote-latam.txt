@@ -1,0 +1,97 @@
+                                             Kevin Bravo
+               0bravokevin@gmail.com | +58 412 205 7346 | kevinbravo.com
+                       github.com/0bkevin | linkedin.com/in/0bkevin
+                              Spanish (Native) | English (C1)
+
+Work History
+Chief Technology Officer at Proyecto Educa, Remote                                December 2025 to Current
+
+
+ • Owned discovery, architecture, delivery, deployment, and production support for education platforms,
+    working directly with operators to turn unclear workflow requests into concrete plans and decide which
+    actions required human review.
+ • Designed data models, validation rules, access controls, system boundaries, and support processes
+   so staff could automate repetitive work without losing control of consequential actions.
+ • Used AI coding agents to prototype and test production changes, while personally reviewing code,
+   failure paths, and release readiness.
+
+Principal Software Engineer at Free2Z, Remote                                        April 2025 to April 2026
+
+
+ • Shipped an AI writing assistant to real users with Python, Django, LLM prompts, and live platform
+   activity as context, then corrected prompt and context failures so creators received useful drafts inside
+    their publishing workflow.
+ • Led a production migration across TypeScript, JavaScript, Python, Django REST APIs, PostgreSQL,
+    Docker, and GCP so a live startup product could evolve without interrupting customer workflows.
+ • Hardened Pub/Sub and webhook integrations with signature verification, idempotency, durable event
+    records, retries, concurrency tests, and explicit failure handling so duplicate events and partial outages
+    did not corrupt user state.
+ • Owned CI/CD, production logs, health checks, deployment gates, and automated rollback so failures
+   were visible, diagnosable, and recoverable while customers used the platform.
+
+Product Engineer at U.S. Department of State via AVAA, Remote               November 2024 to August 2025
+
+
+ • Built Billingua Talent as the sole engineer after mapping an undocumented client workflow, using
+   Next.js, React, TypeScript, Node.js, REST APIs, PostgreSQL, and role-based access to deliver the
+    product from scope through production support.
+ • Ran demos and a live pilot with advisors and employers, asked users where the workflow failed, and
+    translated their feedback into onboarding, service-management, data-validation, and reporting
+    changes.
+ • Used browser traces, application logs, diagnostic SQL, and data checks to reproduce live issues,
+   explain tradeoffs to non-technical stakeholders, and keep delivery moving without a formal
+   specification.
+Work History (continued)
+Software Developer at AVAA, Caracas                                               October 2022 to July 2024
+
+
+ • Built, deployed, and maintained SEP and SEA with Next.js, TypeScript, React, PostgreSQL, Prisma,
+   Auth.js, and Azure, replacing spreadsheet-heavy operations for approximately 300 scholars, advisors,
+   and staff.
+ • Modeled records, attendance, services, payments, receipts, permissions, and reporting so program
+   teams could complete daily work from consistent data instead of manual reconciliation.
+ • Diagnosed production and data failures with logs, SQL, Python validation scripts, cleanup workflows,
+   and user walkthroughs, then documented fixes so recurring problems were easier to resolve.
+
+Selected AI Agent and Developer Tooling
+RegistroCiberVE Research and Incident Verification Agent                      Python, Playwright, LLM APIs
+
+
+ • Built a Python agent that ingested incident files, retrieved web and PDF sources, rendered blocked
+   pages with Playwright, judged incident-specific evidence, and produced structured records and debug
+   reports for a public cybersecurity registry.
+ • Added evaluation criteria, source scoring, rejection reasons, uncertainty labels, and human-review
+   checkpoints so generic pages, unrelated incidents, and weak snippets could not become publishable
+   evidence.
+ • Added caching, retries, timeouts, staged search, browser and social-source fallbacks, and model
+   escalation so the agent remained usable when sources failed while controlling latency and API cost.
+
+Brio - Mobile Agent Control Plane                                            React Native, Go, PostgreSQL
+
+
+ • Built a control plane with device pairing, per-user ownership, session state, relay routing, action logs,
+   and health checks so a persistent AI agent could be operated, monitored, and recovered across
+   devices.
+
+Zrode - Open-Source Agent Development Environment                                TypeScript, React, Node.js
+
+
+ • Built an open-source environment for multi-provider coding agents with session control, runtime logs,
+   and health checks so agent workflows could be inspected and improved from real failures.
+
+Open Source and Volunteer Leadership
+Open-Source Contributor: Hermes Agent, Orca, and Zed                                    July 2026 to Current
+
+
+ • Contributed prompt-preservation and board-scoped default fixes to Hermes Agent, plus Windows
+   agent setup, stale SSH-session, and editor fixes through public issues, regression tests, and
+    maintainer review.
+
+Vice President at Junior Achievement Venezuela Alumni                                 March 2026 to Current
+
+
+ • Led strategy, partnerships, operations, and onboarding for a national youth entrepreneurship network.
+
+Education
+• M.P.A. from IESA (Instituto de Estudios Superiores de Administracion), in progress   Expected 2027
+

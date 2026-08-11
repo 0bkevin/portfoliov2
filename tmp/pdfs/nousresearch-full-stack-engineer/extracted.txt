@@ -1,0 +1,84 @@
+                                             Kevin Bravo
+             0bravokevin@gmail.com | +58 412 205 7346 | kevinbravo.com
+                      github.com/0bkevin | linkedin.com/in/0bkevin
+        English (C1) | Spanish (Native) | NousResearch/hermes-agent contributor
+
+Work History
+Chief Technology Officer at Proyecto Educa, Remote                               December 2025 to Current
+
+
+ • Owned product direction, full-stack architecture, implementation priorities, deployment, and production
+    support for education platforms, turning unclear operator needs into maintainable releases.
+ • Defined API contracts, data models, authentication rules, integration boundaries, and failure handling,
+    then selected implementation approaches based on product risk and delivery speed.
+ • Led distributed contributors through written plans, GitHub code reviews, automated tests, and release
+    checks so the team could ship quickly without lowering its engineering standards.
+
+Principal Software Engineer at Free2Z, Remote                                        April 2025 to April 2026
+
+
+ • Built and modernized customer-facing publishing, search, CMS, live-video, and AI-writing features
+   across TypeScript, JavaScript, React, Python, Django REST APIs, and PostgreSQL.
+ • Shipped an AI writing assistant using prompt design and retrieved product activity as context, then
+   corrected prompt and context failures from observed usage so creators received useful drafts inside
+   their workflow.
+ • Hardened Pub/Sub and webhook services with signature verification, idempotency, durable event
+   records, retries, concurrency tests, and explicit failure handling so duplicate events did not corrupt
+    user state.
+ • Operated Dockerized services on GCP with CI/CD, production logs, health checks, deployment gates,
+    and automatic rollback so releases remained observable and recoverable.
+
+Product Engineer at U.S. Department of State via AVAA, Remote               November 2024 to August 2025
+
+
+ • Built Billingua Talent as the sole engineer with Next.js, React, TypeScript, Node.js, REST APIs, and
+   PostgreSQL after mapping an undocumented workflow with advisors and employers.
+ • Designed user-facing flows, multi-tenant data models, RBAC, validations, and reports for candidates,
+   employers, advisors, and administrators, then improved them through demos and a live pilot.
+ • Used browser traces, application logs, diagnostic SQL, and regression tests to reproduce production
+   failures, fix root causes, and explain technical decisions to non-technical stakeholders.
+Work History (continued)
+Software Developer at AVAA, Remote                                             October 2022 to July 2024
+
+
+ • Built, deployed, and maintained SEP and SEA with TypeScript, React, Node.js, PostgreSQL, Prisma,
+   Auth.js, and Azure, replacing spreadsheet-heavy operations for approximately 300 scholars, advisors,
+   and staff.
+ • Designed relational schemas, migrations, permissions, validations, dashboards, and reports so
+   program teams could complete daily work from consistent data instead of manual reconciliation.
+ • Diagnosed production and data failures with application logs, SQL, Python validation scripts, cleanup
+   workflows, and user walkthroughs, then documented fixes for faster support and safer releases.
+
+Selected AI and Open-Source Engineering
+Hermes Agent - Open-Source Contributions                                Python, TypeScript, React, SQLite
+
+
+ • Submitted a Desktop warm-activation fix that reconciled stale session state without erasing submitted
+   prompts, with ordering regression tests covering activation, streaming, completion, and interruption.
+ • Submitted a gateway and CLI routing fix that scoped Kanban default assignments by board, failed
+   closed on unsafe database paths, recorded routing provenance, and added production-path tests and
+   documentation.
+
+Zrode - Open-Source Agent Development Environment                TypeScript, React, Node.js, WebSockets
+
+
+ • Built an interface and WebSocket service for multiple coding-agent providers with persistent sessions,
+   typed events, checkpoints, runtime logs, health checks, and automated tests so developers could
+   inspect and recover agent workflows.
+
+Brio - Mobile Agent Control Plane                                          Go, React Native, PostgreSQL
+
+
+ • Built Go companion and relay services with device pairing, session state, routing, action logs, and
+   health checks so a persistent agent could be controlled and monitored across devices.
+
+RegistroCiberVE Research and Incident Verification Agent                    Python, Playwright, LLM APIs
+
+
+ • Built a tool-calling agent with retrieval, structured outputs, browser automation, source evaluation,
+   retries, caches, fallbacks, and human-review checkpoints to verify web and PDF evidence for a public
+    cybersecurity registry.
+
+Education
+ • M.P.A. from IESA (Instituto de Estudios Superiores de Administracion), in progress      Expected 2027
+

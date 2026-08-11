@@ -1,0 +1,91 @@
+Kevin Bravo
+0bravokevin@gmail.com | +58 412 205 7346 | kevinbravo.com
+github.com/0bkevin | linkedin.com/in/0bkevin
+English (C1) | Spanish (Native) | Americas time zone with flexible customer overlap
+Work History
+Chief Technology Officer at Proyecto Educa, Remote
+
+December 2025 to Current
+
+• Owned technical discovery, solution design, implementation, deployment, and production support for
+education platforms, turning open-ended operator problems into clear plans and measurable releases.
+• Defined API boundaries, data models, integrations, access controls, validation rules, and
+human-review steps so staff could automate operational work without weakening security or user
+control.
+• Led distributed contributors through written plans, architecture notes, GitHub code reviews, automated
+tests, and release checks, keeping technical decisions clear in an asynchronous environment.
+Principal Software Engineer at Free2Z, Remote
+
+April 2025 to April 2026
+
+• Shipped an AI writing assistant to real users with Python, Django, prompt design, and retrieved
+product activity as context, then corrected prompt and context failures from observed usage.
+• Protected payment and balance-changing workflows with verified webhooks, idempotency, atomic
+PostgreSQL updates, durable event records, retries, and audit trails so duplicate or partial events
+could not corrupt user state.
+• Built and operated customer-facing services across TypeScript, Python, Django REST APIs,
+PostgreSQL, Docker, and GCP, owning changes from architecture through incident response and
+continuous improvement.
+• Used GCP Workload Identity, CI/CD, production logs, health checks, deployment gates, and automatic
+rollback so service access and live failures remained controlled, observable, and recoverable.
+Product Engineer at U.S. Department of State via AVAA, Remote
+
+November 2024 to August 2025
+
+• Built Billingua Talent as the sole engineer after mapping an undocumented customer workflow, using
+TypeScript, Node.js, REST APIs, PostgreSQL, multi-tenant data models, and RBAC to deliver the
+product from discovery through production support.
+• Ran technical discovery, demos, and a live pilot with advisors and employers, translating constraints
+and success criteria into data flows, validation rules, rollout steps, and product changes.
+• Diagnosed live issues with browser traces, application logs, SQL, and regression checks, then
+documented decisions and explained tradeoffs to technical and non-technical stakeholders.
+
+Work History (continued)
+Software Developer at AVAA, Remote
+
+October 2022 to July 2024
+
+• Built, deployed, and maintained SEP and SEA with TypeScript, Node.js, PostgreSQL, Prisma, Auth.js,
+and Azure, replacing spreadsheet-heavy operations for approximately 300 scholars, advisors, and
+staff.
+• Modeled participant records, services, payments, receipts, permissions, and reports with role-based
+access and scoped data flows so program teams could work from consistent information.
+• Investigated production and data failures with logs, SQL, Python validation scripts, cleanup workflows,
+and user walkthroughs, then documented repeatable support and recovery steps.
+Selected AI Agent and Automation Systems
+RegistroCiberVE Research and Incident Verification Agent
+
+Python, Playwright, LLM APIs
+
+• Built a Python agent using retrieval, structured outputs, web-search and browser tools, and Playwright
+to verify web and PDF evidence and produce records for a public cybersecurity registry.
+• Defined evaluation criteria, source scoring, rejection reasons, uncertainty labels, and human-review
+checkpoints, then added retries, caches, fallbacks, and model escalation to control quality, latency,
+and API cost.
+Zrode - Open-Source Agent Development Environment
+
+TypeScript, React, Node.js
+
+• Built an open-source environment for multiple coding-agent providers with persistent sessions, typed
+events, runtime logs, health checks, and tests so agent workflows could be observed, reproduced, and
+improved from real failures.
+Brio - Mobile Agent Control Plane
+
+Go, React Native, PostgreSQL
+
+• Built companion and relay services with device pairing, per-user ownership, session state, routing,
+action logs, and health checks so a persistent agent could be operated, monitored, and recovered
+across devices.
+Open Source
+Contributor to Hermes Agent, Orca, and Zed
+
+July 2026 to Current
+
+• Contributed agent-setup, prompt-preservation, session, and editor fixes through public issues,
+regression tests, GitHub code review, and maintainer feedback.
+Education
+• M.P.A. from IESA (Instituto de Estudios Superiores de Administracion), in progress
+
+Expected 2027
+
+

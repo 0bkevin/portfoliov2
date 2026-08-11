@@ -1,0 +1,77 @@
+Kevin Bravo
+0bravokevin@gmail.com | kevinbravo.com | github.com/0bkevin
+linkedin.com/in/0bkevin
+Caracas, Venezuela | Open to fully remote roles | Spanish (Native) | English (C1)
+Education & Certificates
+• M.P.A. from IESA (Instituto de Estudios Superiores de Administracion), in progress
+
+Expected 2027
+
+• Bachelor’s degree in Occupational Therapy from Universidad Central de Venezuela, Cum Laude 2023
+Work History
+Chief Technology Officer at Proyecto Educa, Remote
+
+December 2025 to Current
+
+• Owned product direction and production support for education platforms by reproducing issues from
+vague operator reports, separating data or configuration failures from product bugs, and turning root
+causes into documented workflows and release priorities so staff could keep programs running.
+• Reviewed contributor code and technical decisions, wrote runbooks and release notes, and walked
+non-technical stakeholders through tradeoffs so teammates could resolve recurring issues without
+creating an engineering bottleneck.
+Principal Software Engineer at Free2Z, Remote
+
+April 2025 to April 2026
+
+• Led a live React-to-SvelteKit migration across TypeScript, JavaScript, Python, Django REST APIs,
+PostgreSQL, Docker, and GCP so the startup could improve architecture and reliability without
+interrupting the product used by its community.
+• Traced production failures across browser JavaScript, REST APIs, PostgreSQL, Pub/Sub, and verified
+webhooks using logs and integration tests, then added idempotency, retry handling, health checks, and
+rollback safeguards so duplicate events and transient outages would not corrupt user workflows.
+• Integrated an AI writing assistant into the production blogging flow using LLM prompts, Django APIs, and
+live platform activity as context, then debugged prompt and context misfires so non-technical creators
+could turn community interests into relevant drafts and publishable posts.
+Product Engineer at U.S. Department of State via AVAA, Remote
+
+November 2024 to August 2025
+
+• Built Billingua Talent as the sole engineer after mapping an undocumented customer workflow, using
+Next.js, React, TypeScript, Node.js web tooling, REST APIs, PostgreSQL, and role-based access
+so advisors and employers could manage bilingual candidates, training services, and reports in one
+product.
+• Worked directly with advisors and employers during demos and a live pilot, using browser traces, logs,
+diagnostic SQL, and data validation to reproduce onboarding and reporting issues, resolve them, and
+convert repeated questions into stronger validation rules and clearer workflows.
+
+Work History (continued)
+Software Developer at AVAA, Caracas
+
+October 2022 to July 2024
+
+• Built, deployed, and maintained SEP and SEA with Next.js, TypeScript, React, Node.js tooling,
+PostgreSQL, Prisma, Auth.js, and Azure, replacing spreadsheet-heavy operations with internal
+platforms serving approximately 300 scholars, advisors, and staff.
+• Supported non-technical operators through issue reports, data cleanup, report reconciliation, and
+workflow changes, using diagnostic SQL, Python ETL and validation scripts, and written walkthroughs
+so the team could solve recurring cases with less manual engineering help.
+Selected AI Agent & Developer Tooling Projects
+Research and Incident Verification Agent
+
+Python, Playwright, LLM APIs
+
+• Built an agent workflow with prompt engineering, retrieval from source knowledge bases, structured
+outputs, and human-review signals to turn incident files into evidence records and debug reports instead
+of unsupported black-box answers.
+• Diagnosed prompt, retrieval, and model failure modes with candidate scoring, rejection reasons,
+uncertainty labels, caching, retries, timeouts, browser fallbacks, and model escalation so weak
+evidence was caught before it reached a user.
+Zrode and Brio
+
+AI Coding Agents and Developer Tooling
+
+• Built and used multi-provider coding workflows with Claude Code, OpenAI Codex, Cursor, and other
+models, adding session control, relay routing, runtime logs, health checks, and operational visibility so
+developers could navigate unfamiliar code, monitor agent runs, and recover stalled sessions.
+
+

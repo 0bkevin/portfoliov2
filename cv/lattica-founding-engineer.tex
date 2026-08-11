@@ -1,0 +1,106 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[left=0.98cm,top=0.78cm,right=0.98cm,bottom=0.58cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Founding Engineer - Backend, DeFi and Risk Systems},
+    pdfsubject={ATS-compliant CV for Founding Engineer role at Lattica},
+    pdfkeywords={Founding Engineer, Lattica, DeFi, prediction markets, lending, leverage, risk systems, smart contracts, Solidity, EVM, TypeScript, Node.js, Python, Django, PostgreSQL, backend infrastructure, system reliability}
+}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, label={\textbf{-}}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{3pt}
+    \begin{center}
+        \textbf{#1}
+    \end{center}
+    \vspace{-5pt}
+}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Founding Software Engineer | Backend, DeFi and Risk Systems \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    | \href{https://kevinbravo.com}{kevinbravo.com}
+    | \href{https://github.com/0bkevin}{github.com/0bkevin}
+    | \href{https://www.linkedin.com/in/0bkevin/}{linkedin.com/in/0bkevin}
+    | Remote
+\end{center}
+
+\fontsize{9.65}{10.55}\selectfont
+
+\sectiontitle{Professional Summary}
+Full-stack software engineer with 5 years of experience designing, shipping, and operating production systems in high-ownership environments. Strong in TypeScript, JavaScript, Node.js web tooling, Python, Django, PostgreSQL, REST APIs, asynchronous workflows, data modeling, deployments, and production reliability. Hands-on DeFi and Web3 study through Ethernaut, Damn Vulnerable DeFi, Brownie, EVM concepts, Solidity fundamentals, AMMs, lending pools, flash loans, wallet behavior, and smart-contract security. Comfortable moving from ambiguous product ideas to working systems, with a focus on correctness, failure handling, and fast iteration.
+
+\sectiontitle{Technical Fit}
+\textbf{Backend and infrastructure:} TypeScript, JavaScript, Node.js web tooling, Python, Django, REST APIs, PostgreSQL, SQL, relational data modeling, asynchronous jobs, webhooks, idempotency, retries, concurrency tests, Docker, GCP, Cloud Build, GKE, Cloud SQL, GCS, Pub/Sub, logs, health checks, rollback, and deployment ownership. \\
+\textbf{DeFi and protocol systems:} DeFi concepts, prediction-market interest, lending pools, leverage and margin concepts, AMMs, flash loans, EVM, Solidity fundamentals, Brownie, Web3.py, wallet behavior, oracle and collateral concepts, smart-contract security, and secure contract-interaction patterns. \\
+\textbf{Financial correctness and risk:} Atomic transactions, durable event receipts, balance and audit effects, publish-after-commit workflows, duplicate handling, webhook verification, processing leases, deterministic validation, data-quality checks, reconciliation thinking, and risk-signal analysis. \\
+\textbf{Product engineering:} React, SvelteKit, Next.js, responsive interfaces, dashboards, role-based workflows, server-side rendering, API integrations, testing, technical documentation, and end-to-end product ownership.
+
+\sectiontitle{Professional Experience}
+\textbf{Proyecto Educa} \hfill \textit{Remote} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dec 2025 - Present}
+\begin{itemize}
+    \item \textbf{Own product and technical direction} for education platforms, translating ambiguous requirements into architecture, implementation priorities, testing expectations, release decisions, and production support.
+    \item \textbf{Lead hands-on execution across backend, frontend, automation, deployment, and reliability}, making pragmatic tradeoffs while keeping systems maintainable and useful.
+\end{itemize}
+
+\vspace{1pt}
+\textbf{Free2Z} \hfill \textit{Remote} \\
+\textbf{Principal Software Engineer} \hfill \textit{Apr 2025 - Apr 2026}
+\begin{itemize}
+    \item \textbf{Led a live migration from React to SvelteKit} within a production GCP platform using Dockerized Django and SvelteKit services on GKE, Cloud SQL, GCS, Pub/Sub, Artifact Registry, Cloud Build, and Workload Identity.
+    \item \textbf{Hardened a Pub/Sub consumer that changes user balances}, combining durable idempotency, atomic balance and audit effects, publish-after-commit logic, and explicit ACK/NACK behavior for duplicates and transient failures.
+    \item \textbf{Made paid-meeting webhooks and recording ingestion idempotent} across Django, PostgreSQL, Pub/Sub, and GCS with verified signatures, durable business-event receipts, processing leases, and atomic ledger effects.
+    \item \textbf{Strengthened production rollout and recovery} with worker health gates, automatic rollback, retry-safe concurrent PostgreSQL migrations, and real-database concurrency and failure-path tests.
+\end{itemize}
+
+\vspace{1pt}
+\textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remote} \\
+\textbf{Product Engineer | Billingua Talent} \hfill \textit{Nov 2024 - Aug 2025}
+\begin{itemize}
+    \item \textbf{Built a multi-tenant platform as the sole engineer}, owning stakeholder discovery, relational data architecture, role-based access, APIs, dashboards, reporting, deployment, and production support.
+    \item \textbf{Piloted the system with 50 users and 5 companies}, turning operational feedback into clearer onboarding, service-management workflows, data-quality checks, and reporting.
+\end{itemize}
+
+\vspace{1pt}
+\textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remote} \\
+\textbf{Software Developer} \hfill \textit{Oct 2022 - Jul 2024}
+\begin{itemize}
+    \item \textbf{Built, deployed, and maintained SEP and SEA}, multi-tenant operational platforms using Next.js, TypeScript, PostgreSQL, Prisma, Auth.js, Azure, and Python workflows.
+    \item \textbf{Replaced spreadsheet-heavy operations with maintainable systems} for records, attendance, volunteer hours, services, payments, receipts, outreach, data validation, and reporting.
+\end{itemize}
+
+\sectiontitle{DeFi, Protocol and Community Work}
+\textbf{Web3 and DeFi technical writing:} Published walkthroughs and research notes on Ethernaut, Damn Vulnerable DeFi, Brownie, wallet behavior, flash loans, lending pools, EVM concepts, and smart-contract security. \\
+\textbf{Secure protocol study:} Worked through vulnerable-contract exercises involving access control, oracle assumptions, price manipulation, reentrancy, accounting errors, and unsafe external interactions. \\
+\textbf{Dev3pack:} Organized the Caracas hub for a global Web3 and AI hackathon, coordinating logistics, mentors, sponsors, speakers, and participant support. \\
+\textbf{Zrode and Brio:} Built applied AI and agent tooling for multi-provider coding workflows, session control, relay routing, logs, and operational visibility.
+
+\sectiontitle{Education and Languages}
+\textbf{Instituto de Estudios Superiores de Administracion (IESA)} \hfill \textit{Remote} \\
+Master of Public Administration, in progress \hfill \textit{2025 - 2027} \\
+\textbf{Languages:} Spanish (Native), English (C1 - Professional Working Proficiency).
+
+\end{document}

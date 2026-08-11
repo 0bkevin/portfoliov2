@@ -1,0 +1,110 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[left=1.05cm,top=0.82cm,right=1.05cm,bottom=0.60cm]{geometry}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}\pdfgentounicode=1}{}
+\hypersetup{
+    hidelinks,
+    pdfauthor={Kevin Bravo},
+    pdftitle={Kevin Bravo - Senior Software Developer Full-Stack CV},
+    pdfsubject={ATS-compliant Harvard-style CV for Senior Software Developer Full-Stack role},
+    pdfkeywords={Senior Software Developer, Full-Stack Developer, TypeScript, JavaScript, Node.js, React, Astro, Prisma, PostgreSQL, schema design, query optimization, GitHub Actions, CI/CD, Docker, Azure VPS, GCP, production debugging, monitoring, AI-assisted development}
+}
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, label={\textbf{-}}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{4pt}
+    \begin{center}
+        \textbf{#1}
+    \end{center}
+    \vspace{-5pt}
+}
+
+\begin{document}
+\raggedright
+
+\begin{center}
+    {\LARGE \textbf{Kevin Bravo}}\\
+    Senior Software Developer | Full-Stack TypeScript, Node.js and React \\
+    \hrulefill
+\end{center}
+
+\begin{center}
+    \href{mailto:0bravokevin@gmail.com}{0bravokevin@gmail.com}
+    | \href{https://kevinbravo.com}{kevinbravo.com}
+    | \href{https://github.com/0bkevin}{github.com/0bkevin}
+    | \href{https://www.linkedin.com/in/0bkevin/}{linkedin.com/in/0bkevin}
+\end{center}
+
+\fontsize{9.7}{10.85}\selectfont
+
+\sectiontitle{Professional Summary}
+Full-stack software engineer with 5 years of experience designing, shipping, and operating production systems. Built TypeScript and JavaScript products with React, Astro, Next.js, SvelteKit, Node.js web tooling, Prisma, and PostgreSQL, as well as Python and Django REST APIs. Own features from relational schema design and backend logic through responsive interfaces, deployment, monitoring, and production debugging. Recent work includes Dockerized cloud services, asynchronous workflows, idempotency, verified webhooks, health gates, rollback automation, and daily AI-assisted engineering.
+
+\sectiontitle{Work Experience}
+
+\textbf{Proyecto Educa} \hfill \textit{Remote} \\
+\textbf{Chief Technology Officer} \hfill \textit{Dec 2025 - Present}
+\begin{itemize}
+    \item \textbf{Own architecture and technical priorities} for education platforms, lead hands-on delivery, review system decisions, and remain accountable for release quality, deployment, and production support.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Free2Z} \hfill \textit{Remote} \\
+\textbf{Principal Software Engineer} \hfill \textit{Apr 2025 - Jun 2026}
+\begin{itemize}
+    \item \textbf{Led a live migration from React to SvelteKit} within a production GCP platform using Dockerized Django and SvelteKit services on GKE, Cloud SQL, GCS, Pub/Sub, Artifact Registry, Cloud Build, and Workload Identity.
+    \item \textbf{Shipped full-stack product features} across frontend workflows, Django REST APIs, PostgreSQL data, live video integrations, Markdown editing, CMS tooling, publishing, and search.
+    \item \textbf{Hardened asynchronous workflows and production rollouts} with durable idempotency, atomic balance and audit effects, verified webhooks, processing leases, explicit ACK/NACK behavior, worker health gates, automatic rollback, retry-safe PostgreSQL migrations, and failure-path tests.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{U.S. Department of State (via AVAA)} \hfill \textit{Remote} \\
+\textbf{Product Engineer | Billingua Talent} \hfill \textit{Nov 2024 - Oct 2025}
+\begin{itemize}
+    \item \textbf{Built and operated a multi-tenant B2B platform as the sole engineer}, owning requirements, PostgreSQL data architecture, role-based authorization, backend workflows, dashboards, deployment, production releases, and support; piloted it with 50 users and 5 companies.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Freelance} \hfill \textit{Remote} \\
+\textbf{Software Engineer} \hfill \textit{Sep 2024 - Dec 2024}
+\begin{itemize}
+    \item \textbf{Delivered Astro and TypeScript web products} with responsive interfaces, forms, API-connected workflows, performance improvements, and production deployments across multiple client projects.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Asociacion Venezolano Americana de Amistad (AVAA)} \hfill \textit{Remote} \\
+\textbf{Software Developer} \hfill \textit{Sep 2022 - Jul 2024} \\
+\textbf{Software Developer Intern} \hfill \textit{Sep 2021 - Aug 2022}
+\begin{itemize}
+    \item \textbf{Designed, deployed, and maintained SEP}, a Next.js, TypeScript, PostgreSQL, Prisma, Auth.js, and Azure platform that replaced spreadsheet-based operations for approximately 300 scholars across 3 chapters.
+    \item \textbf{Built SEA for EducationUSA}, modeling advisee histories, paid services, payment and receipt records, outreach, and reporting; wrote Python ETL workflows to normalize historical data and improve data integrity.
+\end{itemize}
+
+\sectiontitle{Open-Source and Volunteer Experience}
+\textbf{Zed | Open-Source Contributor} \\
+Contributed to Zed, the open-source code editor. \\
+\textbf{AVAA | Education Committee Member} \hfill \textit{Sep 2024 - Present} \\
+Serve as primary administrator of SEP, keeping attendance, volunteer-hour, and reporting workflows running for approximately 300 scholars across 3 chapters; advise on requirements, data quality, and technical feasibility. \\
+\textbf{JA Venezuela Alumni | Vice President} \hfill \textit{Mar 2026 - Present} \\
+Set strategy with the board and lead internal operations, committee coordination, partnerships, and member onboarding for the national alumni network. \\
+\textbf{Dev3pack | Global Hackathon Hub Organizer} \hfill \textit{Apr 2026 - May 2026} \\
+Owned hub operations and mentored teams on product scope, technical decisions, final submissions, and pitches for a global Web3 and AI hackathon.
+
+\sectiontitle{Education and Languages}
+\textbf{Instituto de Estudios Superiores de Administracion (IESA)} \hfill \textit{2025 - 2027} \\
+Master of Public Administration, in progress \\
+\textbf{Technical:} TypeScript, JavaScript, Node.js, React, Astro, Next.js, SvelteKit, Python, Django, Prisma, PostgreSQL, SQL, REST APIs, Docker, Azure VPS, GCP, GitHub Actions and CI/CD concepts, Cloudflare, schema design, migrations, SSR, monitoring, logs, health checks, rollback, and AI-assisted development. \\
+\textbf{Languages:} Spanish (Native), English (C1 professional proficiency).
+
+\end{document}
