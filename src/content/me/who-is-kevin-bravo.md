@@ -15,7 +15,7 @@ He works best when he has full agency to turn an unclear technical problem into 
 - In 2026, he organized the **Caracas hub for the Dev3pack Global Hackathon**, coordinating the local experience for students interested in Web3 and AI.
 - In 2026, he worked as a **Code Mentor for Technovation Girls Venezuela**, helping a team of students build a mobile app with MIT App Inventor.
 - In 2025, he started a **Master of Public Administration at IESA**, connecting his technical work with education, institutions, and public-minded systems.
-- In 2025, he worked as **Principal Software Engineer at Free2Z**, leading a platform migration from React to SvelteKit and improving the architecture, performance, state management, backend integrations, live video, and CMS workflows.
+- Since March 2025, he has worked as **Senior Product Engineer at Free2Z**, leading a live platform migration from React to SvelteKit and working across product, backend systems, security, and production infrastructure.
 - In 2025, he led the development of **Billingua Talent**, a professional networking platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit and led through AVAA.
 - In 2025, his team won **3rd place at the first EmprendeTECH Hackathon at IESA**.
 - In 2024, he became an **Education Committee Member at AVAA**, providing technical support for Programa Excelencia and maintaining the Participant Evaluation System.
@@ -25,13 +25,13 @@ He works best when he has full agency to turn an unclear technical problem into 
 - In 2023, he graduated **Cum Laude in Occupational Therapy** from Universidad Central de Venezuela.
 - From 2019 to 2023, he was an **AVAA ProExcelencia scholarship holder**, where he grew through leadership, English training, volunteering, and professional development.
 
-One of his main projects at AVAA was the **PES, the Participant Evaluation System**. It became the source of truth for scholar records, activities, volunteer hours, attendance, reports, and performance follow-up across three national chapters.
+One of his main projects at AVAA was **SEP, the Participant Evaluation System**. It became the source of truth for scholar records, activities, volunteer hours, attendance, reports, and performance follow-up across all three states where ProExcelencia operates, and now serves around 400 monthly active users.
 
-He also built the **AES, the Advisee Evaluation System**, for EducationUSA. The system helps advisors track students, outreach activities, promotional work, and institutional alliances.
+He also built **SEA, the Advisee Evaluation System**, for EducationUSA. The system helps advisors track students, outreach activities, services, payments, receipts, institutional partnerships, and reports.
 
 For the U.S. Department of State’s Venezuela Affairs Unit, through AVAA, he built **Billingua Talent** from the ground up. The platform connects bilingual Venezuelan talent with international organizations and gives advisors tools to track candidates, services, English levels, and development gaps.
 
-At Free2Z, he directed a migration from React to SvelteKit. The work included Dyte live video integration, Svelte stores, backend API connections, server-side rendering, Tailwind CSS, and a custom CMS suite with a Markdown editor and blog engine.
+At Free2Z, he led the end-to-end migration of the live product from React to SvelteKit while maintaining feature parity. His work spans responsive product flows, multilingual article creation, Python and Django APIs, PostgreSQL, livestreaming, Zcash authentication security, production infrastructure, and an MCP server currently in development.
 
 Kevin likes projects where the first version of the solution still needs to be designed. He enjoys defining the architecture, modeling the data, connecting services, building the backend, and shipping something people can use.
 

@@ -15,7 +15,7 @@ Getting to know a candidate is hard, and more when there is little time, too muc
 
 Product engineer with 5 years of experience building full-stack products, internal platforms, and AI agent systems across startups, government projects, and non-profits. Strong focus on high-ownership work: taking an ambiguous product or operations problem and turning it into architecture, data models, and software teams rely on every day.
 
-Sole engineer on a platform for the U.S. Department of State’s Venezuela Affairs Unit, and builder of production systems for Free2Z and AVAA (including SEP, a multi-tenant platform serving ~300 scholars across 3 national chapters). Outside of work, I’ve spent years volunteering in education, tech and community initiatives, organizing hackathons and tech events, mentoring students, and helping build programs focused on entrepreneurship, leadership, and technology access.
+Sole engineer on a platform for the U.S. Department of State’s Venezuela Affairs Unit, and builder of production systems for Free2Z and AVAA (including SEP, a multi-tenant platform serving around 400 monthly active users across all three states where ProExcelencia operates). Outside of work, I’ve spent years volunteering in education, tech and community initiatives, organizing hackathons and tech events, mentoring students, and helping build programs focused on entrepreneurship, leadership, and technology access.
 
 ## 🤷‍♀️ Overall
 
@@ -81,15 +81,15 @@ I also like being close to the product and understanding why something is being 
 
 ### [Billingua Talent](/projects/billingua-talent)
 
-Billingua Talent is a multi-tenant professional networking and operations platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit. It connects highly skilled bilingual Venezuelans to companies hiring locally, so the country retains talent that would otherwise emigrate, with role-based access for four kinds of users: Binational Centers offering English courses, businesses posting jobs and searching talent, candidates applying and enrolling in courses, and administrators. As the sole engineer, I designed and built the platform architecture, data model, and core product flows end to end, then tested it in internal pilots with 50 users from the AVAA ProExcelencia program and 5 companies ahead of a broader rollout.
+Billingua Talent is a multi-tenant professional networking and operations platform commissioned by the U.S. Department of State’s Venezuela Affairs Unit. It connects highly skilled bilingual Venezuelans to companies hiring locally, with role-based access for candidates, companies, advisors, and administrators. As the sole engineer, I owned requirements, architecture, data modeling, product design, full-stack implementation, testing, and launch readiness. The application was completed and validated through initial stakeholder testing, but did not launch after the program lost funding during the 2025 changes to U.S. international cooperation policy.
 
-### [PES - Participant Evaluation System](/projects/sep)
+### [SEP - Participant Evaluation System](/projects/sep)
 
-The platform I built for AVAA to manage ProExcelencia with live data instead of scattered spreadsheets. Built with Next.js, PostgreSQL, Prisma, and Auth.js and deployed on Azure, it is a multi-tenant system serving around 300 scholars and their program staff across three national chapters, and became the source of truth for scholar records, activities, volunteer hours, attendance, and reports. I started on this program as an intern cleaning its historical data, then proposed and built the platform on top of it.
+The platform I built for AVAA to manage ProExcelencia with live data instead of scattered spreadsheets. Built with Next.js, PostgreSQL, Prisma, and Auth.js and deployed on Azure, it is a multi-tenant system serving around 400 monthly active users across all three states where the program operates. It became the source of truth for scholar records, activities, volunteer hours, attendance, and reports. I started on this program as an intern cleaning its historical data, then proposed and built the platform on top of it.
 
 ### [Free2Z platform migration](/me/who-is-kevin-bravo)
 
-I directed the technical migration and architecture redesign of a live startup product, moving the frontend from React to SvelteKit, with real users on it, to improve performance and code maintainability. The work included live video integration with Dyte, Svelte stores, Tailwind CSS, SSR optimization, backend API connections to Python/Django, and a custom CMS suite with a Markdown editor and blog engine.
+As Senior Product Engineer, I led the end-to-end migration of a live startup product from React to SvelteKit while maintaining feature parity in production. I also improved responsive product flows and multilingual article creation, built against Python and Django APIs, hardened Zcash authentication, and worked across livestreaming, PostgreSQL, production infrastructure, and MCP development.
 
 ## What AI tools, models, and workflows are you currently using?
 
