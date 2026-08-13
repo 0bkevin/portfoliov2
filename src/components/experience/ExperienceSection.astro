@@ -1,18 +1,6 @@
 ---
 const EXPERIENCE = [
   {
-    period: "Dec 2025 — Present",
-    company: "Proyecto Educa",
-    role: "Chief Technology Officer",
-    location: "Caracas",
-    summary: "I lead the technical direction for digital initiatives that support the organization’s educational work.",
-    highlights: [
-      "Own architecture and product priorities.",
-      "Guide delivery with a focus on clarity and maintainability.",
-    ],
-    current: true,
-  },
-  {
     period: "Apr 2025 — Apr 2026",
     company: "Free2Z",
     role: "Principal Software Engineer",
@@ -145,11 +133,6 @@ const SIDEBAR_ITEMS = [
                 </p>
               </div>
               <div class="flex items-center gap-4 mt-2 md:mt-0">
-                {item.current && (
-                  <span class="inline-flex items-center rounded-full bg-accent-500/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-accent-700 dark:text-accent-400">
-                    Current
-                  </span>
-                )}
                 <span class="text-sm font-medium text-surface-400 dark:text-surface-500 tracking-tight drop-shadow-sm">{item.period}</span>
               </div>
             </div>
