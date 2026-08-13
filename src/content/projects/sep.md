@@ -10,7 +10,7 @@ language: en
 
 ## Overview
 
-SEP, the **Participant Evaluation System**, is the platform I built to help AVAA manage ProExcelencia with live data instead of scattered spreadsheets. It is a multi-tenant system serving around 300 scholars and program staff of roughly four to six people per chapter, across three national chapters in Venezuela, centralizing scholar records, activities, chat clubs, volunteer hours, attendance, and reports.
+SEP, the **Participant Evaluation System**, is the platform I built to help AVAA manage ProExcelencia with live data instead of scattered spreadsheets. It is a multi-tenant system serving around 400 monthly active users across all three states where ProExcelencia operates in Venezuela, centralizing scholar records, activities, chat clubs, volunteer hours, attendance, and reports.
 
 <figure>
   <img src="/assets/projects/sep/cover.avif" alt="Generated SEP cover showing an education operations platform" />

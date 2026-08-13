@@ -79,7 +79,7 @@ The analytics views help the team understand candidate composition, offer activi
 
 ## Outcome
 
-I delivered Billingua Talent as a complete, production-ready product and tested it in internal pilots with 50 users from the AVAA ProExcelencia program and 5 companies, then turned their feedback into refined workflows and reporting ahead of a broader rollout.
+I completed Billingua Talent and validated its core flows through initial testing sessions with AVAA and U.S. Embassy stakeholders, then incorporated their feedback into the product. The application was prepared for launch, but did not reach production after the program lost funding during the 2025 changes to U.S. international cooperation policy.
 
 By design, it gives candidates a structured professional presence, gives businesses a way to reach vetted bilingual talent, and gives advisors the data to coordinate training, monitor English readiness, and support access to national opportunities, all built to keep skilled professionals working from within the country.
 
