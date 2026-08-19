@@ -137,7 +137,7 @@ Use this file to prevent date drift and unsupported claims. Prefer newer explici
 Do not infer or invent:
 
 - years of experience beyond the employment dates;
-- Rust, C++, Java, C#, Ruby, MongoDB, BigQuery, Databricks, FoundationDB, ClickHouse, NATS, or other unlisted technologies;
+- C++, Java, C#, Ruby, MongoDB, BigQuery, Databricks, FoundationDB, ClickHouse, NATS, or other unlisted technologies;
 - Supabase Row Level Security;
 - Sentry, Stripe, or Playwright usage outside the projects listed above;
 - U.S., Canadian, European, or other work authorization;
