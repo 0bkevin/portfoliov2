@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NAME}} - {{TARGET_TITLE}}</title>
+  <style>
+    @page { size: Letter; margin: 0.50in 0.82in; }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.5;
+    }
+    header { text-align: center; margin: 0 0 8pt; }
+    h1 { margin: 0 0 2pt; font-size: 14pt; line-height: 17pt; }
+    .headline { margin: 0 0 2pt; font-weight: 700; }
+    .contact { margin: 0; line-height: 15pt; }
+    a { color: #1155cc; text-decoration: none; }
+    main a { color: #000; }
+    h2 { margin: 7pt 0 3pt; font-size: 10.5pt; line-height: 15.75pt; }
+    .role {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12pt;
+      margin-top: 5pt;
+      font-style: italic;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .date { white-space: nowrap; text-align: right; }
+    ul { margin: 1.5pt 0 0; padding-left: 0.29in; }
+    li { margin: 0 0 2.1pt; break-inside: avoid; page-break-inside: avoid; }
+    .page-break { break-before: page; page-break-before: always; }
+    .page-break h2 { margin: 5pt 0 2pt; }
+    .page-break .role { margin-top: 4pt; }
+    .page-break li { margin-bottom: 1.2pt; }
+    @media screen {
+      body { width: 8.5in; margin: 0 auto; padding: 0.50in 0.82in; }
+      .page-break { margin-top: 0.50in; padding-top: 0.50in; border-top: 1px solid #ddd; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{{NAME}}</h1>
+    <p class="headline">{{TARGET_TITLE}}</p>
+    <p class="contact">{{CONTACT_LINKS}}</p>
+    <p class="contact">{{PROFILE_LINKS_LOCATION_LANGUAGES}}</p>
+  </header>
+  <main>
+    <h2>Work History</h2>
+    <div class="role">
+      <span>{{JOB_TITLE}} at {{COMPANY}}, {{LOCATION}}</span>
+      <span class="date">{{START_DATE}} to {{END_DATE}}</span>
+    </div>
+    <ul>
+      <li>{{PLAIN_LANGUAGE_ROLE_OVERVIEW}}</li>
+      <li>{{WHAT_HOW_WHY_BULLET}}</li>
+    </ul>
+    <section class="page-break">
+      {{CONTINUED_WORK_PROJECTS_VOLUNTEERING}}
+      <h2>Education</h2>
+      {{EDUCATION_AT_END}}
+    </section>
+  </main>
+</body>
+</html>
