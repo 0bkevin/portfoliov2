@@ -105,6 +105,27 @@ Use this file to prevent date drift and unsupported claims. Prefer newer explici
 - Appears in older CV sources as a Go/PostgreSQL/React Native agent control-plane project.
 - Confirm its current status, repository, and exact implementation before using it as primary evidence.
 
+## Open-source contributions
+
+### Zed
+
+- Contributed Rust changes to `zed-industries/zed`.
+- Merged [PR #62022](https://github.com/zed-industries/zed/pull/62022), preserving `--user-data-dir` across Linux, macOS, and Windows restarts and adding regression coverage for restart and updater argument handling.
+- Merged [PR #60938](https://github.com/zed-industries/zed/pull/60938), deriving non-empty LSP workspace-folder names consistently across initialization, notifications, and workspace-folder responses.
+- Merged [PR #60864](https://github.com/zed-industries/zed/pull/60864), resolving relative Markdown links with line and column positions and adding regression coverage.
+
+### Orca
+
+- Merged [PR #10453](https://github.com/stablyai/orca/pull/10453) with TypeScript and React changes that detect missing `npx.cmd` during Windows skill setup, provide recovery guidance, preserve other platforms, and add focused tests.
+
+### T3 Code
+
+- Merged [PR #5379](https://github.com/pingdotgg/t3code/pull/5379) with TypeScript server changes that unsnooze a thread when it is settled, repair legacy settled-and-snoozed state, and cover lifecycle behavior with tests.
+
+### Space Rabbit
+
+- Submitted [PR #35](https://github.com/Tahul/space-rabbit/pull/35), an opt-in Swift/macOS Mission Control gesture feature with failure fallbacks, localization, build checks, and runtime validation. The PR was closed without merge; describe it as submitted, not merged or shipped.
+
 ## Volunteer and education
 
 - Education Committee Member at AVAA, September 2024 to current.
