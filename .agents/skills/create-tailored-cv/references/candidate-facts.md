@@ -72,7 +72,7 @@ Use this file to prevent date drift and unsupported claims. Prefer newer explici
 
 ### Viamu
 
-- Private repository at `https://github.com/0bkevin/viamu`; current project.
+- Private repository at `https://github.com/0bkevin/viamu`; built application.
 - Go API, Nuxt/TypeScript clients, PostgreSQL/pgvector, Docker, standalone Supabase Auth, and AWS.
 - Includes authentication, application workspaces, eligibility, ingestion and reconciliation, translations, semantic retrieval, contextual AI chat, alerts, measurement, saved opportunities, and subscription entitlements.
 - Uses Ent and Atlas for relational models and migrations.
@@ -102,8 +102,14 @@ Use this file to prevent date drift and unsupported claims. Prefer newer explici
 
 ### Brio
 
-- Appears in older CV sources as a Go/PostgreSQL/React Native agent control-plane project.
-- Confirm its current status, repository, and exact implementation before using it as primary evidence.
+- Public repository at `https://github.com/0bkevin/brio`; built application.
+- Mobile control plane for managing stock Hermes Agent installations from mobile and web.
+- Contains an Expo/React Native application, a Go relay service, a Go connector, and shared JSON protocol schemas.
+- The connector keeps an authenticated outbound WebSocket tunnel to the relay and forwards an allowlisted set of paths to the local Hermes API without requiring a Hermes fork.
+- Supports native JSON-RPC conversations through `hermes serve`, Responses API streaming, tool and lifecycle events, automatic reconnects, event replay, session resume, and a REST/SSE degraded mode.
+- Supports isolated Hermes profiles with separate configuration, keys, memory, sessions, and gateway endpoints; identity is scoped by environment, profile, and session.
+- Includes device authentication, enrollment and recovery, credential revocation, rate limiting, optional PostgreSQL persistence, Docker packaging, and an AWS Copilot deployment manifest.
+- CI runs Go tests, installer tests, linting, TypeScript type checks, and a web export. Tagged releases cross-compile the connector for Linux, macOS, and Windows on amd64 and arm64.
 
 ## Open-source contributions
 
