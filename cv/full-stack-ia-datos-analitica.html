@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kevin Bravo - Ingeniero Full Stack | IA aplicada a datos y analítica</title>
+  <meta name="author" content="Kevin Bravo">
+  <meta name="description" content="CV de Ingeniero Full Stack enfocado en TypeScript, React, Node.js, PostgreSQL, dashboards, RAG, búsqueda semántica, outputs estructurados, evaluación de LLM y productos de datos.">
+  <style>
+    @page { size: Letter; margin: 0.50in 0.78in; }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.5;
+    }
+    body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    header { text-align: center; margin: 0 0 8pt; }
+    h1 { margin: 0 0 2pt; font-size: 14pt; line-height: 17pt; font-weight: 700; }
+    .headline { margin: 0 0 2pt; font-size: 10.5pt; line-height: 15.75pt; font-weight: 700; }
+    .contact { margin: 0; font-size: 10.5pt; line-height: 15pt; }
+    a { color: #1155cc; text-decoration: none; }
+    main a { color: #000; }
+    h2 { margin: 7pt 0 3pt; font-size: 10.5pt; line-height: 15.75pt; font-weight: 700; }
+    .role {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12pt;
+      margin-top: 5pt;
+      font-style: italic;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .role:first-of-type { margin-top: 0; }
+    .date { white-space: nowrap; text-align: right; }
+    ul { margin: 1.5pt 0 0; padding-left: 0.29in; }
+    li {
+      margin: 0 0 2pt;
+      padding-left: 0.02in;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .compact li { margin-bottom: 1pt; }
+    .page-break { break-before: page; page-break-before: always; }
+    .page-break h2 { margin: 5pt 0 2pt; }
+    .page-break .role { margin-top: 3.5pt; }
+    .page-break li { margin-bottom: 0.8pt; line-height: 1.44; }
+    .page-break .compact li { margin-bottom: 0.4pt; }
+    @media screen {
+      body {
+        width: 8.5in;
+        margin: 0 auto;
+        padding: 0.50in 0.78in;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.14);
+      }
+      .page-break { margin-top: 0.50in; padding-top: 0.50in; border-top: 1px solid #ddd; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kevin Bravo</h1>
+    <p class="headline">Ingeniero Full Stack | IA aplicada a datos y analítica</p>
+    <p class="contact">
+      <a href="mailto:0bravokevin@gmail.com">0bravokevin@gmail.com</a>
+      &nbsp;|&nbsp;
+      <a href="tel:+584122057346">+58 412 205 7346</a>
+      &nbsp;|&nbsp;
+      <a href="https://kevinbravo.com">kevinbravo.com</a>
+    </p>
+    <p class="contact">
+      <a href="https://github.com/0bkevin">github.com/0bkevin</a>
+      &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/0bkevin/">linkedin.com/in/0bkevin</a>
+      &nbsp;|&nbsp; Venezuela &nbsp;|&nbsp; Español nativo &nbsp;|&nbsp; Inglés C1
+    </p>
+  </header>
+
+  <main>
+    <h2>Experiencia profesional</h2>
+
+    <div class="role">
+      <span>Ingeniero Senior de Producto en <a href="https://free2z.cash">Free2Z</a>, remoto</span>
+      <span class="date">Marzo 2025 a la actualidad</span>
+    </div>
+    <ul>
+      <li>Desarrollo funcionalidades con TypeScript y SvelteKit en el frontend, y Python, APIs REST en Django y PostgreSQL en el backend de una plataforma en producción para contenido, transmisiones en vivo y apoyo comunitario.</li>
+      <li>Lideré la migración del frontend heredado de React a SvelteKit mientras el producto seguía activo, reconstruyendo flujos, estado y componentes de forma incremental para no interrumpir a los usuarios.</li>
+      <li>Diseño contratos de API y flujos de autenticación, y utilizo PostgreSQL para persistir estado y validaciones que deben mantenerse consistentes entre solicitudes y despliegues.</li>
+      <li>Protegí la autenticación por desafío de Zcash contra ataques de repetición y suplantación de proxy, actualizando PostgreSQL, OpenAPI, NGINX, pruebas y documentación operativa.</li>
+      <li>Investigo fallas con trazas HTTP, registros de aplicación, consultas SQL y reproducciones controladas; luego incorporo pruebas de regresión, validaciones y manejo explícito de errores.</li>
+      <li>Actualmente construyo un servidor MCP y utilizo Codex, OpenCode y agentes revisores para implementar integraciones, revisar resultados y aceptar cambios mediante pruebas ejecutables.</li>
+    </ul>
+
+    <div class="role">
+      <span>Ingeniero de Producto para el Departamento de Estado de EE. UU. vía AVAA, remoto</span>
+      <span class="date">Octubre 2024 a agosto 2025</span>
+    </div>
+    <ul>
+      <li>Construí Billingua Talent como único ingeniero con React, Next.js, TypeScript, Node.js, PostgreSQL y Prisma, llevando el producto desde el levantamiento de requerimientos hasta las pruebas con stakeholders.</li>
+      <li>Diseñé la arquitectura multi-tenant, el modelo relacional y el control de acceso para candidatos, empresas, asesores y administradores, manteniendo sus datos y flujos separados.</li>
+      <li>Desarrollé perfiles, oportunidades, cursos, inscripciones, paneles, analítica y reportes para convertir datos operativos en información que el equipo pudiera consultar sin consolidar hojas manualmente.</li>
+      <li>Trabajé con AVAA y la Embajada de EE. UU. para simplificar requerimientos, explicar decisiones técnicas e incorporar el feedback de las pruebas; la aplicación quedó terminada y validada, pero no llegó a producción por el cierre del programa.</li>
+    </ul>
+
+    <div class="role">
+      <span>Desarrollador Full Stack freelance, remoto</span>
+      <span class="date">Julio 2024 a diciembre 2024</span>
+    </div>
+    <ul>
+      <li>Construí sitios web, aplicaciones móviles, automatizaciones e integraciones para clientes de educación, finanzas y servicios profesionales, desde el alcance hasta el despliegue y el soporte.</li>
+    </ul>
+
+    <section class="page-break">
+      <div class="role">
+        <span>Desarrollador Full Stack en AVAA, Caracas</span>
+        <span class="date">Octubre 2022 a julio 2024</span>
+      </div>
+      <ul>
+        <li>Construí y operé SEP y SEA con TypeScript, React, Next.js, Node.js, PostgreSQL, Prisma, Auth.js, Python y Azure, reemplazando procesos de AVAA y EducationUSA basados en hojas de cálculo desconectadas.</li>
+        <li>Diseñé modelos relacionales, permisos, validaciones, formularios, paneles y reportes para registros de participantes, actividades, asistencia, pagos, recibos, servicios y alianzas.</li>
+        <li>Desarrollé SEP como la plataforma principal de ProExcelencia en tres estados de Venezuela, con alrededor de 400 usuarios activos mensuales y datos utilizados en las operaciones diarias del programa.</li>
+        <li>Implementé una funcionalidad RAG que recuperaba registros relevantes antes de generar respuestas, de modo que el personal pudiera contrastarlas con la información almacenada en la plataforma.</li>
+        <li>Desplegué y mantuve ambas aplicaciones en Azure, utilizando registros de producción, consultas SQL, reportes de usuarios y pruebas para diagnosticar incidentes y publicar mejoras.</li>
+      </ul>
+
+      <div class="role">
+        <span>Ingeniero de Software Junior en AVAA, Caracas</span>
+        <span class="date">Septiembre 2021 a agosto 2022</span>
+      </div>
+      <ul>
+        <li>Construí procesos ETL en Python para limpiar, normalizar, validar, deduplicar y conciliar cuatro años de registros que luego se utilizaron como datos iniciales de SEP.</li>
+        <li>Desarrollé un dashboard en Power BI con datos demográficos, académicos, laborales y de satisfacción, dando al equipo su primera vista consolidada de la evolución del programa.</li>
+        <li>Automaticé actividades recurrentes con Google Apps Script para reducir la captura manual y mantener los datos operativos consistentes.</li>
+      </ul>
+
+      <h2>IA aplicada, datos y evaluación</h2>
+
+      <div class="role">
+        <span><a href="https://github.com/0bkevin/viamu">Viamu, producto full stack con IA</a></span>
+        <span class="date">Go, TypeScript, PostgreSQL, pgvector, AWS</span>
+      </div>
+      <ul>
+        <li>Construí una API en Go y clientes en TypeScript con modelos relacionales, migraciones mediante Ent y Atlas, ingesta y conciliación de fuentes, búsqueda semántica y chat contextual sobre PostgreSQL y pgvector.</li>
+        <li>Configuré GitHub Actions para ejecutar pruebas, verificaciones de tipos, migraciones reales de PostgreSQL, auditorías de dependencias y builds de Docker antes de integrar cambios.</li>
+      </ul>
+
+      <div class="role">
+        <span>RegistroCiberVE, pipeline de verificación de incidentes</span>
+        <span class="date">Python, Playwright, APIs de LLM</span>
+      </div>
+      <ul>
+        <li>Construí un flujo con outputs estructurados, citas por campo, puntuación de fuentes y revisión humana para evitar que respuestas plausibles pero sin evidencia se convirtieran en registros aceptados.</li>
+        <li>Evalué casos adversariales con enlaces caídos, fechas contradictorias, PDF incompletos, fuentes débiles y entidades similares, incorporando comparación de modelos, reintentos, caché, fallbacks y motivos de rechazo.</li>
+      </ul>
+
+      <div class="role">
+        <span><a href="https://github.com/0bkevin/brio">Brio, plano de control móvil para Hermes Agent</a></span>
+        <span class="date">React Native, TypeScript, Go, WebSockets</span>
+      </div>
+      <ul>
+        <li>Construí una app Expo/React Native, un relay y un conector en Go para administrar agentes Hermes mediante túneles WebSocket autenticados, conversaciones JSON-RPC y Responses API en streaming.</li>
+        <li>Implementé reconexión, replay de eventos, fallback REST/SSE, aislamiento por perfiles y credenciales separadas para evitar que sesiones o datos de distintos agentes se mezclaran.</li>
+      </ul>
+
+      <h2>Educación</h2>
+      <div class="role">
+        <span>Maestría en Gerencia Pública, IESA, en curso</span>
+        <span class="date">Graduación prevista: 2027</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

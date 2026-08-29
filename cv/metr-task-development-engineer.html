@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kevin Bravo - Task Development Engineer</title>
+  <meta name="author" content="Kevin Bravo">
+  <meta name="description" content="Resume for AI Task Development Engineer roles, focused on agent evaluations, adversarial test cases, task specifications, scoring criteria, reproducibility, Python, software engineering, automated testing, human review, and evaluation infrastructure.">
+  <style>
+    @page {
+      size: Letter;
+      margin: 0.55in 0.72in;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.5;
+    }
+
+    body {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    header {
+      text-align: center;
+      margin: 0 0 9pt;
+    }
+
+    h1 {
+      margin: 0 0 3pt;
+      font-size: 14pt;
+      line-height: 17pt;
+      font-weight: 700;
+    }
+
+    .contact {
+      margin: 0;
+      font-size: 11.5pt;
+      line-height: 15pt;
+    }
+
+    a {
+      color: #1155cc;
+      text-decoration: none;
+    }
+
+    main a { color: #000; }
+
+    h2 {
+      margin: 8pt 0 4pt;
+      font-size: 10.5pt;
+      line-height: 15.75pt;
+      font-weight: 700;
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12pt;
+      margin-top: 6pt;
+      font-style: italic;
+      break-after: avoid;
+    }
+
+    .role:first-of-type { margin-top: 0; }
+
+    .date {
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    ul {
+      margin: 2pt 0 0;
+      padding-left: 0.30in;
+    }
+
+    li {
+      margin: 0 0 2.5pt;
+      padding-left: 0.02in;
+    }
+
+    @media screen {
+      body {
+        width: 8.5in;
+        margin: 0 auto;
+        padding: 0.55in 0.72in;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.14);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kevin Bravo</h1>
+    <p class="contact">
+      <a href="mailto:0bravokevin@gmail.com">0bravokevin@gmail.com</a>
+      &nbsp;|&nbsp;
+      <a href="tel:+584122057346">+58 412 205 7346</a>
+      &nbsp;|&nbsp;
+      <a href="https://kevinbravo.com">kevinbravo.com</a>
+    </p>
+    <p class="contact">
+      <a href="https://github.com/0bkevin">github.com/0bkevin</a>
+      &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/0bkevin/">linkedin.com/in/0bkevin</a>
+    </p>
+    <p class="contact">English (C1) &nbsp;|&nbsp; Spanish (Native)</p>
+  </header>
+
+  <main>
+    <h2>Selected AI Evaluation &amp; Task Development</h2>
+
+    <div class="role">
+      <span>RegistroCiberVE Research and Incident Verification Pipeline</span>
+      <span class="date">Python, Playwright, LLM APIs</span>
+    </div>
+    <ul>
+      <li>Developed a multi-stage agent task that searches for cybersecurity incidents, retrieves web and PDF evidence, extracts structured claims, and determines whether a record has enough support for a public registry.</li>
+      <li>Specified inputs, allowed evidence, output schemas, acceptance criteria, rejection reasons, uncertainty states, and source traceability so completions could be scored against observable evidence.</li>
+      <li>Built adversarial cases with dead links, conflicting dates, incomplete PDFs, duplicated reports, weak secondary sources, inaccessible pages, and similar entity names after an early agent treated search snippets as verified evidence.</li>
+      <li>Added source scoring, field-level citations, retries, fallbacks, caching, model escalation, and human review; separated “found,” “supported,” and “verified” states so unsupported claims could not pass.</li>
+      <li>Compared OpenAI and Anthropic outputs against the same criteria, inspected disagreements and failure patterns, and refined prompts, tools, validation rules, and task instructions.</li>
+    </ul>
+
+    <div class="role">
+      <span><a href="https://github.com/0bkevin/zrode">Zrode - Open-Source Agent Development Environment</a></span>
+      <span class="date">TypeScript, React, Electron, Node.js</span>
+    </div>
+    <ul>
+      <li>Built and use an environment for Claude Code, Codex, and OpenCode with persistent sessions, sub-agent workflows, typed events, runtime logs, recovery behavior, usage analytics, and regression tests.</li>
+      <li>Use separate agents to propose solutions, challenge assumptions, review implementations, and reproduce failure paths before executable checks provide the final acceptance signal.</li>
+    </ul>
+
+    <h2>Work History</h2>
+
+    <div class="role">
+      <span>Co-Founder and Chief Technology Officer at Proyecto Educa, Remote</span>
+      <span class="date">December 2025 to Current</span>
+    </div>
+    <ul>
+      <li>Owned education products from ambiguous problems through task decomposition, written specifications, TypeScript and Node.js architecture, PostgreSQL, testing, deployment, documentation, and production support.</li>
+      <li>Used AI agents for most development, validating work through type checks, static analysis, unit, integration, database-backed and end-to-end tests, plus adversarial failure cases.</li>
+      <li>Led contributors through written plans, GitHub reviews, test expectations, and release checks while identifying ambiguous requirements before they became implementation defects.</li>
+    </ul>
+
+    <div class="role">
+      <span>Product Engineer at Free2Z, Remote</span>
+      <span class="date">April 2025 to June 2026</span>
+    </div>
+    <ul>
+      <li>Built and operated a production platform with Python, Django REST APIs, TypeScript, React, SvelteKit, PostgreSQL, Docker, Kubernetes, Pub/Sub, webhooks, and GCP across a complex existing codebase.</li>
+      <li>Shipped an AI writing assistant with model APIs, prompt design, retrieved context, and output tests before placing generated drafts in customer workflows.</li>
+      <li>Created reproducible tests for duplicate events, partial failures, retries, concurrent updates, invalid requests, and rollback so asynchronous systems preserved user state.</li>
+      <li>Investigated production failures with HTTP traces, logs, diagnostic SQL, and replayable events, then converted observed failure modes into regression tests, safeguards, and documentation.</li>
+    </ul>
+
+    <div class="role">
+      <span>Product Engineer at U.S. Department of State via AVAA, Remote</span>
+      <span class="date">November 2024 to August 2025</span>
+    </div>
+    <ul>
+      <li>Built Billingua Talent as the sole engineer, converting an undocumented multi-organization workflow into requirements, roles, data models, validation rules, interfaces, tests, and a live pilot.</li>
+      <li>Verified that workflows were solvable as specified through prototypes, stakeholder demonstrations, test data, permission checks, browser traces, logs, and diagnostic SQL.</li>
+    </ul>
+
+    <div class="role">
+      <span>Freelance Software Engineer, Remote</span>
+      <span class="date">September 2024 to December 2024</span>
+    </div>
+
+    <div class="role">
+      <span>Software Developer at AVAA, Caracas</span>
+      <span class="date">October 2022 to July 2024</span>
+    </div>
+    <div class="role" style="margin-top:0">
+      <span>Software Developer Intern at AVAA, Caracas</span>
+      <span class="date">September 2021 to August 2022</span>
+    </div>
+    <ul>
+      <li>Built and deployed SEP and SEA with TypeScript, React, Next.js, Node.js, REST APIs, PostgreSQL, Python, and Azure for approximately 300 scholars, advisors, and staff.</li>
+      <li>Created Python validation and ETL workflows with normalization rules, rejection conditions, diagnostic outputs, and manual-review steps so reporting used consistent data.</li>
+      <li>Worked with program teams to clarify underspecified workflows, test edge cases, document correct behavior, and turn recurring problems into product improvements.</li>
+    </ul>
+
+    <h2>Additional Evaluation, Reliability &amp; Open-Source Work</h2>
+
+    <div class="role">
+      <span>Brio - Cross-Platform Agent Control Plane</span>
+      <span class="date">React Native, Go, PostgreSQL</span>
+    </div>
+    <ul>
+      <li>Designed mobile and relay services with device pairing, per-user ownership, session state, agent routing, logs, monitoring, and health checks so persistent agents could be observed and recovered across devices.</li>
+    </ul>
+
+    <div class="role">
+      <span>Open-Source Contributor at <a href="https://github.com/Tahul/space-rabbit/pull/35">Space Rabbit</a>, Orca, and Zed</span>
+    </div>
+    <ul>
+      <li>Reproduced and fixed developer-tool failures involving stale SSH sessions, terminal focus, Git state, settings, and Markdown navigation through minimal test cases, regression tests, code review, and maintainer feedback.</li>
+    </ul>
+
+    <h2>Volunteer Experience</h2>
+
+    <div class="role">
+      <span>Education Committee Member at AVAA</span>
+      <span class="date">September 2024 to Current</span>
+    </div>
+    <ul>
+      <li>Advised on education-product requirements, data quality, reporting, and workflow changes.</li>
+    </ul>
+
+    <div class="role">
+      <span>Caracas Hub Organizer at Dev3pack Global Hackathon</span>
+      <span class="date">April 2026 to May 2026</span>
+    </div>
+    <ul>
+      <li>Coordinated speakers, mentors, technical support, logistics, and judging readiness for a global Web3 and AI hackathon hub.</li>
+    </ul>
+
+    <div class="role">
+      <span>Code Mentor at Technovation Girls Venezuela</span>
+      <span class="date">January 2026 to May 2026</span>
+    </div>
+    <ul>
+      <li>Guided four students through research, task scoping, mobile prototyping, debugging, deadlines, and a final product presentation.</li>
+    </ul>
+
+    <h2>Education &amp; Certificates</h2>
+    <ul>
+      <li>M.P.A. from IESA (Instituto de Estudios Superiores de Administracion), in progress <span class="date" style="float:right">Expected 2027</span></li>
+    </ul>
+  </main>
+</body>
+</html>
