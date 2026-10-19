@@ -8,18 +8,7 @@ import Info from "./InfoCard.astro";
     <h2 class="section-title">Background</h2>
   </div>
 
-  <div class="grid lg:grid-cols-5 gap-16 items-start">
-    <div class="lg:col-span-2">
-      <img
-        src="/assets/photo-1.avif"
-        alt="Kevin Bravo"
-        loading="lazy"
-        decoding="async"
-        class="rounded-xl w-full max-w-sm mx-auto lg:mx-0 object-cover aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-500"
-      />
-    </div>
-
-    <div class="lg:col-span-3 flex flex-col gap-10">
+  <div class="max-w-3xl flex flex-col gap-10">
       <Info />
 
       <div class="space-y-4">
@@ -51,6 +40,5 @@ import Info from "./InfoCard.astro";
           <i class="bx bx-download text-base"></i>
         </a>
       </div>
-    </div>
   </div>
 </section>
