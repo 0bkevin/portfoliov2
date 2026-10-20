@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Tailored CV"
+  short_description: "Build concise ATS-friendly role-based CVs"
+  default_prompt: "Use $create-tailored-cv to create a truthful, ATS-friendly CV for this job description."

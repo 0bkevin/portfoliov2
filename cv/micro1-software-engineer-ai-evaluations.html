@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kevin Bravo - Software Engineer | AI Evaluation, Developer Workflows, Automation</title>
+  <meta name="author" content="Kevin Bravo">
+  <meta name="description" content="Resume for Software Engineer evaluation roles focused on AI agents, developer workflows, Git and GitHub, reproducible testing, Python, TypeScript, REST APIs, authentication, webhooks, MCP, automation, and technical quality assurance.">
+  <style>
+    @page { size: Letter; margin: 0.50in 0.68in; }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.5;
+    }
+    body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    header { text-align: center; margin: 0 0 8pt; }
+    h1 { margin: 0 0 2pt; font-size: 14pt; line-height: 17pt; font-weight: 700; }
+    .headline { margin: 0 0 2pt; font-size: 10.5pt; line-height: 15.75pt; font-weight: 700; }
+    .contact { margin: 0; font-size: 10.5pt; line-height: 15pt; }
+    a { color: #1155cc; text-decoration: none; }
+    main a { color: #000; }
+    h2 { margin: 7pt 0 3pt; font-size: 10.5pt; line-height: 15.75pt; font-weight: 700; }
+    .role {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12pt;
+      margin-top: 5pt;
+      font-style: italic;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .role:first-of-type { margin-top: 0; }
+    .date { white-space: nowrap; text-align: right; }
+    ul { margin: 1.5pt 0 0; padding-left: 0.29in; }
+    li {
+      margin: 0 0 2.1pt;
+      padding-left: 0.02in;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .compact li { margin-bottom: 1.4pt; }
+    .page-break { break-before: page; page-break-before: always; }
+    .page-break h2 { margin: 4.5pt 0 1.5pt; }
+    .page-break .role { margin-top: 3pt; }
+    .page-break li { margin-bottom: 0.6pt; line-height: 1.42; }
+    .page-break .compact li { margin-bottom: 0.3pt; }
+    @media screen {
+      body {
+        width: 8.5in;
+        margin: 0 auto;
+        padding: 0.50in 0.68in;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.14);
+      }
+      .page-break { margin-top: 0.50in; padding-top: 0.50in; border-top: 1px solid #ddd; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kevin Bravo</h1>
+    <p class="headline">Software Engineer | AI Evaluation, Developer Workflows, Automation</p>
+    <p class="contact">
+      <a href="mailto:0bravokevin@gmail.com">0bravokevin@gmail.com</a>
+      &nbsp;|&nbsp;
+      <a href="tel:+584122057346">+58 412 205 7346</a>
+      &nbsp;|&nbsp;
+      <a href="https://kevinbravo.com">kevinbravo.com</a>
+    </p>
+    <p class="contact">
+      <a href="https://github.com/0bkevin">github.com/0bkevin</a>
+      &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/0bkevin/">linkedin.com/in/0bkevin</a>
+      &nbsp;|&nbsp; English C1 &nbsp;|&nbsp; Spanish Native
+    </p>
+  </header>
+
+  <main>
+    <h2>Selected AI Evaluation and Developer Workflow Work</h2>
+
+    <div class="role">
+      <span>RegistroCiberVE Research and Incident Verification Pipeline</span>
+      <span class="date">Python, Playwright, REST APIs</span>
+    </div>
+    <ul>
+      <li>Developed a multi-stage agent task that searches for cybersecurity incidents, retrieves web and PDF evidence, extracts structured claims, and determines whether a record has enough support for a public registry.</li>
+      <li>Defined task inputs, allowed evidence, output schemas, acceptance criteria, rejection reasons, uncertainty states, and source traceability so model completions could be graded against observable results.</li>
+      <li>Built reproducible adversarial cases with dead links, conflicting dates, incomplete PDFs, duplicate reports, weak sources, inaccessible pages, and similar entity names after an early agent treated search snippets as verified evidence.</li>
+      <li>Added field-level citations, retries, fallback fetchers, caching, source scoring, model comparison, and human-review checkpoints; separated found, supported, and verified states so unsupported claims could not pass.</li>
+      <li>Compared OpenAI and Anthropic outputs under the same criteria, inspected disagreements and failure patterns, and revised prompts, tools, validation rules, and task instructions.</li>
+    </ul>
+
+    <div class="role">
+      <span><a href="https://github.com/0bkevin/zrode">Zrode, Open-Source Agent Development Environment</a></span>
+      <span class="date">TypeScript, React, Node.js, WebSockets</span>
+    </div>
+    <ul>
+      <li>Built and use an environment for Codex and OpenCode with persistent sessions, multiple-agent workflows, typed events, runtime logs, message steering, recovery behavior, usage tracking, and regression tests.</li>
+      <li>Use separate agents to explore repositories, propose changes, challenge assumptions, review diffs, reproduce failure paths, and document findings before executable checks provide the acceptance signal.</li>
+    </ul>
+
+    <h2>Work History</h2>
+    <div class="role">
+      <span>Senior Product Engineer at <a href="https://free2z.cash">Free2Z</a>, Remote</span>
+      <span class="date">March 2025 to Current</span>
+    </div>
+    <ul>
+      <li>Develop and maintain a production platform with TypeScript, Python, Django REST APIs, PostgreSQL, SvelteKit, authentication, live streaming, search, and content workflows across a complex existing codebase.</li>
+      <li>Use AI coding agents throughout exploration, implementation, debugging, testing, and documentation, validating outputs with type checks, static analysis, automated tests, database-backed tests, and independent reviewer agents.</li>
+      <li>Investigate failures through HTTP traces, application logs, SQL queries, and controlled reproductions, then turn observed behavior into regression tests, validation, explicit error handling, and runbook updates.</li>
+      <li>Currently building a Model Context Protocol server with structured tool interfaces and controlled access to production capabilities.</li>
+    </ul>
+
+    <section class="page-break">
+      <div class="role">
+        <span>Product Engineer for the U.S. Department of State via AVAA, Remote</span>
+        <span class="date">October 2024 to August 2025</span>
+      </div>
+      <ul>
+        <li>Built Billingua Talent as the sole engineer with TypeScript, Node.js, REST APIs, PostgreSQL, Prisma, React, and Next.js, converting an undocumented multi-organization process into a testable product.</li>
+        <li>Owned task breakdown, data modeling, authentication, role-based access, implementation, test data, browser checks, deployment preparation, documentation, and stakeholder validation.</li>
+        <li>Worked with AVAA and U.S. Embassy stakeholders to clarify ambiguous requirements, demonstrate expected behavior, record feedback, and verify revised workflows against real program needs.</li>
+      </ul>
+
+      <div class="role">
+        <span>Full-Stack Engineer at AVAA, Caracas</span>
+        <span class="date">October 2022 to July 2024</span>
+      </div>
+      <ul>
+        <li>Built and operated SEP and SEA with TypeScript, Node.js, REST APIs, PostgreSQL, Prisma, Next.js, Python, and Azure, replacing disconnected spreadsheets used by AVAA and EducationUSA.</li>
+        <li>Worked with staff and beneficiaries to define correct behavior, test permissions and edge cases, document recurring problems, and turn findings into data models, validation rules, workflows, and released fixes.</li>
+        <li>Added an internal RAG feature to SEP that retrieved relevant records before answering and kept generated responses grounded in program data.</li>
+      </ul>
+
+      <div class="role">
+        <span>Junior Software Engineer at AVAA, Caracas</span>
+        <span class="date">September 2021 to August 2022</span>
+      </div>
+      <ul>
+        <li>Built Python ETL and validation scripts to clean, normalize, reconcile, and verify four years of inconsistent records from Google Sheets and Excel before they became SEP's initial dataset.</li>
+        <li>Automated recurring workflows with Google Apps Script and created a Power BI dashboard used to review demographic, academic, employment, satisfaction, and outcome data.</li>
+      </ul>
+
+      <h2>Additional Automation, QA, and Open-Source Work</h2>
+      <div class="role">
+        <span><a href="https://github.com/0bkevin/veo-create">Veo Create, Generative Video Workflow</a></span>
+        <span class="date">Node.js, REST APIs, Cloud Storage</span>
+      </div>
+      <ul>
+        <li>Built a CLI that turns Markdown scenes into a continuous video by coordinating Vertex AI, Veo, Gemini, ElevenLabs, Cloud Storage, and FFmpeg through authenticated APIs and reproducible JSON plans.</li>
+      </ul>
+
+      <div class="role">
+        <span>Brio, Cross-Platform Agent Control Plane</span>
+        <span class="date">Go, PostgreSQL, React Native</span>
+      </div>
+      <ul>
+        <li>Designed authenticated device pairing, per-user ownership, session state, event routing, action logs, monitoring, and health checks so persistent agents could be observed and recovered across devices.</li>
+      </ul>
+
+      <div class="role">
+        <span>Contributor to <a href="https://github.com/Tahul/space-rabbit/pull/35">Space Rabbit</a>, Orca, and Zed</span>
+      </div>
+      <ul>
+        <li>Submitted focused fixes for SSH sessions, terminal focus, Git state, settings, and Markdown navigation by reproducing issues, reviewing diffs, adding regression coverage, and responding to maintainer feedback.</li>
+      </ul>
+
+      <h2>Volunteer Experience</h2>
+      <div class="role">
+        <span>Education Committee Member at AVAA</span>
+        <span class="date">September 2024 to Current</span>
+      </div>
+      <ul class="compact">
+        <li>Advise on system requirements, data quality, reporting, and long-term maintenance.</li>
+      </ul>
+
+      <div class="role">
+        <span>Code Mentor at Technovation Girls Venezuela</span>
+        <span class="date">January 2026 to May 2026</span>
+      </div>
+
+      <h2>Education</h2>
+      <div class="role">
+        <span>Master of Public Administration, IESA, in progress</span>
+        <span class="date">Expected 2027</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
